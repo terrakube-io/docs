@@ -1,10 +1,9 @@
 # Table of contents
 
-* [Introduction](README.md)
+* [AzBuilder Platform](README.md)
 
 ## Getting started
 
-* [What is AzBuilder?](getting-started/what-is-azbuilder.md)
 * [Design and Architecture](getting-started/design-and-architecture/README.md)
   * [Security](getting-started/design-and-architecture/security.md)
 * [Requirements](getting-started/requirements.md)
