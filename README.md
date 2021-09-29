@@ -1,4 +1,4 @@
-# AzBuilder Platform
+# Terrakube Platform
 
 This project aims to be an open Source alternative for Terraform Enterprise and Scalr that you can run in any Kubernetes Cluster.
 

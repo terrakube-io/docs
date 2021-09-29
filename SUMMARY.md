@@ -1,6 +1,6 @@
 # Table of contents
 
-* [AzBuilder Platform](README.md)
+* [Terrakube Platform](README.md)
 
 ## Getting started
 
