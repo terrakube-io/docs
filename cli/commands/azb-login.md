@@ -1,11 +1,11 @@
-# azb login
+# terrakube login
 
-Authenticate with a AZB host
+Authenticate with a Terrakube Server
 
 #### Synopsis
 
 ```text
-azb login [flags]
+terrakube login [flags]
 ```
 
 #### Examples

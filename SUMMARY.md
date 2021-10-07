@@ -15,11 +15,16 @@
 
 ## CLI
 
-* [Install](cli/install.md)
+* [Getting started](cli/getting-started.md)
+* [Installation](cli/install.md)
 * [Commands](cli/commands/README.md)
-  * [azb login](cli/commands/azb-login.md)
-  * [azb organization](cli/commands/azb-organization.md)
-  * [azb module](cli/commands/azb-module.md)
+  * [terrakube login](cli/commands/azb-login.md)
+  * [terrakube organization](cli/commands/azb-organization/README.md)
+    * [list](cli/commands/azb-organization/list.md)
+    * [update](cli/commands/azb-organization/update.md)
+    * [delete](cli/commands/azb-organization/delete.md)
+    * [create](cli/commands/azb-organization/create.md)
+  * [terrakube module](cli/commands/azb-module.md)
 
 ## OpenAPI Specification <a id="api"></a>
 

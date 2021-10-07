@@ -1,18 +1,18 @@
-# Install
+# Installation
 
 #### MacOs
 
-`azb` is available via [Homebrew](https://brew.sh/) and as a downloadable binary from the [releases page](https://github.com/AzBuilder/azb-cli/releases/latest).
+`terrakube` is available via [Homebrew](https://brew.sh/) and as a downloadable binary from the [releases page](https://github.com/AzBuilder/terrakube-cli/releases).
 
 ```text
-brew install azbuilder/cli/azb
+brew install azbuilder/cli/terrakube
 ```
 
 #### Windows
 
-`azb` is available via [Chocolatey](https://chocolatey.org/) and as a downloadable binary from the [releases page](https://github.com/AzBuilder/azb-cli/releases/latest).
+`azb` is available via [Chocolatey](https://chocolatey.org/) and as a downloadable binary from the [releases page](https://github.com/AzBuilder/terrakube-cli/releases).
 
 ```text
-choco install azb
+choco install terrakube
 ```
 

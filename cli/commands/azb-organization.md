@@ -1,2 +1,0 @@
-# azb organization
-
