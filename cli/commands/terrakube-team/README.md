@@ -10,12 +10,12 @@ terrakube team [command]
 
 #### Commands
 
-| Sub command | Description |
+| Command | Description |
 | :--- | :--- |
-| create | create a team |
-| [delete](../azb-organization/delete.md) | delete a team |
-| [list](../azb-organization/list.md) | list teams |
-| [update](../azb-organization/update.md) | update a team |
+| [create](team-create.md) | create a team |
+| [delete](team-delete.md) | delete a team |
+| [list](team-list.md) | list teams |
+| [update](team-update.md) | update a team |
 
 #### Aliases
 

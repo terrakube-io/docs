@@ -10,7 +10,7 @@ terrakube organization [command]
 
 #### Commands
 
-| Sub command | Description |
+| Command | Description |
 | :--- | :--- |
 | [create](create.md) | create an organization |
 | [delete](delete.md) | delete an organization |
