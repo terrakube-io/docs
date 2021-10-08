@@ -35,7 +35,7 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](../../.gitbook/assets/image%20%282%29%20%281%29.png)
+![](../../.gitbook/assets/image%20%284%29.png)
 
 Check "This is a private consumer" and add the following permission:
 
@@ -43,7 +43,7 @@ Check "This is a private consumer" and add the following permission:
 
 Example: 
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](../../.gitbook/assets/image%20%288%29.png)
 
 After creating the application copy the following values:
 
@@ -123,11 +123,11 @@ https://bitbucket.org/site/oauth2/authorize?client_id={{keyId}}&response_type=co
 
 Make sure to replace the values:
 
-* keyID = Application Key from step 2
+* keyID = Application Key from step 1
 
 ### Step 5 - Authorize Application
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image%20%289%29.png)
 
 If the setup was successful you should see this message in your browser.
 

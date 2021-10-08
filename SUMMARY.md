@@ -18,8 +18,8 @@
 * [VCS Providers](vcs-integration/vcs-providers/README.md)
   * [Azure DevOps](vcs-integration/vcs-providers/azure-devops.md)
   * [Bitbucket](vcs-integration/vcs-providers/bitbucket.com.md)
-  * [Github.com](vcs-integration/vcs-providers/github.com.md)
-  * [Gitlab.com](vcs-integration/vcs-providers/gitlab.com.md)
+  * [Github](vcs-integration/vcs-providers/github.com.md)
+  * [GitLab](vcs-integration/vcs-providers/gitlab.com.md)
 
 ## CLI
 

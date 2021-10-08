@@ -1,12 +1,10 @@
-# Github.com
-
-
+# Github
 
 To connect Terrakube to GitHub and use private git repositories you will need to follow these steps:
 
 ### Step 1 - Register OAuth Application
 
-Open GitHub and log in as whichever account you want Terrakube to use and use the following [link](https://github.com/settings/applications/new). 
+Open GitHub and log in and use the following [link](https://github.com/settings/applications/new) to create a new application. 
 
 Complete the following fields:
 
@@ -97,7 +95,7 @@ https://github.com/login/oauth/authorize?client_id={{GitHubClientId}}&allow_sign
 
 Make sure to replace the values:
 
-* GitHubClientId = Client Id from step 2
+* GitHubClientId = Client Id from step 1
 
 ### Step 5 - Authorize Application
 
