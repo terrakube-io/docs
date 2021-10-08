@@ -111,7 +111,7 @@ Make sure to replace the values:
 * app\_id = Client Id from step 2
 * redirect\_uri = Application callback from step 3
 
-Step 5 - Authorize Application
+### Step 5 - Authorize Application
 
 ![](../../.gitbook/assets/image%20%283%29.png)
 
