@@ -1,2 +1,6 @@
 # delete
 
+Delete an organization
+
+
+

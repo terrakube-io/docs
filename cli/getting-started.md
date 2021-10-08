@@ -8,7 +8,7 @@ You can find installation instructions here [Install](install.md)
 
 ### Getting help
 
-When you are working with terrakube cli probably you will need some helps with the supported commands and flags and you can use [Commands sections](commands/) for that, however a better approach is to use the same cli to get help using --help flag or -h shortand. The embedded help provides you more detail for each command and some examples you can use as reference
+When you are working with terrakube cli probably you will need some help with the supported commands and flags and you can use [Commands sections](commands/) for that, however a better option is to use the same cli to get help using --help flag or -h shortand. The embedded help provides you more detail for each command and some examples you can use as reference
 
 ```bash
 # using help flag

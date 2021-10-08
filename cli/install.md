@@ -10,7 +10,7 @@ brew install azbuilder/cli/terrakube
 
 #### Windows
 
-`azb` is available via [Chocolatey](https://chocolatey.org/) and as a downloadable binary from the [releases page](https://github.com/AzBuilder/terrakube-cli/releases).
+`terrakube` is available via [Chocolatey](https://chocolatey.org/) and as a downloadable binary from the [releases page](https://github.com/AzBuilder/terrakube-cli/releases).
 
 ```text
 choco install terrakube
