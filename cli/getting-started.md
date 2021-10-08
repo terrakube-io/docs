@@ -33,7 +33,7 @@ To sign in, use a web browser to open the page
 https://microsoft.com/devicelogin and enter the code AAM4MVU96 to authenticate.
 ```
 
-### Working with Organizations
+### Create your Organization
 
 Organizations are privately shared spaces for teams to collaborate on infrastructure. 
 
