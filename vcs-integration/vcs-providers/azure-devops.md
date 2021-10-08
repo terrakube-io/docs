@@ -1,6 +1,6 @@
 # Azure DevOps
 
-To connect Terrakube to your Azure DevOps and use private git repositories you will need to follow these steps:
+To connect Terrakube to Azure DevOps and use private git repositories you will need to follow these steps:
 
 ### Step 1 - Register OAuth Application
 
@@ -19,7 +19,7 @@ For authorization callback you can use http://localhost, we will update this val
 
 Example:
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](../../.gitbook/assets/image.png)
 
 Add the followings "Authorized scopes" and create the application:
 
@@ -28,7 +28,7 @@ Add the followings "Authorized scopes" and create the application:
 
 Example: 
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 After creating the application copy the following values:
 
@@ -85,7 +85,7 @@ Response Body Sample:
 ```
 
 {% hint style="info" %}
-You can also use Terrakube CLI or Terrakube UI
+You can also use Terrakube CLI or Terrakube UI to generate the VCS record.
 {% endhint %}
 
 Make sure to copy the VCS id from the response body.
@@ -113,7 +113,7 @@ Make sure to replace the values:
 
 ### Step 5 - Authorize Application
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%281%29.png)
 
 If the setup was successful you should see this message in your browser.
 

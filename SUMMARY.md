@@ -17,7 +17,7 @@
 
 * [VCS Providers](vcs-integration/vcs-providers/README.md)
   * [Azure DevOps](vcs-integration/vcs-providers/azure-devops.md)
-  * [Bitbucket.com](vcs-integration/vcs-providers/bitbucket.com.md)
+  * [Bitbucket](vcs-integration/vcs-providers/bitbucket.com.md)
   * [Github.com](vcs-integration/vcs-providers/github.com.md)
   * [Gitlab.com](vcs-integration/vcs-providers/gitlab.com.md)
 
