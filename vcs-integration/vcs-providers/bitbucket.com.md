@@ -68,11 +68,11 @@ Request Body:
   "data": {
     "type": "vcs",
     "attributes": {
-      "name": "vcsAzDevOps",
+      "name": "vcsBitbucket",
       "description": "vcsDescription",
       "vcsType": "BITBUCKET",
-      "clientId": "{{azDevOpsClientId}}",
-      "clientSecret": "{{azDevOpsClientSecret}}"
+      "clientId": "{{bitbucketClientId}}",
+      "clientSecret": "{{bitbucketClientSecret}}"
     }
   }
 }
@@ -82,10 +82,10 @@ Response Body Sample:
         "type": "vcs",
         "id": "{{vcsId}}",
         "attributes": {
-            "clientId": "{{azDevOpsClientId}}",
+            "clientId": "{{bitbucketClientId}}",
             "description": "vcsDescription",
-            "name": "vcsAzDevOps",
-            "vcsType": "AZURE_DEVOPS"
+            "name": "vcsBitbucket",
+            "vcsType": "BITBUCKET"
         },
         "relationships": {
             "organization": {
