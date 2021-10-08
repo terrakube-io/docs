@@ -28,7 +28,7 @@ Add the followings "Authorized scopes" and create the application:
 
 Example: 
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](../../.gitbook/assets/image%20%285%29.png)
 
 After creating the application copy the following values:
 
@@ -113,7 +113,7 @@ Make sure to replace the values:
 
 ### Step 5 - Authorize Application
 
-![](../../.gitbook/assets/image%20%283%29.png)
+![](../../.gitbook/assets/image%20%281%29%20%281%29.png)
 
 If the setup was successful you should see this message in your browser.
 

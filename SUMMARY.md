@@ -29,10 +29,14 @@
   * [terrakube login](cli/commands/azb-login.md)
   * [terrakube organization](cli/commands/azb-organization/README.md)
     * [list](cli/commands/azb-organization/list.md)
+    * [create](cli/commands/azb-organization/create.md)
     * [update](cli/commands/azb-organization/update.md)
     * [delete](cli/commands/azb-organization/delete.md)
-    * [create](cli/commands/azb-organization/create.md)
-  * [terrakube module](cli/commands/azb-module.md)
+  * [terrakube team](cli/commands/terrakube-team.md)
+  * [terrakube workspace](cli/commands/terrakube-workspace.md)
+  * [terrakube module](cli/commands/azb-module/README.md)
+    * [create](cli/commands/azb-module/create.md)
+    * [list](cli/commands/azb-module/list.md)
 
 ## OpenAPI Specification <a id="api"></a>
 
