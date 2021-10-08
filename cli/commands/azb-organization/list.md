@@ -1,4 +1,4 @@
-# list
+# organization list
 
 List organizations
 

@@ -1,11 +1,11 @@
-# update
+# organization update
 
 Update an organization
 
 #### Usage
 
 ```text
- terrakube organization create [flags]
+ terrakube organization update [flags]
 ```
 
 #### Flags
@@ -24,4 +24,6 @@ Update the description for an existing organization
 ```text
 terrakube organization update --id 38b6635a-d38e-46f2-a95e-d00a416de4fd -d "new description" 
 ```
+
+
 
