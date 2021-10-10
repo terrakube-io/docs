@@ -1,11 +1,11 @@
-# module list
+# job list
 
-List Modules
+List jobs
 
 #### Usage
 
 ```
-terrakube module list [flags]
+terrakube job list [flags]
 ```
 
 #### Flags
@@ -18,8 +18,8 @@ terrakube module list [flags]
 
 #### Examples
 
-List all existing modules in an Organization
+List all existing jobs in an Organization
 
 ```
-terrakube module list --organization-id e5ad0642-f9b3-48b3-9bf4-35997febe1fb
+terrakube job list --organization-id e5ad0642-f9b3-48b3-9bf4-35997febe1fb
 ```

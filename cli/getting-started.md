@@ -97,7 +97,7 @@ Once you create your organization you will probably want to define the teams and
 terrakube team create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name AZB_USER --manage-workspace=true --manage-module=true --manage-provider=true
 ```
 
-In the previous command we are creating a new team inside our new Organization and for this case we are providing permissions to manage workspaces, modules and providers. In the name flag we are using an Azure AD Group, so all the team members are defined inside the AD group. For more details about teams and permissions you can see [Security Page](../getting-started/design-and-architecture/security.md).
+In the previous command we are creating a new team inside our new Organization and for this case we are providing permissions to manage workspaces, modules and providers. In the name flag we are using an Azure AD Group, so all the team members are defined inside the AD group. For more details about teams and permissions you can see [Security Page](../getting-started/security.md).
 
 ### Create a Workspace
 
