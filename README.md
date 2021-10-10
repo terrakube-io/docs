@@ -8,9 +8,7 @@ It provides diferente features like:
 * Handle workspaces.
 * Terraform module protocol.
 * Terraform provider protocol.
-* Support to use with any **RDBMS** supported by [liquibase](https://www.liquibase.org/) \(mysql, postgres, oracle, sql server, etc\).
+* Support to use with any **RDBMS **supported by [liquibase](https://www.liquibase.org) (mysql, postgres, oracle, sql server, etc).
 * Plugins support to extends functionality using different cloud providers.
 * UI and CLI support
-
-
 

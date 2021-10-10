@@ -1,4 +1,4 @@
-# Getting started
+# 🌟 Getting started
 
 `terrakube cli` is Terrakube Server on the command line. It brings organizations, workspaces and other Terrakube concepts to the terminal.
 
@@ -36,7 +36,7 @@ You can also pass this values using [`terrakube login`](commands/azb-login.md) h
 
 Open your terminal and execute the following commands in order to setup your terrakube environment and get authenticated. You can get  the server, path, scheme, tenant id and client id values during the [Terrakube server deployment](../getting-started/deployment/)
 
-```text
+```
 export TERRAKUBE_SERVER="my-terrakube.com"
 export TERRAKUBE_PATH="terrakube"
 export TERRAKUBE_SCHEME="https"
@@ -48,7 +48,7 @@ terrakube login
 
 You will receive a code, open the url in a web browser and provide your account details. See below code as reference
 
-```text
+```
 To sign in, use a web browser to open the page 
 https://microsoft.com/devicelogin and enter the code AAM4MVU96 to authenticate.
 ```
@@ -57,21 +57,21 @@ https://microsoft.com/devicelogin and enter the code AAM4MVU96 to authenticate.
 
 Organizations are privately shared spaces for teams to collaborate on infrastructure. 
 
-* You can check the organizations you have access using  [`terrakube organization` ](commands/azb-organization/)
+* You can check the organizations you have access using  [`terrakube organization `](commands/azb-organization/)
 
-```text
+```
 terrakube organization list
 ```
 
 * If you don't have an organization created yet, you can create a new one.
 
-```text
+```
 terrakube organization create --name MyOrganization --description "Getting started Organization" 
 ```
 
 The result for the above command should be something like this
 
-```text
+```
 {
     "attributes": {
         "description": "Getting started Organization",
@@ -93,7 +93,7 @@ For more commands and options in organization see the full documentation for [`t
 
 Once you create your organization you will probably want to define the teams and permissions for the organization, so you can use the team command for that.
 
-```text
+```
 terrakube team create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name AZB_USER --manage-workspace=true --manage-module=true --manage-provider=true
 ```
 
@@ -103,19 +103,19 @@ In the previous command we are creating a new team inside our new Organization a
 
 After having given permissions to our teams we can create a workspace. 
 
-```text
+```
 terrakube workspace create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name MyWorkspace --source https://github.com/AzBuilder/terraform-sample-repository.git --branch master --terraform-version 0.15.0
 ```
 
  And define some variables for the created workspace
 
-```text
+```
 terrakube workspace variable create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --workspace-id 38b6635a-d38e-46f2-a95e-d00a416de4fd --key tag_name --value "Hola mundo" --hcl=false --sensitive=false --category TERRAFORM 
 ```
 
 If you want to avoid entering the organization or the workspace in each command you can use environment variables, so the previous commands would be simplified as follows.
 
-```text
+```
 export TERRAKUBE_ORGANIZATION_ID=8a6e9998-165c-49f0-953c-d3fb0924731a
 terrakube workspace create --name MyWorkspace --source https://github.com/AzBuilder/terraform-sample-repository.git --branch master --terraform-version 0.15.0
 export TERRAKUBE_WORKSPACE_ID=38b6635a-d38e-46f2-a95e-d00a416de4fd
@@ -192,4 +192,3 @@ terrakube mod create -n myModule3 -d "module description 3" -p azurerm -s https:
 
 
 ```
-

@@ -49,8 +49,6 @@
     * [create](cli/commands/azb-module/create.md)
     * [list](cli/commands/azb-module/list.md)
 
-## OpenAPI Specification <a href="api" id="api"></a>
+## API
 
-***
-
-* [v1.2](v1.2.md)
+* [v1.3](api/v1.3.md)

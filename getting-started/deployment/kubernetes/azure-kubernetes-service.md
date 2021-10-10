@@ -226,7 +226,7 @@ To setup Azure Kubernetes Service with Lets Encrypt please refer to the followin
 
 ### Step 4 - Ingress Controller
 
-To setup the NGINX ingress controller use the following yaml and replace the **XXXX** with the correct values.
+To setup the NGINX ingress controller use the following yaml and replace the **XXXX **with the correct values.
 
 _Keep in mind that if you want to use the Open-Registry you will need to use two domains._
 
@@ -291,4 +291,3 @@ spec:
             port:
               number: 8075
 ```
-
