@@ -23,9 +23,9 @@
 
 ## CLI
 
-* [Getting started](cli/getting-started.md)
-* [Installation](cli/install.md)
-* [Commands](cli/commands/README.md)
+* [🌟 Getting started](cli/getting-started.md)
+* [💿 Installation](cli/install.md)
+* [ℹ Commands](cli/commands/README.md)
   * [terrakube login](cli/commands/azb-login.md)
   * [terrakube logout](cli/commands/terrakube-logout.md)
   * [terrakube organization](cli/commands/azb-organization/README.md)
@@ -49,9 +49,8 @@
     * [create](cli/commands/azb-module/create.md)
     * [list](cli/commands/azb-module/list.md)
 
-## OpenAPI Specification <a id="api"></a>
+## OpenAPI Specification <a href="api" id="api"></a>
 
----
+***
 
 * [v1.2](v1.2.md)
-

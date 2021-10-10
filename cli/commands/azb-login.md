@@ -4,13 +4,13 @@ Authenticate with a Terrakube Server
 
 #### Usage
 
-```text
+```
 terrakube login [flags]
 ```
 
 #### Flags
 
-```text
+```bash
   -c, --client-id string   Azure application Client id (required)
   -h, --help               help for login
   -p, --path string        Terrakube Server path
@@ -23,9 +23,7 @@ terrakube login [flags]
 
 Login to a local Terrakube Server
 
-```text
+```
 terrakube login -s localhost:8080 -c 853b26d6-1849-4c00-8543-da5805b0e593 -t 0e6427af-ab9e-4af6-9f6f-bc098f470d75
 ```
-
-
 
