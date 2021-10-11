@@ -33,7 +33,7 @@ Create a new VCS connection using the following values:
 * vcsType = GITLAB
 
 {% hint style="warning" %}
-Please refer to [VCS API ](broken-reference)for more information
+Please refer to [VCS API](../api/methods/vcs.md) for more information
 {% endhint %}
 
 {% hint style="info" %}

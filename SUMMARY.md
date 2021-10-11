@@ -55,12 +55,12 @@
 * [🏗 Installation](api/installation.md)
 * [⚙ Methods](api/methods/README.md)
   * [Organization](api/methods/organization.md)
-  * [Teams](api/methods/teams.md)
+  * [Teams API](api/methods/teams-api.md)
   * [Workspace](api/methods/workspace.md)
   * [Variables](api/methods/variables.md)
   * [Jobs](api/methods/jobs.md)
   * [Module](api/methods/module.md)
-  * [VCS](api/methods/vcs.md)
+  * [Vcs](api/methods/vcs.md)
   * [Provider](api/methods/provider.md)
 
 ## 🛡 VCS
