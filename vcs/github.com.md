@@ -18,7 +18,7 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](<../.gitbook/assets/image (2).png>)
 
 After creating the application copy the **"Client Id"** and generate a new "**Client Secret"**.
 
@@ -30,46 +30,11 @@ Create a new VCS connection using the following values:
 * clientSecret = GitHub Client Secret 
 * vcsType = GITHUB
 
-Example: 
 
-```text
-Http Method: POST
-URL: {{TerrakubeApiURL}}/api/v1/organization/{{organizationId}}/vcs
-Request Body:
-{
-  "data": {
-    "type": "vcs",
-    "attributes": {
-      "name": "vcsGitHub",
-      "description": "vcsDescription",
-      "vcsType": "GITHUB",
-      "clientId": "{{githubClientId}}",
-      "clientSecret": "{{githubClientSecret}}"
-    }
-  }
-}
-Response Body Sample:
-{
-    "data": {
-        "type": "vcs",
-        "id": "{{vcsId}}",
-        "attributes": {
-            "clientId": "{{githubClientId}}",
-            "description": "vcsDescription",
-            "name": "vcsGithub",
-            "vcsType": "GITHUB"
-        },
-        "relationships": {
-            "organization": {
-                "data": {
-                    "type": "organization",
-                    "id": "{{organizationId}}"
-                }
-            }
-        }
-    }
-}
-```
+
+{% hint style="warning" %}
+Please refer to [VCS API ](broken-reference)for more information
+{% endhint %}
 
 {% hint style="info" %}
 You can also use Terrakube CLI or Terrakube UI to generate the VCS record.
@@ -81,7 +46,7 @@ Make sure to copy the VCS id from the response body.
 
 Update the application callback using the following structure:
 
-```text
+```
 https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
 ```
 
@@ -89,7 +54,7 @@ https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
 
 Visit the following link
 
-```text
+```
 https://github.com/login/oauth/authorize?client_id={{GitHubClientId}}&allow_signup=false&scope=repo
 ```
 
@@ -99,11 +64,10 @@ Make sure to replace the values:
 
 ### Step 5 - Authorize Application
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](<../.gitbook/assets/image (1).png>)
 
 If the setup was successful you should see this message in your browser.
 
-```text
+```
 Connected 
 ```
-

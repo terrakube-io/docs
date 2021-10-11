@@ -13,14 +13,6 @@
   * [Kubernetes](getting-started/deployment/kubernetes/README.md)
     * [Azure Kubernetes Service](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
 
-## VCS Integration
-
-* [VCS Providers](vcs-integration/vcs-providers/README.md)
-  * [Azure DevOps](vcs-integration/vcs-providers/azure-devops.md)
-  * [Bitbucket](vcs-integration/vcs-providers/bitbucket.com.md)
-  * [Github](vcs-integration/vcs-providers/github.com.md)
-  * [GitLab](vcs-integration/vcs-providers/gitlab.com.md)
-
 ## 💻 CLI
 
 * [🌟 Getting started](cli/getting-started.md)
@@ -70,3 +62,10 @@
   * [Module](api/methods/module.md)
   * [VCS](api/methods/vcs.md)
   * [Provider](api/methods/provider.md)
+
+## 🛡 VCS
+
+* [Azure DevOps](vcs/azure-devops.md)
+* [Bitbucket](vcs/bitbucket.com.md)
+* [Github](vcs/github.com.md)
+* [GitLab](vcs/gitlab.com.md)

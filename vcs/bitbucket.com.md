@@ -8,12 +8,12 @@ To connect Terrakube to Bitbucket and use private git repositories you will need
 
 ### Step 1 - Register OAuth Application
 
-Open [Bitbucket Cloud](https://bitbucket.org/) and log in as whichever account you want Terrakube to use. 
+Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use. 
 
 Navigate to Bitbucket's "Add OAuth Consumer" page.
 
 {% hint style="info" %}
-[https://bitbucket.org/](https://bitbucket.org/){{WORKSPACE NAME}}/workspace/settings/oauth-consumers/new
+[https://bitbucket.org/](https://bitbucket.org){{WORKSPACE NAME}}/workspace/settings/oauth-consumers/new
 {% endhint %}
 
 You can also reach it through Bitbucket's menus:
@@ -35,15 +35,15 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](../../.gitbook/assets/image%20%282%29%20%281%29.png)
+![](<../.gitbook/assets/image (2) (1).png>)
 
 Check "This is a private consumer" and add the following permission:
 
-* Repository \(Read\)
+* Repository (Read)
 
 Example: 
 
-![](../../.gitbook/assets/image%20%286%29.png)
+![](<../.gitbook/assets/image (6).png>)
 
 After creating the application copy the following values:
 
@@ -58,46 +58,9 @@ Create a new VCS connection using the following values:
 * clientSecret = Client Secret 
 * vcsType = BITBUCKET
 
-Example: 
-
-```text
-Http Method: POST
-URL: {{TerrakubeApiURL}}/api/v1/organization/{{organizationId}}/vcs
-Request Body:
-{
-  "data": {
-    "type": "vcs",
-    "attributes": {
-      "name": "vcsBitbucket",
-      "description": "vcsDescription",
-      "vcsType": "BITBUCKET",
-      "clientId": "{{bitbucketClientId}}",
-      "clientSecret": "{{bitbucketClientSecret}}"
-    }
-  }
-}
-Response Body Sample:
-{
-    "data": {
-        "type": "vcs",
-        "id": "{{vcsId}}",
-        "attributes": {
-            "clientId": "{{bitbucketClientId}}",
-            "description": "vcsDescription",
-            "name": "vcsBitbucket",
-            "vcsType": "BITBUCKET"
-        },
-        "relationships": {
-            "organization": {
-                "data": {
-                    "type": "organization",
-                    "id": "{{organizationId}}"
-                }
-            }
-        }
-    }
-}
-```
+{% hint style="warning" %}
+Please refer to [VCS API ](broken-reference)for more information
+{% endhint %}
 
 {% hint style="info" %}
 You can also use Terrakube CLI or Terrakube UI to generate the VCS record.
@@ -109,7 +72,7 @@ Make sure to copy the VCS id from the response body.
 
 Update the application callback using the following structure:
 
-```text
+```
 https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
 ```
 
@@ -117,7 +80,7 @@ https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
 
 Visit the following link
 
-```text
+```
 https://bitbucket.org/site/oauth2/authorize?client_id={{keyId}}&response_type=code&response_type=code&scope=repository
 ```
 
@@ -127,11 +90,10 @@ Make sure to replace the values:
 
 ### Step 5 - Authorize Application
 
-![](../../.gitbook/assets/image%20%287%29.png)
+![](<../.gitbook/assets/image (7).png>)
 
 If the setup was successful you should see this message in your browser.
 
-```text
+```
 Connected 
 ```
-

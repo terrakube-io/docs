@@ -12,7 +12,7 @@ Complete the following fields:
 * Redirect URL
 * Confidential
 * Expire access token
-* Scope \(API\)
+* Scope (API)
 
 {% hint style="info" %}
 For application and authorization callback you can use http://localhost, we will update this value later.
@@ -20,7 +20,7 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](../../.gitbook/assets/image%20%2810%29.png)
+![](<../.gitbook/assets/image (10).png>)
 
 After creating the application copy the **"Application Id"** and generate a new "**Secret"**.
 
@@ -32,46 +32,9 @@ Create a new VCS connection using the following values:
 * clientSecret = Gitlab Application Secret 
 * vcsType = GITLAB
 
-Example: 
-
-```text
-Http Method: POST
-URL: {{TerrakubeApiURL}}/api/v1/organization/{{organizationId}}/vcs
-Request Body:
-{
-  "data": {
-    "type": "vcs",
-    "attributes": {
-      "name": "vcsGitlab",
-      "description": "vcsDescription",
-      "vcsType": "GITLAB",
-      "clientId": "{{gitlabClientId}}",
-      "clientSecret": "{{gitlabClientSecret}}"
-    }
-  }
-}
-Response Body Sample:
-{
-    "data": {
-        "type": "vcs",
-        "id": "{{vcsId}}",
-        "attributes": {
-            "clientId": "{{gitlabClientId}}",
-            "description": "vcsDescription",
-            "name": "vcsGitlab",
-            "vcsType": "GITLAB"
-        },
-        "relationships": {
-            "organization": {
-                "data": {
-                    "type": "organization",
-                    "id": "{{organizationId}}"
-                }
-            }
-        }
-    }
-}
-```
+{% hint style="warning" %}
+Please refer to [VCS API ](broken-reference)for more information
+{% endhint %}
 
 {% hint style="info" %}
 You can also use Terrakube CLI or Terrakube UI to generate the VCS record.
@@ -83,7 +46,7 @@ Make sure to copy the VCS id from the response body.
 
 Update the application redirect URI using the following structure:
 
-```text
+```
 https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
 ```
 
@@ -91,7 +54,7 @@ https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
 
 Visit the following link
 
-```text
+```
 https://gitlab.com/oauth/authorize?client_id={{applicationId}}&response_type=code&scope=api&&redirect_uri={{redirectURI}}
 ```
 
@@ -104,7 +67,6 @@ Make sure to replace the values:
 
 If the setup was successful you should see this message in your browser.
 
-```text
+```
 Connected 
 ```
-

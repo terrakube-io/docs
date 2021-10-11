@@ -19,16 +19,16 @@ For authorization callback you can use http://localhost, we will update this val
 
 Example:
 
-![](../../.gitbook/assets/image.png)
+![](../.gitbook/assets/image.png)
 
 Add the followings "Authorized scopes" and create the application:
 
-* Code \(Read\)
-* Code \(Status\)
+* Code (Read)
+* Code (Status)
 
 Example: 
 
-![](../../.gitbook/assets/image%20%285%29.png)
+![](<../.gitbook/assets/image (5).png>)
 
 After creating the application copy the following values:
 
@@ -41,48 +41,11 @@ Create a new VCS connection using the following values:
 
 * clientId = App ID 
 * clientSecret = Client Secret 
-* vcsType = AZURE\_DEVOPS
+* vcsType = AZURE_DEVOPS
 
-Example: 
-
-```text
-Http Method: POST
-URL: {{TerrakubeApiURL}}/api/v1/organization/{{organizationId}}/vcs
-Request Body:
-{
-  "data": {
-    "type": "vcs",
-    "attributes": {
-      "name": "vcsAzDevOps",
-      "description": "vcsDescription",
-      "vcsType": "AZURE_DEVOPS",
-      "clientId": "{{azDevOpsClientId}}",
-      "clientSecret": "{{azDevOpsClientSecret}}"
-    }
-  }
-}
-Response Body Sample:
-{
-    "data": {
-        "type": "vcs",
-        "id": "{{vcsId}}",
-        "attributes": {
-            "clientId": "{{azDevOpsClientId}}",
-            "description": "vcsDescription",
-            "name": "vcsAzDevOps",
-            "vcsType": "AZURE_DEVOPS"
-        },
-        "relationships": {
-            "organization": {
-                "data": {
-                    "type": "organization",
-                    "id": "{{organizationId}}"
-                }
-            }
-        }
-    }
-}
-```
+{% hint style="warning" %}
+Please refer to [VCS API ](broken-reference)for more information
+{% endhint %}
 
 {% hint style="info" %}
 You can also use Terrakube CLI or Terrakube UI to generate the VCS record.
@@ -94,7 +57,7 @@ Make sure to copy the VCS id from the response body.
 
 Update the application callback using the following structure:
 
-```text
+```
 https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
 ```
 
@@ -102,22 +65,21 @@ https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
 
 Visit the following link
 
-```text
+```
 https://app.vssps.visualstudio.com/oauth2/authorize?client_id={{appId}}&redirect_uri={{appCallback}}&response_type=Assertion&scope=vso.code+vso.code_status
 ```
 
 Make sure to replace the values:
 
-* app\_id = Client Id from step 1
-* redirect\_uri = Application callback from step 3
+* app_id = Client Id from step 1
+* redirect_uri = Application callback from step 3
 
 ### Step 5 - Authorize Application
 
-![](../../.gitbook/assets/image%20%281%29%20%281%29.png)
+![](<../.gitbook/assets/image (1) (1).png>)
 
 If the setup was successful you should see this message in your browser.
 
-```text
+```
 Connected 
 ```
-
