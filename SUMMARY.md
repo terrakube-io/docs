@@ -57,22 +57,16 @@
     * [module update](cli/commands/azb-module/module-update.md)
     * [module delete](cli/commands/azb-module/module-delete.md)
 
-***
-
-* [🚀 API](api/README.md)
-  * [🌟 Getting started](api/getting-started.md)
-  * [🏗 Installation](api/installation.md)
-  * [⚙ Methods](api/methods/README.md)
-    * [Organization](api/methods/organization.md)
-    * [Teams](api/methods/teams.md)
-    * [Workspace](api/methods/workspace.md)
-    * [Variables](api/methods/variables.md)
-    * [Jobs](api/methods/jobs.md)
-    * [Module](api/methods/module.md)
-    * [VCS](api/methods/vcs.md)
-    * [Provider](api/methods/provider.md)
-
 ## 📖 API
 
-* [v1.3](api-1/v1.3.md)
-* [Page 1](api-1/page-1.md)
+* [🌟 Getting started](api/getting-started.md)
+* [🏗 Installation](api/installation.md)
+* [⚙ Methods](api/methods/README.md)
+  * [Organization](api/methods/organization.md)
+  * [Teams](api/methods/teams.md)
+  * [Workspace](api/methods/workspace.md)
+  * [Variables](api/methods/variables.md)
+  * [Jobs](api/methods/jobs.md)
+  * [Module](api/methods/module.md)
+  * [VCS](api/methods/vcs.md)
+  * [Provider](api/methods/provider.md)
