@@ -1,6 +1,6 @@
 # Jobs
 
-This endpoint is used to create, update, search or delete jobs for a particular Terrakube workspace. 
+This endpoint is used to create, update, search or delete jobs for a particular Terrakube workspace.&#x20;
 
 {% hint style="warning" %}
 To use this endpoint you need to create a Terrakube workspace.
@@ -8,12 +8,16 @@ To use this endpoint you need to create a Terrakube workspace.
 
 ### Entity fields:
 
-| Path                                   | Type   | Description                                |
-| -------------------------------------- | ------ | ------------------------------------------ |
-| data.type                              | string | Should be "job"                            |
-| data.attributes.command                | string | Terraform operation (plan, apply, destroy) |
-| data.relationships.workspace.data.type | string | Should be "workspace"                      |
-| data.relationships.workspace.data.Id   | string | Should be the VCS Workspace Id (OPTIONAL)  |
+| Path                                   | Type   | Description                                   |
+| -------------------------------------- | ------ | --------------------------------------------- |
+| data.type                              | string | Should be "job"                               |
+| data.attributes.tcl                    | string | Terraform Configuration Language job template |
+| data.relationships.workspace.data.type | string | Should be "workspace"                         |
+| data.relationships.workspace.data.Id   | string | Should be the VCS Workspace Id (OPTIONAL)     |
+
+{% hint style="info" %}
+To better understand Terrakube Configuration Language job templates please refer to the following [GitHub repository.](https://github.com/AzBuilder/terrakube-extensions)
+{% endhint %}
 
 ### Example:
 
@@ -22,7 +26,7 @@ To use this endpoint you need to create a Terrakube workspace.
   "data": {
     "type": "job",
     "attributes": {
-      "command": "plan"
+      "tcl": "Base64 TCL job template"
     },
     "relationships":{
         "workspace":{
@@ -55,5 +59,5 @@ To use this endpoint you need to create a Terrakube workspace.
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [Open API specification.](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_4.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_5.yml)
 {% endhint %}

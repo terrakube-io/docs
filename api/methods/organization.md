@@ -7,7 +7,7 @@ You need to be part of the administrator Active Directory Group to work with thi
 {% endhint %}
 
 {% hint style="warning" %}
-The default group is handled using the Spring Boot property 
+The default group is handled using the Spring Boot property&#x20;
 
 ```
 org.azbuilder.owner=AZB_ADMIN
@@ -55,7 +55,5 @@ org.azbuilder.owner=AZB_ADMIN
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [Open API specification.](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_4.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_5.yml)[ ](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_4.yml)
 {% endhint %}
-
-##

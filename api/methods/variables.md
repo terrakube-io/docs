@@ -1,6 +1,6 @@
 # Variables
 
-This endpoint is used to create, update, search or delete variables information inside a Terrakube workspace. 
+This endpoint is used to create, update, search or delete variables information inside a Terrakube workspace.&#x20;
 
 {% hint style="warning" %}
 To use this endpoint you should have "manageWorkspace" access at team level and a Terrakube workspace
@@ -55,5 +55,5 @@ To use this endpoint you should have "manageWorkspace" access at team level and 
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [Open API specification.](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_4.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_5.yml)
 {% endhint %}

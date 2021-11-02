@@ -1,10 +1,20 @@
 ---
-description: Setup AzBuilder using SQL Azure and Azure Storage Account
+description: Setup Terrakube using SQL Azure and Azure Storage Account
 ---
 
 # Azure Kubernetes Service
 
-Step 1 - Create Kubernetes Secrets
+To use Terrakube inside a AKS with SQL Azure and Azure Storage for persisten storage please use the following steps:
+
+### Step 1 - Azure Active Directory Application
+
+To register the Active Directory Application please use the following [terraform module.](https://github.com/AzBuilder/terraform-azurerm-terrakube-app-registration)
+
+### Step 2 - Azure SQL Azure
+
+To create a SQL Azure Database please refer to the following Microsoft [guide](https://docs.microsoft.com/en-us/azure/azure-sql/database/single-database-create-quickstart?tabs=azure-portal).
+
+### Step 3 - Create Kubernetes Secrets
 
 You can use the following yaml file to create all the secrets but you need to replace **XXXXX** with correct values.
 
@@ -16,12 +26,19 @@ metadata:
 type: Opaque
 stringData:
   ApiDataSourceType: 'SQL_AZURE'
-  SqlAzureServer: 'XXXXX.database.windows.net'
-  SqlAzureDatabase: 'XXXXX'
-  SqlAzureUser: 'XXXXX'
-  SqlAzurePassword: 'XXXXX'
   AzureAdAppId: 'XXXXX'
-  AzureAdApiIdUri: 'api://azbuilder'
+  AzureAdApiIdUri: 'api://XXXXX'
+  GroupValidationType: 'AZURE'
+  UserValidationType: 'AZURE'
+  AuthenticationValidationType: 'AZURE'
+  AzGroupClientId: 'XXXXX'
+  AzGroupTenantId: 'XXXXX'
+  AzGroupSecret: 'XXXXX'
+  DatasourceHostname: 'XXXXX.database.windows.net'
+  DatasourceDatabase: 'XXXXX'
+  DatasourceUser: 'XXXXX'
+  DatasourcePassword: 'XXXXX' 
+  TerrakubeHostname: 'XXXXX'
 ---
 apiVersion: v1
 kind: Secret
@@ -33,8 +50,9 @@ stringData:
   AzureAdAppClientId: 'XXXXX'
   AzureAdAppClientSecret: 'XXXXX'
   AzureAdAppTenantId: 'XXXXX'
-  AzureAdAppScope: 'api://azbuilder/.default'
+  AzureAdAppScope: 'api://XXXXX/.default'
   AzBuilderExecutorUrl: 'http://aks-azbuilder-executor-service:8090/api/v1/terraform-rs'
+  TerrakubeEnableSecurity: 'true'
 ---
 apiVersion: v1
 kind: Secret
@@ -45,7 +63,7 @@ stringData:
   TerraformStateType: 'AzureTerraformStateImpl'
   AzureTerraformStateResourceGroup: 'XXXXX'
   AzureTerraformStateStorageAccountName: 'XXXXX'
-  AzureTerraformStateStorageContainerName: 'XXXXX'
+  AzureTerraformStateStorageContainerName: 'tfstate'
   AzureTerraformStateStorageAccessKey: 'XXXXX'
   TerraformOutputType: 'AzureTerraformOutputImpl'
   AzureTerraformOutputAccountName: 'XXXXX'
@@ -54,9 +72,12 @@ stringData:
   AzureAdAppClientId: 'XXXXX'
   AzureAdAppClientSecret: 'XXXXX'
   AzureAdAppTenantId: 'XXXXX'
-  AzureAdAppScope: 'api://azbuilder/.default'
+  AzureAdAppScope: 'api://XXXXX/.default'
   ExecutorFlagBatch: 'false'
   ExecutorFlagDisableAcknowledge: 'false'
+  TerrakubeToolsRepository: 'https://github.com/AzBuilder/terrakube-extensions'
+  TerrakubeToolsBranch: 'main'
+  TerrakubeEnableSecurity: 'true'
 ---
 apiVersion: v1
 kind: Secret
@@ -64,17 +85,19 @@ metadata:
   name: azbuilder-open-registry-secrets
 type: Opaque
 stringData:
-  AzBuilderRegistry: 'XXXXX'
+  AzBuilderRegistry: 'https://poc.aks.vse.aespana.me/open-registry'
   AzureAccountName: 'XXXXX'
   AzureAccountKey: 'XXXXX'
   AzBuilderApiUrl: 'http://aks-azbuilder-service:8080'
   AzureAdAppClientId: 'XXXXX'
   AzureAdAppClientSecret: 'XXXXX'
   AzureAdAppTenantId: 'XXXXX'
-  AzureAdAppScope: 'api://azbuilder/.default'
+  AzureAdAppScope: 'api://XXXXX/.default'
+  AuthenticationValidationTypeRegistry: 'LOCAL'
+  TerrakubeEnableSecurity: 'true'
 ```
 
-### Step 2 - Deploy AzBuilder Platform
+### Step 4 - Deploy Terrakube Platform
 
 Use the following yaml to deploy the service to the Azure Kubernetes Service
 
@@ -97,7 +120,7 @@ spec:
     spec:
       containers:
       - name: azbuilder-api
-        image: azbuilder/api-server:latest
+        image: azbuilder/api-server:1.5.1
         ports:
         - containerPort: 8080
         envFrom:
@@ -134,7 +157,7 @@ spec:
     spec:
       containers:
       - name: azbuilder-api
-        image: azbuilder/api-job:latest
+        image: azbuilder/api-job:1.5.1
         ports:
         - containerPort: 8085
         envFrom:
@@ -159,7 +182,7 @@ spec:
     spec:
       containers:
       - name: azbuilder-api-executor
-        image: azbuilder/executor:latest
+        image: azbuilder/executor:1.4.0
         ports:
         - containerPort: 8090
         envFrom:
@@ -196,7 +219,7 @@ spec:
     spec:
       containers:
       - name: azbuilder-api
-        image: azbuilder/open-registry:latest
+        image: azbuilder/open-registry:1.5.1
         ports:
         - containerPort: 8075
         envFrom:
@@ -216,7 +239,7 @@ spec:
     app: azbuilder-open-registry
 ```
 
-### Step 3 - Setup Let's Encrypt with AKS
+### Step 5 - Setup Let's Encrypt with AKS
 
 To setup Azure Kubernetes Service with Lets Encrypt please refer to the followings guides:
 
@@ -224,7 +247,7 @@ To setup Azure Kubernetes Service with Lets Encrypt please refer to the followin
 
 {% embed url="https://docs.microsoft.com/en-us/azure/aks/ingress-static-ip" %}
 
-### Step 4 - Ingress Controller
+### Step 6 - Ingress Controller
 
 To setup the NGINX ingress controller use the following yaml and replace the **XXXX **with the correct values.
 
@@ -291,3 +314,7 @@ spec:
             port:
               number: 8075
 ```
+
+{% hint style="warning" %}
+We are currently working to automate all the steps
+{% endhint %}

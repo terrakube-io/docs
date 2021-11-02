@@ -1,4 +1,4 @@
-# VCS
+# Vcs
 
 This endpoint is used to create, update, search or delete vcs (version control system) information inside a Terrakube organization so you can connect to private git repositories to run modules and workspaces
 
@@ -8,14 +8,14 @@ To use this endpoint you should have "manageVcs" access at team level and a Terr
 
 ### Entity fields:
 
-| Path                         | Type   | Description                                               |
-| ---------------------------- | ------ | --------------------------------------------------------- |
-| data.type                    | string | Should be "vcs"                                           |
-| data.attributes.name         | string | Unique vcs name for an Terrakube organization             |
-| data.attributes.description  | string | Free text for description                                 |
-| data.attributes.vcsType      | string | Supported values: GITHUB, GITLAB, BITBUCKET, AZURE_DEVOPS |
-| data.attributes.clientID     | string | Client Application Id                                     |
-| data.attributes.clientSecret | string | Client Application secret                                 |
+| Path                         | Type   | Description                                                |
+| ---------------------------- | ------ | ---------------------------------------------------------- |
+| data.type                    | string | Should be "vcs"                                            |
+| data.attributes.name         | string | Unique vcs name for an Terrakube organization              |
+| data.attributes.description  | string | Free text for description                                  |
+| data.attributes.vcsType      | string | Supported values: GITHUB, GITLAB, BITBUCKET, AZURE\_DEVOPS |
+| data.attributes.clientID     | string | Client Application Id                                      |
+| data.attributes.clientSecret | string | Client Application secret                                  |
 
 ### Example:
 
@@ -53,5 +53,5 @@ To use this endpoint you should have "manageVcs" access at team level and a Terr
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [Open API specification.](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_4.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_5.yml)
 {% endhint %}

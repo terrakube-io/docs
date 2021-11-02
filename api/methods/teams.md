@@ -7,7 +7,7 @@ You need to be part of the administrator Active Directory Group to work with thi
 {% endhint %}
 
 {% hint style="warning" %}
-The default group is handled using the Spring Boot property 
+The default group is handled using the Spring Boot property&#x20;
 
 ```
 org.azbuilder.owner=AZB_ADMIN
@@ -24,6 +24,7 @@ org.azbuilder.owner=AZB_ADMIN
 | data.attributes.manageModule    | boolean | Enable Create/Update/Delete Workspaces for a Team                                  |
 | data.attributes.manageProvider  | boolean | Enable Create/Update/Delete Terraform Provider for a Team                          |
 | data.attributes.manageVcs       | boolean | Enable Create/Update/Delete VCS connection for private GIT Repositories for a Team |
+| data.attributes.manageTemplates | boolean | Enable Create/Update/Delete Templates for a Team                                   |
 
 ### Example:
 
@@ -36,7 +37,8 @@ org.azbuilder.owner=AZB_ADMIN
       "manageWorkspace": true,
       "manageModule": true,
       "manageProvider": true,
-      "manageVcs": true
+      "manageVcs": true,
+      "manageTemplate": true
     }
   }
 }
@@ -61,5 +63,5 @@ org.azbuilder.owner=AZB_ADMIN
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [Open API specification.](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_4.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://editor.swagger.io/?url=https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1\_5.yml)
 {% endhint %}
