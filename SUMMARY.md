@@ -60,6 +60,8 @@
   * [Variables](api/methods/variables.md)
   * [History](api/methods/history.md)
   * [Jobs](api/methods/jobs.md)
+  * [Template](api/methods/template.md)
+  * [Schedule](api/methods/schedule.md)
   * [Step](api/methods/step.md)
   * [Module](api/methods/module.md)
   * [Vcs](api/methods/vcs.md)
