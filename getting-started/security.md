@@ -32,7 +32,7 @@ Adding a group to an organization will grant access to read the content inside t
 
 ### Administrator groups
 
-There is one special group inside Terrakube called "TERRAKUBE\_ADMINiSTRATORS", this is the only group that has access to create organizations and grant access to a teams to manage differente organization features.
+There is one special group inside Terrakube called _**TERRAKUBE\_ADMINISTRATORS**_, this is the only group that has access to create organizations and grant access to a teams to manage different organization features.
 
 
 
