@@ -9,25 +9,35 @@ Component descriptions:
 * Terrakube API:&#x20;
   * Expose a JSON:API or GraphQL API providing endpoints to handle:
     * Organizations.
-    * Workspaces (Variables, Environment Variables and Terraform state changes history).
-    * Jobs.
-    * Modules.
-    * Providers.
-    * Teams.
+    * Workspace API with the following support:
+      * Terraform state history
+      * Terraform output history
+      * Terraform Variables (public/secrets)&#x20;
+      * Environment Variables  (public/secrets)
+      * Cron like support to schedule the jobs execution programmatically
+    * Job.
+      * Custom terraform flows based on Terrakube Configuration Language
+    * Modules
+    * Providers
+    * Teams
     * Teamplate
-* Terrakube Job:
-  * Automatic process that check for any pending job operations in any workspace&#x20;
+* Terrakube Jobs:
+  * Automatic process that check for any pending job operations in any workspace to trigger a custom logic flow based on Terrakube Configuration Language
 * Terrakube Executor:
-  * Service that executes the terraform operations, updates the status using the Terrakube API and save the results using different cloud storage providers, it uses the Terrakube configuration language to customize the jobs flows with different steps using internal or external tools
+  * Service that executes the Terrakube job operations written in Terrakube Configuration Language,  handle the terraform state and outputs using cloud storage providers like Azure Storage Account
 * Terrakube Open Registry:
-  * Open Source terraform registry with support for the module, provider and login protocol.
+  * This component allows to expose an open source private repository protected by Azure Active directory that you can use to handle your company private terraform modules or providers.
 * Cloud Storage:
-  * Cloud storage to save the terraform state and terraform outputs.
+  * Cloud storage to handle terraform state, outputs and terraform modules used by terraform CLI
 * RDBMS:
   * The platform can be used with any database supported by the Liquibase project.
 * Security:&#x20;
-  * To handle authentication the platform uses Azure Active Directory.
+  * All authentication and authorization is handle using Azure Active Directory features.
 * Terrakube CLI:
-  * Go based CLI that can communicate with the Terrakube API and execute operation for organizations, workspaces, jobs, modules or providers
+  * Go based CLI that can communicate with the Terrakube API and execute operation for organizations, workspaces, jobs, templates, modules or providers
 * Terrakube UI:
   * React based frontend to handle all Terrakube Operations.
+
+{% hint style="info" %}
+Terrakube can installed in any kuberentes cluster using any cloud provider or even running locally like minikube or Docker Desktop. We provide a Helm Chart that can be found in the following [link](https://github.com/AzBuilder/terrakube-helm-chart).
+{% endhint %}
