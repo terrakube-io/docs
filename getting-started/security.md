@@ -2,7 +2,11 @@
 
 ### General security
 
-Terrakube security is based organizations and groups&#x20;
+Terrakube security is based organizations and groups.
+
+{% hint style="info" %}
+All Azure Active Directory groups are available to be used inside Terrakube
+{% endhint %}
 
 A group inside Terrakube can have two types of members:
 
