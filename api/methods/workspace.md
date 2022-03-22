@@ -1,6 +1,6 @@
 # Workspace
 
-This endpoint is used to create, update, search or delete workspace information inside a Terrakube organization.&#x20;
+This endpoint is used to create, update, search or delete workspace information inside a Terrakube organization.
 
 {% hint style="warning" %}
 To use this endpoint you should have "manageWorkspace" access at team level and a Terrakube organization
@@ -61,6 +61,5 @@ To use this endpoint you should have "manageWorkspace" access at team level and 
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/blob/main/openapi-spec/v1\_6.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
 {% endhint %}
-
