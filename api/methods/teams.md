@@ -10,7 +10,7 @@ You need to be part of the administrator Active Directory Group to work with thi
 The default group is handled using the Spring Boot property
 
 ```
-org.azbuilder.owner=TERRAKUBE_ADMINISTRATORS
+org.azbuilder.owner=TERRAKUBE_ADMIN
 ```
 {% endhint %}
 
