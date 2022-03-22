@@ -1,6 +1,6 @@
 # Step
 
-This endpoint is used to see the output for a jobs step.&#x20;
+This endpoint is used to see the output for a job step.
 
 ### Entity fields:
 
@@ -33,5 +33,5 @@ This endpoint is used to see the output for a jobs step.&#x20;
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/blob/main/openapi-spec/v1\_6.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
 {% endhint %}

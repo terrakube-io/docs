@@ -1,6 +1,6 @@
 # History
 
-This endpoint is used to see terraform states changes over time for a Terrakube workspace.&#x20;
+This endpoint is used to see terraform states changes over time for a Terrakube workspace.
 
 {% hint style="warning" %}
 To use this endpoint you should have "manageWorkspace" access at team level and a Terrakube workspace
@@ -33,5 +33,5 @@ To use this endpoint you should have "manageWorkspace" access at team level and 
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/blob/main/openapi-spec/v1\_6.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
 {% endhint %}

@@ -1,6 +1,6 @@
 # Template
 
-This endpoint is used to create, update, search or delete jobs for a particular Jobs Templates that can be reused inside an organization.&#x20;
+This endpoint is used to create, update, search or delete teamplates inside an organization.
 
 ### Entity fields:
 
@@ -53,4 +53,3 @@ To better understand Terrakube Configuration Language job templates please refer
 {% hint style="info" %}
 For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/blob/main/openapi-spec/v1\_6.yml)
 {% endhint %}
-

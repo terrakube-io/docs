@@ -1,6 +1,6 @@
 # Jobs
 
-This endpoint is used to create, update, search or delete jobs for a particular Terrakube workspace.&#x20;
+This endpoint is used to create, update, search or delete jobs for a particular Terrakube workspace.
 
 {% hint style="warning" %}
 To use this endpoint you need to create a Terrakube workspace.
@@ -8,12 +8,13 @@ To use this endpoint you need to create a Terrakube workspace.
 
 ### Entity fields:
 
-| Path                                   | Type   | Description                                   |
-| -------------------------------------- | ------ | --------------------------------------------- |
-| data.type                              | string | Should be "job"                               |
-| data.attributes.tcl                    | string | Terraform Configuration Language job template |
-| data.relationships.workspace.data.type | string | Should be "workspace"                         |
-| data.relationships.workspace.data.Id   | string | Should be the VCS Workspace Id (OPTIONAL)     |
+| Path                                   | Type   | Description                                       |
+| -------------------------------------- | ------ | ------------------------------------------------- |
+| data.type                              | string | Should be "job"                                   |
+| data.attributes.tcl                    | string | Terraform Configuration Language job template     |
+| data.attributes.templateReference      | string | Terrakube template id to use when running the job |
+| data.relationships.workspace.data.type | string | Should be "workspace"                             |
+| data.relationships.workspace.data.Id   | string | Should be the VCS Workspace Id (OPTIONAL)         |
 
 {% hint style="info" %}
 To better understand Terrakube Configuration Language job templates please refer to the following [GitHub repository.](https://github.com/AzBuilder/terrakube-extensions)
@@ -27,6 +28,7 @@ To better understand Terrakube Configuration Language job templates please refer
     "type": "job",
     "attributes": {
       "tcl": "Base64 TCL job template"
+      "templateReference": "XXXXXXXXX"
     },
     "relationships":{
         "workspace":{
@@ -59,6 +61,5 @@ To better understand Terrakube Configuration Language job templates please refer
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/blob/main/openapi-spec/v1\_6.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
 {% endhint %}
-
