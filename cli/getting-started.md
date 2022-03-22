@@ -24,17 +24,15 @@ terrakube organization -h
 terrakube organization create -h
 ```
 
-
-
 ### Authentication
 
-Run [`terrakube login`](commands/azb-login.md) to authenticate with your account.  But first you need to set some environment variables.
+Run [`terrakube login`](commands/azb-login.md) to authenticate with your account. But first you need to set some environment variables.
 
 {% hint style="info" %}
 You can also pass this values using [`terrakube login`](commands/azb-login.md) however is recommended to use environment variables in the case you need to authenticate several times or if you are running an automatic script.
 {% endhint %}
 
-Open your terminal and execute the following commands in order to setup your terrakube environment and get authenticated. You can get  the server, path, scheme, tenant id and client id values during the [Terrakube server deployment](../getting-started/deployment/)
+Open your terminal and execute the following commands in order to setup your terrakube environment and get authenticated. You can get the server, path, scheme, tenant id and client id values during the [Terrakube server deployment](../getting-started/deployment/)
 
 ```
 export TERRAKUBE_SERVER="my-terrakube.com"
@@ -55,9 +53,9 @@ https://microsoft.com/devicelogin and enter the code AAM4MVU96 to authenticate.
 
 ### Create your Organization
 
-Organizations are privately shared spaces for teams to collaborate on infrastructure. 
+Organizations are privately shared spaces for teams to collaborate on infrastructure.
 
-* You can check the organizations you have access using  [`terrakube organization `](commands/azb-organization/)
+* You can check the organizations you have access using [`terrakube organization`](commands/azb-organization/)
 
 ```
 terrakube organization list
@@ -101,13 +99,13 @@ In the previous command we are creating a new team inside our new Organization a
 
 ### Create a Workspace
 
-After having given permissions to our teams we can create a workspace. 
+After having given permissions to our teams we can create a workspace.
 
 ```
 terrakube workspace create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name MyWorkspace --source https://github.com/AzBuilder/terraform-sample-repository.git --branch master --terraform-version 0.15.0
 ```
 
- And define some variables for the created workspace
+And define some variables for the created workspace
 
 ```
 terrakube workspace variable create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --workspace-id 38b6635a-d38e-46f2-a95e-d00a416de4fd --key tag_name --value "Hola mundo" --hcl=false --sensitive=false --category TERRAFORM 
@@ -140,7 +138,7 @@ terrakube job list --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a
 You can use a curl command to retrieve the log result from the terminal
 {% endhint %}
 
-###  Defining your Modules
+### Defining your Modules
 
 Usually you will want to define your infrastructure templates as code using terraform and for this you can use the modules so others can reuse them.
 
@@ -148,9 +146,9 @@ Usually you will want to define your infrastructure templates as code using terr
 terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule --description "module description" --provider azurerm --source https://github.com/AzBuilder/terraform-sample-repository.git 
 ```
 
-### Simplifying the commands 
+### Simplifying the commands
 
-In order to simplify the commands when you are working with the cli, you can use shortands and alias and some environment variables.  See the following sections for more details.
+In order to simplify the commands when you are working with the cli, you can use shortands and alias and some environment variables. See the following sections for more details.
 
 {% hint style="info" %}
 Use the --help flag to get the details about available shorthands and alias for each command
@@ -189,6 +187,5 @@ export TERRAKUBE_ORGANIZATION_ID=8a6e9998-165c-49f0-953c-d3fb0924731a
 terrakube mod create -n myModule -d "module description" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git 
 terrakube mod create -n myModule2 -d "module description 2" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git
 terrakube mod create -n myModule3 -d "module description 3" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git
-
 
 ```

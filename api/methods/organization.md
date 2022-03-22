@@ -7,10 +7,10 @@ You need to be part of the administrator Active Directory Group to work with thi
 {% endhint %}
 
 {% hint style="warning" %}
-The default group is handled using the Spring Boot property&#x20;
+The default group is handled using the Spring Boot property
 
 ```
-org.azbuilder.owner=AZB_ADMIN
+org.azbuilder.owner=TERRAKUBE_ADMIN
 ```
 {% endhint %}
 
@@ -38,22 +38,23 @@ org.azbuilder.owner=AZB_ADMIN
 
 ### Supported Operations
 
-{% swagger src="https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_4.yml" path="/organization/{organizationId}/vcs/{vcsId}" method="get" %}
-[https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_4.yml](https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_4.yml)
+{% swagger src="../../.gitbook/assets/v2_1.yml" path="/organization" method="get" %}
+[v2_1.yml](../../.gitbook/assets/v2_1.yml)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/v1_4.yml" path="/organization/{organizationId}/vcs" method="post" %}
-[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% swagger src="../../.gitbook/assets/v2_1.yml" path="/organization" method="post" %}
+[v2_1.yml](../../.gitbook/assets/v2_1.yml)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/v1_4.yml" path="/organization/{organizationId}/vcs/{vcsId}" method="delete" %}
-[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% swagger src="../../.gitbook/assets/v2_1.yml" path="/organization/{organizationId}" method="delete" %}
+[v2_1.yml](../../.gitbook/assets/v2_1.yml)
 {% endswagger %}
 
-{% swagger src="../../.gitbook/assets/v1_4.yml" path="/organization/{organizationId}/vcs/{vcsId}" method="patch" %}
-[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% swagger src="../../.gitbook/assets/v2_1.yml" path="/organization/{organizationId}" method="patch" %}
+[v2_1.yml](../../.gitbook/assets/v2_1.yml)
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification ](https://github.com/AzBuilder/terrakube-server/blob/main/openapi-spec/v1\_6.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
 {% endhint %}
+
