@@ -6,12 +6,15 @@
 
 * [📐 Architecture](getting-started/design-and-architecture.md)
 * [🔐 Security](getting-started/security.md)
-* [📄 Requirements](getting-started/requirements.md)
 * [📥 Deployment](getting-started/deployment/README.md)
-  * [Docker Compose](getting-started/deployment/docker-compose.md)
-  * [Docker Compose + Azure Storage](getting-started/deployment/docker-compose-1.md)
   * [Kubernetes](getting-started/deployment/kubernetes/README.md)
-    * [Azure Kubernetes Service](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
+    * [Azure Kubernetes Service (AKS)](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
+    * [Google Kubernetes Engine (GKE)](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
+    * [Amazon Kubernetes Service (AKS)](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
+  * [Docker Compose](getting-started/deployment/docker-compose/README.md)
+    * [Docker Compose](getting-started/deployment/docker-compose/docker-compose.md)
+    * [Docker Compose + Azure Storage](getting-started/deployment/docker-compose/docker-compose-1.md)
+* [🏢 Organizations](getting-started/organizations.md)
 
 ## 💻 CLI
 
@@ -52,7 +55,6 @@
 ## 📖 API
 
 * [🌟 Getting started](api/getting-started.md)
-* [🏗 Installation](api/installation.md)
 * [⚙ Methods](api/methods/README.md)
   * [Organization](api/methods/organization.md)
   * [Teams](api/methods/teams.md)
