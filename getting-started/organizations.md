@@ -2,10 +2,6 @@
 
 Organizations are privately shared spaces for teams to collaborate on infrastructure.
 
-#### View Organizations
-
-
-
 #### Create a new Organization
 
 Click the organizations list on the main menu and then click the **Create new organization** button
