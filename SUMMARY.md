@@ -26,7 +26,18 @@
 
 ## 💻 CLI
 
-* [🌟 Getting started](cli/getting-started.md)
+* [🌟 Getting started](cli/getting-started/README.md)
+  * [variable create](cli/getting-started/variable-create.md)
+  * [variable update](cli/getting-started/variable-update.md)
+  * [variable delete](cli/getting-started/variable-delete.md)
+  * [terrakube job](cli/getting-started/terrakube-job/README.md)
+    * [job list](cli/getting-started/terrakube-job/job-list.md)
+    * [job create](cli/getting-started/terrakube-job/job-create.md)
+  * [terrakube module](cli/getting-started/azb-module/README.md)
+    * [module list](cli/getting-started/azb-module/list.md)
+    * [module create](cli/getting-started/azb-module/create.md)
+    * [module update](cli/getting-started/azb-module/module-update.md)
+    * [module delete](cli/getting-started/azb-module/module-delete.md)
 * [💿 Installation](cli/install.md)
 * [ℹ Commands](cli/commands/README.md)
   * [terrakube login](cli/commands/azb-login.md)
@@ -48,21 +59,10 @@
     * [workspace delete](cli/commands/terrakube-workspace/workspace-delete.md)
     * [workspace variable](cli/commands/terrakube-workspace/workspace-variable/README.md)
       * [variable list](cli/commands/terrakube-workspace/workspace-variable/variable-list.md)
-* [🌟 Getting started](cli/getting-started-1/README.md)
-  * [variable create](cli/getting-started-1/variable-create.md)
-  * [variable update](cli/getting-started-1/variable-update.md)
-  * [variable delete](cli/getting-started-1/variable-delete.md)
-  * [terrakube job](cli/getting-started-1/terrakube-job/README.md)
-    * [job list](cli/getting-started-1/terrakube-job/job-list.md)
-    * [job create](cli/getting-started-1/terrakube-job/job-create.md)
-  * [terrakube module](cli/getting-started-1/azb-module/README.md)
-    * [module list](cli/getting-started-1/azb-module/list.md)
-    * [module create](cli/getting-started-1/azb-module/create.md)
-    * [module update](cli/getting-started-1/azb-module/module-update.md)
-    * [module delete](cli/getting-started-1/azb-module/module-delete.md)
 
 ## 📖 API
 
+* [🌟 Getting started](api/getting-started.md)
 * [⚙ Methods](api/methods/README.md)
   * [Organization](api/methods/organization.md)
   * [Teams](api/methods/teams.md)
