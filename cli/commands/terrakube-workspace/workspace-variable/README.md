@@ -10,12 +10,12 @@ terrakube workspace variable [command]
 
 #### Commands
 
-| Command                      | Description       |
-| ---------------------------- | ----------------- |
-| [create](variable-create.md) | create a variable |
-| [delete](variable-delete.md) | delete a variable |
-| [list](variable-list.md)     | list variables    |
-| [update](variable-update.md) | update a variable |
+| Command                                                 | Description       |
+| ------------------------------------------------------- | ----------------- |
+| [create](../../../getting-started-1/variable-create.md) | create a variable |
+| [delete](../../../getting-started-1/variable-delete.md) | delete a variable |
+| [list](variable-list.md)                                | list variables    |
+| [update](../../../getting-started-1/variable-update.md) | update a variable |
 
 #### Aliases
 
