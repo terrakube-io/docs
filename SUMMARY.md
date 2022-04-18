@@ -77,9 +77,13 @@
   * [Vcs](api/methods/vcs.md)
   * [Provider](api/methods/provider.md)
 
-## 🛡 VCS
+## 🛡 VCS Connection
 
-* [Azure DevOps](vcs/azure-devops.md)
-* [Bitbucket](vcs/bitbucket.com.md)
-* [Github](vcs/github.com.md)
-* [GitLab](vcs/gitlab.com.md)
+* [Azure DevOps](vcs-connection/azure-devops.md)
+* [Bitbucket](vcs-connection/bitbucket.com.md)
+* [Github](vcs-connection/github.com.md)
+* [GitLab](vcs-connection/gitlab.com.md)
+
+## 🏗 CI/CD Integration
+
+* [Bitbucket](ci-cd-integration/bitbucket.md)
