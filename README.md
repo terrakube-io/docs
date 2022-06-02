@@ -2,7 +2,7 @@
 
 Terrakube is an open source collaboration platform for running remote infraestructure as code operations using terraform that aims to be a complete replacement for close source tools like  Terraform Enterprise and Scalr.
 
-The platform can be easily install in any kubernetes cluster, you can easily customiza the platform using other open source tools already available for terraform and you can integrate the tool with Azure Active Directory to handle authentication and authorization.&#x20;
+The platform can be easily installed in any kubernetes cluster, you can easily customize the platform using other open source tools already available for terraform and you can integrate the tool with Azure Active Directory to handle authentication and authorization.&#x20;
 
 Terrakube provides different features like the following:
 
