@@ -1,2 +1,2 @@
-# Amazon Kubernetes Service (AKS)
+# Amazon(AWS) Elastic Kubernetes Service (EKS)
 
