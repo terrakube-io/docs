@@ -36,6 +36,130 @@ Use the helm chart to deploy Terrakube in the cluster.
 
 {% embed url="https://github.com/AzBuilder/terrakube-helm-chart" %}
 
+You can use the following sample values and replace the require parameters
+
+```
+## Global Name
+name: "terrakube"
+
+## Azure Active Directory Security
+security:
+  type: "AZURE"
+  azure:
+    appIdURI: "api://Terrakube"
+    appClientId: "XXXX" # <--REPLACE WITH REAL VALUE
+    appTenantId: "XXXX" # <--REPLACE WITH REAL VALUE
+    appSecret: "XXXX" # <--REPLACE WITH REAL VALUE
+
+## Terraform Storage
+storage:
+  azure:
+    storageAccountName: "XXX" # <--REPLACE WITH REAL VALUE
+    storageAccountResourceGroup: "XXX" # <--REPLACE WITH REAL VALUE
+    storageAccountAccessKey: "XXX" # <--REPLACE WITH REAL VALUE
+
+## API properties
+api:
+  enabled: true
+  version: "2.4.1"
+  replicaCount: "1"
+  serviceType: "ClusterIP"
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1024Mi
+    requests:
+      cpu: 200m
+      memory: 256Mi
+  properties:
+    databaseType: "SQL_AZURE"
+    databaseHostname: "XXX" # <--REPLACE WITH REAL VALUE
+    databaseName: "XXX" # <--REPLACE WITH REAL VALUE
+    databaseUser: "XXX" # <--REPLACE WITH REAL VALUE
+    databasePassword: "XXX" # <--REPLACE WITH REAL VALUE
+
+## Executor properties
+executor:
+  enabled: true
+  version: "1.7.2"  
+  replicaCount: "1"
+  serviceType: "ClusterIP"
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1024Mi
+    requests:
+      cpu: 200m
+      memory: 256Mi
+  properties:
+    toolsRepository: "https://github.com/AzBuilder/terrakube-extensions"
+    toolsBranch: "main"
+    terraformStateType: "AzureTerraformStateImpl"
+    terraformOutputType: "AzureTerraformOutputImpl"
+
+## Registry properties
+registry:
+  enabled: true
+  version: "2.4.1"
+  replicaCount: "1"
+  serviceType: "ClusterIP"
+  resources:
+    limits:
+      cpu: 500m
+      memory: 1024Mi
+    requests:
+      cpu: 200m
+      memory: 256Mi
+
+## UI Properties
+ui:
+  enabled: true
+  version: "0.7.4"
+  replicaCount: "1"
+  serviceType: "ClusterIP"
+  resources:
+    limits:
+      cpu: 500m
+      memory: 512Mi
+    requests:
+      cpu: 200m
+      memory: 256Mi
+
+## Ingress properties
+ingress:
+  useTls: true
+  ui:
+    enabled: true
+    domain: "ui.terrakube.azure.com" # <--REPLACE WITH REAL VALUE
+    path: "/(.*)"
+    pathType: "Prefix" 
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/use-regex: "true"
+      cert-manager.io/cluster-issuer: letsencrypt
+  api:
+    enabled: true
+    domain: "api.terrakube.azure.com" # <--REPLACE WITH REAL VALUE
+    path: "/(.*)"
+    pathType: "Prefix"
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/use-regex: "true"
+      nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
+      cert-manager.io/cluster-issuer: letsencrypt
+  registry:
+    enabled: true
+    domain: "registry.terrakube.azure.com" # <--REPLACE WITH REAL VALUE
+    path: "/(.*)"
+    pathType: "Prefix"
+    annotations:
+      kubernetes.io/ingress.class: nginx
+      nginx.ingress.kubernetes.io/use-regex: "true"
+	  nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
+      cert-manager.io/cluster-issuer: letsencrypt
+
+```
+
 {% hint style="warning" %}
 We are currently working to automate all the steps
 {% endhint %}
