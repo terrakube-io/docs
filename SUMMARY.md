@@ -65,6 +65,7 @@
 
 * [🌟 Getting started](api/getting-started.md)
 * [⚙ Methods](api/methods/README.md)
+  * [Globalvar](api/methods/globalvar.md)
   * [Organization](api/methods/organization.md)
   * [Teams](api/methods/teams.md)
   * [Workspace](api/methods/workspace.md)
