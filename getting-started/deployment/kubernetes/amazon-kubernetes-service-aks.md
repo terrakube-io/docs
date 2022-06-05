@@ -30,6 +30,8 @@ To setup an Amazon S3 bucket please refer to the following [documentation](https
 
 To create the EKS cluster please refer to the following [documentation](https://docs.aws.amazon.com/eks/latest/userguide/create-cluster.html), for the load balancer information please refer to this [document](https://docs.aws.amazon.com/eks/latest/userguide/alb-ingress.html).
 
+![](<../../../.gitbook/assets/image (15).png>)
+
 ### Step 5 - Deploy Terrakube with Helm.
 
 Use the helm chart to deploy Terrakube in the cluster.

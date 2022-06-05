@@ -336,7 +336,7 @@ Request:
 
 Response:
 
-![](<../.gitbook/assets/image (15).png>)
+![](<../.gitbook/assets/image (15) (1).png>)
 
 After a couple of minutes Terrakube should have completed the job execution and we can use the following endpoint to check the output
 
