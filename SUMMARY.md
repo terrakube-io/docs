@@ -19,18 +19,7 @@
 
 ## 💻 CLI
 
-* [🌟 Getting started](cli/getting-started/README.md)
-  * [variable create](cli/getting-started/variable-create.md)
-  * [variable update](cli/getting-started/variable-update.md)
-  * [variable delete](cli/getting-started/variable-delete.md)
-  * [terrakube job](cli/getting-started/terrakube-job/README.md)
-    * [job list](cli/getting-started/terrakube-job/job-list.md)
-    * [job create](cli/getting-started/terrakube-job/job-create.md)
-  * [terrakube module](cli/getting-started/azb-module/README.md)
-    * [module list](cli/getting-started/azb-module/list.md)
-    * [module create](cli/getting-started/azb-module/create.md)
-    * [module update](cli/getting-started/azb-module/module-update.md)
-    * [module delete](cli/getting-started/azb-module/module-delete.md)
+* [🌟 Getting started](cli/getting-started.md)
 * [💿 Installation](cli/install.md)
 * [ℹ Commands](cli/commands/README.md)
   * [terrakube login](cli/commands/azb-login.md)
@@ -52,6 +41,18 @@
     * [workspace delete](cli/commands/terrakube-workspace/workspace-delete.md)
     * [workspace variable](cli/commands/terrakube-workspace/workspace-variable/README.md)
       * [variable list](cli/commands/terrakube-workspace/workspace-variable/variable-list.md)
+  * [terrakube variable](cli/commands/terrakube-variable/README.md)
+    * [variable update](cli/commands/terrakube-variable/variable-update.md)
+    * [variable delete](cli/commands/terrakube-variable/variable-delete.md)
+    * [variable create](cli/commands/terrakube-variable/variable-create.md)
+  * [terrakube job](cli/commands/terrakube-job/README.md)
+    * [job list](cli/commands/terrakube-job/job-list.md)
+    * [job create](cli/commands/terrakube-job/job-create.md)
+  * [terrakube module](cli/commands/azb-module/README.md)
+    * [module list](cli/commands/azb-module/list.md)
+    * [module create](cli/commands/azb-module/create.md)
+    * [module update](cli/commands/azb-module/module-update.md)
+    * [module delete](cli/commands/azb-module/module-delete.md)
 
 ## 📖 API
 

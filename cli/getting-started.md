@@ -1,14 +1,14 @@
 # 🌟 Getting started
 
-`terrakube cli` is Terrakube Server on the command line. It brings organizations, workspaces and other Terrakube concepts to the terminal.
+`terrakube cli` is Terrakube on the command line. It brings organizations, workspaces and other Terrakube concepts to the terminal.
 
 ### Installation
 
-You can find installation instructions here [Install](../install.md)
+You can find installation instructions here [Install](install.md)
 
 ### Getting help
 
-When you are working with terrakube cli probably you will need some help with the supported commands and flags and you can use [Commands sections](../commands/) for that, however a better option is to use the same cli to get help using --help flag or -h shortand. The embedded help provides you more detail for each command and some examples you can use as reference
+When you are working with terrakube cli probably you will need some help with the supported commands and flags and you can use [Commands sections](commands/) for that, however a better option is to use the same cli to get help using --help flag or -h shortand. The embedded help provides you more detail for each command and some examples you can use as reference
 
 ```bash
 # using help flag
@@ -26,13 +26,13 @@ terrakube organization create -h
 
 ### Authentication
 
-Run [`terrakube login`](../commands/azb-login.md) to authenticate with your account. But first you need to set some environment variables.
+Run [`terrakube login`](commands/azb-login.md) to authenticate with your account. But first you need to set some environment variables.
 
 {% hint style="info" %}
-You can also pass this values using [`terrakube login`](../commands/azb-login.md) however is recommended to use environment variables in the case you need to authenticate several times or if you are running an automatic script.
+You can also pass this values using [`terrakube login`](commands/azb-login.md) however is recommended to use environment variables in the case you need to authenticate several times or if you are running an automatic script.
 {% endhint %}
 
-Open your terminal and execute the following commands in order to setup your terrakube environment and get authenticated. You can get the server, path, scheme, tenant id and client id values during the [Terrakube server deployment](../../getting-started/deployment/)
+Open your terminal and execute the following commands in order to setup your terrakube environment and get authenticated. You can get the server, path, scheme, tenant id and client id values during the [Terrakube server deployment](../getting-started/deployment/)
 
 ```
 export TERRAKUBE_SERVER="my-terrakube.com"
@@ -55,7 +55,7 @@ https://microsoft.com/devicelogin and enter the code AAM4MVU96 to authenticate.
 
 Organizations are privately shared spaces for teams to collaborate on infrastructure.
 
-* You can check the organizations you have access using [`terrakube organization`](../commands/azb-organization/)
+* You can check the organizations you have access using [`terrakube organization`](commands/azb-organization/)
 
 ```
 terrakube organization list
@@ -85,7 +85,7 @@ The result for the above command should be something like this
 }
 ```
 
-For more commands and options in organization see the full documentation for [`terrakube organization`](../commands/azb-organization/)
+For more commands and options in organization see the full documentation for [`terrakube organization`](commands/azb-organization/)
 
 ### Working with Teams
 
@@ -95,7 +95,7 @@ Once you create your organization you will probably want to define the teams and
 terrakube team create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name AZB_USER --manage-workspace=true --manage-module=true --manage-provider=true
 ```
 
-In the previous command we are creating a new team inside our new Organization and for this case we are providing permissions to manage workspaces, modules and providers. In the name flag we are using an Azure AD Group, so all the team members are defined inside the AD group. For more details about teams and permissions you can see [Security Page](../../getting-started/security.md).
+In the previous command we are creating a new team inside our new Organization and for this case we are providing permissions to manage workspaces, modules and providers. In the name flag we are using an Azure AD Group, so all the team members are defined inside the AD group. For more details about teams and permissions you can see [Security Page](../getting-started/security.md).
 
 ### Create a Workspace
 
@@ -187,5 +187,4 @@ export TERRAKUBE_ORGANIZATION_ID=8a6e9998-165c-49f0-953c-d3fb0924731a
 terrakube mod create -n myModule -d "module description" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git 
 terrakube mod create -n myModule2 -d "module description 2" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git
 terrakube mod create -n myModule3 -d "module description 3" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git
-
 ```
