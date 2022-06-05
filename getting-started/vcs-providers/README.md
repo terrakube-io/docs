@@ -1,2 +1,0 @@
-# 🛡 VCS Providers
-

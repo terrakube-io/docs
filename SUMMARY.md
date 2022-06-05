@@ -15,15 +15,7 @@
   * [Docker Compose](getting-started/deployment/docker-compose/README.md)
     * [Docker Compose](getting-started/deployment/docker-compose/docker-compose.md)
     * [Docker Compose + Azure Storage](getting-started/deployment/docker-compose/docker-compose-1.md)
-* [🌟 Getting started](getting-started/getting-started.md)
 * [🏢 Organizations](getting-started/organizations.md)
-* [🕹 Workspaces](getting-started/workspaces.md)
-* [🛡 VCS Providers](getting-started/vcs-providers/README.md)
-  * [Github](getting-started/vcs-providers/github.md)
-  * [Azure Devops](getting-started/vcs-providers/azure-devops.md)
-  * [BitBucket](getting-started/vcs-providers/bitbucket.md)
-  * [Gitlab](getting-started/vcs-providers/gitlab.md)
-* [🗃 Templates](getting-started/templates.md)
 
 ## 💻 CLI
 
