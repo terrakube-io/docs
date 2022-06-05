@@ -11,6 +11,7 @@
     * [Azure Kubernetes Service (AKS)](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
     * [Google Kubernetes Engine (GKE)](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
     * [Amazon Elastic Kubernetes Service (EKS)](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
+    * [Docker Desktop](getting-started/deployment/kubernetes/docker-desktop.md)
   * [Docker Compose](getting-started/deployment/docker-compose/README.md)
     * [Docker Compose](getting-started/deployment/docker-compose/docker-compose.md)
     * [Docker Compose + Azure Storage](getting-started/deployment/docker-compose/docker-compose-1.md)
