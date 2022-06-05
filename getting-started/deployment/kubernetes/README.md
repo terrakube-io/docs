@@ -1,8 +1,6 @@
 # Kubernetes
 
-You can run Terrakube in any Kubernetes Cluster in cloud or on Premises Environment. &#x20;
-
-
+You can run Terrakube in any Kubernetes Cluster in cloud or on Premises Environment.
 
 **Running Terrakube in Cloud**
 
@@ -16,4 +14,8 @@ You can run Terrakube in any Kubernetes Cluster in cloud or on Premises Environm
 
 {% content-ref url="amazon-kubernetes-service-aks.md" %}
 [amazon-kubernetes-service-aks.md](amazon-kubernetes-service-aks.md)
+{% endcontent-ref %}
+
+{% content-ref url="docker-desktop.md" %}
+[docker-desktop.md](docker-desktop.md)
 {% endcontent-ref %}
