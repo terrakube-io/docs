@@ -17,6 +17,11 @@
     * [Docker Compose + Azure Storage](getting-started/deployment/docker-compose/docker-compose-1.md)
 * [🏢 Organizations](getting-started/organizations.md)
 
+## 🎓 Tutorial
+
+* [What is Terrakube](tutorial/what-is-terrakube.md)
+* [Working with Workspaces](tutorial/working-with-workspaces.md)
+
 ## 💻 CLI
 
 * [🌟 Getting started](cli/getting-started.md)
