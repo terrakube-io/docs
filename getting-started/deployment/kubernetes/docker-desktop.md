@@ -47,6 +47,8 @@ Windows location: **c:\Windows\System32\Drivers\etc\hosts**
 
 ### Step 5.1 - Deploy with Azure Storage Account
 
+Use the terraform module to deploy the storage account. [Link](https://github.com/AzBuilder/terraform-azurerm-terrakube-cloud-storage).
+
 Use the helm chart to deploy Terrakube in the cluster.
 
 {% embed url="https://github.com/AzBuilder/terrakube-helm-chart" %}
@@ -169,6 +171,10 @@ ingress:
 ```
 
 ### Step 5.2 - Deploy with Amazon S3 Buket
+
+Create an S3 bucket and make sure to select the following:
+
+![](<../../../.gitbook/assets/image (26).png>)
 
 Use the helm chart to deploy Terrakube in the cluster.
 

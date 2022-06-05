@@ -435,4 +435,4 @@ If you wan to check all the available methods you can use the following enpoint.
 
 ![](<../.gitbook/assets/image (31).png>)
 
-![](<../.gitbook/assets/image (26).png>)
+![](<../.gitbook/assets/image (26) (1).png>)
