@@ -21,9 +21,9 @@
 
 * [What is Terrakube](tutorial/what-is-terrakube.md)
 * [Configuring your Organization](tutorial/working-with-workspaces.md)
-*
-*
-*
+* [Deploying using Terrakube](learn/deploying-using-terrakube.md)
+* [Using Terrakube Private Registry](learn/using-terrakube-private-registry.md)
+* [Deploying using Terrakube CLI](learn/deploying-using-terrakube-cli.md)
 
 ## 💻 CLI
 
