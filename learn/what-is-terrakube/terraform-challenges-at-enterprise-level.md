@@ -1,3 +1,5 @@
 # Terraform Challenges at Enterprise Level
 
-Work in Progress :construction\_worker:
+{% embed url="https://youtu.be/LvJXFgkM9Zo" %}
+Terraform challenges at Enterprise Level
+{% endembed %}

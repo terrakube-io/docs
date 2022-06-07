@@ -19,7 +19,7 @@
 
 ## 🎓 Learn
 
-* [What is Terrakube](learn/what-is-terrakube/README.md)
+* [What is Terrakube](tutorial/what-is-terrakube.md)
   * [Section Overview](learn/what-is-terrakube/section-overview.md)
   * [Terraform in a Nutshell](learn/what-is-terrakube/terraform-in-a-nutshell.md)
   * [Terraform Challenges at Enterprise Level](learn/what-is-terrakube/terraform-challenges-at-enterprise-level.md)
