@@ -19,7 +19,12 @@
 
 ## 🎓 Learn
 
-* [What is Terrakube](tutorial/what-is-terrakube.md)
+* [What is Terrakube](learn/what-is-terrakube/README.md)
+  * [Section Overview](learn/what-is-terrakube/section-overview.md)
+  * [Terraform in a Nutshell](learn/what-is-terrakube/terraform-in-a-nutshell.md)
+  * [Terraform Challenges at Enterprise Level](learn/what-is-terrakube/terraform-challenges-at-enterprise-level.md)
+  * [Introducing Terrakube](learn/what-is-terrakube/introducing-terrakube.md)
+  * [Summary and Up Next](learn/what-is-terrakube/summary-and-up-next.md)
 * [Configuring your Organization](tutorial/working-with-workspaces.md)
 * [Deploying using Terrakube](learn/deploying-using-terrakube.md)
 * [Using Terrakube Private Registry](learn/using-terrakube-private-registry.md)
