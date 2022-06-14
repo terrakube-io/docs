@@ -1,8 +1,8 @@
 # Introduction
 
-Terrakube is an open source collaboration platform for running remote infraestructure as code operations using terraform that aims to be a complete replacement for close source tools like  Terraform Enterprise and Scalr.
+Terrakube is an open source collaboration platform for running remote infrastructure as code operations using terraform that aims to be a complete replacement for close source tools like  Terraform Enterprise and Scalr.
 
-The platform can be easily installed in any kubernetes cluster, you can easily customize the platform using other open source tools already available for terraform and you can integrate the tool with Azure Active Directory to handle authentication and authorization.&#x20;
+The platform can be easily installed in any kubernetes cluster, you can easily customize the platform using other open source tools already available for terraform and you can integrate the tool with Azure Active Directory to handle authentication and authorization.
 
 Terrakube provides different features like the following:
 
@@ -14,7 +14,7 @@ Terrakube provides different features like the following:
 * Easily extended by default integrating with many open source tools available today for terraform CLI.
 * Support to run the platform using any **RDBMS** supported by [liquibase](https://www.liquibase.org) (mysql, postgres, oracle, sql server, etc).
 * Plugins support to extends functionality using different cloud providers and open source tools using the Terrakube Configuration Languague (TCL).
-* Easily extends the platform using common technologies like react js, java, spring, elide, liquidbase, groovy, bash, go.
+* Easily extends the platform using common technologies like react js, java, spring, elide, liquibase, groovy, bash, go.
 * Native integration with the most popular VCS like:
   * Github.
   * Azure DevOps
