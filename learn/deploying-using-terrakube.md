@@ -4,7 +4,7 @@ Work in Progress :construction\_worker:
 
 ### Overview
 
-### Workspaces
+### Creating an Organization
 
 ### Creating a Workspace
 

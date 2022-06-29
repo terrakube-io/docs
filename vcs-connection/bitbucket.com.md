@@ -8,19 +8,19 @@ To connect Terrakube to Bitbucket and use private git repositories you will need
 
 ### Step 1 - Register OAuth Application
 
-Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use. 
+Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use.
 
 Navigate to Bitbucket's "Add OAuth Consumer" page.
 
 {% hint style="info" %}
-[https://bitbucket.org/](https://bitbucket.org){{WORKSPACE NAME}}/workspace/settings/oauth-consumers/new
+[https://bitbucket.org/](https://bitbucket.org)\{{WORKSPACE NAME\}}/workspace/settings/oauth-consumers/new
 {% endhint %}
 
 You can also reach it through Bitbucket's menus:
 
 * Click your profile picture and choose the workspace you want to access.
 * In the workspace navigation, click "Settings".
-* In the settings navigation, click "OAuth consumers," 
+* In the settings navigation, click "OAuth consumers,"
 * On the OAuth settings page and click the "Add consumer" button.
 
 Complete the following fields:
@@ -41,7 +41,7 @@ Check "This is a private consumer" and add the following permission:
 
 * Repository (Read)
 
-Example: 
+Example:
 
 ![](<../.gitbook/assets/image (6).png>)
 
@@ -54,8 +54,8 @@ After creating the application copy the following values:
 
 Create a new VCS connection using the following values:
 
-* clientId = Key 
-* clientSecret = Client Secret 
+* clientId = Key
+* clientSecret = Client Secret
 * vcsType = BITBUCKET
 
 {% hint style="warning" %}
@@ -90,7 +90,7 @@ Make sure to replace the values:
 
 ### Step 5 - Authorize Application
 
-![](<../.gitbook/assets/image (7).png>)
+![](<../.gitbook/assets/image (4).png>)
 
 If the setup was successful you should see this message in your browser.
 

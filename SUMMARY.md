@@ -25,10 +25,8 @@
   * [Terraform Challenges at Enterprise Level](learn/what-is-terrakube/terraform-challenges-at-enterprise-level.md)
   * [Introducing Terrakube](learn/what-is-terrakube/introducing-terrakube.md)
   * [Summary and Up Next](learn/what-is-terrakube/summary-and-up-next.md)
-* [Configuring your Organization](tutorial/working-with-workspaces.md)
 * [Deploying using Terrakube](learn/deploying-using-terrakube.md)
 * [Using Terrakube Private Registry](learn/using-terrakube-private-registry.md)
-* [Deploying using Terrakube CLI](learn/deploying-using-terrakube-cli.md)
 
 ## 💻 CLI
 
