@@ -8,8 +8,6 @@ Work in Progress :construction\_worker:
 
 ### Creating a Workspace
 
-### Variables and Values
-
 ### Custom Flows
 
 ### Scheduling Workspaces
