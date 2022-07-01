@@ -1,3 +1,3 @@
 # Summary and Up Next
 
-Work in Progress :construction\_worker:
+{% embed url="https://youtu.be/XiATpUljxdU" %}
