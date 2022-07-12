@@ -5,13 +5,8 @@
 Terrakube security is based organizations and groups.
 
 {% hint style="info" %}
-All Azure Active Directory groups are available to be used inside Terrakube
+All Dex connectors that implement the groups claims can be used inside Terrakube
 {% endhint %}
-
-A group inside Terrakube can have two types of members:
-
-* Azure Active Directory users
-* Azure Active Directory applications
 
 An organization can have one or multiple groups and each group have different kind of access to manage the following options:
 
@@ -22,20 +17,16 @@ An organization can have one or multiple groups and each group have different ki
 * Template
   * Manage the custom flows written in Terrakube Configuration Language when running any job inside the platform
 * Workspaces
-  * Manage the terraform workspaces to run remote terraform operations.&#x20;
+  * Manage the terraform workspaces to run remote terraform operations.
 * Providers
   * Manage the terraform providers available inside the platform
 
 {% hint style="info" %}
-Adding a group to an organization will grant access to read the content inside the organization but to be able to manage any option like module, workspace, templates or providers or VCS a Terrakube administrator will need to grant it&#x20;
+Adding a group to an organization will grant access to read the content inside the organization but to be able to manage any option like module, workspace, templates or providers or VCS a Terrakube administrator will need to grant it
 {% endhint %}
 
 ### Administrator groups
 
 There is one special group inside Terrakube called _**TERRAKUBE\_ADMINISTRATORS**_, this is the only group that has access to create organizations and grant access to a teams to manage different organization features.
-
-
-
-
 
 ###
