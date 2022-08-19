@@ -66,7 +66,7 @@ Templates are sent to the API in base64 encoding.
 
 To create it we will use the request inside the postman collection "Step 3 - Templates"
 
-![](<../.gitbook/assets/image (8).png>)
+![](<../.gitbook/assets/image (8) (2).png>)
 
 #### Template 1 - Basic Terraform Plan-Apply
 
@@ -106,7 +106,7 @@ flow:
 
 Request:
 
-![](<../.gitbook/assets/image (17).png>)
+![](<../.gitbook/assets/image (17) (1).png>)
 
 Response:
 
@@ -287,7 +287,7 @@ When a workspace is created inside Terrakube we can define some schedules, this 
 
 Request
 
-![](<../.gitbook/assets/image (13).png>)
+![](<../.gitbook/assets/image (13) (2).png>)
 
 {% hint style="info" %}
 This schedule will run the workspace using one template every 30 minutes

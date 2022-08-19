@@ -4,7 +4,7 @@ To connect Terrakube to GitHub and use private git repositories you will need to
 
 ### Step 1 - Register OAuth Application
 
-Open GitHub and log in and use the following [link](https://github.com/settings/applications/new) to create a new application. 
+Open GitHub and log in and use the following [link](https://github.com/settings/applications/new) to create a new application.
 
 Complete the following fields:
 
@@ -18,7 +18,7 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
 
 After creating the application copy the **"Client Id"** and generate a new "**Client Secret"**.
 
@@ -26,11 +26,9 @@ After creating the application copy the **"Client Id"** and generate a new "**Cl
 
 Create a new VCS connection using the following values:
 
-* clientId = GitHub Client Id 
-* clientSecret = GitHub Client Secret 
+* clientId = GitHub Client Id
+* clientSecret = GitHub Client Secret
 * vcsType = GITHUB
-
-
 
 {% hint style="warning" %}
 Please refer to [VCS API](../api/methods/vcs.md) for more information

@@ -7,6 +7,7 @@
 * [📐 Architecture](getting-started/design-and-architecture.md)
 * [🔐 Security](getting-started/security.md)
 * [📥 Deployment](getting-started/deployment/README.md)
+  * [Gitpod](getting-started/deployment/gitpod.md)
   * [Kubernetes](getting-started/deployment/kubernetes/README.md)
     * [Azure Kubernetes Service (AKS)](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
     * [Google Kubernetes Engine (GKE)](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)

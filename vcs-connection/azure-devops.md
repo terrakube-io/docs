@@ -19,14 +19,14 @@ For authorization callback you can use http://localhost, we will update this val
 
 Example:
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (41).png>)
 
 Add the followings "Authorized scopes" and create the application:
 
 * Code (Read)
 * Code (Status)
 
-Example: 
+Example:
 
 ![](<../.gitbook/assets/image (5).png>)
 
@@ -39,9 +39,9 @@ After creating the application copy the following values:
 
 Create a new VCS connection using the following values:
 
-* clientId = App ID 
-* clientSecret = Client Secret 
-* vcsType = AZURE_DEVOPS
+* clientId = App ID
+* clientSecret = Client Secret
+* vcsType = AZURE\_DEVOPS
 
 {% hint style="warning" %}
 Please refer to [VCS API ](../api/methods/vcs.md)for more information
@@ -71,8 +71,8 @@ https://app.vssps.visualstudio.com/oauth2/authorize?client_id={{appId}}&redirect
 
 Make sure to replace the values:
 
-* app_id = Client Id from step 1
-* redirect_uri = Application callback from step 3
+* app\_id = Client Id from step 1
+* redirect\_uri = Application callback from step 3
 
 ### Step 5 - Authorize Application
 
