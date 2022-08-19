@@ -1,4 +1,4 @@
-# Google Kubernetes Engine (GKE)
+# Google Cloud Identity
 
 
 
@@ -28,15 +28,15 @@ You need to comple the Google authentication setup for Dex. You can found inform
 
 You need to go to your GCP projet and create a new OAuth Application you can follow this steps: firts select "APIs & Services => Credentials"
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (23).png>)
 
 Once inside the "Credentials" page, you will have to create a new OAuth Client
 
-![](<../../../.gitbook/assets/image (17).png>)
+![](<../../../.gitbook/assets/image (16).png>)
 
 The OAuth application should look like this with the redirect URL "[https://api.terrakube.gcp.com/dex/callback](https://api.terrakube.docker.com/dex/callback)"
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (3).png>)
 
 For Google authentication we need to get the GCP groups so you need to complete [this setup](https://dexidp.io/docs/connectors/google/#fetching-groups-from-google).
 
@@ -46,11 +46,11 @@ Include the Domain Wide Delegation inside the admin consol [https://admin.google
 
 Using the following permission "[https://www.googleapis.com/auth/admin.directory.group.readonly](https://www.googleapis.com/auth/admin.directory.group.readonly)"
 
-![](<../../../.gitbook/assets/image (8).png>)
+![](../../../.gitbook/assets/image.png)
 
 You can now generate the JSON credentials file for your application, you will use this file later in the helm chart.
 
-![](<../../../.gitbook/assets/image (13).png>)
+![](<../../../.gitbook/assets/image (1).png>)
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 

@@ -1,8 +1,4 @@
----
-description: Ready to Code
----
-
-# Gitpod
+# 🚀 Getting Started
 
 We use Gitpod to develop the platform. You can have a complete development environment to test all the components and features with one click using the following button.
 

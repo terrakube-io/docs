@@ -33,7 +33,7 @@ Please refer to the following documentation to install the ingress. [Link](https
 
 Edit the hosts file like the following example:
 
-![](<../../../.gitbook/assets/image (9) (2).png>)
+![](<../../../.gitbook/assets/image (9).png>)
 
 Include the following entries
 
