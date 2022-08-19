@@ -1,4 +1,4 @@
-# Amazon Elastic Kubernetes Service (EKS)
+# Amazon Cognito
 
 To use Terrakube inside a AWS with Azure Active Directory authentication please follow these steps:
 

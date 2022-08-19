@@ -2,7 +2,7 @@
 description: Setup Terrakube using SQL Azure and Azure Storage Account
 ---
 
-# Azure Kubernetes Service (AKS)
+# Azure Active Directory
 
 To use Terrakube inside a AKS with SQL Azure and Azure Storage for persisten storage please use the following steps:
 

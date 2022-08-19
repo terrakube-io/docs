@@ -90,7 +90,7 @@ Make sure to replace the values:
 
 ### Step 5 - Authorize Application
 
-![](<../.gitbook/assets/image (4).png>)
+![](<../.gitbook/assets/image (4) (1).png>)
 
 If the setup was successful you should see this message in your browser.
 

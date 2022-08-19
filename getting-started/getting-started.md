@@ -4,6 +4,10 @@ We use Gitpod to develop the platform. You can have a complete development envir
 
 [![Gitpod ready-to-code](https://camo.githubusercontent.com/791bd446c60d39e9a296e8d02837c81fe0af6108f02a04afbc93edda0cb93ad6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f476974706f642d72656164792d2d746f2d2d636f64652d626c75653f6c6f676f3d676974706f64267374796c653d666c61742d737175617265)](https://gitpod.io/#https://github.com/AzBuilder/terrakube)
 
+{% hint style="warning" %}
+Gitpod is [free for 50 hours](https://www.gitpod.io/pricing) every month, so you dont have to worry for testing the application.
+{% endhint %}
+
 Running Terrakube in Gitpod is like running the platform in any Kubernetes distribution in Azure, Aws or GCP, so you will be able to use all the features available with one single click without installing any software in your computer and the environment should be ready in only 1 or 2 minute.
 
 > Terrakube API uses an in memory database, it will be deleted and preloaded with default information in every startup.

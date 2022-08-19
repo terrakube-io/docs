@@ -20,7 +20,7 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (10) (1).png>)
 
 After creating the application copy the **"Application Id"** and generate a new "**Secret"**.
 
@@ -29,7 +29,7 @@ After creating the application copy the **"Application Id"** and generate a new 
 Create a new VCS connection using the following values:
 
 * clientId = Application Id
-* clientSecret = Gitlab Application Secret 
+* clientSecret = Gitlab Application Secret
 * vcsType = GITLAB
 
 {% hint style="warning" %}

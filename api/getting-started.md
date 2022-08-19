@@ -66,7 +66,7 @@ Templates are sent to the API in base64 encoding.
 
 To create it we will use the request inside the postman collection "Step 3 - Templates"
 
-![](<../.gitbook/assets/image (8).png>)
+![](<../.gitbook/assets/image (8) (2).png>)
 
 #### Template 1 - Basic Terraform Plan-Apply
 
@@ -157,7 +157,7 @@ Request:
 
 Response:
 
-![](<../.gitbook/assets/image (23) (1).png>)
+![](<../.gitbook/assets/image (23).png>)
 
 #### Template 4 - Static Code Analysis Terrascan
 
@@ -301,7 +301,7 @@ When Terrakube runs a job it will start saving all the states and changes inside
 
 Request
 
-![](<../.gitbook/assets/image (28) (1).png>)
+![](<../.gitbook/assets/image (28).png>)
 
 ### Worspace (Azure/GCP/AWS)
 
@@ -313,7 +313,7 @@ Basically to use any terraform provider we just need to define the worspace envi
 
 This is an example of an Azure workspace.
 
-![](<../.gitbook/assets/image (12).png>)
+![](<../.gitbook/assets/image (12) (2).png>)
 
 For more information about the workspace please check the api methods for:
 
