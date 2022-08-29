@@ -20,7 +20,7 @@ You need to complete the Google authentication setup for Dex. You can found info
 
 You need to go to your GCP projet and create a new OAuth Application you can follow this steps: firts select "APIs & Services => Credentials"
 
-![](<../../../.gitbook/assets/image (4) (2).png>)
+![](<../../../.gitbook/assets/image (4).png>)
 
 Once inside the "Credentials" page, you will have to create a new OAuth Client
 
@@ -42,7 +42,7 @@ Using the following permission "[https://www.googleapis.com/auth/admin.directory
 
 You can now generate the JSON credentials file for your application, you will use this file later in the helm chart.
 
-![](<../../../.gitbook/assets/image (6) (2).png>)
+![](<../../../.gitbook/assets/image (6).png>)
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 

@@ -20,15 +20,15 @@ You need to complete the Azure authentication setup for Dex. You can found infor
 
 You need to go to your Azure and create a new Application
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (14).png>)
 
 After the application is created you need to add the redirect URL.
 
-![](<../../../.gitbook/assets/image (6).png>)
+![](../../../.gitbook/assets/image.png)
 
 You will also need to add the permission Directory.Read.All and ask a Azure administrator to approve the permission.
 
-![](<../../../.gitbook/assets/image (5).png>)
+![](<../../../.gitbook/assets/image (1).png>)
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 

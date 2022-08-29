@@ -18,7 +18,7 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (2).png>)
 
 After creating the application copy the **"Client Id"** and generate a new "**Client Secret"**.
 
