@@ -19,7 +19,7 @@ For authorization callback you can use http://localhost, we will update this val
 
 Example:
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (1).png>)
 
 Add the followings "Authorized scopes" and create the application:
 
@@ -28,7 +28,7 @@ Add the followings "Authorized scopes" and create the application:
 
 Example:
 
-![](<../.gitbook/assets/image (5).png>)
+![](<../.gitbook/assets/image (5) (1).png>)
 
 After creating the application copy the following values:
 

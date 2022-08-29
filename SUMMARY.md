@@ -7,11 +7,11 @@
 * [📐 Architecture](getting-started/design-and-architecture.md)
 * [🔐 Security](getting-started/security.md)
 * [🚀 Getting Started](getting-started/getting-started.md)
-* [🤵 User Management](getting-started/user-management/README.md)
-  * [Azure Active Directory](getting-started/user-management/azure-active-directory.md)
-  * [Google Cloud Identity](getting-started/user-management/google-cloud-identity.md)
-  * [Amazon Cognito](getting-started/user-management/amazon-cognito.md)
-  * [Docker Desktop](getting-started/user-management/docker-desktop.md)
+* [🤵 User Management](getting-started/deployment/kubernetes/README.md)
+  * [Azure Active Directory](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
+  * [Google Cloud Identity](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
+  * [Amazon Cognito](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
+  * [Docker Desktop](getting-started/deployment/kubernetes/docker-desktop.md)
 * [📥 Deployment](getting-started/deployment/README.md)
   * [Helm Chart](getting-started/deployment/docker-compose/README.md)
     * [Azure Active Directory](getting-started/deployment/docker-compose/docker-compose.md)
@@ -84,6 +84,8 @@
   * [Module](api/methods/module.md)
   * [Vcs](api/methods/vcs.md)
   * [Provider](api/methods/provider.md)
+  * [Personal Access Token](api/methods/personal-access-token.md)
+  * [SSH Key](api/methods/ssh-key.md)
 
 ## 🛡 VCS Connection
 
