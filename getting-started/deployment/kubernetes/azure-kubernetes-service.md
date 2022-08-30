@@ -7,6 +7,7 @@ Azure Authentication with Dex Connecor require Terrakube >= 2.6.0 and Helm Chart
 ### &#x20;Requirements
 
 * Azure Active Directory [here](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
+* Azure Storage Account
 
 For this example lets image that you will be using the following domains to deploy Terrakube.
 
@@ -24,11 +25,11 @@ You need to go to your Azure and create a new Application
 
 After the application is created you need to add the redirect URL.
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (11).png>)
 
 You will also need to add the permission Directory.Read.All and ask a Azure administrator to approve the permission.
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1) (3).png>)
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 
@@ -168,8 +169,6 @@ executor:
   properties:
     toolsRepository: "https://github.com/AzBuilder/terrakube-extensions"
     toolsBranch: "main"
-    terraformStateType: "AzureTerraformStateImpl"
-    terraformOutputType: "AzureTerraformOutputImpl"
 
 ## Registry properties
 registry:

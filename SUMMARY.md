@@ -7,16 +7,13 @@
 * [📐 Architecture](getting-started/design-and-architecture.md)
 * [🔐 Security](getting-started/security.md)
 * [🚀 Getting Started](getting-started/getting-started.md)
+* [📥 Deployment](getting-started/deployment/README.md)
+  * [🔨 Helm Chart](getting-started/deployment/docker-compose.md)
 * [🤵 User Management](getting-started/deployment/kubernetes/README.md)
   * [Azure Active Directory](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
   * [Google Cloud Identity](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
   * [Amazon Cognito](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
   * [Docker Desktop](getting-started/deployment/kubernetes/docker-desktop.md)
-* [📥 Deployment](getting-started/deployment/README.md)
-  * [Helm Chart](getting-started/deployment/docker-compose/README.md)
-    * [Azure Active Directory](getting-started/deployment/docker-compose/docker-compose.md)
-    * [Github](getting-started/deployment/docker-compose/github.md)
-    * [Google Cloud Identity](getting-started/deployment/docker-compose/docker-compose-1.md)
 * [🏢 Organizations](getting-started/organizations.md)
 
 ## 🎓 Learn

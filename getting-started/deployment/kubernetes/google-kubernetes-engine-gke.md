@@ -7,6 +7,7 @@ Google Identity Authentication with Dex connector require Terrakube >= 2.6.0 and
 ### &#x20;Requirements
 
 * Google Cloud Identity [here](https://cloud.google.com/identity/docs/set-up-cloud-identity-admin#sign-up-for-cloud-identity-free)
+* Gooble Storage Bucket
 
 For this example lets image that you will be using the following domains to deploy Terrakube.
 
@@ -20,7 +21,7 @@ You need to complete the Google authentication setup for Dex. You can found info
 
 You need to go to your GCP projet and create a new OAuth Application you can follow this steps: firts select "APIs & Services => Credentials"
 
-![](<../../../.gitbook/assets/image (4).png>)
+![](<../../../.gitbook/assets/image (4) (1).png>)
 
 Once inside the "Credentials" page, you will have to create a new OAuth Client
 
@@ -34,7 +35,7 @@ For Google authentication we need to get the GCP groups so you need to complete 
 
 Include the Domain Wide Delegation inside the admin consol [https://admin.google.com/](https://admin.google.com/) for the OAuth application
 
-![](<../../../.gitbook/assets/image (1) (3).png>)
+![](<../../../.gitbook/assets/image (1) (3) (1).png>)
 
 Using the following permission "[https://www.googleapis.com/auth/admin.directory.group.readonly](https://www.googleapis.com/auth/admin.directory.group.readonly)"
 
@@ -212,8 +213,6 @@ executor:
   properties:
     toolsRepository: "https://github.com/AzBuilder/terrakube-extensions"
     toolsBranch: "main"
-    terraformStateType: "GcpTerraformStateImpl"
-    terraformOutputType: "GcpTerraformOutputImpl"
 
 ## Registry properties
 registry:

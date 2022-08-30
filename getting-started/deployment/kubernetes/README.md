@@ -1,8 +1,6 @@
 # 🤵 User Management
 
-You can run Terrakube in any Kubernetes Cluster in cloud or on Premises Environment.
-
-**Running Terrakube in Cloud**
+You can handle Terrakube users with differen authentication providers like the following
 
 {% content-ref url="azure-kubernetes-service.md" %}
 [azure-kubernetes-service.md](azure-kubernetes-service.md)
