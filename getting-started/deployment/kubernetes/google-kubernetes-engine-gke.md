@@ -25,11 +25,11 @@ You need to go to your GCP projet and create a new OAuth Application you can fol
 
 Once inside the "Credentials" page, you will have to create a new OAuth Client
 
-![](<../../../.gitbook/assets/image (3).png>)
+![](<../../../.gitbook/assets/image (3) (1).png>)
 
 The OAuth application should look like this with the redirect URL "[https://api.terrakube.gcp.com/dex/callback](https://api.terrakube.docker.com/dex/callback)"
 
-![](<../../../.gitbook/assets/image (10).png>)
+![](<../../../.gitbook/assets/image (10) (2).png>)
 
 For Google authentication we need to get the GCP groups so you need to complete [this setup](https://dexidp.io/docs/connectors/google/#fetching-groups-from-google).
 
@@ -39,11 +39,11 @@ Include the Domain Wide Delegation inside the admin consol [https://admin.google
 
 Using the following permission "[https://www.googleapis.com/auth/admin.directory.group.readonly](https://www.googleapis.com/auth/admin.directory.group.readonly)"
 
-![](<../../../.gitbook/assets/image (8).png>)
+![](<../../../.gitbook/assets/image (8) (3).png>)
 
 You can now generate the JSON credentials file for your application, you will use this file later in the helm chart.
 
-![](<../../../.gitbook/assets/image (6).png>)
+![](<../../../.gitbook/assets/image (6) (1).png>)
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 
@@ -101,7 +101,7 @@ The firt step is to clone the repository.
 git clone https://github.com/AzBuilder/terrakube-helm-chart.git
 ```
 
-You can use the following sample values and replace the require parameters
+Replace _<\<CHANGE\_THIS>>_ with the real values, create the values.yaml file and run the helm install
 
 <pre><code>## Global Name
 name: "terrakube"
@@ -270,6 +270,16 @@ ingress:
       nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
       cert-manager.io/cluster-issuer: letsencrypt
 </code></pre>
+
+Run the installation
+
+```bash
+helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n terrakube
+```
+
+{% hint style="warning" %}
+
+{% endhint %}
 
 {% hint style="warning" %}
 For any question or feedback please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)

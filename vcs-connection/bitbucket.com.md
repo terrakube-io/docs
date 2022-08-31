@@ -43,7 +43,7 @@ Check "This is a private consumer" and add the following permission:
 
 Example:
 
-![](<../.gitbook/assets/image (6) (1).png>)
+![](<../.gitbook/assets/image (6) (1) (1).png>)
 
 After creating the application copy the following values:
 

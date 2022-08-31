@@ -21,23 +21,23 @@ You need to complete the AWS Cognito authentication setup for Dex using the OIDC
 
 You need to create a new Cognito user pool
 
-![](<../../../.gitbook/assets/image (1).png>)
+![](<../../../.gitbook/assets/image (1) (4).png>)
 
 You can keep the default values
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (36).png>)
 
 Add the domain name to cognito
 
-![](<../../../.gitbook/assets/image (9).png>)
+![](<../../../.gitbook/assets/image (9) (3).png>)
 
 Once the user pool is created you will need to create a new application.
 
-![](<../../../.gitbook/assets/image (5).png>)
+![](<../../../.gitbook/assets/image (5) (2).png>)
 
 Update the application configuration and update the redirect URL configuration.
 
-![](<../../../.gitbook/assets/image (4).png>)
+![](<../../../.gitbook/assets/image (4) (2).png>)
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 
@@ -103,7 +103,7 @@ The firt step is to clone the repository.
 git clone https://github.com/AzBuilder/terrakube-helm-chart.git
 ```
 
-You can use the following sample values and replace the require parameters
+Replace _<\<CHANGE\_THIS>>_ with the real values, create the values.yaml file and run the helm install
 
 ```
 ## Global Name
@@ -256,6 +256,16 @@ ingress:
       cert-manager.io/cluster-issuer: letsencrypt
 
 ```
+
+Run the installation
+
+```bash
+helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n terrakube
+```
+
+{% hint style="warning" %}
+
+{% endhint %}
 
 {% hint style="warning" %}
 For any question or feedback please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)

@@ -25,7 +25,7 @@ You need to go to your Azure and create a new Application
 
 After the application is created you need to add the redirect URL.
 
-![](<../../../.gitbook/assets/image (11).png>)
+![](<../../../.gitbook/assets/image (11) (1).png>)
 
 You will also need to add the permission Directory.Read.All and ask a Azure administrator to approve the permission.
 
@@ -85,7 +85,7 @@ The firt step is to clone the repository.
 git clone https://github.com/AzBuilder/terrakube-helm-chart.git
 ```
 
-You can use the following sample values and replace the require parameters
+Replace _<\<CHANGE\_THIS>>_ with the real values, create the values.yaml file and run the helm install
 
 ```
 ## Global Name
@@ -227,6 +227,16 @@ ingress:
       cert-manager.io/cluster-issuer: letsencrypt
 
 ```
+
+Run the installation
+
+```bash
+helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n terrakube
+```
+
+{% hint style="warning" %}
+
+{% endhint %}
 
 {% hint style="warning" %}
 For any question or feedback please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)
