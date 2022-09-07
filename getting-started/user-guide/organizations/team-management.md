@@ -1,6 +1,6 @@
 # Team Management
 
-
+In Terrakube you can define user permissions inside your organization using teams.&#x20;
 
 ### Creating a Team
 
