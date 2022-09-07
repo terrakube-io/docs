@@ -13,7 +13,7 @@
   * [Azure Active Directory](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
   * [Google Cloud Identity](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
   * [Amazon Cognito](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
-  * [Docker Desktop](getting-started/deployment/kubernetes/docker-desktop.md)
+  * [Github](getting-started/deployment/kubernetes/docker-desktop.md)
 * [🏢 Organizations](getting-started/organizations.md)
 
 ## 🎓 Learn
