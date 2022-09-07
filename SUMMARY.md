@@ -14,7 +14,10 @@
   * [Google Cloud Identity](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
   * [Amazon Cognito](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
   * [Github](getting-started/deployment/kubernetes/docker-desktop.md)
-* [🏢 Organizations](getting-started/organizations.md)
+* [📓 User Guide](getting-started/user-guide/README.md)
+  * [Organizations](getting-started/user-guide/organizations/README.md)
+    * [Creating an Organization](getting-started/user-guide/organizations/organizations.md)
+    * [Team Management](getting-started/user-guide/organizations/team-management.md)
 
 ## 🎓 Learn
 

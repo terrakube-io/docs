@@ -14,7 +14,7 @@ After a couple of seconds the Gitpod environment will be ready and you will need
 
 After some seconds Terrakube API will be up and running.
 
-![](<../.gitbook/assets/image (49).png>)
+![](<../.gitbook/assets/image (49) (1).png>)
 
 Now you can select the "Thunder Client" and open the "Getting Started" collection to test the API
 
@@ -30,7 +30,7 @@ Execute the request "Get Device Code" and open the URL in field "verification\_u
 
 When you open the "verification\__uri\__complete" field you should see a similar page.
 
-![](<../.gitbook/assets/image (46).png>)
+![](<../.gitbook/assets/image (46) (1).png>)
 
 Authenticate using the user "admin@example.com" with password "admin"
 
@@ -126,7 +126,7 @@ flow:
 
 Request:
 
-![](../.gitbook/assets/image.png)
+![](<../.gitbook/assets/image (51).png>)
 
 Response:
 
