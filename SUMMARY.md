@@ -18,6 +18,7 @@
   * [Organizations](getting-started/user-guide/organizations/README.md)
     * [Creating an Organization](getting-started/user-guide/organizations/organizations.md)
     * [Team Management](getting-started/user-guide/organizations/team-management.md)
+    * [Templates](getting-started/user-guide/organizations/templates.md)
 
 ## 🎓 Learn
 
