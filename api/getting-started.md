@@ -311,7 +311,7 @@ Request.
 
 Response.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Worspaces Schedule
 
@@ -459,4 +459,4 @@ The job output should be similar to the following:
 
 If you wan to check all the available methods you can use the following enpoint.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (2).png" alt=""><figcaption></figcaption></figure>

@@ -8,6 +8,8 @@ The firts step will be to create some terraform policies inside your Terrakube e
 
 <figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+
 The following policy computes a score for a Terraform that combines
 
 * The number of deletions of each resource type
@@ -206,19 +208,19 @@ You can add this template inside your organization settings using a custom templ
 
 * Create a new template
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
 
 * Select a blank template.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Add the template body.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 * Save the template
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Terrakube Workspace Code
 
