@@ -21,29 +21,29 @@ You need to complete the Google authentication setup for Dex. You can found info
 
 You need to go to your GCP projet and create a new OAuth Application you can follow this steps: firts select "APIs & Services => Credentials"
 
-![](<../../../.gitbook/assets/image (4) (1).png>)
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once inside the "Credentials" page, you will have to create a new OAuth Client
 
-![](<../../../.gitbook/assets/image (3) (1).png>)
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 The OAuth application should look like this with the redirect URL "[https://api.terrakube.gcp.com/dex/callback](https://api.terrakube.docker.com/dex/callback)"
 
-![](<../../../.gitbook/assets/image (10) (2).png>)
+<figure><img src="../../../.gitbook/assets/image (10) (2).png" alt=""><figcaption></figcaption></figure>
 
 For Google authentication we need to get the GCP groups so you need to complete [this setup](https://dexidp.io/docs/connectors/google/#fetching-groups-from-google).
 
 Include the Domain Wide Delegation inside the admin consol [https://admin.google.com/](https://admin.google.com/) for the OAuth application
 
-![](<../../../.gitbook/assets/image (1) (3) (1).png>)
+<figure><img src="../../../.gitbook/assets/image (1) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Using the following permission "[https://www.googleapis.com/auth/admin.directory.group.readonly](https://www.googleapis.com/auth/admin.directory.group.readonly)"
 
-![](<../../../.gitbook/assets/image (8) (3).png>)
+<figure><img src="../../../.gitbook/assets/image (8) (3).png" alt=""><figcaption></figcaption></figure>
 
 You can now generate the JSON credentials file for your application, you will use this file later in the helm chart.
 
-![](<../../../.gitbook/assets/image (6) (1).png>)
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 

@@ -16,7 +16,7 @@ Running Terrakube in Gitpod is like running the platform in any Kubernetes distr
 
 A file called _**GITPOD.md**_ will have the information for the entire workspace
 
-[![image](https://user-images.githubusercontent.com/4461895/181385377-c25610e5-f39b-48f4-aa5c-3bfafce54794.png)](https://user-images.githubusercontent.com/4461895/181385377-c25610e5-f39b-48f4-aa5c-3bfafce54794.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181385377-c25610e5-f39b-48f4-aa5c-3bfafce54794.png" alt=""><figcaption></figcaption></figure>
 
 The configuration is generated dynamically using the following bash script. This is executed by Gitpod in the environment startup process.
 
@@ -47,11 +47,11 @@ The development environment will have the following information:
 
 To run all the Terrakube components run the following task:
 
-[![image](https://user-images.githubusercontent.com/4461895/181374024-a8f546ba-dbf7-4ac9-a74b-04ff8759f165.png)](https://user-images.githubusercontent.com/4461895/181374024-a8f546ba-dbf7-4ac9-a74b-04ff8759f165.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181374024-a8f546ba-dbf7-4ac9-a74b-04ff8759f165.png" alt=""><figcaption></figcaption></figure>
 
 After a couple of seconds all the components will be running, you can start/stop/restart any component as needed.
 
-[![image](https://user-images.githubusercontent.com/4461895/181374080-c7486a32-b4f2-41d3-9112-5861e3fdc8d9.png)](https://user-images.githubusercontent.com/4461895/181374080-c7486a32-b4f2-41d3-9112-5861e3fdc8d9.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181374080-c7486a32-b4f2-41d3-9112-5861e3fdc8d9.png" alt=""><figcaption></figcaption></figure>
 
 #### Login Development Environment
 
@@ -63,7 +63,7 @@ gp url 3000
 
 The Terrakube login will look like this example:
 
-[![image](https://user-images.githubusercontent.com/4461895/181138967-401c142a-9366-4d1b-8506-1c667f5ab543.png)](https://user-images.githubusercontent.com/4461895/181138967-401c142a-9366-4d1b-8506-1c667f5ab543.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181138967-401c142a-9366-4d1b-8506-1c667f5ab543.png" alt=""><figcaption></figcaption></figure>
 
 #### Dex Authentication.
 
@@ -87,7 +87,7 @@ scripts/template/dex/template-config-ldap.yaml
 
 Dex login page should look like this example:
 
-[![image](https://user-images.githubusercontent.com/4461895/181138996-f6ae507f-c3cf-460a-bc12-60ed6cb2e159.png)](https://user-images.githubusercontent.com/4461895/181138996-f6ae507f-c3cf-460a-bc12-60ed6cb2e159.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181138996-f6ae507f-c3cf-460a-bc12-60ed6cb2e159.png" alt=""><figcaption></figcaption></figure>
 
 #### Sample Organizations
 
@@ -100,27 +100,29 @@ api/src/main/resources/db/changelog/demo-data/azure.xml
 api/src/main/resources/db/changelog/demo-data/simple.xml
 ```
 
-[![image](https://user-images.githubusercontent.com/4461895/181139038-ff3c449a-7c4a-4346-b1d1-08a150b99307.png)](https://user-images.githubusercontent.com/4461895/181139038-ff3c449a-7c4a-4346-b1d1-08a150b99307.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181139038-ff3c449a-7c4a-4346-b1d1-08a150b99307.png" alt=""><figcaption></figcaption></figure>
 
 #### Sample Teams
 
-Depending of the selected organization and user you will see different information available. [![image](https://user-images.githubusercontent.com/4461895/181139272-3d73ece3-718c-43ec-aaaf-8cff7ddef227.png)](https://user-images.githubusercontent.com/4461895/181139272-3d73ece3-718c-43ec-aaaf-8cff7ddef227.png)
+Depending of the selected organization and user you will see different information available.&#x20;
+
+<figure><img src="https://user-images.githubusercontent.com/4461895/181139272-3d73ece3-718c-43ec-aaaf-8cff7ddef227.png" alt=""><figcaption></figcaption></figure>
 
 #### Sample Modules
 
 Each organization is preloaded with some modules that can be found in Github like the following:
 
-[![image](https://user-images.githubusercontent.com/4461895/181139092-c82fb7b1-6423-4159-ba74-8d842468ab75.png)](https://user-images.githubusercontent.com/4461895/181139092-c82fb7b1-6423-4159-ba74-8d842468ab75.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181139092-c82fb7b1-6423-4159-ba74-8d842468ab75.png" alt=""><figcaption></figcaption></figure>
 
-[![image](https://user-images.githubusercontent.com/4461895/181139125-8cbe1cc8-9149-4ab7-bd5f-a5430bafb792.png)](https://user-images.githubusercontent.com/4461895/181139125-8cbe1cc8-9149-4ab7-bd5f-a5430bafb792.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181139125-8cbe1cc8-9149-4ab7-bd5f-a5430bafb792.png" alt=""><figcaption></figcaption></figure>
 
-[![image](https://user-images.githubusercontent.com/4461895/181139149-a052e4b0-ad63-49f9-bb52-8dfbb1c54915.png)](https://user-images.githubusercontent.com/4461895/181139149-a052e4b0-ad63-49f9-bb52-8dfbb1c54915.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181139149-a052e4b0-ad63-49f9-bb52-8dfbb1c54915.png" alt=""><figcaption></figcaption></figure>
 
 #### Templates
 
 Each organization is preloaded with the following templates to run Terrakube jobs:
 
-[![image](https://user-images.githubusercontent.com/4461895/181139239-ee39bb71-e52d-43ca-b791-075701d4d9eb.png)](https://user-images.githubusercontent.com/4461895/181139239-ee39bb71-e52d-43ca-b791-075701d4d9eb.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181139239-ee39bb71-e52d-43ca-b791-075701d4d9eb.png" alt=""><figcaption></figcaption></figure>
 
 For more information of how to use templates please refer to the following [repository](https://github.com/AzBuilder/terrakube-extensions)
 
@@ -137,13 +139,13 @@ Other workspaces can be created but they will be deleted on each restart unless 
 api/src/main/resources/db/changelog/demo-data/simple.xml
 ```
 
-[![image](https://user-images.githubusercontent.com/4461895/181139337-624bdfcc-684b-4531-9cac-6cc6455232de.png)](https://user-images.githubusercontent.com/4461895/181139337-624bdfcc-684b-4531-9cac-6cc6455232de.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181139337-624bdfcc-684b-4531-9cac-6cc6455232de.png" alt=""><figcaption></figcaption></figure>
 
 #### API Testing
 
 Gitpod has the _**thunder-client**_ installed to easily test the API without using the UI.
 
-[![image](https://user-images.githubusercontent.com/4461895/181368786-86e18f0f-f04a-49cd-a7c3-345329f2550e.png)](https://user-images.githubusercontent.com/4461895/181368786-86e18f0f-f04a-49cd-a7c3-345329f2550e.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181368786-86e18f0f-f04a-49cd-a7c3-345329f2550e.png" alt=""><figcaption></figcaption></figure>
 
 All the environment variables for the collection are generated on each Gitpod workspace startup The environment variables template can be found in the following directory:
 
@@ -151,9 +153,11 @@ All the environment variables for the collection are generated on each Gitpod wo
 scripts/template/thunder-tests/thunderEnvironment.json
 ```
 
-[![image](https://user-images.githubusercontent.com/4461895/181370059-449ea154-ebff-4da7-b498-46cee1437f42.png)](https://user-images.githubusercontent.com/4461895/181370059-449ea154-ebff-4da7-b498-46cee1437f42.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181370059-449ea154-ebff-4da7-b498-46cee1437f42.png" alt=""><figcaption></figcaption></figure>
 
-To authenticate the thunder client you can use Dex Device Code Authentication using the following request [![image](https://user-images.githubusercontent.com/4461895/181369061-41cf588c-c5de-41cf-8c81-2d09ae34d416.png)](https://user-images.githubusercontent.com/4461895/181369061-41cf588c-c5de-41cf-8c81-2d09ae34d416.png)
+To authenticate the thunder client you can use Dex Device Code Authentication using the following request&#x20;
+
+<figure><img src="https://user-images.githubusercontent.com/4461895/181369061-41cf588c-c5de-41cf-8c81-2d09ae34d416.png" alt=""><figcaption></figcaption></figure>
 
 The response should look like the following and you can use the _**verification\_uri\_complete**_ to finish the device authentication.
 
@@ -168,44 +172,46 @@ The response should look like the following and you can use the _**verification\
 }
 ```
 
-[![image](https://user-images.githubusercontent.com/4461895/181369527-9fe35c68-9753-4c59-886a-871795549a56.png)](https://user-images.githubusercontent.com/4461895/181369527-9fe35c68-9753-4c59-886a-871795549a56.png) [![image](https://user-images.githubusercontent.com/4461895/181369588-5a9d26f5-bcf8-439c-8aaa-03ab2eff5a1f.png)](https://user-images.githubusercontent.com/4461895/181369588-5a9d26f5-bcf8-439c-8aaa-03ab2eff5a1f.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181369527-9fe35c68-9753-4c59-886a-871795549a56.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="https://user-images.githubusercontent.com/4461895/181369588-5a9d26f5-bcf8-439c-8aaa-03ab2eff5a1f.png" alt=""><figcaption></figcaption></figure>
 
 Once the Dex device code authentication is completed you can use the following request to get the access token.
 
-[![image](https://user-images.githubusercontent.com/4461895/181369778-e183a4d6-2506-4960-8824-08b66b4ee1c5.png)](https://user-images.githubusercontent.com/4461895/181369778-e183a4d6-2506-4960-8824-08b66b4ee1c5.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181369778-e183a4d6-2506-4960-8824-08b66b4ee1c5.png" alt=""><figcaption></figcaption></figure>
 
 Now you can call any method available in the API without the UI
 
-[![image](https://user-images.githubusercontent.com/4461895/181369869-eddae1d5-0b13-4e6a-b484-3fcefc665d4d.png)](https://user-images.githubusercontent.com/4461895/181369869-eddae1d5-0b13-4e6a-b484-3fcefc665d4d.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181369869-eddae1d5-0b13-4e6a-b484-3fcefc665d4d.png" alt=""><figcaption></figcaption></figure>
 
 #### Terraform Login Protocol
 
 Terraform login protocol can be tested using the _**thunder-client**_ collection:
 
-[![image](https://user-images.githubusercontent.com/4461895/181377967-b0178cf5-9378-4305-a6c8-d516c6882f12.png)](https://user-images.githubusercontent.com/4461895/181377967-b0178cf5-9378-4305-a6c8-d516c6882f12.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181377967-b0178cf5-9378-4305-a6c8-d516c6882f12.png" alt=""><figcaption></figcaption></figure>
 
 The response should look similar to the following:
 
-[![image](https://user-images.githubusercontent.com/4461895/181378021-61ec1041-842c-4b58-bcb3-14df2aeb3ad3.png)](https://user-images.githubusercontent.com/4461895/181378021-61ec1041-842c-4b58-bcb3-14df2aeb3ad3.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181378021-61ec1041-842c-4b58-bcb3-14df2aeb3ad3.png" alt=""><figcaption></figcaption></figure>
 
 #### Terraform Module Protocol
 
 There is one example of terraform module protocol inside the _**thunder-client**_ collection that you can be used for testing purposes executing the following two request.
 
-[![image](https://user-images.githubusercontent.com/4461895/181378277-c58250be-1dec-4351-a91e-ae66e0417826.png)](https://user-images.githubusercontent.com/4461895/181378277-c58250be-1dec-4351-a91e-ae66e0417826.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181378277-c58250be-1dec-4351-a91e-ae66e0417826.png" alt=""><figcaption></figcaption></figure>
 
 The response should look like the following:
 
 * Getting versions for the module
 
-[![image](https://user-images.githubusercontent.com/4461895/181378462-e2ddb743-5dfe-40f9-b780-db948635f237.png)](https://user-images.githubusercontent.com/4461895/181378462-e2ddb743-5dfe-40f9-b780-db948635f237.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181378462-e2ddb743-5dfe-40f9-b780-db948635f237.png" alt=""><figcaption></figcaption></figure>
 
 * Getting zip file for the module
 
-[![image](https://user-images.githubusercontent.com/4461895/181378504-39aa618f-2d5f-4873-a4c5-3c4e64795191.png)](https://user-images.githubusercontent.com/4461895/181378504-39aa618f-2d5f-4873-a4c5-3c4e64795191.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181378504-39aa618f-2d5f-4873-a4c5-3c4e64795191.png" alt=""><figcaption></figcaption></figure>
 
 #### OpenAPI Spec
 
 The specification can be obtained using the following request:
 
-[![image](https://user-images.githubusercontent.com/4461895/181378782-4cd46efc-a4ea-472f-9547-9e1d22cc91e5.png)](https://user-images.githubusercontent.com/4461895/181378782-4cd46efc-a4ea-472f-9547-9e1d22cc91e5.png)
+<figure><img src="https://user-images.githubusercontent.com/4461895/181378782-4cd46efc-a4ea-472f-9547-9e1d22cc91e5.png" alt=""><figcaption></figcaption></figure>

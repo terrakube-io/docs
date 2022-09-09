@@ -21,23 +21,23 @@ You need to complete the AWS Cognito authentication setup for Dex using the OIDC
 
 You need to create a new Cognito user pool
 
-![](<../../../.gitbook/assets/image (1) (4).png>)
+<figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 You can keep the default values
 
-![](<../../../.gitbook/assets/image (36).png>)
+<figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
 Add the domain name to cognito
 
-![](<../../../.gitbook/assets/image (9) (3).png>)
+<figure><img src="../../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
 
 Once the user pool is created you will need to create a new application.
 
-![](<../../../.gitbook/assets/image (5) (2).png>)
+<figure><img src="../../../.gitbook/assets/image (5) (2).png" alt=""><figcaption></figcaption></figure>
 
 Update the application configuration and update the redirect URL configuration.
 
-![](<../../../.gitbook/assets/image (4) (2).png>)
+<figure><img src="../../../.gitbook/assets/image (4) (2).png" alt=""><figcaption></figcaption></figure>
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 

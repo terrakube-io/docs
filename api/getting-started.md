@@ -10,15 +10,15 @@ Gitpod is [free for 50 hours](https://www.gitpod.io/pricing) every month, so you
 
 After a couple of seconds the Gitpod environment will be ready and you will need to start the API, to do this just select "Run and Debug" in the left menu in VS Code and start the application using the "Terrakube" option
 
-![](<../.gitbook/assets/image (47).png>)
+<figure><img src="../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
 
 After some seconds Terrakube API will be up and running.
 
-![](<../.gitbook/assets/image (49) (1).png>)
+<figure><img src="../.gitbook/assets/image (49) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now you can select the "Thunder Client" and open the "Getting Started" collection to test the API
 
-![](<../.gitbook/assets/image (5) (1).png>)
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Authentication
 
@@ -26,21 +26,21 @@ The firt step wil be to get the authorization token for the Terrakube API.&#x20;
 
 Execute the request "Get Device Code" and open the URL in field "verification\_uri\_complete" inside the response to get the authentication token
 
-![](<../.gitbook/assets/image (16).png>)
+<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 When you open the "verification\__uri\__complete" field you should see a similar page.
 
-![](<../.gitbook/assets/image (46) (1).png>)
+<figure><img src="../.gitbook/assets/image (46) (1).png" alt=""><figcaption></figcaption></figure>
 
 Authenticate using the user "admin@example.com" with password "admin"
 
-![](<../.gitbook/assets/image (28).png>)
+<figure><img src="../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
 
-![](<../.gitbook/assets/image (48).png>)
+<figure><img src="../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
 
 Finally get the access token for the API using the request "Get Access Token"
 
-![](<../.gitbook/assets/image (26).png>)
+<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
 
 Now we can start using the API
 
@@ -50,13 +50,13 @@ Terrakube is based on Organization, we can have one or multiple organizations in
 
 To create it we will use the request inside the collection "Step 1 - Organization"
 
-![](<../.gitbook/assets/image (33).png>)
+<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 Request to create an Organization called "Hashicorp":
 
 We should receive a response like the following:
 
-![](<../.gitbook/assets/image (42).png>)
+<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
 Now we have the basic element in Terrakube to start testing all the endpoints.
 
@@ -66,11 +66,11 @@ Inside an Organization we can have multiple teams working, each team can have ac
 
 To create it we will use the request inside the collection "Step 2 - Teams"
 
-![](<../.gitbook/assets/image (32).png>)
+<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 This will create a team called "TERRAKUBE\_DEVELOPERS" with access to all the features and you should get a response like the following:
 
-![](<../.gitbook/assets/image (23).png>)
+<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 The team name should be a valid "group" name in Azure Active Directory, Google Cloud Identity, Github, Gitlab, OIDC, Amazon Cognito, etc. This will be based on Dex Configuration. For this example we are using Terrakube with a preconfigured LDAP.
@@ -86,7 +86,7 @@ Templates are sent to the API in base64 encoding.
 
 To create it we will use the request inside the postman collection "Step 3 - Templates"
 
-![](<../.gitbook/assets/image (8).png>)
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 #### Template 1 - Basic Terraform Plan-Apply
 
@@ -104,11 +104,11 @@ flow:
 
 Request:
 
-![](<../.gitbook/assets/image (10).png>)
+<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
 
 Response:
 
-![](<../.gitbook/assets/image (18).png>)
+<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 Now we have a template that we can reuse when running jobs accross an organization, lets define a couple of more templates.
 
@@ -126,11 +126,11 @@ flow:
 
 Request:
 
-![](<../.gitbook/assets/image (51) (1).png>)
+<figure><img src="../.gitbook/assets/image (51) (1).png" alt=""><figcaption></figcaption></figure>
 
 Response:
 
-![](<../.gitbook/assets/image (7).png>)
+<figure><img src="../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
 Now our firts organization have to templates, one to run a terraform plan/apply and one for a terraform destroy. Lets create a couple of more templates.
 
@@ -173,11 +173,11 @@ In this template we are defining a flow where a terraform plan will be executed 
 
 Request:
 
-![](<../.gitbook/assets/image (6).png>)
+<figure><img src="../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 Response:
 
-![](<../.gitbook/assets/image (24).png>)
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 #### Template 4 - Static Code Analysis Terrascan
 
@@ -211,11 +211,11 @@ flow:
 
 Request:
 
-![](<../.gitbook/assets/image (43).png>)
+<figure><img src="../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 Response:
 
-![](<../.gitbook/assets/image (19).png>)
+<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
 
 This template is importing the **Terrascan** extension and running a analisys for one particular workspace.
 
@@ -251,11 +251,11 @@ flow:
 
 Request:
 
-![](<../.gitbook/assets/image (9).png>)
+<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 Response:
 
-![](<../.gitbook/assets/image (3) (2).png>)
+<figure><img src="../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 Now we have the following template available inside our organization:
 
@@ -281,7 +281,7 @@ Workspace Git repository can be public or private using the following providers:
 
 To create it we will use the request inside the postman collection "Step 4 - Worspace"
 
-![](<../.gitbook/assets/image (11).png>)
+<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 Lets create a very simple workspace using the following terraform code inside this public git repository "[https://github.com/AzBuilder/terrakube-docker-compose.git](https://github.com/AzBuilder/terrakube-docker-compose.git)" using the root folder "/"
 
@@ -307,11 +307,11 @@ You can have multiple workspaces using a single git repository using folders and
 
 Request.
 
-![](<../.gitbook/assets/image (21).png>)
+<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 Response.
 
-![](<../.gitbook/assets/image (4).png>)
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 ### Worspaces Schedule
 
@@ -319,7 +319,7 @@ When a workspace is created inside Terrakube we can define some schedules, this 
 
 Request
 
-![](<../.gitbook/assets/image (17).png>)
+<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 This schedule will run the workspace using one template every minute
@@ -333,19 +333,19 @@ When Terrakube runs a job it will start saving all the states and changes inside
 
 Request
 
-![](<../.gitbook/assets/image (40).png>)
+<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 ### Worspace (Azure/GCP/AWS)
 
 To understan how you can create workspace for any cloud provider please refer to the following examples inside the collection:
 
-![](<../.gitbook/assets/image (31).png>)
+<figure><img src="../.gitbook/assets/image (31).png" alt=""><figcaption></figcaption></figure>
 
 Basically to use any terraform provider we just need to define the worspace environment variables.
 
 This is an example of an Azure workspace.
 
-![](<../.gitbook/assets/image (15).png>)
+<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
 
 For more information about the workspace please check the api methods for:
 
@@ -360,11 +360,11 @@ After we have a workspace we can star creating jobs for our workspaces using the
 
 To create it we will use the request inside the postman collection "Step 5 - Jobs"
 
-![](<../.gitbook/assets/image (38).png>)
+<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 Request:
 
-![](<../.gitbook/assets/image (50).png>)
+<figure><img src="../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
 
 After a couple of minutes Terrakube should have completed the job execution
 
@@ -459,4 +459,4 @@ The job output should be similar to the following:
 
 If you wan to check all the available methods you can use the following enpoint.
 
-![](<../.gitbook/assets/image (2) (1).png>)
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
