@@ -6,7 +6,7 @@ Terrakube can be integrated with Open Policy Agent using the Terrakube extension
 
 The firts step will be to create some terraform policies inside your Terrakube extensions repository folder inside the policy folder as you can see in the image below.
 
-![](<../../.gitbook/assets/image (39).png>)
+<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 The following policy computes a score for a Terraform that combines
 
@@ -206,19 +206,19 @@ You can add this template inside your organization settings using a custom templ
 
 * Create a new template
 
-![](<../../.gitbook/assets/image (3).png>)
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 * Select a blank template.
 
-![](<../../.gitbook/assets/image (2).png>)
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 * Add the template body.
 
-![](../../.gitbook/assets/image.png)
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 * Save the template
 
-![](<../../.gitbook/assets/image (1).png>)
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Terrakube Workspace Code
 
@@ -256,9 +256,9 @@ resource "aws_launch_configuration" "my_web_config" {
 
 When you run the Terrakube job for this workspace you can see that the terraform policy is valid for our workspace.
 
-![](<../../.gitbook/assets/image (49).png>)
+<figure><img src="../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
 
-![](<../../.gitbook/assets/image (52).png>)
+<figure><img src="../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
 
 #### Example 2:
 
@@ -314,9 +314,9 @@ resource "aws_autoscaling_group" "my_asg3" {
 
 When you run this Terrakube job for this particular workspace you will see that the terraform policy is invalid and the job flow will failed.
 
-![](<../../.gitbook/assets/image (53).png>)
+<figure><img src="../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
 
-![](<../../.gitbook/assets/image (54).png>)
+<figure><img src="../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 This is how you can make use of Terrakube extension and Open Policy Agent to validate your terraform resources inside your organization before you deployed it to the cloud.&#x20;
 
