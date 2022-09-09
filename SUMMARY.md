@@ -19,6 +19,7 @@
     * [Creating an Organization](getting-started/user-guide/organizations/organizations.md)
     * [Team Management](getting-started/user-guide/organizations/team-management.md)
     * [Templates](getting-started/user-guide/organizations/templates.md)
+  * [Open Policy Agent](getting-started/user-guide/open-policy-agent.md)
 
 ## 🎓 Learn
 

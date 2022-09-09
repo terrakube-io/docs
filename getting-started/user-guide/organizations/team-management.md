@@ -6,7 +6,7 @@ In Terrakube you can define user permissions inside your organization using team
 
 Once you are in the desired organization, click the **Settings** button and then in the left menu select the **Teams** option.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (39) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (39) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Click the **Create team** button
 
@@ -23,11 +23,11 @@ In the popup, provide the team name and the permissions assigned to the team. Us
 | Manage [Templates](templates.md) | Allow members to create and administrate all [templates](templates.md) within the organization                                                                                                                                                                                                              |
 | Manage VCS Settings              | Allow members to create and administrate all VCS Providers within the organization                                                                                                                                                                                                                          |
 
-<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (49) (2).png" alt=""><figcaption></figcaption></figure>
 
 Finally click the **Save team** button and the team will be created
 
-<figure><img src="../../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (52) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now all the users inside the team will be able to manage the specific resources within the organization based on the permissions you grantted.
 
@@ -39,10 +39,10 @@ Click the **Edit** button next to the team you want to edit
 
 Change the permissions you need and click the **Save team** button
 
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (39) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Delete a Team
 
 Click the **Delete** button next to the team you want to delete, and then click the Yes button to confirm the deletion. Please take in consideration the deletion is irreversible
 
-<figure><img src="../../../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (53) (1).png" alt=""><figcaption></figcaption></figure>
