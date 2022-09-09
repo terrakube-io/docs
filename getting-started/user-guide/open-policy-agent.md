@@ -114,7 +114,7 @@ num_modifies[resource_type] := num {
 
 ### Template Definition
 
-Once we have defined one or more policies inside your Terrakube extension reposiotry, yoa can write a custome template that make use of the Open Policy Agent using the Terrakube Configuration Language as the following example:
+Once we have defined one or more policies inside your Terrakube extension repository, yoa can write a custom template that make use of the Open Policy Agent using the Terrakube Configuration Language as the following example:
 
 <pre><code>flow:
   - type: "terraformPlan"
@@ -202,9 +202,27 @@ In a high level this template will do the following:
           fi
 ..</code></pre>
 
+You can add this template inside your organization settings using a custom template and following these steps.
+
+* Create a new template
+
+![](<../../.gitbook/assets/image (3).png>)
+
+* Select a blank template.
+
+![](<../../.gitbook/assets/image (2).png>)
+
+* Add the template body.
+
+![](../../.gitbook/assets/image.png)
+
+* Save the template
+
+![](<../../.gitbook/assets/image (1).png>)
+
 ### Terrakube Workspace Code
 
-Now that your terraform policy is completed and you have defined the Terrakube template that make us of the Open Policy agent, you can star testing it.
+Now that your terraform policy is completed and you have defined the Terrakube template that make us of the Open Policy agent, you can star testing it with some sample workspaces.
 
 #### Example 1:
 

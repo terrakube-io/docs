@@ -14,7 +14,7 @@ Then you will redirected to the Organization Settings page where you can define 
 
 &#x20;
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 In order to start using your organization you must add at least one team and define a template. See [Creating a Team](team-management.md#creating-a-team) and [Templates](templates.md#creating-a-template) for further information.

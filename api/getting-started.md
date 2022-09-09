@@ -18,7 +18,7 @@ After some seconds Terrakube API will be up and running.
 
 Now you can select the "Thunder Client" and open the "Getting Started" collection to test the API
 
-![](<../.gitbook/assets/image (5).png>)
+![](<../.gitbook/assets/image (5) (1).png>)
 
 ### Authentication
 
@@ -255,7 +255,7 @@ Request:
 
 Response:
 
-![](<../.gitbook/assets/image (3).png>)
+![](<../.gitbook/assets/image (3) (2).png>)
 
 Now we have the following template available inside our organization:
 
@@ -459,4 +459,4 @@ The job output should be similar to the following:
 
 If you wan to check all the available methods you can use the following enpoint.
 
-![](<../.gitbook/assets/image (2).png>)
+![](<../.gitbook/assets/image (2) (1).png>)
