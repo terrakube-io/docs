@@ -126,7 +126,7 @@ flow:
 
 Request:
 
-![](<../.gitbook/assets/image (51).png>)
+![](<../.gitbook/assets/image (51) (1).png>)
 
 Response:
 
@@ -255,7 +255,7 @@ Request:
 
 Response:
 
-![](<../.gitbook/assets/image (3) (2).png>)
+![](<../.gitbook/assets/image (3).png>)
 
 Now we have the following template available inside our organization:
 
@@ -459,4 +459,4 @@ The job output should be similar to the following:
 
 If you wan to check all the available methods you can use the following enpoint.
 
-![](<../.gitbook/assets/image (2) (4).png>)
+![](<../.gitbook/assets/image (2).png>)
