@@ -15,3 +15,7 @@ In this section:
 {% content-ref url="templates.md" %}
 [templates.md](templates.md)
 {% endcontent-ref %}
+
+{% content-ref url="../vcs-providers/" %}
+[vcs-providers](../vcs-providers/)
+{% endcontent-ref %}

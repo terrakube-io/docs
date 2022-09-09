@@ -1,18 +1,16 @@
-# GitLab
+# Github
 
-To connect Terrakube to GitLab and use private git repositories you will need to follow these steps:
+To connect Terrakube to GitHub and use private git repositories you will need to follow these steps:
 
 ### Step 1 - Register OAuth Application
 
-Open GitLab and log in and use the following [link](https://gitlab.com/-/profile/applications) and create a new application.
+Open GitHub and log in and use the following [link](https://github.com/settings/applications/new) to create a new application.
 
 Complete the following fields:
 
 * Application name
-* Redirect URL
-* Confidential
-* Expire access token
-* Scope (API)
+* Home page URL
+* Authorization callback URL
 
 {% hint style="info" %}
 For application and authorization callback you can use http://localhost, we will update this value later.
@@ -20,20 +18,20 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](<../.gitbook/assets/image (10) (1).png>)
+![](<../../.gitbook/assets/image (2) (2).png>)
 
-After creating the application copy the **"Application Id"** and generate a new "**Secret"**.
+After creating the application copy the **"Client Id"** and generate a new "**Client Secret"**.
 
 ### Step 2 - Create a new VCS Connection
 
 Create a new VCS connection using the following values:
 
-* clientId = Application Id
-* clientSecret = Gitlab Application Secret
-* vcsType = GITLAB
+* clientId = GitHub Client Id
+* clientSecret = GitHub Client Secret
+* vcsType = GITHUB
 
 {% hint style="warning" %}
-Please refer to [VCS API](../api/methods/vcs.md) for more information
+Please refer to [VCS API](../../api/methods/vcs.md) for more information
 {% endhint %}
 
 {% hint style="info" %}
@@ -44,7 +42,7 @@ Make sure to copy the VCS id from the response body.
 
 ### Step 3 - Update OAuth Application Callback
 
-Update the application redirect URI using the following structure:
+Update the application callback using the following structure:
 
 ```
 https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
@@ -55,15 +53,16 @@ https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
 Visit the following link
 
 ```
-https://gitlab.com/oauth/authorize?client_id={{applicationId}}&response_type=code&scope=api&&redirect_uri={{redirectURI}}
+https://github.com/login/oauth/authorize?client_id={{GitHubClientId}}&allow_signup=false&scope=repo
 ```
 
 Make sure to replace the values:
 
-* applicationId = Application Client Id from step 1
-* redirectURI = Application callback from step 3
+* GitHubClientId = Client Id from step 1
 
 ### Step 5 - Authorize Application
+
+![](<../../.gitbook/assets/image (1) (2).png>)
 
 If the setup was successful you should see this message in your browser.
 

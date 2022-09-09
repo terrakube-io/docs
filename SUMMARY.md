@@ -14,12 +14,19 @@
   * [Google Cloud Identity](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
   * [Amazon Cognito](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
   * [Github](getting-started/deployment/kubernetes/docker-desktop.md)
-* [📓 User Guide](getting-started/user-guide/README.md)
-  * [Organizations](getting-started/user-guide/organizations/README.md)
-    * [Creating an Organization](getting-started/user-guide/organizations/organizations.md)
-    * [Team Management](getting-started/user-guide/organizations/team-management.md)
-    * [Templates](getting-started/user-guide/organizations/templates.md)
-  * [Open Policy Agent](getting-started/user-guide/open-policy-agent.md)
+
+## 📓 User Guide
+
+* [Organizations](user-guide/organizations/README.md)
+  * [Creating an Organization](user-guide/organizations/organizations.md)
+  * [Team Management](user-guide/organizations/team-management.md)
+  * [Templates](user-guide/organizations/templates.md)
+* [VCS Providers](user-guide/vcs-providers/README.md)
+  * [Github](user-guide/vcs-providers/github.com.md)
+  * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)
+  * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)
+  * [GitLab](user-guide/vcs-providers/gitlab.com.md)
+* [Open Policy Agent](user-guide/open-policy-agent.md)
 
 ## 🎓 Learn
 
@@ -88,13 +95,6 @@
   * [Provider](api/methods/provider.md)
   * [Personal Access Token](api/methods/personal-access-token.md)
   * [SSH Key](api/methods/ssh-key.md)
-
-## 🛡 VCS Connection
-
-* [Azure DevOps](vcs-connection/azure-devops.md)
-* [Bitbucket](vcs-connection/bitbucket.com.md)
-* [Github](vcs-connection/github.com.md)
-* [GitLab](vcs-connection/gitlab.com.md)
 
 ## 🏗 CI/CD Integration
 
