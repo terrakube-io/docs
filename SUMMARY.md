@@ -9,11 +9,11 @@
 * [🚀 Getting Started](getting-started/getting-started.md)
 * [📥 Deployment](getting-started/deployment/README.md)
   * [🔨 Helm Chart](getting-started/deployment/docker-compose.md)
-* [🤵 User Management](getting-started/deployment/kubernetes/README.md)
-  * [Azure Active Directory](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
-  * [Google Cloud Identity](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
-  * [Amazon Cognito](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
-  * [Github](getting-started/deployment/kubernetes/docker-desktop.md)
+* [🤵 User Management](getting-started/user-management/README.md)
+  * [Azure Active Directory](getting-started/user-management/azure-active-directory.md)
+  * [Google Cloud Identity](getting-started/user-management/google-cloud-identity.md)
+  * [Amazon Cognito](getting-started/user-management/amazon-cognito.md)
+  * [Github](getting-started/user-management/docker-desktop.md)
 
 ## 📓 User Guide
 
@@ -31,7 +31,7 @@
 
 ## 🎓 Learn
 
-* [What is Terrakube](tutorial/what-is-terrakube.md)
+* [What is Terrakube](learn/what-is-terrakube/README.md)
   * [Section Overview](learn/what-is-terrakube/section-overview.md)
   * [Terraform in a Nutshell](learn/what-is-terrakube/terraform-in-a-nutshell.md)
   * [Terraform Challenges at Enterprise Level](learn/what-is-terrakube/terraform-challenges-at-enterprise-level.md)

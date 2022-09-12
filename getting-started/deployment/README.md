@@ -8,6 +8,6 @@ The easiest way to deploy Terrakube is using our Helm Chart, to learn more about
 
 You can deploy Terrakube using different authentication providers for more information check
 
-{% content-ref url="kubernetes/" %}
-[kubernetes](kubernetes/)
+{% content-ref url="../user-management/" %}
+[user-management](../user-management/)
 {% endcontent-ref %}

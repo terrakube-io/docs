@@ -95,23 +95,23 @@ To see the complete list for terrakube extensions see the [github repo](https://
 
 Once you are in the desired organization, click the **Settings** button, then in the left menu select the **Templates** option and click the **Add Template** button
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
 
 You will see a list of some predefined templates than you can utilize as a quick start or if you prefer you can click the **Blank Template** to start from scratch
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen you can define your template and when you are ready click the **Continue** button.
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (122).png" alt=""><figcaption></figcaption></figure>
 
 Finally, you can assign a name and description to your template and click the **Create Template** button.
 
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (130).png" alt=""><figcaption></figcaption></figure>
 
 Now you template is ready and you can start using it in any workspace within your organization.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 By default Terrakube don't create any template, so you have to define the templates in your organization based on your requirements.
@@ -121,17 +121,17 @@ By default Terrakube don't create any template, so you have to define the templa
 
 Click the **Edit** button next to the Template you would like to edit
 
-<figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (116).png" alt=""><figcaption></figcaption></figure>
 
 Edit your template definition, description or name as desired and when you are ready click the **Save Template** button
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>
 
 ### Deleting a Template
 
 Click the **Delete** button next to the Template you want to delete and then click **Yes** to confirm the deletion
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (128).png" alt=""><figcaption></figcaption></figure>
 
 
 
