@@ -1,71 +1,74 @@
 # Github
 
-To connect Terrakube to GitHub and use private git repositories you will need to follow these steps:
-
-### Step 1 - Register OAuth Application
-
-Open GitHub and log in and use the following [link](https://github.com/settings/applications/new) to create a new application.
-
-Complete the following fields:
-
-* Application name
-* Home page URL
-* Authorization callback URL
+For using repositories from GitHub.com with Terrakube workspaces and modules you will need to follow these steps:
 
 {% hint style="info" %}
-For application and authorization callback you can use http://localhost, we will update this value later.
+**Manage VCS Providers** permission is required to perform this action, please check [team-management.md](../organizations/team-management.md "mention") for more info.
 {% endhint %}
 
-Example:
+Navigate to the desired organization **** and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
-![](<../../.gitbook/assets/image (2) (2).png>)
-
-After creating the application copy the **"Client Id"** and generate a new "**Client Secret"**.
-
-### Step 2 - Create a new VCS Connection
-
-Create a new VCS connection using the following values:
-
-* clientId = GitHub Client Id
-* clientSecret = GitHub Client Secret
-* vcsType = GITHUB
-
-{% hint style="warning" %}
-Please refer to [VCS API](../../api/methods/vcs.md) for more information
-{% endhint %}
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-You can also use Terrakube CLI or Terrakube UI to generate the VCS record.
+If you prefer, you can add a new VCS Provider directly from the Create workspace or Create Module screen.&#x20;
 {% endhint %}
 
-Make sure to copy the VCS id from the response body.
+Click the **Github button**
 
-### Step 3 - Update OAuth Application Callback
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
 
-Update the application callback using the following structure:
+In the next screen click the link to [register a new OAuth Application](https://github.com/settings/applications/new) in Github
 
-```
-https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
-```
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
-### Step 4 - Authorize OAuth Application
+In Github, complete the required fields and click **Register application**
 
-Visit the following link
+| Field                      | Description                                                            |
+| -------------------------- | ---------------------------------------------------------------------- |
+| Application Name           | Your application name, for example you can use your organization name. |
+| Homepage URL               | The url for your application or website,                               |
+| Application Description    | Any description you choice                                             |
+| Authorization Callback URL | Use https://localhost we will update this value later                  |
 
-```
-https://github.com/login/oauth/authorize?client_id={{GitHubClientId}}&allow_signup=false&scope=repo
-```
+{% hint style="info" %}
+You can complete the fields using the information suggested by terrakube in VCS providers screen
+{% endhint %}
 
-Make sure to replace the values:
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-* GitHubClientId = Client Id from step 1
+Next, generate a new client secret
 
-### Step 5 - Authorize Application
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-![](<../../.gitbook/assets/image (1) (2).png>)
+Copy the  **Client Id**  and **Client Secret** from Github **** and **** go back to Terrakube to complete the **** required information. Next, click the **Connect and Continue** button
 
-If the setup was successful you should see this message in your browser.
+<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
-```
-Connected 
-```
+In the next screen copy the **Callback URL,** we will need this value to update our github application
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Go back to Github and update the callback URL, click the **Update application**
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+Once you updated the Callback Url in Github, return to Terrakube and click the **Connect to Github** button
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+You will see a new window, click the **Authorize** button to complete the connection
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+Finally if the connection was stablished successfully, you wil see **Connected** message, you can close the window and return to terrakube.
+
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+
+If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
+And now you will be able to use the connection in your workspaces and modules:
+
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>

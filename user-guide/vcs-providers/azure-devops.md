@@ -11,7 +11,6 @@ Complete the following fields:
 * Company name
 * Application name
 * Application website
-* Authorization callback URL
 
 {% hint style="info" %}
 For authorization callback you can use http://localhost, we will update this value later.
@@ -19,7 +18,7 @@ For authorization callback you can use http://localhost, we will update this val
 
 Example:
 
-![](<../../.gitbook/assets/image (2) (3).png>)
+![](<../../.gitbook/assets/image (2) (3) (1).png>)
 
 Add the followings "Authorized scopes" and create the application:
 

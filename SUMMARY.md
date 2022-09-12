@@ -21,6 +21,7 @@
   * [Creating an Organization](user-guide/organizations/organizations.md)
   * [Team Management](user-guide/organizations/team-management.md)
   * [Templates](user-guide/organizations/templates.md)
+  * [SSH](user-guide/organizations/ssh.md)
 * [VCS Providers](user-guide/vcs-providers/README.md)
   * [Github](user-guide/vcs-providers/github.com.md)
   * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)

@@ -26,7 +26,7 @@ The firt step wil be to get the authorization token for the Terrakube API.&#x20;
 
 Execute the request "Get Device Code" and open the URL in field "verification\_uri\_complete" inside the response to get the authentication token
 
-<figure><img src="../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (16) (2).png" alt=""><figcaption></figcaption></figure>
 
 When you open the "verification\__uri\__complete" field you should see a similar page.
 
@@ -70,7 +70,7 @@ To create it we will use the request inside the collection "Step 2 - Teams"
 
 This will create a team called "TERRAKUBE\_DEVELOPERS" with access to all the features and you should get a response like the following:
 
-<figure><img src="../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (23) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 The team name should be a valid "group" name in Azure Active Directory, Google Cloud Identity, Github, Gitlab, OIDC, Amazon Cognito, etc. This will be based on Dex Configuration. For this example we are using Terrakube with a preconfigured LDAP.
@@ -86,7 +86,7 @@ Templates are sent to the API in base64 encoding.
 
 To create it we will use the request inside the postman collection "Step 3 - Templates"
 
-<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Template 1 - Basic Terraform Plan-Apply
 
@@ -104,11 +104,11 @@ flow:
 
 Request:
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 Response:
 
-<figure><img src="../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now we have a template that we can reuse when running jobs accross an organization, lets define a couple of more templates.
 
@@ -215,7 +215,7 @@ Request:
 
 Response:
 
-<figure><img src="../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
 
 This template is importing the **Terrascan** extension and running a analisys for one particular workspace.
 
@@ -251,11 +251,11 @@ flow:
 
 Request:
 
-<figure><img src="../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 Response:
 
-<figure><img src="../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now we have the following template available inside our organization:
 
@@ -276,12 +276,12 @@ For more information about Terrakube extension please refer to the followin Gith
 A workspace is a folder inside a git repository where we store our terraform code, we can define all the terraform resources or we can just call a terraform module that is available inside Terrakube modules.
 
 {% hint style="info" %}
-Workspace Git repository can be public or private using the following providers: Github, Gitlab, Azure DevOps, Bitbucket or SSH keys (rsa and ed25519). If you are using a private git respository please refer to the following[ document](broken-reference/).
+Workspace Git repository can be public or private using the following providers: Github, Gitlab, Azure DevOps, Bitbucket or SSH keys (rsa and ed25519). If you are using a private git respository please refer to the following[ document](https://github.com/AzBuilder/docs/blob/master/api/broken-reference/README.md).
 {% endhint %}
 
 To create it we will use the request inside the postman collection "Step 4 - Worspace"
 
-<figure><img src="../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 Lets create a very simple workspace using the following terraform code inside this public git repository "[https://github.com/AzBuilder/terrakube-docker-compose.git](https://github.com/AzBuilder/terrakube-docker-compose.git)" using the root folder "/"
 
@@ -307,7 +307,7 @@ You can have multiple workspaces using a single git repository using folders and
 
 Request.
 
-<figure><img src="../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
 
 Response.
 

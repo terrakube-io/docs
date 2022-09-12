@@ -1,6 +1,6 @@
 # VCS Providers
 
-Terrakube empower collaboration between different teams and to achieve this, a main feature is that you can integrate it with your version control system (VCS) provider. Although you can use terrakube with public git repositories or with private git repositories using SSH, a VCS provider is the preferred way to connect to your Terraform code.
+Terrakube empower collaboration between different teams in your organization, and to achieve this you can integrate terrakube with your version control system (VCS) provider. Although you can use terrakube with public git repositories or with private git repositories using SSH, a VCS provider is the preferred way to connect to your Terraform code.
 
 Terrakube supports the following VCS providers:
 

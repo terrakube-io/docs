@@ -43,7 +43,7 @@ Using the following permission "[https://www.googleapis.com/auth/admin.directory
 
 You can now generate the JSON credentials file for your application, you will use this file later in the helm chart.
 
-<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 

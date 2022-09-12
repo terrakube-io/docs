@@ -21,11 +21,11 @@ You need to complete the Azure authentication setup for Dex. You can found infor
 
 You need to go to your Azure and create a new Application
 
-<figure><img src="../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 After the application is created you need to add the redirect URL.
 
-<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 You will also need to add the permission Directory.Read.All and ask a Azure administrator to approve the permission.
 
