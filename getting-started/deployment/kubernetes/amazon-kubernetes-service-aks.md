@@ -29,7 +29,7 @@ You can keep the default values
 
 Add the domain name to cognito
 
-<figure><img src="../../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the user pool is created you will need to create a new application.
 

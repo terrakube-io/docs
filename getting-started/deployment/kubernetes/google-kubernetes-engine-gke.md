@@ -25,7 +25,7 @@ You need to go to your GCP projet and create a new OAuth Application you can fol
 
 Once inside the "Credentials" page, you will have to create a new OAuth Client
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 The OAuth application should look like this with the redirect URL "[https://api.terrakube.gcp.com/dex/callback](https://api.terrakube.docker.com/dex/callback)"
 

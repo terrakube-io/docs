@@ -111,7 +111,7 @@ Finally, you can assign a name and description to your template and click the **
 
 Now you template is ready and you can start using it in any workspace within your organization.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 By default Terrakube don't create any template, so you have to define the templates in your organization based on your requirements.
@@ -125,7 +125,7 @@ Click the **Edit** button next to the Template you would like to edit
 
 Edit your template definition, description or name as desired and when you are ready click the **Save Template** button
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Deleting a Template
 

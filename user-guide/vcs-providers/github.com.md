@@ -8,7 +8,7 @@ For using repositories from GitHub.com with Terrakube workspaces and modules you
 
 Navigate to the desired organization **** and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you prefer, you can add a new VCS Provider directly from the Create workspace or Create Module screen.&#x20;
@@ -35,11 +35,11 @@ In the Github page, complete the required fields and click **Register applicatio
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
 
 Next, generate a new client secret
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (4).png" alt=""><figcaption></figcaption></figure>
 
 Copy the  **Client Id**  and **Client Secret** from Github **** and **** go back to Terrakube to complete the **** required information. Then, click the **Connect and Continue** button
 
@@ -47,7 +47,7 @@ Copy the  **Client Id**  and **Client Secret** from Github **** and **** go back
 
 In the next screen copy the **Callback URL,** we will need this value to update our github application
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Github and update the callback URL, click the **Update application** button
 
