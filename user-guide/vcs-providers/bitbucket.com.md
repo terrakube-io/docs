@@ -35,7 +35,7 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (2) (1) (1).png>)
 
 Check "This is a private consumer" and add the following permission:
 
@@ -43,7 +43,7 @@ Check "This is a private consumer" and add the following permission:
 
 Example:
 
-![](<../../.gitbook/assets/image (101).png>)
+![](<../../.gitbook/assets/image (6) (1) (1).png>)
 
 After creating the application copy the following values:
 
@@ -90,7 +90,7 @@ Make sure to replace the values:
 
 ### Step 5 - Authorize Application
 
-![](<../../.gitbook/assets/image (59).png>)
+![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
 
 If the setup was successful you should see this message in your browser.
 

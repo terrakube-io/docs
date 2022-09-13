@@ -1,6 +1,24 @@
 # GitLab
 
-To connect Terrakube to GitLab and use private git repositories you will need to follow these steps:
+For using repositories from Gitlab.com with Terrakube workspaces and modules you will need to follow these steps:
+
+{% hint style="info" %}
+**Manage VCS Providers** permission is required to perform this action, please check [team-management.md](../organizations/team-management.md "mention") for more info.
+{% endhint %}
+
+
+
+Navigate to the desired organization **** and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
+
+<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+If you prefer, you can add a new VCS Provider directly from the Create workspace or Create Module screen.&#x20;
+{% endhint %}
+
+Click the **Gitlab button**
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 ### Step 1 - Register OAuth Application
 
@@ -20,7 +38,7 @@ For application and authorization callback you can use http://localhost, we will
 
 Example:
 
-![](<../../.gitbook/assets/image (78).png>)
+![](<../../.gitbook/assets/image (10) (1) (1).png>)
 
 After creating the application copy the **"Application Id"** and generate a new "**Secret"**.
 

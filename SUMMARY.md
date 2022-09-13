@@ -9,11 +9,11 @@
 * [🚀 Getting Started](getting-started/getting-started.md)
 * [📥 Deployment](getting-started/deployment/README.md)
   * [🔨 Helm Chart](getting-started/deployment/docker-compose.md)
-* [🤵 User Management](getting-started/user-management/README.md)
-  * [Azure Active Directory](getting-started/user-management/azure-active-directory.md)
-  * [Google Cloud Identity](getting-started/user-management/google-cloud-identity.md)
-  * [Amazon Cognito](getting-started/user-management/amazon-cognito.md)
-  * [Github](getting-started/user-management/docker-desktop.md)
+* [🤵 User Management](getting-started/deployment/kubernetes/README.md)
+  * [Azure Active Directory](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
+  * [Google Cloud Identity](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
+  * [Amazon Cognito](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
+  * [Github](getting-started/deployment/kubernetes/docker-desktop.md)
 
 ## 📓 User Guide
 
@@ -21,17 +21,17 @@
   * [Creating an Organization](user-guide/organizations/organizations.md)
   * [Team Management](user-guide/organizations/team-management.md)
   * [Templates](user-guide/organizations/templates.md)
-  * [SSH](user-guide/organizations/ssh.md)
+  * [SSH Keys](user-guide/organizations/ssh-keys.md)
 * [VCS Providers](user-guide/vcs-providers/README.md)
   * [Github](user-guide/vcs-providers/github.com.md)
-  * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)
-  * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)
   * [GitLab](user-guide/vcs-providers/gitlab.com.md)
+  * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)
+  * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)
 * [Open Policy Agent](user-guide/open-policy-agent.md)
 
 ## 🎓 Learn
 
-* [What is Terrakube](learn/what-is-terrakube/README.md)
+* [What is Terrakube](tutorial/what-is-terrakube.md)
   * [Section Overview](learn/what-is-terrakube/section-overview.md)
   * [Terraform in a Nutshell](learn/what-is-terrakube/terraform-in-a-nutshell.md)
   * [Terraform Challenges at Enterprise Level](learn/what-is-terrakube/terraform-challenges-at-enterprise-level.md)

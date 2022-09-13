@@ -38,8 +38,8 @@ You need to be part of the administrator Active Directory Group to work with thi
 
 ### Supported Operations
 
-{% swagger src="../../.gitbook/assets/v2_4 (1).json" path="/organization/{organizationId}/globalvar" method="get" %}
-[v2_4 (1).json](<../../.gitbook/assets/v2_4 (1).json>)
+{% swagger src="../../.gitbook/assets/v2_4 (2).json" path="/organization/{organizationId}/globalvar" method="get" %}
+[v2_4 (2).json](<../../.gitbook/assets/v2_4 (2).json>)
 {% endswagger %}
 
 {% swagger src="../../.gitbook/assets/v2_4.yaml" path="/organization/{organizationId}/globalvar" method="post" %}
