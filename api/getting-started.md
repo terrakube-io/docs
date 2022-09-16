@@ -18,7 +18,7 @@ After some seconds Terrakube API will be up and running.
 
 Now you can select the "Thunder Client" and open the "Getting Started" collection to test the API
 
-<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Authentication
 
@@ -86,7 +86,7 @@ Templates are sent to the API in base64 encoding.
 
 To create it we will use the request inside the postman collection "Step 3 - Templates"
 
-<figure><img src="../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Template 1 - Basic Terraform Plan-Apply
 
@@ -333,7 +333,7 @@ When Terrakube runs a job it will start saving all the states and changes inside
 
 Request
 
-<figure><img src="../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (40) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Worspace (Azure/GCP/AWS)
 
@@ -345,7 +345,7 @@ Basically to use any terraform provider we just need to define the worspace envi
 
 This is an example of an Azure workspace.
 
-<figure><img src="../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (15) (3).png" alt=""><figcaption></figcaption></figure>
 
 For more information about the workspace please check the api methods for:
 

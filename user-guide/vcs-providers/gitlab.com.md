@@ -16,9 +16,9 @@ Navigate to the desired organization **** and click the **Settings** button, the
 If you prefer, you can add a new VCS Provider directly from the Create workspace or Create Module screen.&#x20;
 {% endhint %}
 
-Click the **Gitlab button**
+Click the **Gitlab** button
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen click the link to [register a new OAuth Application](https://gitlab.com/-/profile/applications) in Gitlab
 
@@ -40,19 +40,19 @@ You can complete the fields using the information suggested by terrakube in the 
 
 In the next screen, copy the **Application ID** and **Secret**
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (5).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen copy the **Callback URL,** we will need this value to update our gitlab application
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Gitlab and update the Redirect URI, click the **Save application** button
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once you updated the Callback Url in Gitlab, return to Terrakube and click the **Connect to Gitlab** button
 
@@ -68,8 +68,8 @@ Finally if the connection was stablished successfully, you wil see a **Connected
 
 If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (4).png" alt=""><figcaption></figcaption></figure>
 
 And now, you will be able to use the connection in your workspaces and modules:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>

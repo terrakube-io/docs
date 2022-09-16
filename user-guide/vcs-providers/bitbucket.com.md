@@ -4,96 +4,82 @@ description: Work in progress
 
 # Bitbucket
 
-To connect Terrakube to Bitbucket and use private git repositories you will need to follow these steps:
-
-### Step 1 - Register OAuth Application
-
-Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use.
-
-Navigate to Bitbucket's "Add OAuth Consumer" page.
+For using repositories from Bitbucket.com with Terrakube workspaces and modules you will need to follow these steps:
 
 {% hint style="info" %}
-[https://bitbucket.org/](https://bitbucket.org)\{{WORKSPACE NAME\}}/workspace/settings/oauth-consumers/new
+**Manage VCS Providers** permission is required to perform this action, please check [team-management.md](../organizations/team-management.md "mention") for more info.
 {% endhint %}
 
-You can also reach it through Bitbucket's menus:
+Navigate to the desired organization **** and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
-* Click your profile picture and choose the workspace you want to access.
-* In the workspace navigation, click "Settings".
-* In the settings navigation, click "OAuth consumers,"
-* On the OAuth settings page and click the "Add consumer" button.
-
-Complete the following fields:
-
-* Application name
-* Application URL
-* Authorization callback URL
+<figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-For application and authorization callback you can use http://localhost, we will update this value later.
+If you prefer, you can add a new VCS Provider directly from the Create workspace or Create Module screen.
 {% endhint %}
 
-Example:
+Click the **Bitbucket** button
 
-![](<../../.gitbook/assets/image (2) (1) (1).png>)
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
-Check "This is a private consumer" and add the following permission:
+<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
 
-* Repository (Read)
+Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use and click the **settings** button in your workspace
 
-Example:
+<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
 
-![](<../../.gitbook/assets/image (6) (1) (1).png>)
+Click the **OAuth consumers** menu and then click the **Add consumer** button
 
-After creating the application copy the following values:
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
-* Key
-* Secret
+Complete the required fields and click **Save**  button
 
-### Step 2 - Create a new VCS Connection
-
-Create a new VCS connection using the following values:
-
-* clientId = Key
-* clientSecret = Client Secret
-* vcsType = BITBUCKET
-
-{% hint style="warning" %}
-Please refer to [VCS API](../../api/methods/vcs.md) for more information
-{% endhint %}
+| Field                                 | Description                                                                                                                                                                                                              |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Name                                  | Your application name, for example you can use your organization name.                                                                                                                                                   |
+| Description                           | Any description of your choice                                                                                                                                                                                           |
+| Redirect URI                          | Use https://localhost we will update this value later                                                                                                                                                                    |
+| This is a private consumer (checkbox) | Checked                                                                                                                                                                                                                  |
+| Permissions (checkboxes)              | <p>The following should be checked: </p><p><strong>Account</strong>: Write </p><p><strong>Repositories</strong>: Admin </p><p><strong>Pull requests</strong>: Write </p><p><strong>Webhooks</strong>: Read and write</p> |
 
 {% hint style="info" %}
-You can also use Terrakube CLI or Terrakube UI to generate the VCS record.
+You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-Make sure to copy the VCS id from the response body.
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-### Step 3 - Update OAuth Application Callback
+In the next screen, copy the **Key** and **Secret**
 
-Update the application callback using the following structure:
+<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
 
-```
-https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
-```
+Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-### Step 4 - Authorize OAuth Application
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-Visit the following link
+In the next screen copy the **Callback URL,** we will need this value to update our Bitbucket application
 
-```
-https://bitbucket.org/site/oauth2/authorize?client_id={{keyId}}&response_type=code&response_type=code&scope=repository
-```
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-Make sure to replace the values:
+Go back to Bitbucket and update the Callback URL, click the **Save** button
 
-* keyID = Application Key from step 1
+<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
 
-### Step 5 - Authorize Application
+Once you updated the Callback Url in Bitbucket, return to Terrakube and click the **Connect to Bitbucket** button
 
-![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-If the setup was successful you should see this message in your browser.
+You will see a new window, click the **Grant Access** button to complete the connection
 
-```
-Connected 
-```
+<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+
+Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
+
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
+
+<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+
+And now, you will be able to use the connection in your workspaces and modules:
+
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>

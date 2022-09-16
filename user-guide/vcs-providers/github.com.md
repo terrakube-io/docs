@@ -20,7 +20,7 @@ Click the **Github button**
 
 In the next screen click the link to [register a new OAuth Application](https://github.com/settings/applications/new) in Github
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>
 
 In the Github page, complete the required fields and click **Register application**
 
@@ -35,7 +35,7 @@ In the Github page, complete the required fields and click **Register applicatio
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 Next, generate a new client secret
 
@@ -51,7 +51,7 @@ In the next screen copy the **Callback URL,** we will need this value to update 
 
 Go back to Github and update the callback URL, click the **Update application** button
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once you updated the Callback Url in Github, return to Terrakube and click the **Connect to Github** button
 
