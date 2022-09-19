@@ -8,14 +8,14 @@ Terrakube supports the following VCS providers:
 [github.com.md](github.com.md)
 {% endcontent-ref %}
 
-{% content-ref url="azure-devops.md" %}
-[azure-devops.md](azure-devops.md)
+{% content-ref url="gitlab.com.md" %}
+[gitlab.com.md](gitlab.com.md)
 {% endcontent-ref %}
 
 {% content-ref url="bitbucket.com.md" %}
 [bitbucket.com.md](bitbucket.com.md)
 {% endcontent-ref %}
 
-{% content-ref url="gitlab.com.md" %}
-[gitlab.com.md](gitlab.com.md)
+{% content-ref url="azure-devops.md" %}
+[azure-devops.md](azure-devops.md)
 {% endcontent-ref %}
