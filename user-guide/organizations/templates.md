@@ -121,11 +121,11 @@ By default Terrakube don't create any template, so you have to define the templa
 
 Click the **Edit** button next to the Template you would like to edit
 
-<figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Edit your template definition, description or name as desired and when you are ready click the **Save Template** button
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Deleting a Template
 

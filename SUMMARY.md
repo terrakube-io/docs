@@ -28,6 +28,7 @@
   * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)
   * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)
 * [Open Policy Agent](user-guide/open-policy-agent.md)
+* [Cost Estimation](user-guide/cost-estimation.md)
 
 ## 🎓 Learn
 

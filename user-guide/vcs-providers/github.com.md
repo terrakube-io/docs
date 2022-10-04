@@ -51,7 +51,7 @@ In the next screen copy the **Callback URL,** we will need this value to update 
 
 Go back to Github and update the callback URL, click the **Update application** button
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 Once you updated the Callback Url in Github, return to Terrakube and click the **Connect to Github** button
 

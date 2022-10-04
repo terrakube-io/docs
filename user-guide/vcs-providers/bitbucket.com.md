@@ -22,7 +22,7 @@ Click the **Bitbucket** button
 
 <figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (3).png" alt=""><figcaption></figcaption></figure>
 
 Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use and click the **settings** button in your workspace
 
@@ -30,7 +30,7 @@ Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account yo
 
 Click the **OAuth consumers** menu and then click the **Add consumer** button
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
 
 Complete the required fields and click **Save**  button
 
@@ -54,11 +54,11 @@ In the next screen, copy the **Key** and **Secret**
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen copy the **Callback URL,** we will need this value to update our Bitbucket application
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Bitbucket and update the Callback URL, click the **Save** button
 
@@ -66,7 +66,7 @@ Go back to Bitbucket and update the Callback URL, click the **Save** button
 
 Once you updated the Callback Url in Bitbucket, return to Terrakube and click the **Connect to Bitbucket** button
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
 
 You will see a new window, click the **Grant Access** button to complete the connection
 
@@ -74,7 +74,7 @@ You will see a new window, click the **Grant Access** button to complete the con
 
 Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
 

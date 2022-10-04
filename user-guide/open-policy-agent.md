@@ -208,7 +208,7 @@ You can add this template inside your organization settings using a custom templ
 
 * Create a new template
 
-<figure><img src="../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Select a blank template.
 
