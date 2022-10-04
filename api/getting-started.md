@@ -177,7 +177,7 @@ Request:
 
 Response:
 
-<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (24) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Template 4 - Static Code Analysis Terrascan
 
@@ -319,7 +319,7 @@ When a workspace is created inside Terrakube we can define some schedules, this 
 
 Request
 
-<figure><img src="../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 This schedule will run the workspace using one template every minute

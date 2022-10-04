@@ -59,7 +59,7 @@ Once you updated the Callback Url in Github, return to Terrakube and click the *
 
 You will see a new window, click the **Authorize** button to complete the connection
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
 

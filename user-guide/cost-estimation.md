@@ -6,7 +6,7 @@ Terrakube can be integrated with Infracost using the Terrakube extension to vali
 
 The firts step will be to create a Terrakube template that calculate the estimated cost of the resources using infracost and validate the total monthly cost to check if we could deploy the resource or not if the price is bellow 100 USD.&#x20;
 
-```
+```yaml
 flow:
 - type: "terraformPlan"
   name: "Terraform Plan with Cost Estimation"
@@ -33,9 +33,11 @@ flow:
       after: true
       script: |
         terraform show -json terraformLibrary.tfPlan > plan.json;
-        infracost breakdown --path plan.json --format json --out-file infracost.json;
+        INFRACOST_ENABLE_DASHBOARD=true infracost breakdown --path plan.json --format json --out-file infracost.json;
         totalCost=$(jq -r '.totalMonthlyCost' infracost.json);
-        echo "Total Monthly Cost: $totalCost"
+        urlTotalCost=$(jq -r '.shareUrl' infracost.json);
+        echo "Total Monthly Cost: $totalCost USD"
+        echo "For more detail information please visit: $urlTotalCost"
         if (($totalCost < 100)); 
         then
           echo "The total cost for the resource is below 100 USD. Deployment is approved";
@@ -52,7 +54,7 @@ In a high level this template will do the following:
 
 * Run the terraform plan for the Terrakube workspace
 
-```
+```yaml
 ...
 flow:
 - type: "terraformPlan"
@@ -63,7 +65,7 @@ flow:
 
 * After the terraform plan is completed successfully it will import the Infracost inside our job using the Infracost extension.
 
-```
+```yaml
 ...
     - runtime: "GROOVY"
       priority: 100
@@ -86,16 +88,18 @@ flow:
 
 * Once the Infracost has been imported successfully inside our Terrakube Job, you can make use of it to generate the cost estimation with some business rules using a simple BASH script. Based on the result of the Terrakube Job can continue or the execution can be cancelled if the monthly cost is above 100 USD.
 
-```
+```yaml
 ...
     - runtime: "BASH"
       priority: 200
       after: true
       script: |
         terraform show -json terraformLibrary.tfPlan > plan.json;
-        infracost breakdown --path plan.json --format json --out-file infracost.json;
+        INFRACOST_ENABLE_DASHBOARD=true infracost breakdown --path plan.json --format json --out-file infracost.json;
         totalCost=$(jq -r '.totalMonthlyCost' infracost.json);
-        echo "Total Monthly Cost: $totalCost"
+        urlTotalCost=$(jq -r '.shareUrl' infracost.json);
+        echo "Total Monthly Cost: $totalCost USD"
+        echo "For more detail information please visit: $urlTotalCost"
         if (($totalCost < 100)); 
         then
           echo "The total cost for the resource is below 100 USD. Deployment is approved";
@@ -103,7 +107,7 @@ flow:
           echo "The total cost for the resource is above 100 USD, cancelling operation";
           exit 1
         fi;
-..
+...
 ```
 
 You can use the Terrakube UI to setup the new template and use it across the Terrakube organization.
@@ -163,11 +167,15 @@ Azure Credentials and Infracost key can be define using Global Variables inside 
 
 Now we can start the Terrakube job using the template which include the cost validation.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (5).png" alt=""><figcaption></figcaption></figure>
 
-After a couple of seconds you should be able to see the monthly the terraform plan information and the cost validation
+After a couple of seconds you should be able to see the monthly the terraform plan information and the cost validation.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+You can also visit the infracost dashboard to see the cost detail.
+
+<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 Now lets update the terraform resource and use a more expensive one.
 
@@ -208,7 +216,7 @@ This will deploy an Azure Service Plan which cost 146 USD every month
 
 Now you can run the workspace again and the deployment will fail because it does not comply with the max cost of 100 USD every month, that you defined in the Terrakube template.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
 This is how you can integrate Terrakube with infracost to validate the cost of the resources that you will be deploying and even adding some custom business rules inside the jobs.
 
