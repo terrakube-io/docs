@@ -48,6 +48,64 @@ flow:
   step: 200
 ```
 
+In a high level this template will do the following:
+
+* Run the terraform plan for the Terrakube workspace
+
+```
+...
+flow:
+- type: "terraformPlan"
+  name: "Terraform Plan with Cost Estimation"
+  step: 100
+...
+```
+
+* After the terraform plan is completed successfully it will import the Infracost inside our job using the Infracost extension.
+
+```
+...
+    - runtime: "GROOVY"
+      priority: 100
+      after: true
+      script: |
+        import Infracost
+
+        String credentials = "version: \"0.1\"\n" +
+                "api_key: $INFRACOST_KEY \n" +
+                "pricing_api_endpoint: https://pricing.api.infracost.io"
+
+        new Infracost().loadTool(
+           "$workingDirectory",
+           "$bashToolsDirectory", 
+           "0.10.12",
+           credentials)
+        "Infracost Download Completed..."
+...
+```
+
+* Once the Infracost has been imported successfully inside our Terrakube Job, you can make use of it to generate the cost estimation with some business rules using a simple BASH script. Based on the result of the Terrakube Job can continue or the execution can be cancelled if the monthly cost is above 100 USD.
+
+```
+...
+    - runtime: "BASH"
+      priority: 200
+      after: true
+      script: |
+        terraform show -json terraformLibrary.tfPlan > plan.json;
+        infracost breakdown --path plan.json --format json --out-file infracost.json;
+        totalCost=$(jq -r '.totalMonthlyCost' infracost.json);
+        echo "Total Monthly Cost: $totalCost"
+        if (($totalCost < 100)); 
+        then
+          echo "The total cost for the resource is below 100 USD. Deployment is approved";
+        else
+          echo "The total cost for the resource is above 100 USD, cancelling operation";
+          exit 1
+        fi;
+..
+```
+
 You can use the Terrakube UI to setup the new template and use it across the Terrakube organization.
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
