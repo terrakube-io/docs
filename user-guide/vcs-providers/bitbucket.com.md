@@ -54,7 +54,7 @@ In the next screen, copy the **Key** and **Secret**
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (4).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen copy the **Callback URL,** we will need this value to update our Bitbucket application
 
@@ -74,7 +74,7 @@ You will see a new window, click the **Grant Access** button to complete the con
 
 Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1) (5).png" alt=""><figcaption></figcaption></figure>
 
 If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
 

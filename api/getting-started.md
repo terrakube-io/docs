@@ -18,7 +18,7 @@ After some seconds Terrakube API will be up and running.
 
 Now you can select the "Thunder Client" and open the "Getting Started" collection to test the API
 
-<figure><img src="../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Authentication
 

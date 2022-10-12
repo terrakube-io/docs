@@ -99,7 +99,7 @@ Once you are in the desired organization, click the **Settings** button, then in
 
 You will see a list of some predefined templates than you can utilize as a quick start or if you prefer you can click the **Blank Template** to start from scratch
 
-<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen you can define your template and when you are ready click the **Continue** button.
 

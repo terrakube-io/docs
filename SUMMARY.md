@@ -29,6 +29,7 @@
   * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)
 * [Open Policy Agent](user-guide/open-policy-agent.md)
 * [Cost Estimation](user-guide/cost-estimation.md)
+* [Drift Detection](user-guide/drift-detection.md)
 
 ## 🎓 Learn
 
