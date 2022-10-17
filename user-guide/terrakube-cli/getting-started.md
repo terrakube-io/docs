@@ -1,4 +1,4 @@
-# 🌟 Getting started
+# Getting started
 
 `terrakube cli` is Terrakube on the command line. It brings organizations, workspaces and other Terrakube concepts to the terminal.
 
@@ -32,7 +32,7 @@ Run [`terrakube login`](commands/azb-login.md) to authenticate with your account
 You can also pass this values using [`terrakube login`](commands/azb-login.md) however is recommended to use environment variables in the case you need to authenticate several times or if you are running an automatic script.
 {% endhint %}
 
-Open your terminal and execute the following commands in order to setup your terrakube environment and get authenticated. You can get the server, path, scheme, tenant id and client id values during the [Terrakube server deployment](../getting-started/deployment/)
+Open your terminal and execute the following commands in order to setup your terrakube environment and get authenticated. You can get the server, path, scheme, tenant id and client id values during the [Terrakube server deployment](../../getting-started/deployment/)
 
 ```
 export TERRAKUBE_SERVER="my-terrakube.com"
@@ -95,7 +95,7 @@ Once you create your organization you will probably want to define the teams and
 terrakube team create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name AZB_USER --manage-workspace=true --manage-module=true --manage-provider=true
 ```
 
-In the previous command we are creating a new team inside our new Organization and for this case we are providing permissions to manage workspaces, modules and providers. In the name flag we are using an Azure AD Group, so all the team members are defined inside the AD group. For more details about teams and permissions you can see [Security Page](../getting-started/security.md).
+In the previous command we are creating a new team inside our new Organization and for this case we are providing permissions to manage workspaces, modules and providers. In the name flag we are using an Azure AD Group, so all the team members are defined inside the AD group. For more details about teams and permissions you can see [Security Page](../../getting-started/security.md).
 
 ### Create a Workspace
 

@@ -16,7 +16,7 @@ If you prefer, you can add a new VCS Provider directly from the Create workspace
 
 Click the **Github button**
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (3).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen click the link to [register a new OAuth Application](https://github.com/settings/applications/new) in Github
 
@@ -67,7 +67,7 @@ Finally if the connection was stablished successfully, you wil see a **Connected
 
 If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (3).png" alt=""><figcaption></figcaption></figure>
 
 And now, you will be able to use the connection in your workspaces and modules:
 

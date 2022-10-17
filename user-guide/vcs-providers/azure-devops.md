@@ -1,84 +1,77 @@
 # Azure DevOps
 
-To connect Terrakube to Azure DevOps and use private git repositories you will need to follow these steps:
-
-### Step 1 - Register OAuth Application
-
-Use the following [link](https://aex.dev.azure.com/app/register?mkt=en-US) to create a new OAuth Application inside Azure DevOps Services
-
-Complete the following fields:
-
-* Company name
-* Application name
-* Application website
+For using repositories from Azure Devops with Terrakube workspaces and modules you will need to follow these steps:
 
 {% hint style="info" %}
-For authorization callback you can use http://localhost, we will update this value later.
+**Manage VCS Providers** permission is required to perform this action, please check [team-management.md](../organizations/team-management.md "mention") for more info.
 {% endhint %}
 
-Example:
+Navigate to the desired organization **** and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
-![](<../../.gitbook/assets/image (2) (3) (1) (1).png>)
-
-Add the followings "Authorized scopes" and create the application:
-
-* Code (Read)
-* Code (Status)
-
-Example:
-
-![](<../../.gitbook/assets/image (5) (1) (1).png>)
-
-After creating the application copy the following values:
-
-* App Id
-* Client Secret
-
-### Step 2 - Create a new VCS Connection
-
-Create a new VCS connection using the following values:
-
-* clientId = App ID
-* clientSecret = Client Secret
-* vcsType = AZURE\_DEVOPS
-
-{% hint style="warning" %}
-Please refer to [VCS API ](../../api/methods/vcs.md)for more information
-{% endhint %}
+<figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-You can also use Terrakube CLI or Terrakube UI to generate the VCS record.
+If you prefer, you can add a new VCS Provider directly from the Create workspace or Create Module screen.
 {% endhint %}
 
-Make sure to copy the VCS id from the response body.
+Click the **Azure Devops** button
 
-### Step 3 - Update OAuth Application Callback
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
-Update the application callback using the following structure:
+In the next screen click the link to [register a new OAuth Application](https://aex.dev.azure.com/app/register?mkt=en-US) in Azure Devops
 
-```
-https://{{TerrakubeApiURL}}/callback/v1/vcs/{{vcsId}}
-```
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-### Step 4 - Authorize OAuth Application
+In the Azure Devops page, complete the required fields and click **Create application**
 
-Visit the following link
+| Field                          | Description                                                       |
+| ------------------------------ | ----------------------------------------------------------------- |
+| Company Name                   | Your company name.                                                |
+| Application name               | The name of your application or you can use the Organization name |
+| Application website            | Your application or website url                                   |
+| Callback URL                   | Use https://localhost we will update this value later             |
+| Authorized scopes (checkboxes) | Only the following should be checked: Code (read) Code (status)   |
 
-```
-https://app.vssps.visualstudio.com/oauth2/authorize?client_id={{appId}}&redirect_uri={{appCallback}}&response_type=Assertion&scope=vso.code+vso.code_status
-```
+{% hint style="info" %}
+You can complete the fields using the information suggested by terrakube in the VCS provider screen
+{% endhint %}
 
-Make sure to replace the values:
 
-* app\_id = Client Id from step 1
-* redirect\_uri = Application callback from step 3
 
-### Step 5 - Authorize Application
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
-![](<../../.gitbook/assets/image (1) (1) (1) (1).png>)
+In the next screen, copy the **App ID** and **Client Secret**
 
-If the setup was successful you should see this message in your browser.
+<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
-```
-Connected 
-```
+Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+In the next screen copy the **Callback URL,** we will need this value to update our Azure Devops application
+
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+Go back to Azure Devops and update the Callback URL, click the **Save** button
+
+<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+Once you updated the Callback Url in Azure Devops, return to Terrakube and click the **Connect to Azure Devops** button
+
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+
+You will see a new window, click the **Accept** button to complete the connection
+
+<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+
+Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
+
+<figure><img src="../../.gitbook/assets/image (6) (1) (5).png" alt=""><figcaption></figcaption></figure>
+
+If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+And now, you will be able to use the connection in your workspaces and modules:
+
+<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>

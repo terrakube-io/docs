@@ -18,7 +18,7 @@ If you prefer, you can add a new VCS Provider directly from the Create workspace
 
 Click the **Gitlab** button
 
-<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen click the link to [register a new OAuth Application](https://gitlab.com/-/profile/applications) in Gitlab
 
@@ -40,7 +40,7 @@ You can complete the fields using the information suggested by terrakube in the 
 
 In the next screen, copy the **Application ID** and **Secret**
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
@@ -72,4 +72,4 @@ If you refresh the VCS providers page in your organization, you should see the c
 
 And now, you will be able to use the connection in your workspaces and modules:
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (3).png" alt=""><figcaption></figcaption></figure>

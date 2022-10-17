@@ -1,4 +1,4 @@
-# ℹ Commands
+# Commands
 
 #### Usage
 

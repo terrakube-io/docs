@@ -159,7 +159,7 @@ Lets create a workspace with this information in Terrakube to test the template 
 
 You will have to define the correct credentials to deploy the resource and setup the environment variables and include the infracost key.
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 Azure Credentials and Infracost key can be define using Global Variables inside the organization so you dont have to define it in every workspace. For more information check [Global Variables](../api/methods/globalvar.md)
@@ -216,7 +216,7 @@ This will deploy an Azure Service Plan which cost 146 USD every month
 
 Now you can run the workspace again and the deployment will fail because it does not comply with the max cost of 100 USD every month, that you defined in the Terrakube template.
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 This is how you can integrate Terrakube with infracost to validate the cost of the resources that you will be deploying and even adding some custom business rules inside the jobs.
 

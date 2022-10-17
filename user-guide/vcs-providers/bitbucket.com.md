@@ -46,7 +46,7 @@ Complete the required fields and click **Save**  button
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (5).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen, copy the **Key** and **Secret**
 
@@ -82,4 +82,4 @@ If you refresh the VCS providers page in your organization, you should see the c
 
 And now, you will be able to use the connection in your workspaces and modules:
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (9) (4).png" alt=""><figcaption></figcaption></figure>
