@@ -26,6 +26,8 @@
   * [GitLab](user-guide/vcs-providers/gitlab.com.md)
   * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)
   * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)
+* [Workspaces](user-guide/workspaces/README.md)
+  * [Creating Workspaces](user-guide/workspaces/creating-workspaces.md)
 * [Terrakube CLI](user-guide/terrakube-cli/README.md)
   * [Getting started](user-guide/terrakube-cli/getting-started.md)
   * [Installation](user-guide/terrakube-cli/install.md)
@@ -61,7 +63,7 @@
       * [module create](user-guide/terrakube-cli/commands/azb-module/create.md)
       * [module update](user-guide/terrakube-cli/commands/azb-module/module-update.md)
       * [module delete](user-guide/terrakube-cli/commands/azb-module/module-delete.md)
-* [Open Policy Agent](user-guide/open-policy-agent.md)
+* [Policy Enforcement (OPA)](user-guide/policy-enforcement-opa.md)
 * [Cost Estimation](user-guide/cost-estimation.md)
 * [Drift Detection](user-guide/drift-detection.md)
 
