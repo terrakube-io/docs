@@ -8,6 +8,10 @@ In this section:
 [organizations.md](organizations.md)
 {% endcontent-ref %}
 
+{% content-ref url="global-variables.md" %}
+[global-variables.md](global-variables.md)
+{% endcontent-ref %}
+
 {% content-ref url="team-management.md" %}
 [team-management.md](team-management.md)
 {% endcontent-ref %}
