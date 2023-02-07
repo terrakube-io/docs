@@ -110,7 +110,8 @@ The firts step will be to create a Terrakube template that validate if there is 
               terrakubeOutput);
           }
 
-          "Drift Detection Completed..."</code></pre>
+          "Drift Detection Completed..."
+</code></pre>
 
 In a high level this template will do the following:
 
@@ -251,7 +252,7 @@ resource "azurerm_app_service_plan" "example" {
 
 Once our resources are created in Azure we can run the **Drift Detection** template.
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
 
 The template will send a message to a Slack channel with the following:
 
@@ -273,7 +274,7 @@ You will have to go the the **"Schedule"** option inside your workspace.
 
 Now you can select the **Drift Detection** template to run at 5:30 AM every day.
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (5).png" alt=""><figcaption></figcaption></figure>
 
 Now you should receive the notification in your Slack channel every day at 5:30 am&#x20;
 

@@ -19,6 +19,7 @@
 
 * [Organizations](user-guide/organizations/README.md)
   * [Creating an Organization](user-guide/organizations/organizations.md)
+  * [Global Variables](user-guide/organizations/global-variables.md)
   * [Team Management](user-guide/organizations/team-management.md)
   * [Templates](user-guide/organizations/templates.md)
 * [VCS Providers](user-guide/vcs-providers/README.md)

@@ -269,6 +269,7 @@ ingress:
       nginx.ingress.kubernetes.io/use-regex: "true"
       nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
       cert-manager.io/cluster-issuer: letsencrypt
+
 </code></pre>
 
 Run the installation
