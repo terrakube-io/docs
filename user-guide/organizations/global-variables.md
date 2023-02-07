@@ -27,7 +27,7 @@ In the popup, provide the required values. Use the below table as reference:
 | HCL         | Parse this field as HashiCorp Configuration Language (HCL). This allows you to interpolate values at runtime.                             |
 | Sensitive   | Sensitive variables are never shown in the UI or API. They may appear in Terraform logs if your configuration is designed to output them. |
 
-Finally click the **Save global variable** button and the team will be created
+Finally click the **Save global variable** button and the variable will be created
 
 <figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
