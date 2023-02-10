@@ -30,6 +30,7 @@
 * [Workspaces](user-guide/workspaces/README.md)
   * [Creating Workspaces](user-guide/workspaces/creating-workspaces.md)
   * [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md)
+  * [CLI-driven Workflow (Templates)](user-guide/workspaces/cli-driven-workflow-templates.md)
   * [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md)
 * [Terrakube CLI](user-guide/terrakube-cli/README.md)
   * [Getting started](user-guide/terrakube-cli/getting-started.md)

@@ -39,7 +39,7 @@ You will see the new global variable in the list. And now the variable will be i
 
 Click the **Edit** button next to the global variable you want to edit.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (6).png" alt=""><figcaption></figcaption></figure>
 
 Change the fields you need and click the **Save global variable** button
 
@@ -47,10 +47,10 @@ Change the fields you need and click the **Save global variable** button
 For security, you can't change the **Sensitive** field. So if you want to change one global variable to sensitive you must delete the existing variable and create a new one
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (5).png" alt=""><figcaption></figcaption></figure>
 
 ### Delete a Global Variable
 
 Click the **Delete** button next to the global variable you want to delete, and then click the Yes button to confirm the deletion. Please take in consideration the deletion is irreversible
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
