@@ -102,4 +102,5 @@
 
 ## 🏗 CI/CD Integration
 
+* [Github Actions](ci-cd-integration/github-actions.md)
 * [Bitbucket](ci-cd-integration/bitbucket.md)
