@@ -50,7 +50,7 @@ You can complete the fields using the information suggested by terrakube in the 
 
 In the next screen, copy the **Key** and **Secret**
 
-<figure><img src="../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (13) (5).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 

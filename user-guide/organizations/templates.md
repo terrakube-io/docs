@@ -111,7 +111,7 @@ In the next screen you can define your template and when you are ready click the
 
 Finally, you can assign a name and description to your template and click the **Create Template** button.
 
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 Now you template is ready and you can start using it in any workspace within your organization.
 
@@ -129,7 +129,7 @@ Click the **Edit** button next to the Template you would like to edit
 
 Edit your template definition, description or name as desired and when you are ready click the **Save Template** button
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Deleting a Template
 

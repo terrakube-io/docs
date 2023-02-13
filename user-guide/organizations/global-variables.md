@@ -29,7 +29,7 @@ In the popup, provide the required values. Use the below table as reference:
 
 Finally click the **Save global variable** button and the variable will be created
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 You will see the new global variable in the list. And now the variable will be injected in all the workspaces within the organization
 

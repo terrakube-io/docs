@@ -23,6 +23,7 @@
   * [Team Management](user-guide/organizations/team-management.md)
   * [Templates](user-guide/organizations/templates.md)
 * [VCS Providers](user-guide/vcs-providers/README.md)
+  * [SSH](user-guide/vcs-providers/ssh.md)
   * [Github](user-guide/vcs-providers/github.com.md)
   * [GitLab](user-guide/vcs-providers/gitlab.com.md)
   * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)

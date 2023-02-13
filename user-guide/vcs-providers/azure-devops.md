@@ -50,7 +50,7 @@ Go back to Terrakube to enter the information you copied from the previous step.
 
 In the next screen copy the **Callback URL,** we will need this value to update our Azure Devops application
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Azure Devops and update the Callback URL, click the **Save** button
 
