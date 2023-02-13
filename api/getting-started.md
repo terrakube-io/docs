@@ -40,7 +40,7 @@ Authenticate using the user "admin@example.com" with password "admin"
 
 Finally get the access token for the API using the request "Get Access Token"
 
-<figure><img src="../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (26) (2).png" alt=""><figcaption></figcaption></figure>
 
 Now we can start using the API
 

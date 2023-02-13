@@ -71,6 +71,7 @@
 * [Policy Enforcement (OPA)](user-guide/policy-enforcement-opa.md)
 * [Cost Estimation](user-guide/cost-estimation.md)
 * [Drift Detection](user-guide/drift-detection.md)
+* [Personal Access Token (PAT)](user-guide/personal-access-token-pat.md)
 
 ## 🎓 Learn
 
