@@ -15,3 +15,24 @@ Add some small description to the token and the duration
 The new token will be showed and you can copy it to star calling the Terrakube API using Postman or some other tool.
 
 <figure><img src="../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+
+#### Code example:
+
+```
+curl --location --request POST 'https://{TerrakubeAPI}/api/v1/organization' \
+--header 'Content-Type: application/vnd.api+json' \
+--header 'Authorization: Bearer XXXXXXX' \
+--data-raw '{
+  "data": {
+    "type": "organization",
+    "attributes": {
+      "name": "hashicorp",
+      "description": "hashicorp organization"
+    }
+  }
+}'
+```
+
+{% hint style="info" %}
+Replace XXXXXXX with the Personal Access Token value
+{% endhint %}
