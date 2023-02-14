@@ -16,6 +16,6 @@ In this section:
 [team-management.md](team-management.md)
 {% endcontent-ref %}
 
-{% content-ref url="templates.md" %}
-[templates.md](templates.md)
+{% content-ref url="templates/" %}
+[templates](templates/)
 {% endcontent-ref %}

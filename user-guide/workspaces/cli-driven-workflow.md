@@ -2,8 +2,12 @@
 
 Cli-driven workflow allow to use Terrakube remotely using only the Terraform CLI.
 
+{% hint style="info" %}
+Terrakube creates default templates for CLI-Driven workflow when you create a new organization, if you delete those templates you won't be able to run this workflow, check [default templates](../organizations/templates/default-templates.md#cli-driven-templates) for more information.
+{% endhint %}
+
 {% hint style="warning" %}
-&#x20;All the terraform operation are executed remotely in Terrakube.
+&#x20;At the moment all the terraform operations are executed remotely in Terrakube
 {% endhint %}
 
 ### Configuration
@@ -34,7 +38,7 @@ resource "random_string" "random" {
 * Organization
   * This should be the Terrakube organization where the workspace will be created.&#x20;
 * Workspace
-  * The name of the workspace to be created.
+  * The name of the workspace to be created. Or you can use an existing workspace created in the UI using the API or CLI driven workflow.
 
 ### Terraform login.
 
@@ -297,7 +301,7 @@ Apply complete! Resources: 0 added, 0 changed, 1 destroyed.
 
 Inside the UI the terraform destroy operation will look like this.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 The terraform destroy can only be approved using the terraform CLI. You wont be able to approve the job inside the UI.
