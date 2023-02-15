@@ -12,8 +12,4 @@ Click **Workspaces** in the main menu and then click the **New workspace** butto
 
 Choose the **Version control workflow**
 
-{% hint style="warning" %}
-Terrakube only support the version control flow at the moment. The other workflows will be supported later.
-{% endhint %}
-
 <figure><img src="../../.gitbook/assets/image (6) (5).png" alt=""><figcaption></figcaption></figure>
