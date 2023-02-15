@@ -24,6 +24,7 @@
   * [Templates](user-guide/organizations/templates/README.md)
     * [Default Templates](user-guide/organizations/templates/default-templates.md)
     * [Persistent Context](user-guide/organizations/templates/persistent-context.md)
+    * [Import Templates](user-guide/organizations/templates/import-templates.md)
     * [UI Templates](user-guide/organizations/templates/ui-templates.md)
 * [VCS Providers](user-guide/vcs-providers/README.md)
   * [SSH](user-guide/vcs-providers/ssh.md)
