@@ -85,7 +85,7 @@ flow:
           "Terratag download completed"
 ```
 
-If you notice the above script is more compact as is reusing some logic. If you want to simplify and reuse some templates in your organization, please check [Import Templates](import-templates.md).
+If you notice the above script is more compact as is reusing some logic.
 
 Using Templates you can even customize the UI for each job, see [UI templates](ui-templates.md) for more details.
 
