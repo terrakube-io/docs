@@ -21,6 +21,7 @@
   * [Creating an Organization](user-guide/organizations/organizations.md)
   * [Global Variables](user-guide/organizations/global-variables.md)
   * [Team Management](user-guide/organizations/team-management.md)
+  * [API Tokens](user-guide/organizations/api-tokens.md)
   * [Templates](user-guide/organizations/templates/README.md)
     * [Default Templates](user-guide/organizations/templates/default-templates.md)
     * [Persistent Context](user-guide/organizations/templates/persistent-context.md)
@@ -74,7 +75,6 @@
 * [Policy Enforcement (OPA)](user-guide/policy-enforcement-opa.md)
 * [Cost Estimation](user-guide/cost-estimation.md)
 * [Drift Detection](user-guide/drift-detection.md)
-* [Personal Access Token (PAT)](user-guide/personal-access-token-pat.md)
 
 ## 🎓 Learn
 
