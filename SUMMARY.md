@@ -35,6 +35,7 @@
   * [SSH](user-guide/vcs-providers/ssh.md)
 * [Workspaces](user-guide/workspaces/README.md)
   * [Creating Workspaces](user-guide/workspaces/creating-workspaces.md)
+  * [Workspace Scheduler](user-guide/workspaces/workspace-scheduler.md)
   * [Variables](user-guide/workspaces/variables.md)
   * [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md)
   * [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md)

@@ -2,7 +2,7 @@
 
 Terrakube can use SSH keys to authenticate to your private repositories. The SSH keys can be uploaded inside the settings menu.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 To handle SSH keys inside Terrakube your team should have "Manage VCS settings" access
 
@@ -10,7 +10,7 @@ To handle SSH keys inside Terrakube your team should have "Manage VCS settings" 
 
 Terrakube support keys with RSA and ED25519
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 SSH keys can be used to authenticate to private repositories where you can store modules or workspaces
 

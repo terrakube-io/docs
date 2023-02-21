@@ -270,7 +270,7 @@ Now that you have tested the Drift Detection template, you can use with the **Wo
 
 You will have to go the the **"Schedule"** option inside your workspace.
 
-<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Now you can select the **Drift Detection** template to run at 5:30 AM every day.
 

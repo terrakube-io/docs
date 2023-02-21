@@ -10,7 +10,7 @@ API tokens may belong directly to a user. User tokens inherit permissions from t
 
 User API tokens can be generated inside the **User Settings**.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Click the **Generate and API token** button
 
