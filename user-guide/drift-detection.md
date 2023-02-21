@@ -213,7 +213,7 @@ The template will look like this:
 
 Now you can use this template in any workspace inside your organization
 
-<figure><img src="../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (20) (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Workspace Setup
 

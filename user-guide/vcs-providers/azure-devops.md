@@ -11,12 +11,12 @@ Navigate to the desired organization **** and click the **Settings** button, the
 <figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-If you prefer, you can add a new VCS Provider directly from the Create workspace or Create Module screen.
+If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.
 {% endhint %}
 
 Click the **Azure Devops** button
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (2).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen click the link to [register a new OAuth Application](https://aex.dev.azure.com/app/register?mkt=en-US) in Azure Devops
 
@@ -62,7 +62,7 @@ Once you updated the Callback Url in Azure Devops, return to Terrakube and click
 
 You will see a new window, click the **Accept** button to complete the connection
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
 
@@ -74,4 +74,4 @@ If you refresh the VCS providers page in your organization, you should see the c
 
 And now, you will be able to use the connection in your workspaces and modules:
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>

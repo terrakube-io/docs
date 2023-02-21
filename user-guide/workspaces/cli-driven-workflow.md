@@ -50,7 +50,7 @@ terraform login 8080-azbuilder-terrakube-3xqsq270uq1.ws-us82.gitpod.io
 
 The output will look something like the following:
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ```
 terraform login 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io

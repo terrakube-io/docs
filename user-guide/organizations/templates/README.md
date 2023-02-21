@@ -85,7 +85,7 @@ flow:
           "Terratag download completed"
 ```
 
-If you notice the above script is more compact as is reusing some logic.
+If you notice the above script is more compact as is reusing some logic. If you want to simplify and reuse some templates in your organization, please check [Import Templates](import-templates.md).
 
 Using Templates you can even customize the UI for each job, see [UI templates](ui-templates.md) for more details.
 
@@ -131,7 +131,7 @@ By default Terrakube don't create any template, so you have to define the templa
 
 Click the **Edit** button next to the Template you would like to edit
 
-<figure><img src="../../../.gitbook/assets/image (2) (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (3) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Edit your template definition, description or name as desired and when you are ready click the **Save Template** button
 

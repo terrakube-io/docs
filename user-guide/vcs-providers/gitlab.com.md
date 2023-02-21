@@ -13,7 +13,7 @@ Navigate to the desired organization **** and click the **Settings** button, the
 <figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-If you prefer, you can add a new VCS Provider directly from the Create workspace or Create Module screen.&#x20;
+If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.&#x20;
 {% endhint %}
 
 Click the **Gitlab** button
@@ -52,7 +52,7 @@ In the next screen copy the **Callback URL,** we will need this value to update 
 
 Go back to Gitlab and update the Redirect URI, click the **Save application** button
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Once you updated the Callback Url in Gitlab, return to Terrakube and click the **Connect to Gitlab** button
 

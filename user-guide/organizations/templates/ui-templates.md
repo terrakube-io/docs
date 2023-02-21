@@ -4,11 +4,11 @@ Terrakube allows you to customize the UI for each step inside your templates usi
 
 For example you can  present the costs using Infracost in a friendly way:
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 Or present a table with the OPA policies&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
 
 In order to use UI templates you will need to save the HTML for each template step using the [Persistent Context](persistent-context.md). Terrakube expects the ui templates in the following format.
 

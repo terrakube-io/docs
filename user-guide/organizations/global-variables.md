@@ -14,7 +14,7 @@ Only users that belongs to Terrakube administrator group can create global varia
 
 Once you are in the desired organization, click the **Settings** button, then in the left menu select the **Global Variables** option and click the **Add global variable** button
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the popup, provide the required values. Use the below table as reference:
 
@@ -33,13 +33,13 @@ Finally click the **Save global variable** button and the variable will be creat
 
 You will see the new global variable in the list. And now the variable will be injected in all the workspaces within the organization
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Edit a Global Variable
 
 Click the **Edit** button next to the global variable you want to edit.
 
-<figure><img src="../../.gitbook/assets/image (1) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Change the fields you need and click the **Save global variable** button
 

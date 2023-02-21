@@ -15,7 +15,7 @@ Navigate to the desired organization **** and click the **Settings** button, the
 <figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-If you prefer, you can add a new VCS Provider directly from the Create workspace or Create Module screen.
+If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.
 {% endhint %}
 
 Click the **Bitbucket** button
@@ -58,7 +58,7 @@ Go back to Terrakube to enter the information you copied from the previous step.
 
 In the next screen copy the **Callback URL,** we will need this value to update our Bitbucket application
 
-<figure><img src="../../.gitbook/assets/image (2) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Bitbucket and update the Callback URL, click the **Save** button
 
@@ -70,7 +70,7 @@ Once you updated the Callback Url in Bitbucket, return to Terrakube and click th
 
 You will see a new window, click the **Grant Access** button to complete the connection
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (4).png" alt=""><figcaption></figcaption></figure>
 
 Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
 
