@@ -11,7 +11,7 @@ kubectl create namespace terrakube
 ### Setup Helm Repository
 
 ```
-helm repo add terrakube-repo https://AzBuilder.github.io/terrakube
+helm repo add terrakube-repo https://AzBuilder.github.io/terrakube-helm-chart
 helm repo update
 ```
 
