@@ -51,7 +51,7 @@ Once you fill the settings click the **Create Workspace** button.
 
 You will be redirected to the Workspace page
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (6).png" alt=""><figcaption></figcaption></figure>
 
 And if you navigate to the **Workspace** menu, you will see the workspace in the Workspaces list
 
@@ -65,7 +65,7 @@ Click **Workspaces** in the main menu and then click the **New workspace** butto
 
 Choose the **CLI-driven workflow**
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (6).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.&#x20;
 
@@ -98,7 +98,7 @@ Click **Workspaces** in the main menu and then click the **New workspace** butto
 
 Choose the **API-driven workflow**
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (7).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.&#x20;
 
@@ -121,4 +121,4 @@ For more details how to use the Terrakube API. See [api-driven-workflow.md](api-
 
 And if you navigate to the **Workspace** menu you will see the workspace in the Workspaces list
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (6).png" alt=""><figcaption></figcaption></figure>

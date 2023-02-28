@@ -20,7 +20,7 @@ Click the **Azure Devops** button
 
 In the next screen click the link to [register a new OAuth Application](https://aex.dev.azure.com/app/register?mkt=en-US) in Azure Devops
 
-<figure><img src="../../.gitbook/assets/image (6) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
 
 In the Azure Devops page, complete the required fields and click **Create application**
 
@@ -29,7 +29,7 @@ In the Azure Devops page, complete the required fields and click **Create applic
 | Company Name                   | Your company name.                                                |
 | Application name               | The name of your application or you can use the Organization name |
 | Application website            | Your application or website url                                   |
-| Callback URL                   | Use https://localhost we will update this value later             |
+| Callback URL                   | Copy the Callback URL from the Terrakube URL                      |
 | Authorized scopes (checkboxes) | Only the following should be checked: Code (read) Code (status)   |
 
 {% hint style="info" %}
@@ -52,15 +52,7 @@ In the next screen copy the **Callback URL,** we will need this value to update 
 
 <figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
-Go back to Azure Devops and update the Callback URL, click the **Save** button
-
-<figure><img src="../../.gitbook/assets/image (4) (6).png" alt=""><figcaption></figcaption></figure>
-
-Once you updated the Callback Url in Azure Devops, return to Terrakube and click the **Connect to Azure Devops** button
-
-<figure><img src="../../.gitbook/assets/image (10) (4).png" alt=""><figcaption></figcaption></figure>
-
-You will see a new window, click the **Accept** button to complete the connection
+You will see an Azure Devops window, click the **Accept** button to complete the connection
 
 <figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 

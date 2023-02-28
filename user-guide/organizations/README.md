@@ -16,6 +16,10 @@ In this section:
 [team-management.md](team-management.md)
 {% endcontent-ref %}
 
+{% content-ref url="api-tokens.md" %}
+[api-tokens.md](api-tokens.md)
+{% endcontent-ref %}
+
 {% content-ref url="templates/" %}
 [templates](templates/)
 {% endcontent-ref %}

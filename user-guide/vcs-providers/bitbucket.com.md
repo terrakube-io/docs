@@ -22,7 +22,7 @@ Click the **Bitbucket** button
 
 <figure><img src="../../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (5) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
 Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use and click the **settings** button in your workspace
 
@@ -38,7 +38,7 @@ Complete the required fields and click **Save**  button
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Name                                  | Your application name, for example you can use your organization name.                                                                                                                                                   |
 | Description                           | Any description of your choice                                                                                                                                                                                           |
-| Redirect URI                          | Use https://localhost we will update this value later                                                                                                                                                                    |
+| Redirect URI                          | Copy the Redirect URI from the Terrakube UI                                                                                                                                                                              |
 | This is a private consumer (checkbox) | Checked                                                                                                                                                                                                                  |
 | Permissions (checkboxes)              | <p>The following should be checked: </p><p><strong>Account</strong>: Write </p><p><strong>Repositories</strong>: Admin </p><p><strong>Pull requests</strong>: Write </p><p><strong>Webhooks</strong>: Read and write</p> |
 
@@ -46,7 +46,7 @@ Complete the required fields and click **Save**  button
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (8) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen, copy the **Key** and **Secret**
 
@@ -54,21 +54,9 @@ In the next screen, copy the **Key** and **Secret**
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-<figure><img src="../../.gitbook/assets/image (2) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
-In the next screen copy the **Callback URL,** we will need this value to update our Bitbucket application
-
-<figure><img src="../../.gitbook/assets/image (2) (3) (1).png" alt=""><figcaption></figcaption></figure>
-
-Go back to Bitbucket and update the Callback URL, click the **Save** button
-
-<figure><img src="../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
-
-Once you updated the Callback Url in Bitbucket, return to Terrakube and click the **Connect to Bitbucket** button
-
-<figure><img src="../../.gitbook/assets/image (4) (3).png" alt=""><figcaption></figcaption></figure>
-
-You will see a new window, click the **Grant Access** button to complete the connection
+You will see a Bitbucket window, click the **Grant Access** button to complete the connection
 
 <figure><img src="../../.gitbook/assets/image (15) (4).png" alt=""><figcaption></figcaption></figure>
 

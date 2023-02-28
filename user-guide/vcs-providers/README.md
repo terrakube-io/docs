@@ -19,3 +19,7 @@ Terrakube supports the following VCS providers:
 {% content-ref url="azure-devops.md" %}
 [azure-devops.md](azure-devops.md)
 {% endcontent-ref %}
+
+{% content-ref url="ssh.md" %}
+[ssh.md](ssh.md)
+{% endcontent-ref %}

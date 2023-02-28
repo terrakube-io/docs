@@ -60,7 +60,7 @@ Visit http://terrakube-ui.minikube.net and login using admin@example.com with pa
 
 You can login using the following user and passwords
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (6).png" alt=""><figcaption></figcaption></figure>
 
 | User              | Password | Member Of                               |
 | ----------------- | -------- | --------------------------------------- |
@@ -85,9 +85,9 @@ terrakube-openldap-secrets
 
 Select the "simple" organization and the "sample\_simple" workspace and run a job.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 

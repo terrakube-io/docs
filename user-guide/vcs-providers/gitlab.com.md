@@ -22,21 +22,21 @@ Click the **Gitlab** button
 
 In the next screen click the link to [register a new OAuth Application](https://gitlab.com/-/profile/applications) in Gitlab
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 On Gitlab, complete the required fields and click **Save application** button
 
 | Field        | Description                                                            |
 | ------------ | ---------------------------------------------------------------------- |
 | Name         | Your application name, for example you can use your organization name. |
-| Redirect URI | Use https://localhost we will update this value later                  |
+| Redirect URI | Copy the Redirect URI from the UI                                      |
 | Scopes       | Only **api** should be checked                                         |
 
 {% hint style="info" %}
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen, copy the **Application ID** and **Secret**
 
@@ -44,21 +44,9 @@ In the next screen, copy the **Application ID** and **Secret**
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-<figure><img src="../../.gitbook/assets/image (3) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-In the next screen copy the **Callback URL,** we will need this value to update our gitlab application
-
-<figure><img src="../../.gitbook/assets/image (9) (3).png" alt=""><figcaption></figcaption></figure>
-
-Go back to Gitlab and update the Redirect URI, click the **Save application** button
-
-<figure><img src="../../.gitbook/assets/image (8) (1) (3).png" alt=""><figcaption></figcaption></figure>
-
-Once you updated the Callback Url in Gitlab, return to Terrakube and click the **Connect to Gitlab** button
-
-<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
-
-You will see a new window, click the **Authorize** button to complete the connection
+You will see a Gitlab window, click the **Authorize** button to complete the connection
 
 <figure><img src="../../.gitbook/assets/image (14) (3).png" alt=""><figcaption></figcaption></figure>
 
@@ -66,7 +54,7 @@ Finally if the connection was stablished successfully, you wil see a **Connected
 
 <figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
 
-If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
+If you navigate to the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
 
 <figure><img src="../../.gitbook/assets/image (13) (4).png" alt=""><figcaption></figcaption></figure>
 

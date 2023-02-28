@@ -14,3 +14,7 @@ You can create unlimited workspaces inside each Terrakube Organization. In this 
 [creating-workspaces.md](creating-workspaces.md)
 {% endcontent-ref %}
 
+{% content-ref url="variables.md" %}
+[variables.md](variables.md)
+{% endcontent-ref %}
+
