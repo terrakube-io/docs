@@ -34,7 +34,7 @@ Provide the git repository URL and click the **Continue** button.
 If you want to connect to a private git repo using SSH Keys you will need to provide the url in ssh format. Example git@github.com:jcanizalez/terraform-sample-repository.git. For more information see [ssh.md](../vcs-providers/ssh.md "mention")
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (2).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.&#x20;
 
@@ -47,7 +47,7 @@ Configure the workspace settings.&#x20;
 
 Once you fill the settings click the **Create Workspace** button.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to the Workspace page
 
@@ -61,7 +61,7 @@ And if you navigate to the **Workspace** menu, you will see the workspace in the
 
 Click **Workspaces** in the main menu and then click the **New workspace** button
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Choose the **CLI-driven workflow**
 
@@ -76,7 +76,7 @@ Configure the workspace settings.&#x20;
 
 Once you fill the settings click the **Create Workspace** button.
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to the Workspace page.
 
@@ -84,7 +84,7 @@ You will be redirected to the Workspace page.
 The overview page for CLI-driven workspaces show the step to connect to the workspace using the Terraform CLI. For more details see [cli-driven-workflow.md](cli-driven-workflow.md "mention")
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
 
 And if you navigate to the **Workspace** menu you will see the workspace in the Workspaces list
 

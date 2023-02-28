@@ -108,7 +108,7 @@ Request:
 
 Response:
 
-<figure><img src="../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (18) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Now we have a template that we can reuse when running jobs accross an organization, lets define a couple of more templates.
 
@@ -281,7 +281,7 @@ Workspace Git repository can be public or private using the following providers:
 
 To create it we will use the request inside the postman collection "Step 4 - Worspace"
 
-<figure><img src="../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Lets create a very simple workspace using the following terraform code inside this public git repository "[https://github.com/AzBuilder/terrakube-docker-compose.git](https://github.com/AzBuilder/terrakube-docker-compose.git)" using the root folder "/"
 
@@ -307,7 +307,7 @@ You can have multiple workspaces using a single git repository using folders and
 
 Request.
 
-<figure><img src="../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (21) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Response.
 

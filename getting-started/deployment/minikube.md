@@ -54,11 +54,13 @@ kubectl get pods -n terrakube
 
 The environment has some users, groups and sample data so you can test it quickly.
 
-Visit http://terrakube-ui.minikube.net
+Visit http://terrakube-ui.minikube.net and login using admin@example.com with password admin
 
-
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
 
 You can login using the following user and passwords
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 | User              | Password | Member Of                               |
 | ----------------- | -------- | --------------------------------------- |
@@ -83,12 +85,14 @@ terrakube-openldap-secrets
 
 Select the "simple" organization and the "sample\_simple" workspace and run a job.
 
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
-
+<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-For more advance configuration options to install Terrkaube visit:
+For more advance configuration options to install Terrakube visit:
 
 [https://github.com/AzBuilder/terrakube-helm-chart](https://github.com/AzBuilder/terrakube-helm-chart)
 {% endhint %}
