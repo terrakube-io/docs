@@ -6,6 +6,9 @@ The default ingress configuration for terrakube can be customize using a terraku
 dex:
   config:
     issuer: http://terrakube-api.minikube.net/dex ## CHANGE THIS DOMAIN
+    #.....
+    #PUT ALL THE REST OF THE DEX CONFIG
+    #.....
 
 ## Ingress properties
 ingress:
