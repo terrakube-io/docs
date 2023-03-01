@@ -20,7 +20,7 @@ Click the **Azure Devops** button
 
 In the next screen click the link to [register a new OAuth Application](https://aex.dev.azure.com/app/register?mkt=en-US) in Azure Devops
 
-<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
 In the Azure Devops page, complete the required fields and click **Create application**
 
@@ -36,21 +36,15 @@ In the Azure Devops page, complete the required fields and click **Create applic
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-
-
-<figure><img src="../../.gitbook/assets/image (8) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen, copy the **App ID** and **Client Secret**
 
-<figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-<figure><img src="../../.gitbook/assets/image (2) (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
-
-In the next screen copy the **Callback URL,** we will need this value to update our Azure Devops application
-
-<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
 
 You will see an Azure Devops window, click the **Accept** button to complete the connection
 
@@ -62,7 +56,7 @@ Finally if the connection was stablished successfully, you wil see a **Connected
 
 If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
 
-<figure><img src="../../.gitbook/assets/image (2) (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 And now, you will be able to use the connection in your workspaces and modules:
 

@@ -175,7 +175,7 @@ After a couple of seconds you should be able to see the monthly the terraform pl
 
 You can also visit the infracost dashboard to see the cost detail.
 
-<figure><img src="../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (24) (3).png" alt=""><figcaption></figcaption></figure>
 
 Now lets update the terraform resource and use a more expensive one.
 

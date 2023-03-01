@@ -141,7 +141,7 @@ Edit your template definition, description or name as desired and when you are r
 
 Click the **Delete** button next to the Template you want to delete and then click **Yes** to confirm the deletion
 
-<figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (22) (2).png" alt=""><figcaption></figcaption></figure>
 
 
 

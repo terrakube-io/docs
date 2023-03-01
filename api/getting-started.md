@@ -50,7 +50,7 @@ Terrakube is based on Organization, we can have one or multiple organizations in
 
 To create it we will use the request inside the collection "Step 1 - Organization"
 
-<figure><img src="../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (33) (2).png" alt=""><figcaption></figcaption></figure>
 
 Request to create an Organization called "Hashicorp":
 
@@ -66,7 +66,7 @@ Inside an Organization we can have multiple teams working, each team can have ac
 
 To create it we will use the request inside the collection "Step 2 - Teams"
 
-<figure><img src="../.gitbook/assets/image (32).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (32) (2).png" alt=""><figcaption></figcaption></figure>
 
 This will create a team called "TERRAKUBE\_DEVELOPERS" with access to all the features and you should get a response like the following:
 
