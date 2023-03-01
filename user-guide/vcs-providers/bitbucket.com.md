@@ -54,7 +54,7 @@ In the next screen, copy the **Key** and **Secret**
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (6).png" alt=""><figcaption></figcaption></figure>
 
 You will see a Bitbucket window, click the **Grant Access** button to complete the connection
 

@@ -233,7 +233,7 @@ random_string.random: Creation complete after 0s [id=QvsEmtO7WoeJJcAJ]
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 The terraform apply can only be approved using the terraform CLI. You wont be able to approve the job inside the UI.

@@ -18,7 +18,7 @@ Once SSH keys are added inside your organization you can use them like the follo
 
 ### Modules:
 
-<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
 
 ### Workspace:
 

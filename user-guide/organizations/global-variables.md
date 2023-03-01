@@ -33,7 +33,7 @@ Finally click the **Save global variable** button and the variable will be creat
 
 You will see the new global variable in the list. And now the variable will be injected in all the workspaces within the organization
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 ### Edit a Global Variable
 
