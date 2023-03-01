@@ -2,12 +2,6 @@
 
 Terrakube can be installed in minikube as a sandbox environment to test, to use it please follow this:
 
-### Setup Terrakube namespace
-
-```
-kubectl create namespace terrakube
-```
-
 ### Setup Helm Repository
 
 ```
@@ -27,6 +21,12 @@ minikube ip
 {% hint style="info" %}
 Copy the minikube ip address ( Example: 192.168.59.100)
 {% endhint %}
+
+### Setup Terrakube namespace
+
+```
+kubectl create namespace terrakube
+```
 
 ### Setup DNS records
 
