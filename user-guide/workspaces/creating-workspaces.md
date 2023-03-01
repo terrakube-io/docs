@@ -51,7 +51,7 @@ Once you fill the settings click the **Create Workspace** button.
 
 You will be redirected to the Workspace page
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (4).png" alt=""><figcaption></figcaption></figure>
 
 And if you navigate to the **Workspace** menu, you will see the workspace in the Workspaces list
 
@@ -98,7 +98,7 @@ Click **Workspaces** in the main menu and then click the **New workspace** butto
 
 Choose the **API-driven workflow**
 
-<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.&#x20;
 

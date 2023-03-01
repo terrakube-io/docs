@@ -60,4 +60,4 @@ If you refresh the VCS providers page in your organization, you should see the c
 
 And now, you will be able to use the connection in your workspaces and modules:
 
-<figure><img src="../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>

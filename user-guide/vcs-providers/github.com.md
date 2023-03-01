@@ -20,7 +20,7 @@ Click the **Github button**
 
 In the next screen click the link to [register a new OAuth Application](https://github.com/settings/applications/new) in Github
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption></figcaption></figure>
 
 In the Github page, complete the required fields and click **Register application**
 
@@ -43,7 +43,7 @@ Next, generate a new client secret
 
 Copy the  **Client Id**  and **Client Secret** from Github **** and **** go back to Terrakube to complete the **** required information. Then, click the **Connect and Continue** button
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 You will see the Github page, click the **Authorize** button to complete the connection
 

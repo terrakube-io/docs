@@ -121,7 +121,7 @@ Finally, you can assign a name and description to your template and click the **
 
 Now you template is ready and you can start using it in any workspace within your organization.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 By default Terrakube don't create any template, so you have to define the templates in your organization based on your requirements.

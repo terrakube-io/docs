@@ -18,7 +18,7 @@ Click the **Generate and API token** button
 
 Add some small description to the token and the duration
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 The new token will be showed and you can copy it to star calling the Terrakube API using Postman or some other tool.
 

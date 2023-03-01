@@ -86,7 +86,7 @@ Templates are sent to the API in base64 encoding.
 
 To create it we will use the request inside the postman collection "Step 3 - Templates"
 
-<figure><img src="../.gitbook/assets/image (8) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Template 1 - Basic Terraform Plan-Apply
 
@@ -251,7 +251,7 @@ flow:
 
 Request:
 
-<figure><img src="../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (9) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Response:
 
