@@ -11,6 +11,7 @@
   * [🔨 Helm Chart](getting-started/deployment/docker-compose.md)
   * [🚀 Minikube](getting-started/deployment/minikube.md)
   * [✈ Ingress Configuration](getting-started/deployment/ingress-configuration.md)
+  * [🔐 User Authentication (DEX)](getting-started/deployment/user-authentication-dex.md)
   * [🛰 Database Backend](getting-started/database-backend.md)
     * [SQL Azure](getting-started/deployment/database-backend/sql-azure.md)
     * [PostgreSQL](getting-started/deployment/database-backend/postgresql.md)
