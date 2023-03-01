@@ -22,7 +22,7 @@ Click the **Gitlab** button
 
 In the next screen click the link to [register a new OAuth Application](https://gitlab.com/-/profile/applications) in Gitlab
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 On Gitlab, complete the required fields and click **Save application** button
 
@@ -36,7 +36,7 @@ On Gitlab, complete the required fields and click **Save application** button
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen, copy the **Application ID** and **Secret**
 

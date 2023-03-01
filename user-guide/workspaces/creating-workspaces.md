@@ -61,7 +61,7 @@ And if you navigate to the **Workspace** menu, you will see the workspace in the
 
 Click **Workspaces** in the main menu and then click the **New workspace** button
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Choose the **CLI-driven workflow**
 

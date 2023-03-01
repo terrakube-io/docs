@@ -51,11 +51,11 @@ Make any desired changes and click **Save variable.**
 
 Click the **Delete** button next to the variable you want to delete.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Click **Yes** to confirm your action.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Environment Variables
 
@@ -79,7 +79,7 @@ In the popup, provide the required values. Use the below table as reference:
 
 Finally click the **Save variable** button and the variable will be created.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Edit an Environment Variable
 
@@ -93,7 +93,7 @@ Make any desired changes and click **Save variable.**
 
 Click the **Delete** button next to the variable you want to delete.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 Click **Yes** to confirm your action.
 

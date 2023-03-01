@@ -53,4 +53,4 @@ For security, you can't change the **Sensitive** field. So if you want to change
 
 Click the **Delete** button next to the global variable you want to delete, and then click the Yes button to confirm the deletion. Please take in consideration the deletion is irreversible
 
-<figure><img src="../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (10) (4).png" alt=""><figcaption></figcaption></figure>
