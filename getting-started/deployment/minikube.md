@@ -83,6 +83,10 @@ The sample user and groups information can be updated in the kubernetes secret:
 terrakube-openldap-secrets
 {% endhint %}
 
+{% hint style="danger" %}
+Minikube will use a very simple OpenLDAP, make sure to change this when using in a real kubernetes environment. Using the option security.useOpenLDAP=false in your helm deployment.
+{% endhint %}
+
 Select the "simple" organization and the "sample\_simple" workspace and run a job.
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

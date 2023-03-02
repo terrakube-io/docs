@@ -7,7 +7,7 @@ dex:
   config:
     issuer: http://terrakube-api.minikube.net/dex ## CHANGE THIS DOMAIN
     #.....
-    #PUT ALL THE REST OF THE DEX CONFIG
+    #PUT ALL THE REST OF THE DEX CONFIG AND UPDATE THE URL WITH THE NEW DOMAIN
     #.....
 
 ## Ingress properties
