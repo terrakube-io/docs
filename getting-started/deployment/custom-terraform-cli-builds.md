@@ -41,3 +41,14 @@ Example Endpoint:&#x20;
 {% hint style="success" %}
 This is usefull when you have some network restrictions that does not allow to get the information from [https://releases.hashicorp.com/terraform/index.json](https://releases.hashicorp.com/terraform/index.json) in your private kuberentes cluster.
 {% endhint %}
+
+To support custom terrafom cli releases when using the helm chart us the following:
+
+```
+api:
+  version: "2.12.0"
+  terraformReleasesUrl: "https://eov1ys4sxa1bfy9.m.pipedream.net/"
+
+executor:
+  version: "2.12.0"
+```
