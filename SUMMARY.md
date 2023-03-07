@@ -57,6 +57,12 @@
 * [Private Registry](user-guide/private-registry/README.md)
   * [Publishing Private Modules](user-guide/private-registry/publishing-private-modules.md)
   * [Using Private Modules](user-guide/private-registry/using-private-modules.md)
+* [Policy Enforcement (OPA)](user-guide/policy-enforcement-opa.md)
+* [Cost Estimation](user-guide/cost-estimation.md)
+* [Drift Detection](user-guide/drift-detection.md)
+* [CI/CD Integration](user-guide/ci-cd-integration/README.md)
+  * [Github Actions](user-guide/ci-cd-integration/github-actions.md)
+  * [Bitbucket](user-guide/ci-cd-integration/bitbucket.md)
 * [Terrakube CLI](user-guide/terrakube-cli/README.md)
   * [Getting started](user-guide/terrakube-cli/getting-started.md)
   * [Installation](user-guide/terrakube-cli/install.md)
@@ -92,12 +98,6 @@
       * [module create](user-guide/terrakube-cli/commands/azb-module/create.md)
       * [module update](user-guide/terrakube-cli/commands/azb-module/module-update.md)
       * [module delete](user-guide/terrakube-cli/commands/azb-module/module-delete.md)
-* [Policy Enforcement (OPA)](user-guide/policy-enforcement-opa.md)
-* [Cost Estimation](user-guide/cost-estimation.md)
-* [Drift Detection](user-guide/drift-detection.md)
-* [CI/CD Integration](user-guide/ci-cd-integration/README.md)
-  * [Github Actions](user-guide/ci-cd-integration/github-actions.md)
-  * [Bitbucket](user-guide/ci-cd-integration/bitbucket.md)
 
 ## 🎓 Learn
 
