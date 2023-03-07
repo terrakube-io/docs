@@ -255,7 +255,7 @@ Request:
 
 Response:
 
-<figure><img src="../.gitbook/assets/image (3) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now we have the following template available inside our organization:
 

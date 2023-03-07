@@ -55,7 +55,7 @@ Click the **Delete** button next to the variable you want to delete.
 
 Click **Yes** to confirm your action.
 
-<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (2).png" alt=""><figcaption></figcaption></figure>
 
 ### Environment Variables
 
