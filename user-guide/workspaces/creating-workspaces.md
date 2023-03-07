@@ -38,12 +38,12 @@ If you want to connect to a private git repo using SSH Keys you will need to pro
 
 Configure the workspace settings.&#x20;
 
-| Field                       | Description                                                                                                                              |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Workspace Name              | The name of your workspace is unique and used in tools, routing, and UI. Dashes, underscores, and alphanumeric characters are permitted. |
-| VCS branch                  | The branch from which to import new versions.                                                                                            |
-| Terraform Working Directory | Default workspace directory. Use / for the root folder                                                                                   |
-| Terraform Version           | The version of Terraform to use for this workspace                                                                                       |
+| Field                       | Description                                                                                                                                                                                                                            |
+| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Workspace Name              | The name of your workspace is unique and used in tools, routing, and UI. Dashes, underscores, and alphanumeric characters are permitted.                                                                                               |
+| VCS branch                  | The branch from which to import new versions.                                                                                                                                                                                          |
+| Terraform Working Directory | Default workspace directory. Use / for the root folder                                                                                                                                                                                 |
+| Terraform Version           | The version of Terraform to use for this workspace. Check [custom-terraform-cli-builds.md](../../getting-started/deployment/custom-terraform-cli-builds.md "mention") if you want to restrict the versions in your Terrakube instance. |
 
 Once you fill the settings click the **Create Workspace** button.
 
@@ -69,10 +69,10 @@ Choose the **CLI-driven workflow**
 
 Configure the workspace settings.&#x20;
 
-| Field             | Description                                                                                                                              |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Workspace Name    | The name of your workspace is unique and used in tools, routing, and UI. Dashes, underscores, and alphanumeric characters are permitted. |
-| Terraform Version | The version of Terraform to use for this workspace                                                                                       |
+| Field             | Description                                                                                                                                                                                                                            |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Workspace Name    | The name of your workspace is unique and used in tools, routing, and UI. Dashes, underscores, and alphanumeric characters are permitted.                                                                                               |
+| Terraform Version | The version of Terraform to use for this workspace. Check [custom-terraform-cli-builds.md](../../getting-started/deployment/custom-terraform-cli-builds.md "mention") if you want to restrict the versions in your Terrakube instance. |
 
 Once you fill the settings click the **Create Workspace** button.
 
@@ -102,10 +102,10 @@ Choose the **API-driven workflow**
 
 Configure the workspace settings.&#x20;
 
-| Field             | Description                                                                                                                              |
-| ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| Workspace Name    | The name of your workspace is unique and used in tools, routing, and UI. Dashes, underscores, and alphanumeric characters are permitted. |
-| Terraform Version | The version of Terraform to use for this workspace                                                                                       |
+| Field             | Description                                                                                                                                                                                                                            |
+| ----------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Workspace Name    | The name of your workspace is unique and used in tools, routing, and UI. Dashes, underscores, and alphanumeric characters are permitted.                                                                                               |
+| Terraform Version | The version of Terraform to use for this workspace. Check [custom-terraform-cli-builds.md](../../getting-started/deployment/custom-terraform-cli-builds.md "mention") if you want to restrict the versions in your Terrakube instance. |
 
 Once you fill the settings click the **Create Workspace** button.
 
