@@ -95,6 +95,9 @@
 * [Policy Enforcement (OPA)](user-guide/policy-enforcement-opa.md)
 * [Cost Estimation](user-guide/cost-estimation.md)
 * [Drift Detection](user-guide/drift-detection.md)
+* [CI/CD Integration](user-guide/ci-cd-integration/README.md)
+  * [Github Actions](user-guide/ci-cd-integration/github-actions.md)
+  * [Bitbucket](user-guide/ci-cd-integration/bitbucket.md)
 
 ## 🎓 Learn
 
@@ -125,8 +128,3 @@
   * [Provider](api/methods/provider.md)
   * [Personal Access Token](api/methods/personal-access-token.md)
   * [SSH Key](api/methods/ssh-key.md)
-
-## 🏗 CI/CD Integration
-
-* [Github Actions](ci-cd-integration/github-actions.md)
-* [Bitbucket](ci-cd-integration/bitbucket.md)
