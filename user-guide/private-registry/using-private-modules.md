@@ -41,7 +41,7 @@ credentials "8075-azbuilder-terrakube-gmnub6flawx.ws-us89b.gitpod.io" {
 
 To get the API token you can check [api-tokens.md](../organizations/api-tokens.md "mention").
 
-As an alternative you can run the [terraform login](https://developer.hashicorp.com/terraform/cli/commands/login) command&#x20;
+As an alternative you can run the [terraform login](https://developer.hashicorp.com/terraform/cli/commands/login) command to obtain and save an user API token.&#x20;
 
 ```
 terraform login [terrakube hostname]
