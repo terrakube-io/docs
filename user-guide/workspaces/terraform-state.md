@@ -20,4 +20,4 @@ You can click the **Download** button to get a copy of the JSON state file&#x20;
 
 Inside the **states** page, click the **diagram** tab and you will see the visual state for your terraform state.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>

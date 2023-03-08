@@ -51,7 +51,7 @@ Make any desired changes and click **Save variable.**
 
 Click the **Delete** button next to the variable you want to delete.
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (5).png" alt=""><figcaption></figcaption></figure>
 
 Click **Yes** to confirm your action.
 

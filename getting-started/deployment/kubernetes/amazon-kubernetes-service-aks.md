@@ -21,7 +21,7 @@ You need to complete the AWS Cognito authentication setup for Dex using the OIDC
 
 You need to create a new Cognito user pool
 
-<figure><img src="../../../.gitbook/assets/image (1) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can keep the default values
 
