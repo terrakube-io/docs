@@ -24,6 +24,7 @@
     * [H2](getting-started/deployment/database-backend/h2.md)
   * [🔐 Custom CA Certs](getting-started/deployment/custom-ca-certs.md)
   * [⚙ Custom Terraform CLI Builds](getting-started/deployment/custom-terraform-cli-builds.md)
+  * [🛡 Token Security](getting-started/deployment/token-security.md)
   * [🚦 Open Telemetry](getting-started/deployment/open-telemetry.md)
 * [🤵 User Management](getting-started/deployment/kubernetes/README.md)
   * [Azure Active Directory](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
