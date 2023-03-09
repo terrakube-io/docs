@@ -76,7 +76,7 @@ Configure the workspace settings.&#x20;
 
 Once you fill the settings click the **Create Workspace** button.
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to the Workspace page.
 

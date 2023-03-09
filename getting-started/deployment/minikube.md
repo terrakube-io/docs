@@ -56,7 +56,7 @@ The environment has some users, groups and sample data so you can test it quickl
 
 Visit http://terrakube-ui.minikube.net and login using admin@example.com with password admin
 
-<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can login using the following user and passwords
 

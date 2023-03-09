@@ -1,5 +1,7 @@
 # 🔐 Custom CA Certs
 
+### Adding certificates at runtime
+
 Terrakube componentes (api, registry and executor) are using [buildpacks](https://buildpacks.io/docs/concepts/) to create the docker images
 
 <figure><img src="https://user-images.githubusercontent.com/4461895/223739868-d206fa74-4a06-40eb-9790-db36df6ee74e.png" alt=""><figcaption></figcaption></figure>
@@ -111,3 +113,21 @@ Additinal information about buildpacks can be found in this link:
 * [https://blog.dahanne.net/2021/02/06/customizing-cloud-native-buildpacks-practical-examples/#Add\_certificates\_binding\_at\_runtime:\~:text=ca%2Dcertificates-,Add%20certificates%20binding%20at%20runtime,-If%20your%20image](https://blog.dahanne.net/2021/02/06/customizing-cloud-native-buildpacks-practical-examples/#Add\_certificates\_binding\_at\_runtime)
 * [https://github.com/paketo-buildpacks/ca-certificates](https://github.com/paketo-buildpacks/ca-certificates)
 * [https://github.com/paketo-buildpacks/spring-boot](https://github.com/paketo-buildpacks/spring-boot)
+
+### Adding certificate at build time
+
+Terrakube allow to add the certs when building the application, to use this option use the following:
+
+```
+git clone https://github.com/AzBuilder/terrakube
+cd terrakube
+git checkout <<TERRAKUBE-VERSION>>
+mv EXAMPLE.pem bindings/ca-certificates
+
+# This script should be run from the root folder
+./scripts/build/terrakubeBuild.sh
+```
+
+The certs will be added at runtime as the following image.
+
+<figure><img src="../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
