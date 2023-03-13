@@ -2,6 +2,8 @@
 
 Templates allows you to customize the job workflow inside each workspace. You can define multiple templates inside each organization. Templates are written in yaml and you can specify each step to be executed once you use this template in the workspace.  Lets see an example for a basic template:
 
+#### Example 1:
+
 ```
 flow:
   - name: "Plan"
@@ -9,6 +11,32 @@ flow:
     step: 100
   - name: "Apply"
     type: "terraformApply"
+    step: 200
+```
+
+#### Example 2:
+
+```
+flow:
+- type: "terraformPlanDestroy"
+  name: "Terraform Plan Destroy from Terraform CLI"
+  step: 100
+- type: "approval"
+  name: "Approve Plan from Terraform CLI"
+  step: 150
+  team: "TERRAFORM_CLI"
+- type: "terraformApply"
+  name: "Terraform Apply from Terraform CLI"
+  step: 200
+```
+
+#### Example 3:
+
+```
+flow:
+  - type: "terraformDestroy"
+    step: 100
+  - type: "disableWorkspace"
     step: 200
 ```
 
