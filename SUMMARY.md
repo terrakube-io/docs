@@ -46,6 +46,7 @@
     * [Import Templates](user-guide/organizations/templates/import-templates.md)
     * [UI Templates](user-guide/organizations/templates/ui-templates.md)
     * [Filter gloval variables in jobs](user-guide/organizations/templates/filter-gloval-variables-in-jobs.md)
+    * [Template Scheduling in Jobs](user-guide/organizations/templates/template-scheduling-in-jobs.md)
 * [VCS Providers](user-guide/vcs-providers/README.md)
   * [Github](user-guide/vcs-providers/github.com.md)
   * [GitLab](user-guide/vcs-providers/gitlab.com.md)

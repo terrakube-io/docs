@@ -24,9 +24,9 @@ OTEL_SERVICE_NAME=TERRAKUBE-API
 
 Now we can go the jaeger ui to see if everything is working as expected.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (8).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 There are several differente configuration options for example:
 
