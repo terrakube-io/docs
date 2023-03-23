@@ -26,7 +26,7 @@ Click the **Bitbucket** button
 
 Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use and click the **settings** button in your workspace
 
-<figure><img src="../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (58) (1).png" alt=""><figcaption></figcaption></figure>
 
 Click the **OAuth consumers** menu and then click the **Add consumer** button
 
@@ -66,7 +66,7 @@ Finally if the connection was stablished successfully, you wil see a **Connected
 
 If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (40) (3).png" alt=""><figcaption></figcaption></figure>
 
 And now, you will be able to use the connection in your workspaces and modules:
 

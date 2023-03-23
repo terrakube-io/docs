@@ -56,7 +56,7 @@ Request to create an Organization called "Hashicorp":
 
 We should receive a response like the following:
 
-<figure><img src="../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (42) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now we have the basic element in Terrakube to start testing all the endpoints.
 
@@ -360,7 +360,7 @@ After we have a workspace we can star creating jobs for our workspaces using the
 
 To create it we will use the request inside the postman collection "Step 5 - Jobs"
 
-<figure><img src="../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (38) (2).png" alt=""><figcaption></figcaption></figure>
 
 Request:
 

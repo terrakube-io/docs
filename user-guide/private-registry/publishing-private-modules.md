@@ -18,7 +18,7 @@ Provide the git repository URL and click the **Continue** button.
 
 In the next screen, configure the required fields and click the **Publish Module** button.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67) (1).png" alt=""><figcaption></figcaption></figure>
 
 The module will be published inside the specified organization. On the details page, you can view available versions, read documentation, and copy a usage example.
 
@@ -32,4 +32,4 @@ To release a new version of a module, create a new release tag to its VCS reposi
 
 In the Module details page click the **Delete Module** button and then click the **Yes** button to confirm
 
-<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (75) (1).png" alt=""><figcaption></figcaption></figure>

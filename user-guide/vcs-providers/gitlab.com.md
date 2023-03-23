@@ -52,7 +52,7 @@ You will see a Gitlab window, click the **Authorize** button to complete the con
 
 Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
 
-<figure><img src="../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (57) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you navigate to the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
 

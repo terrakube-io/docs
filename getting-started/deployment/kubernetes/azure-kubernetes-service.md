@@ -1,195 +1,127 @@
 # Azure Active Directory
 
-{% hint style="warning" %}
-Azure Authentication with Dex Connecor require Terrakube >= 2.6.0 and Helm Chart >= 2.0.0
-{% endhint %}
-
 ### &#x20;Requirements
 
-* Azure Active Directory [here](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
-* Azure Storage Account
+* Azure Active Directory.
+* Azure Active Directory group with name "TERRAKUBE\_ADMIN"
+* Public DNS.
+* Kubernetes with Nginx Ingress installed and working.
+* [Helm](https://helm.sh/)
+* Kubernetes namespace named "terrakube"
 
-For this example lets image that you will be using the following domains to deploy Terrakube.
+{% hint style="info" %}
+If you are using Azure Kubernetes Service the following information can be usefull to setup the ingress controller with TLS. [Link](https://learn.microsoft.com/en-us/azure/aks/ingress-tls?tabs=azure-cli)
+{% endhint %}
 
-* registry.terrakube.azure.com&#x20;
-* ui.terrakube.azure.com&#x20;
-* api.terrakube.azure.com
+### DNS Records
+
+For this example we will have to update our DNS records adding the following domains and the public IP address of the nginx ingress controller in our kubernetes cluster:&#x20;
+
+* terrakube-registry.sandbox.terrakube.org
+* terrakube-ui.sandbox.terrakube.org
+* terrakube-api.sandbox.terrakube.org
 
 ### Setup Azure Authentication
 
-You need to complete the Azure authentication setup for Dex. You can found information in this [link](https://dexidp.io/docs/connectors/microsoft/)
+You will need to complete the Azure authentication setup for Dex.&#x20;
 
-You need to go to your Azure and create a new Application
+{% hint style="success" %}
+Dex configuration information can be found in this [link](https://dexidp.io/docs/connectors/microsoft/).
+{% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (14) (1) (2).png" alt=""><figcaption></figcaption></figure>
+Visit: [https://portal.azure.com/#home](https://portal.azure.com/#home) and select "Azure Active Directory"
 
-After the application is created you need to add the redirect URL.
+<figure><img src="../../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (11) (1) (2).png" alt=""><figcaption></figcaption></figure>
+Select "App Registration".
 
-You will also need to add the permission Directory.Read.All and ask a Azure administrator to approve the permission.
+<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (1) (3).png" alt=""><figcaption></figcaption></figure>
+Click "New registration"
 
-Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
+<figure><img src="../../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
 
-```
-## Dex
-dex:
-  enabled: true
-  version: "v2.32.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  resources:
-    limits:
-      cpu: 512m
-      memory: 256Mi
-    requests:
-      cpu: 256m
-      memory: 128Mi
-  properties:
-    config:
-      issuer: https://api.terrakube.azure.com/dex #<<CHANGE_THIS>>
-      storage:
-        type: memory
-      oauth2:
-        responseTypes: ["code", "token", "id_token"] 
-        skipApprovalScreen: true
-      web:
-        allowedOrigins: ['*']
-  
-      staticClients:
-      - id: microsoft
-        redirectURIs:
-        - 'https://ui.terrakube.azure.com' #<<CHANGE_THIS>>
-        - 'http://localhost:10001/login'
-        - 'http://localhost:10000/login'
-        - '/device/callback'
-        name: 'microsoft'
-        public: true
+Create the application using:
 
-      connectors:
-      - type: microsoft
-        id: microsoft
-        name: microsoft
-        config:
-          clientID: "XXXXXX" #<<CHANGE_THIS>>
-          clientSecret: "XXXXXX" #<<CHANGE_THIS>>
-          redirectURI: "https://api.terrakube.azure.com/dex/callback" #<<CHANGE_THIS>>
-          tenant: "XXXXXX" #<<CHANGE_THIS>>
-```
+* Name:&#x20;
+  * TerrakubeDex
+* Redirect URI:&#x20;
+  * https://terrakube-api.sandbox.terrakube.org/dex/callback (Web)
 
-The firt step is to clone the repository.
+<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+
+Copy the "Application Id" and "Tenant Id"
+
+<figure><img src="../../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+
+You will also need to add the permission Directory.Read.All and ask a Azure administrator to approve it.
+
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Once the permission is approved it should look like this:
+
+<figure><img src="../../../.gitbook/assets/image (77).png" alt=""><figcaption></figcaption></figure>
+
+We need to generate a new secret for our application.
+
+<figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+
+Copy the "secret value"
+
+<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+
+### Helm Deployment
+
+Now we have all the information to deploy terrakube using the Azure Active Directory authentication.
+
+Lets create a file called "terrakube.yaml" with the following content:
 
 ```
-git clone https://github.com/AzBuilder/terrakube-helm-chart.git
-```
-
-Replace _<\<CHANGE\_THIS>>_ with the real values, create the values.yaml file and run the helm install
-
-```
-## Global Name
-name: "terrakube"
-
 ## Terrakube Security
 security:
-  adminGroup: "<<CHANGE_THIS>>" # The value should be a valida azure ad group (example: TERRAKUBE_ADMIN)
-  patSecret: "<<CHANGE_THIS>>"  # Sample Key 32 characters z6QHX!y@Nep2QDT!53vgH43^PjRXyC3X 
-  internalSecret: "<<CHANGE_THIS>>" # Sample Key 32 characters Kb^8cMerPNZV6hS!9!kcD*KuUPUBa^B3 
+  useOpenLDAP: false
+  adminGroup: "TERRAKUBE_ADMIN"
   dexClientId: "microsoft"
   dexClientScope: "email openid profile offline_access groups"
-  dexIssuerUri: "<<CHANGE_THIS>>" #The value should be like https://api.terrakube.azure.com/dex
-  
-## Terraform Storage
-storage:
-  azure:
-    storageAccountName: "XXXXXXX" # <<CHANGE_THIS>>
-    storageAccountResourceGroup: "XXXXXXX" # <<CHANGE_THIS>>
-    storageAccountAccessKey: "XXXXXXX" # <<CHANGE_THIS>>
+  dexIssuerUri: "https://terrakube-api.sandbox.terrakube.org/dex"
 
-## Dex
 dex:
-  enabled: true
-  version: "v2.32.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  resources:
-    limits:
-      cpu: 512m
-      memory: 256Mi
-    requests:
-      cpu: 256m
-      memory: 128Mi
-  properties:
-    config:
-      issuer: https://api.terrakube.azure.com/dex #<<CHANGE_THIS>>
-      storage:
-        type: memory
-      oauth2:
-        responseTypes: ["code", "token", "id_token"] 
-        skipApprovalScreen: true
-      web:
-        allowedOrigins: ['*']
+  config:
+    issuer: https://terrakube-api.sandbox.terrakube.org/dex
+    storage:
+      type: memory
+    oauth2:
+      responseTypes: ["code", "token", "id_token"] 
+      skipApprovalScreen: true
+    web:
+      allowedOrigins: ['*']
   
-      staticClients:
-      - id: microsoft
-        redirectURIs:
-        - 'https://ui.terrakube.azure.com' #<<CHANGE_THIS>>
-        - 'http://localhost:10001/login'
-        - 'http://localhost:10000/login'
-        - '/device/callback'
-        name: 'microsoft'
-        public: true
+    staticClients:
+    - id: microsoft
+      redirectURIs:
+      - 'https://terrakube-ui.sandbox.terrakube.org'
+      - 'http://localhost:10001/login'
+      - 'http://localhost:10000/login'
+      - '/device/callback'
+      name: 'microsoft'
+      public: true
 
-      connectors:
-      - type: microsoft
-        id: microsoft
-        name: microsoft
-        config:
-          clientID: "XXXXXX" #<<CHANGE_THIS>>
-          clientSecret: "XXXXXX" #<<CHANGE_THIS>>
-          redirectURI: "https://api.terrakube.azure.com/dex/callback" #<<CHANGE_THIS>>
-          tenant: "XXXXXX" #<<CHANGE_THIS>>
-
-## API properties
-api:
-  enabled: true
-  version: "2.6.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  properties:
-    databaseType: "H2"
-
-## Executor properties
-executor:
-  enabled: true
-  version: "2.6.0"  
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  properties:
-    toolsRepository: "https://github.com/AzBuilder/terrakube-extensions"
-    toolsBranch: "main"
-
-## Registry properties
-registry:
-  enabled: true
-  version: "2.6.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-
-## UI Properties
-ui:
-  enabled: true
-  version: "2.6.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
+    connectors:
+    - type: microsoft
+      id: microsoft
+      name: microsoft
+      config:
+        clientID: "<<CLIENT ID VALUE>>"
+        clientSecret: "<<CLIENT ID SECRET>>"
+        redirectURI: "https://terrakube-api.sandbox.terrakube.org/dex/callback"
+        tenant: "<<TENANT ID>>"
 
 ## Ingress properties
 ingress:
   useTls: true
   ui:
     enabled: true
-    domain: "ui.terrakube.azure.com"
+    domain: "terrakube-ui.sandbox.terrakube.org"
     path: "/(.*)"
     pathType: "Prefix" 
     annotations:
@@ -198,7 +130,7 @@ ingress:
       cert-manager.io/cluster-issuer: letsencrypt
   api:
     enabled: true
-    domain: "api.terrakube.azure.com"
+    domain: "terrakube-api.sandbox.terrakube.org"
     path: "/(.*)"
     pathType: "Prefix"
     annotations:
@@ -208,7 +140,7 @@ ingress:
       cert-manager.io/cluster-issuer: letsencrypt
   registry:
     enabled: true
-    domain: "registry.terrakube.azure.com"
+    domain: "terrakube-reg.sandbox.terrakube.org"
     path: "/(.*)"
     pathType: "Prefix"
     annotations:
@@ -228,16 +160,40 @@ ingress:
 
 ```
 
+{% hint style="warning" %}
+Dex configuration is using inside the redirect URIs http://localhost:10001/login and http://localhost:10000/login to support the terraform login protocol.
+{% endhint %}
+
 Run the installation
 
 ```bash
-helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n terrakube
+helm install terrakube terrakube-repo/terrakube --values terrakube.yaml -n terrakube
 ```
 
-{% hint style="warning" %}
+If the setup was correct we should be able to login using&#x20;
 
-{% endhint %}
+https://terrakube-ui.sandbox.terrakube.org
 
-{% hint style="warning" %}
-For any question or feedback please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)
-{% endhint %}
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+If we click the "login" button we should be able to see the Azure Active Directy login page.
+
+<figure><img src="../../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+
+After a successfull login we should see Terrakube main page.
+
+<figure><img src="../../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+
+Checking if all the resources are online using kubectl.
+
+```
+kubectl get pods -n terrakube
+NAME                                  READY   STATUS    RESTARTS      AGE
+terrakube-api-5c5f5d897d-n94kp        1/1     Running   1 (16m ago)   17m
+terrakube-dex-865d9465c6-vsj7v        1/1     Running   0             13m
+terrakube-executor-79bfb968c9-vrw2j   1/1     Running   0             17m
+terrakube-minio-68cfdb95bc-6xrq9      1/1     Running   0             17m
+terrakube-postgresql-0                1/1     Running   0             17m
+terrakube-registry-f8dc58b79-648w9    1/1     Running   0             17m
+terrakube-ui-7887b5c47-7kfw6          1/1     Running   0             17m
+```

@@ -6,7 +6,7 @@ All users in an organization with **Manage Modules** permission can view the Ter
 
 Click **Registry** in the main menu. And then click the module you want to use.
 
-<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (70) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the module page, select the version in the dropdown list
 
