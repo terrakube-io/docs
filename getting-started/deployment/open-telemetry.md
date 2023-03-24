@@ -63,3 +63,5 @@ The [Prometheus](https://github.com/prometheus/docs/blob/master/content/docs/ins
 For more information please check, [the official open telemetry documentation](https://github.com/open-telemetry/opentelemetry-java/blob/main/sdk-extensions/autoconfigure/README.md).
 {% endhint %}
 
+Docker Compose - Telemetry Example
+

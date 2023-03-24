@@ -56,7 +56,7 @@ Copy the "Application Id" and "Tenant Id"
 
 You will also need to add the permission Directory.Read.All and ask a Azure administrator to approve it.
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
 
 Once the permission is approved it should look like this:
 
@@ -176,7 +176,7 @@ If the setup was correct we should be able to login using&#x20;
 
 https://terrakube-ui.sandbox.terrakube.org
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 If we click the "login" button we should be able to see the Azure Active Directy login page.
 
