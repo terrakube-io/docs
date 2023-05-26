@@ -105,6 +105,10 @@
       * [module create](user-guide/terrakube-cli/commands/azb-module/create.md)
       * [module update](user-guide/terrakube-cli/commands/azb-module/module-update.md)
       * [module delete](user-guide/terrakube-cli/commands/azb-module/module-delete.md)
+* [Reference](user-guide/reference/README.md)
+  * [Executor](user-guide/reference/executor/README.md)
+    * [Terraform Execution Flow](user-guide/reference/executor/terraform-execution-flow.md)
+    * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
 
 ## 🎓 Learn
 
