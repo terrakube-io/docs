@@ -10,7 +10,7 @@ For using repositories from Bitbucket.com with Terrakube workspaces and modules 
 **Manage VCS Providers** permission is required to perform this action, please check [team-management.md](../organizations/team-management.md "mention") for more info.
 {% endhint %}
 
-Navigate to the desired organization **** and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
+Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
 <figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -34,13 +34,7 @@ Click the **OAuth consumers** menu and then click the **Add consumer** button
 
 Complete the required fields and click **Save**  button
 
-| Field                                 | Description                                                                                                                                                                                                              |
-| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Name                                  | Your application name, for example you can use your organization name.                                                                                                                                                   |
-| Description                           | Any description of your choice                                                                                                                                                                                           |
-| Redirect URI                          | Copy the Redirect URI from the Terrakube UI                                                                                                                                                                              |
-| This is a private consumer (checkbox) | Checked                                                                                                                                                                                                                  |
-| Permissions (checkboxes)              | <p>The following should be checked: </p><p><strong>Account</strong>: Write </p><p><strong>Repositories</strong>: Admin </p><p><strong>Pull requests</strong>: Write </p><p><strong>Webhooks</strong>: Read and write</p> |
+<table><thead><tr><th width="219">Field</th><th>Description</th></tr></thead><tbody><tr><td>Name</td><td>Your application name, for example you can use your organization name.</td></tr><tr><td>Description</td><td>Any description of your choice</td></tr><tr><td>Redirect URI</td><td>Copy the Redirect URI from the Terrakube UI</td></tr><tr><td>This is a private consumer (checkbox)</td><td>Checked</td></tr><tr><td>Permissions (checkboxes)</td><td><p>The following should be checked: </p><p><strong>Account</strong>: Write </p><p><strong>Repositories</strong>: Admin </p><p><strong>Pull requests</strong>: Write </p><p><strong>Webhooks</strong>: Read and write</p></td></tr></tbody></table>
 
 {% hint style="info" %}
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
@@ -60,11 +54,7 @@ You will see a Bitbucket window, click the **Grant Access** button to complete t
 
 <figure><img src="../../.gitbook/assets/image (15) (4).png" alt=""><figcaption></figcaption></figure>
 
-Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
-
-<figure><img src="../../.gitbook/assets/image (6) (1) (5).png" alt=""><figcaption></figcaption></figure>
-
-If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
+Finally, if the connection was established successfully, you will be redirected to the VCS provider’s page in your organization. You should see the connection status with the date and the user that created the connection.
 
 <figure><img src="../../.gitbook/assets/image (40) (3).png" alt=""><figcaption></figcaption></figure>
 

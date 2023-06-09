@@ -6,7 +6,7 @@ For using repositories from Azure Devops with Terrakube workspaces and modules y
 **Manage VCS Providers** permission is required to perform this action, please check [team-management.md](../organizations/team-management.md "mention") for more info.
 {% endhint %}
 
-Navigate to the desired organization **** and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
+Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
 <figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
@@ -24,13 +24,7 @@ In the next screen click the link to [register a new OAuth Application](https://
 
 In the Azure Devops page, complete the required fields and click **Create application**
 
-| Field                          | Description                                                       |
-| ------------------------------ | ----------------------------------------------------------------- |
-| Company Name                   | Your company name.                                                |
-| Application name               | The name of your application or you can use the Organization name |
-| Application website            | Your application or website url                                   |
-| Callback URL                   | Copy the Callback URL from the Terrakube URL                      |
-| Authorized scopes (checkboxes) | Only the following should be checked: Code (read) Code (status)   |
+<table><thead><tr><th width="354">Field</th><th>Description</th></tr></thead><tbody><tr><td>Company Name </td><td>Your company name.</td></tr><tr><td>Application name</td><td>The name of your application or you can use the Organization name</td></tr><tr><td>Application website</td><td>Your application or website url </td></tr><tr><td>Callback URL</td><td>Copy the Callback URL from the Terrakube URL</td></tr><tr><td>Authorized scopes (checkboxes)</td><td>Only the following should be checked: Code (read) Code (status)</td></tr></tbody></table>
 
 {% hint style="info" %}
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
@@ -50,11 +44,7 @@ You will see an Azure Devops window, click the **Accept** button to complete the
 
 <figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
-Finally if the connection was stablished successfully, you wil see a **Connected** message, you can close the window and return to Terrakube.
-
-<figure><img src="../../.gitbook/assets/image (6) (1) (5).png" alt=""><figcaption></figcaption></figure>
-
-If you refresh the VCS providers page in your organization, you should see the connection status with the date and the user that created the connection
+Finally, if the connection was established successfully, you will be redirected to the VCS provider’s page in your organization. You should see the connection status with the date and the user that created the connection.
 
 <figure><img src="../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
