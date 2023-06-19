@@ -23,3 +23,7 @@ In this section:
 {% content-ref url="templates/" %}
 [templates](templates/)
 {% endcontent-ref %}
+
+{% content-ref url="tags.md" %}
+[tags.md](tags.md)
+{% endcontent-ref %}

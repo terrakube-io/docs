@@ -40,7 +40,7 @@ flow:
     step: 200
 ```
 
-If you notice inside the **flow** section **** you can define any step required, for this case only 2 steps are defined. Using the **type** property you can specify the kind of step to be performed, in the above case we are using some default types like **terraformPlan** and **terraformApply.** However the power of terrakube is that you can extend your workflow to execute additional tasks using bash or groovy code. Lets see a more advanced template:
+If you notice inside the **flow** section you can define any step required, for this case only 2 steps are defined. Using the **type** property you can specify the kind of step to be performed, in the above case we are using some default types like **terraformPlan** and **terraformApply.** However the power of terrakube is that you can extend your workflow to execute additional tasks using bash or groovy code. Lets see a more advanced template:
 
 ```
 flow:

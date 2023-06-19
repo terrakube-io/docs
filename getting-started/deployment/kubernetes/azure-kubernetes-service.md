@@ -35,7 +35,7 @@ Visit: [https://portal.azure.com/#home](https://portal.azure.com/#home) and sele
 
 Select "App Registration".
 
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (40) (4).png" alt=""><figcaption></figcaption></figure>
 
 Click "New registration"
 
@@ -48,7 +48,7 @@ Create the application using:
 * Redirect URI:&#x20;
   * https://terrakube-api.sandbox.terrakube.org/dex/callback (Web)
 
-<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (57) (1).png" alt=""><figcaption></figcaption></figure>
 
 Copy the "Application Id" and "Tenant Id"
 
@@ -64,11 +64,11 @@ Once the permission is approved it should look like this:
 
 We need to generate a new secret for our application.
 
-<figure><img src="../../../.gitbook/assets/image (58).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (58) (2).png" alt=""><figcaption></figcaption></figure>
 
 Copy the "secret value"
 
-<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (38) (3).png" alt=""><figcaption></figcaption></figure>
 
 ### Helm Deployment
 
@@ -176,15 +176,15 @@ If the setup was correct we should be able to login using&#x20;
 
 https://terrakube-ui.sandbox.terrakube.org
 
-<figure><img src="../../../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (2) (3).png" alt=""><figcaption></figcaption></figure>
 
 If we click the "login" button we should be able to see the Azure Active Directy login page.
 
-<figure><img src="../../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (59) (1).png" alt=""><figcaption></figcaption></figure>
 
 After a successfull login we should see Terrakube main page.
 
-<figure><img src="../../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (66) (2).png" alt=""><figcaption></figcaption></figure>
 
 Checking if all the resources are online using kubectl.
 
