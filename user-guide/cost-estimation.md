@@ -1,6 +1,6 @@
 # Cost Estimation
 
-Terrakube can be integrated with Infracost using the Terrakube extension to validate the Terraform plan and estimate the monthly cost of the resources, below you can find an example of how this can be achieved.&#x20;
+Terrakube can be integrated with [Infracost](https://www.infracost.io/) using the Terrakube extension to validate the Terraform plan and estimate the monthly cost of the resources, below you can find an example of how this can be achieved.&#x20;
 
 ### Template Definition
 
