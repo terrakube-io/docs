@@ -57,6 +57,7 @@
 * [Workspaces](user-guide/workspaces/README.md)
   * [Overview](user-guide/workspaces/overview.md)
   * [Creating Workspaces](user-guide/workspaces/creating-workspaces.md)
+  * [Creating Workspace (Terraform CLI)](user-guide/workspaces/creating-workspace-terraform-cli.md)
   * [Terraform State](user-guide/workspaces/terraform-state.md)
   * [Variables](user-guide/workspaces/variables.md)
   * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
