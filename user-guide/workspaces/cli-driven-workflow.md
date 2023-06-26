@@ -14,9 +14,7 @@ Terrakube creates default templates for CLI-Driven workflow when you create a ne
 
 ### Configuration
 
-To use the CLI-driven workflow the firts step will be to setup our project to use the terraform remote state or the `cloud` block as the following example:
-
-
+To use the CLI-driven workflow the firts step will be to setup our project to use the terraform remote backend or the `cloud` block as the following example:
 
 {% tabs %}
 {% tab title="remote backend" %}
