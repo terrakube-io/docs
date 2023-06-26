@@ -57,7 +57,6 @@
 * [Workspaces](user-guide/workspaces/README.md)
   * [Overview](user-guide/workspaces/overview.md)
   * [Creating Workspaces](user-guide/workspaces/creating-workspaces.md)
-  * [Creating Workspace (Terraform CLI)](user-guide/workspaces/creating-workspace-terraform-cli.md)
   * [Terraform State](user-guide/workspaces/terraform-state.md)
   * [Variables](user-guide/workspaces/variables.md)
   * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
@@ -66,7 +65,6 @@
 * [Private Registry](user-guide/private-registry/README.md)
   * [Publishing Private Modules](user-guide/private-registry/publishing-private-modules.md)
   * [Using Private Modules](user-guide/private-registry/using-private-modules.md)
-* [Migrating to Terrakube](user-guide/migrating-to-terrakube.md)
 * [Policy Enforcement (OPA)](user-guide/policy-enforcement-opa.md)
 * [Cost Estimation](user-guide/cost-estimation.md)
 * [Drift Detection](user-guide/drift-detection.md)
@@ -112,6 +110,7 @@
   * [Executor](user-guide/reference/executor/README.md)
     * [Terraform Execution Flow](user-guide/reference/executor/terraform-execution-flow.md)
     * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
+* [Migrating to Terrakube](user-guide/migrating-to-terrakube.md)
 
 ## 🎓 Learn
 

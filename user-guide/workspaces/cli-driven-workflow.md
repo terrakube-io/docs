@@ -1,6 +1,8 @@
 # CLI-driven Workflow
 
-Cli-driven workflow allow to use Terrakube remotely using only the Terraform CLI.
+With the CLI integration, you can use Terrakube’s collaboration features in the Terraform CLI workflow that you are already familiar with. This gives you the best of both worlds as a developer who uses the Terraform CLI, and it also works well with your existing CI/CD pipelines.
+
+You can initiate runs with the usual terraform plan and terraform apply commands and then monitor the run progress from your terminal. These runs run remotely in Terrakube.
 
 {% hint style="info" %}
 Terrakube creates default templates for CLI-Driven workflow when you create a new organization, if you delete those templates you won't be able to run this workflow, check [default templates](../organizations/templates/default-templates.md#cli-driven-templates) for more information.
@@ -12,8 +14,12 @@ Terrakube creates default templates for CLI-Driven workflow when you create a ne
 
 ### Configuration
 
-To use the CLI-driven workflow the firts step will be to setup our project to use the terraform remote state in Terrakube as the following example:
+To use the CLI-driven workflow the firts step will be to setup our project to use the terraform remote state or the `cloud` block as the following example:
 
+
+
+{% tabs %}
+{% tab title="remote backend" %}
 ```
 terraform {
   backend "remote" {
@@ -25,6 +31,25 @@ terraform {
   }
 }
 
+resource "random_string" "random" {
+  length           = 16
+  special          = true
+  override_special = "/@£$"
+}
+```
+{% endtab %}
+
+{% tab title="cloud block" %}
+```
+terraform {
+  cloud {
+    organization = "simple"
+    hostname = "8080-azbuilder-terrakube-sscrnu9jbie.ws-us99.gitpod.io"
+    workspaces {
+      name = "samplecloud"
+    }
+  }
+}
 
 resource "random_string" "random" {
   length           = 16
@@ -32,6 +57,8 @@ resource "random_string" "random" {
   override_special = "/@£$"
 }
 ```
+{% endtab %}
+{% endtabs %}
 
 * Hostname
   * This should be the Terrakube API
@@ -39,6 +66,10 @@ resource "random_string" "random" {
   * This should be the Terrakube organization where the workspace will be created.&#x20;
 * Workspace
   * The name of the workspace to be created. Or you can use an existing workspace created in the UI using the API or CLI driven workflow.
+
+{% hint style="warning" %}
+The `cloud` block is available in Terraform v1.1 and later. Previous versions can use the remote bakced to configure the CLI workflow and migrate state. Using tags in the `cloud` block is not yet supported
+{% endhint %}
 
 ### Terraform login.
 
@@ -116,6 +147,10 @@ commands will detect it and remind you to do so if necessary.
 ```
 
 If the initialization is successfull you should be able to see something like this:
+
+### Implicit Workspace Creation <a href="#implicit-workspace-creation" id="implicit-workspace-creation"></a>
+
+Terrakube will create a new workspace with the name you specify in the cloud block if it doesn’t already exist in your organization. You will see a message about this when you run terraform init.
 
 ### Terraform Plan
 
