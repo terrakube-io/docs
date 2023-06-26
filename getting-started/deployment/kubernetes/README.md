@@ -2,8 +2,8 @@
 
 You can handle Terrakube users with differen authentication providers like the following
 
-{% content-ref url="azure-kubernetes-service.md" %}
-[azure-kubernetes-service.md](azure-kubernetes-service.md)
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
 {% endcontent-ref %}
 
 {% content-ref url="google-kubernetes-engine-gke.md" %}

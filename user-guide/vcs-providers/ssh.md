@@ -27,3 +27,19 @@ Once SSH keys are added inside your organization you can use them like the follo
 {% hint style="warning" %}
 When using SSH keys make sure to use your repository URL using the ssh format. For github it is something like [_**git@github.com**_](mailto:git@github.com)_**:AzBuilder/terrakube-docker-compose.git**_
 {% endhint %}
+
+### SSH Key Injection
+
+The selected SSH key will be used to clone the workspace information at runtime when running the job inside Terrakube, but it will also be injected to the job execution to be use inside our terraform code.&#x20;
+
+For example if you are using a module using a GIT connection like the following:
+
+```
+module "test" {
+  source = "git@bitbucket.org:alfespa17/private-module.git"
+}
+```
+
+When running the job, internally terraform will be using the selected SSH key to clone the necesary module dependencies like the below image:
+
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
