@@ -1,9 +1,9 @@
-# 🤵 User Management
+# ☸ Kubernetes
 
-You can handle Terrakube users with differen authentication providers like the following
+WIP
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="azure-kubernetes-service.md" %}
+[azure-kubernetes-service.md](azure-kubernetes-service.md)
 {% endcontent-ref %}
 
 {% content-ref url="google-kubernetes-engine-gke.md" %}
