@@ -27,11 +27,11 @@
   * [⚙ Custom Terraform CLI Builds](getting-started/deployment/custom-terraform-cli-builds.md)
   * [🛡 Token Security](getting-started/deployment/token-security.md)
   * [🚦 Open Telemetry](getting-started/deployment/open-telemetry.md)
-* [🤵 User Management](getting-started/deployment/kubernetes/README.md)
-  * [Azure Active Directory](getting-started/deployment/kubernetes/azure-kubernetes-service.md)
-  * [Google Cloud Identity](getting-started/deployment/kubernetes/google-kubernetes-engine-gke.md)
-  * [Amazon Cognito](getting-started/deployment/kubernetes/amazon-kubernetes-service-aks.md)
-  * [Github](getting-started/deployment/kubernetes/docker-desktop.md)
+* [🤵 User Management](getting-started/user-management/README.md)
+  * [Azure Active Directory](getting-started/user-management/azure-active-directory.md)
+  * [Google Cloud Identity](getting-started/user-management/google-cloud-identity.md)
+  * [Amazon Cognito](getting-started/user-management/amazon-cognito.md)
+  * [Github](getting-started/user-management/docker-desktop.md)
 
 ## 📓 User Guide
 
