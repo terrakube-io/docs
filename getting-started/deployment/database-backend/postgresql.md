@@ -29,3 +29,7 @@ Now you can install terrakube using the command.
 ```bash
 helm install --values terrakube.yaml terrakube terrakube-repo/terrakube -n terrakube
 ```
+
+{% hint style="warning" %}
+Postgresql SSL mode can be use adding DatasourceSslMode parameter by default the value is "disable", but it accepts the following values; disable, allow, prefer, require, verify-ca, verify-full. This feature is supported from Terrakube 2.15.0
+{% endhint %}

@@ -56,6 +56,27 @@ resource "random_string" "random" {
 }
 ```
 {% endtab %}
+
+{% tab title="cloud block tags" %}
+```
+terraform {
+  cloud {
+    organization = "simple"
+    hostname = "8080-azbuilder-terrakube-0musnfsxh7g.ws-us102.gitpod.io"
+
+    workspaces {
+      tags = ["development", "networking"]
+    }
+  }
+}
+
+resource "random_string" "random" {
+  length           = 16
+  special          = true
+  override_special = "/@£$"
+}
+```
+{% endtab %}
 {% endtabs %}
 
 * Hostname

@@ -58,6 +58,7 @@
   * [Overview](user-guide/workspaces/overview.md)
   * [Creating Workspaces](user-guide/workspaces/creating-workspaces.md)
   * [Terraform State](user-guide/workspaces/terraform-state.md)
+  * [Share Workspace State](user-guide/workspaces/share-workspace-state.md)
   * [Variables](user-guide/workspaces/variables.md)
   * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
   * [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md)
