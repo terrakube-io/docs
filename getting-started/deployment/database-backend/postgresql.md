@@ -17,6 +17,7 @@ api:
     databaseName: "database_name"
     databaseUser: "database_user"
     databasePassword: "database_password"
+    databaseSslMode: "disable"
 
 ```
 
@@ -31,5 +32,5 @@ helm install --values terrakube.yaml terrakube terrakube-repo/terrakube -n terra
 ```
 
 {% hint style="warning" %}
-Postgresql SSL mode can be use adding DatasourceSslMode parameter by default the value is "disable", but it accepts the following values; disable, allow, prefer, require, verify-ca, verify-full. This feature is supported from Terrakube 2.15.0
+Postgresql SSL mode can be use adding databaseSslMode parameter by default the value is "disable", but it accepts the following values; disable, allow, prefer, require, verify-ca, verify-full. This feature is supported from Terrakube 2.15.0. Reference: [https://jdbc.postgresql.org/documentation/publicapi/org/postgresql/PGProperty.html#SSL\_MODE](https://jdbc.postgresql.org/documentation/publicapi/org/postgresql/PGProperty.html#SSL\_MODE)
 {% endhint %}
