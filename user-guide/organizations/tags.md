@@ -1,6 +1,6 @@
 # Tags
 
-You can use tags to categorize, sort, and even filter workspaces based on the tags.&#x20;
+You can use tags to categorize, sort, and even filter workspaces based on the tags.
 
 You can manage tags for the organization in the Settings panel. This section lets you create and remove tags. Alternatively, you can add existing tags or create new ones in the [Workspace overview page](../workspaces/overview.md).
 
@@ -22,7 +22,7 @@ Finally click the **Save tag** button and the variable will be created
 
 You will see the new tag in the list. And now you can use the tag in the workspaces within the organization
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Edit a Tag
 

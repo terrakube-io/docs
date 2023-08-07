@@ -89,7 +89,7 @@ Minikube will use a very simple OpenLDAP, make sure to change this when using in
 
 Select the "simple" organization and the "sample\_simple" workspace and run a job.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 

@@ -79,7 +79,7 @@ In the popup, provide the required values. Use the below table as reference:
 
 Finally click the **Save variable** button and the variable will be created.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Edit an Environment Variable
 

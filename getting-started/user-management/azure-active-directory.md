@@ -4,15 +4,15 @@
 Azure Authentication with Dex Connecor require Terrakube >= 2.6.0 and Helm Chart >= 2.0.0
 {% endhint %}
 
-### &#x20;Requirements
+### Requirements
 
 * Azure Active Directory [here](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
 * Azure Storage Account
 
 For this example lets image that you will be using the following domains to deploy Terrakube.
 
-* registry.terrakube.azure.com&#x20;
-* ui.terrakube.azure.com&#x20;
+* registry.terrakube.azure.com
+* ui.terrakube.azure.com
 * api.terrakube.azure.com
 
 ### Setup Azure Authentication
@@ -21,15 +21,13 @@ You need to complete the Azure authentication setup for Dex. You can found infor
 
 You need to go to your Azure and create a new Application
 
-<figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
-
 After the application is created you need to add the redirect URL.
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
 You will also need to add the permission Directory.Read.All and ask a Azure administrator to approve the permission.
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 
@@ -154,7 +152,6 @@ dex:
 ## API properties
 api:
   enabled: true
-  version: "2.6.0"
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
@@ -162,8 +159,7 @@ api:
 
 ## Executor properties
 executor:
-  enabled: true
-  version: "2.6.0"  
+  enabled: true  
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
@@ -173,14 +169,12 @@ executor:
 ## Registry properties
 registry:
   enabled: true
-  version: "2.6.0"
   replicaCount: "1"
   serviceType: "ClusterIP"
 
 ## UI Properties
 ui:
   enabled: true
-  version: "2.6.0"
   replicaCount: "1"
   serviceType: "ClusterIP"
 
@@ -233,10 +227,6 @@ Run the installation
 ```bash
 helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n terrakube
 ```
-
-{% hint style="warning" %}
-
-{% endhint %}
 
 {% hint style="warning" %}
 For any question or feedback please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)

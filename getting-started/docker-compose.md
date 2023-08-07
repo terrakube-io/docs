@@ -26,7 +26,7 @@ Terrakube will be available in the following URL:
   * Username: admin@example.com
   * Password: admin
 
-### Docker Compose with Open Telemetry  Setup
+### Docker Compose with Open Telemetry Setup
 
 You can also test Terrakube using the Open Telemetry example setup to see how the components are working internally and check some internal logs
 
@@ -44,7 +44,7 @@ Jaeger UI will be available in http://localhost:16686/
 
 <figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 For more information about Open Telemetry setup check the [following information](deployment/open-telemetry.md)
