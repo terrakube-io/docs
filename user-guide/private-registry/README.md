@@ -1,6 +1,6 @@
 # Private Registry
 
-Terraform provides a public registry, where you can share and reuse your terraform modules or providers, but sometimes you need to define a Terraform module that can be accessed only withing your organization.
+Terraform provides a public registry, where you can share and reuse your terraform modules or providers, but sometimes you need to define a Terraform module that can be accessed only within your organization.
 
 Terrakube provides a private registry that works similarly to the [public Terraform Registry](https://developer.hashicorp.com/terraform/registry) and helps you share [Terraform providers](https://developer.hashicorp.com/terraform/language/providers) and [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) privately across your organization. You can use any of the main [VCS providers](../vcs-providers/) to mantain your terraform module code.
 
