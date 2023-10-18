@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
+* [Updates](updates.md)
 
 ## Getting started
 
