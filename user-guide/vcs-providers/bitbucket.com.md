@@ -12,7 +12,7 @@ For using repositories from Bitbucket.com with Terrakube workspaces and modules 
 
 Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
-<figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.
@@ -40,7 +40,7 @@ Complete the required fields and click **Save**  button
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (16) (3).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen, copy the **Key** and **Secret**
 
@@ -52,7 +52,7 @@ Go back to Terrakube to enter the information you copied from the previous step.
 
 You will see a Bitbucket window, click the **Grant Access** button to complete the connection
 
-<figure><img src="../../.gitbook/assets/image (15) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally, if the connection was established successfully, you will be redirected to the VCS provider’s page in your organization. You should see the connection status with the date and the user that created the connection.
 

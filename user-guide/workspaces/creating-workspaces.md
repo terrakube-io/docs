@@ -22,7 +22,7 @@ Click **Workspaces** in the main menu and then click the **New workspace** butto
 
 Choose the **Version control workflow**
 
-<figure><img src="../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
 
 Select an existing version control provider or click **Connect to a different VCS** to configure a new one. See [vcs-providers](../vcs-providers/ "mention") for more details.
 
@@ -84,11 +84,11 @@ You will be redirected to the Workspace page.
 The overview page for CLI-driven workspaces show the step to connect to the workspace using the Terraform CLI. For more details see [cli-driven-workflow.md](cli-driven-workflow.md "mention")
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (18) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (18) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 And if you navigate to the **Workspace** menu you will see the workspace in the Workspaces list
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### API-driven Workflow
 
@@ -109,7 +109,7 @@ Configure the workspace settings.&#x20;
 
 Once you fill the settings click the **Create Workspace** button.
 
-<figure><img src="../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
 
 ou will be redirected to the Workspace page.
 
@@ -117,7 +117,7 @@ ou will be redirected to the Workspace page.
 For more details how to use the Terrakube API. See [api-driven-workflow.md](api-driven-workflow.md "mention")
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (15) (4).png" alt=""><figcaption></figcaption></figure>
 
 And if you navigate to the **Workspace** menu you will see the workspace in the Workspaces list
 

@@ -23,7 +23,7 @@ These Terraform variables are set using a terraform.tfvars file. To use interpol
 
 Go to the workspace **Variables** page and in the _Terraform Variables_ section click the **Add variable** button.
 
-<figure><img src="../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (7).png" alt=""><figcaption></figcaption></figure>
 
 In the popup, provide the required values. Use the below table as reference:
 
@@ -37,13 +37,13 @@ In the popup, provide the required values. Use the below table as reference:
 
 Finally click the **Save variable** button and the variable will be created.
 
-<figure><img src="../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
 
 #### Edit a Terraform Variable
 
 Click the **Edit** button next to the variable you want to edit.
 
-<figure><img src="../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 Make any desired changes and click **Save variable.**
 
@@ -65,7 +65,7 @@ These variables are set in Terraform's shell environment using export.
 
 Go to the workspace **Variables** page and in the _Environment Variables_ section click the **Add variable** button.
 
-<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the popup, provide the required values. Use the below table as reference:
 
@@ -79,13 +79,13 @@ In the popup, provide the required values. Use the below table as reference:
 
 Finally click the **Save variable** button and the variable will be created.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Edit an Environment Variable
 
 Click the **Edit** button next to the variable you want to edit.
 
-<figure><img src="../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 Make any desired changes and click **Save variable.**
 
@@ -93,7 +93,7 @@ Make any desired changes and click **Save variable.**
 
 Click the **Delete** button next to the variable you want to delete.
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (3).png" alt=""><figcaption></figcaption></figure>
 
 Click **Yes** to confirm your action.
 

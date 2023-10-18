@@ -56,7 +56,7 @@ The environment has some users, groups and sample data so you can test it quickl
 
 Visit http://terrakube-ui.minikube.net and login using admin@example.com with password admin
 
-<figure><img src="../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (11) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 You can login using the following user and passwords
 
@@ -89,11 +89,11 @@ Minikube will use a very simple OpenLDAP, make sure to change this when using in
 
 Select the "simple" organization and the "sample\_simple" workspace and run a job.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (21) (2).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 For more advance configuration options to install Terrakube visit:

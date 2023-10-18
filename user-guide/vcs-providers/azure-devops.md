@@ -8,7 +8,7 @@ For using repositories from Azure Devops with Terrakube workspaces and modules y
 
 Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
-<figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.
@@ -42,7 +42,7 @@ Go back to Terrakube to enter the information you copied from the previous step.
 
 You will see an Azure Devops window, click the **Accept** button to complete the connection
 
-<figure><img src="../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (12) (1) (2).png" alt=""><figcaption></figcaption></figure>
 
 Finally, if the connection was established successfully, you will be redirected to the VCS provider’s page in your organization. You should see the connection status with the date and the user that created the connection.
 

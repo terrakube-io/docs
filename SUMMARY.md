@@ -64,6 +64,7 @@
   * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
   * [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md)
   * [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md)
+  * [Ephemeral Workspaces](user-guide/workspaces/ephemeral-workspaces.md)
 * [Private Registry](user-guide/private-registry/README.md)
   * [Publishing Private Modules](user-guide/private-registry/publishing-private-modules.md)
   * [Using Private Modules](user-guide/private-registry/using-private-modules.md)

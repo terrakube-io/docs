@@ -130,7 +130,7 @@ Request:
 
 Response:
 
-<figure><img src="../.gitbook/assets/image (7) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (7) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now our firts organization have to templates, one to run a terraform plan/apply and one for a terraform destroy. Lets create a couple of more templates.
 
@@ -215,7 +215,7 @@ Request:
 
 Response:
 
-<figure><img src="../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (19) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 This template is importing the **Terrascan** extension and running a analisys for one particular workspace.
 

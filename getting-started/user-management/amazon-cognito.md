@@ -4,15 +4,15 @@
 AWS Cognito Authentication with Dex Connecor require Terrakube >= 2.6.0 and Helm Chart >= 2.0.0
 {% endhint %}
 
-### &#x20;Requirements
+### Requirements
 
 * AWS Cognito
 * AWS S3 Bucket
 
 For this example lets image that you will be using the following domains to deploy Terrakube.
 
-* registry.terrakube.aws.com&#x20;
-* ui.terrakube.aws.com&#x20;
+* registry.terrakube.aws.com
+* ui.terrakube.aws.com
 * api.terrakube.aws.com
 
 ### Setup AWS Cognito Authentication
@@ -25,7 +25,7 @@ You need to create a new Cognito user pool
 
 You can keep the default values
 
-<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
 
 Add the domain name to cognito
 
@@ -262,10 +262,6 @@ Run the installation
 ```bash
 helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n terrakube
 ```
-
-{% hint style="warning" %}
-
-{% endhint %}
 
 {% hint style="warning" %}
 For any question or feedback please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)

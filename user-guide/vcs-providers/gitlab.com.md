@@ -10,7 +10,7 @@ For using repositories from Gitlab.com with Terrakube workspaces and modules you
 
 Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
-<figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (14) (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.&#x20;
