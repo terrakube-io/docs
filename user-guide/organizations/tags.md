@@ -22,7 +22,7 @@ Finally click the **Save tag** button and the variable will be created
 
 You will see the new tag in the list. And now you can use the tag in the workspaces within the organization
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Edit a Tag
 

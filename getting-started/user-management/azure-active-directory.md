@@ -27,7 +27,7 @@ After the application is created you need to add the redirect URL.
 
 You will also need to add the permission Directory.Read.All and ask a Azure administrator to approve the permission.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 

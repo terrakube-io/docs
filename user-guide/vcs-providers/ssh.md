@@ -2,7 +2,7 @@
 
 Terrakube can use SSH keys to authenticate to your private repositories. The SSH keys can be uploaded inside the settings menu.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 To handle SSH keys inside Terrakube your team should have "Manage VCS settings" access
 
@@ -42,4 +42,4 @@ module "test" {
 
 When running the job, internally terraform will be using the selected SSH key to clone the necesary module dependencies like the below image:
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

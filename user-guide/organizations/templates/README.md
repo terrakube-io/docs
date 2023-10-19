@@ -163,7 +163,7 @@ Click the **Edit** button next to the Template you would like to edit
 
 Edit your template definition, description or name as desired and when you are ready click the **Save Template** button
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Deleting a Template
 
