@@ -42,7 +42,6 @@
   * [Global Variables](user-guide/organizations/global-variables.md)
   * [Team Management](user-guide/organizations/team-management.md)
   * [API Tokens](user-guide/organizations/api-tokens.md)
-  * [Team Tokens](user-guide/organizations/team-tokens.md)
   * [Templates](user-guide/organizations/templates/README.md)
     * [Default Templates](user-guide/organizations/templates/default-templates.md)
     * [Persistent Context](user-guide/organizations/templates/persistent-context.md)
@@ -145,4 +144,5 @@
   * [Vcs](api/methods/vcs.md)
   * [Provider](api/methods/provider.md)
   * [Personal Access Token](api/methods/personal-access-token.md)
+  * [Team API Tokens](api/methods/personal-access-token-1.md)
   * [SSH Key](api/methods/ssh-key.md)

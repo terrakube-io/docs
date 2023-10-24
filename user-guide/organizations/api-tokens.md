@@ -1,8 +1,8 @@
 # API Tokens
 
-At the moment Terrakube supports only user level API tokens.&#x20;
+Terrakube has two kinds of API tokens: user and team. Each token type has a different access level and creation process, which are explained below.
 
-API tokens are displayed only once when they are created, and are obfuscated thereafter. If the token is lost, it must be regenerated.
+API tokens are only shown once when you create them, and then they are hidden. You have to make a new token if you lose the old one.
 
 ### User API Tokens <a href="#user-api-tokens" id="user-api-tokens"></a>
 
@@ -24,23 +24,26 @@ The new token will be showed and you can copy it to star calling the Terrakube A
 
 <figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
-#### Code example:
+### Team API Tokens <a href="#user-api-tokens" id="user-api-tokens"></a>
 
-```
-curl --location --request POST 'https://{TerrakubeAPI}/api/v1/organization' \
---header 'Content-Type: application/vnd.api+json' \
---header 'Authorization: Bearer XXXXXXX' \
---data-raw '{
-  "data": {
-    "type": "organization",
-    "attributes": {
-      "name": "hashicorp",
-      "description": "hashicorp organization"
-    }
-  }
-}'
-```
+API tokens may belong to a specific team. Team API tokens allow access Terrakube, without being tied to any specific user.
 
-{% hint style="info" %}
-Replace XXXXXXX with the Personal Access Token value
+{% hint style="warning" %}
+A team token can only be generated if you are member of the specified team.
 {% endhint %}
+
+To manage the API token for a team, go to **Settings  > Teams > Edit button on the desired team**.
+
+<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+
+Click the **Create a Team Token** button in the Team API Tokens section.
+
+<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+
+Add the token description and duration and click the **Generate token** button
+
+<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+
+The new token will be showed and you can copy it to star calling the Terrakube API using Postman or some other tool.
+
+<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
