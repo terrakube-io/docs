@@ -6,7 +6,9 @@ This endpoint is used to create Team API Tokens information inside Terrakube.
 
 | Path        | Type   | Description                               |
 | ----------- | ------ | ----------------------------------------- |
-| days        | string | Numbere of days for the token to be valid |
+| days        | String | Number of days for the token to be valid  |
+| hours       | String | Number of hours the token will be valid   |
+| minutes     | String | Number of minutes the token will be valid |
 | description | string | Some sample description for the token     |
 
 ### Example:
@@ -14,6 +16,8 @@ This endpoint is used to create Team API Tokens information inside Terrakube.
 ```
 {
   "days": "1",
+  "hours": "6",
+  "minutes"; "30",
   "group": "TERRAKUBE_ADMIN",
   "description": "Sample PAT"
 }
