@@ -4,15 +4,15 @@
 Google Identity Authentication with Dex connector require Terrakube >= 2.6.0 and Helm Chart >= 2.0.0
 {% endhint %}
 
-### &#x20;Requirements
+### Requirements
 
 * Google Cloud Identity [here](https://cloud.google.com/identity/docs/set-up-cloud-identity-admin#sign-up-for-cloud-identity-free)
 * Gooble Storage Bucket
 
 For this example lets image that you will be using the following domains to deploy Terrakube.
 
-* registry.terrakube.gcp.com&#x20;
-* ui.terrakube.gcp.com&#x20;
+* registry.terrakube.gcp.com
+* ui.terrakube.gcp.com
 * api.terrakube.gcp.com
 
 ### Setup Google Authentication
@@ -48,51 +48,39 @@ You can now generate the JSON credentials file for your application, you will us
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 
 ```
-
 ## Dex
 dex:
   enabled: true
-  version: "v2.32.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  resources:
-    limits:
-      cpu: 512m
-      memory: 256Mi
-    requests:
-      cpu: 256m
-      memory: 128Mi
-  properties:
-    config:
-      issuer: https://terrakube-api.yourdomain.com/dex #<<CHANGE_THIS>>
-      storage:
-        type: memory
-      oauth2:
-        responseTypes: ["code", "token", "id_token"] 
-      web:
-        allowedOrigins: ["*"]
-  
-      staticClients:
-      - id: google
-        redirectURIs:
-        - 'https://terrakube-ui.yourdomain.com' #<<CHANGE_THIS>>
-        - 'http://localhost:3000'
-        - 'http://localhost:10001/login'
-        - 'http://localhost:10000/login'
-        - '/device/callback'
-        name: 'google'
-        public: true
+  config:
+    issuer: https://api.terrakube.gcp.com/dex #<<CHANGE_THIS>>
+    storage:
+      type: memory
+    oauth2:
+      responseTypes: ["code", "token", "id_token"]
+    web:
+      allowedOrigins: ["*"]
 
-      connectors:
-      - type: google
-        id: google
-        name: google
-        config:
-          clientID: "<<CHANGE_THIS>>"
-          clientSecret: "<<CHANGE_THIS>>"
-          redirectURI: "https://terrakube-api.yourdomain.com/dex/callback"
-          serviceAccountFilePath: "/etc/gcp/secret/gcp-credentials" # GCP CREDENTIAL FILE WILL BE IN THIS PATH
-          adminEmail: "<<CHANGE_THIS>>"
+    staticClients:
+    - id: google
+      redirectURIs:
+      - 'https://ui.terrakube.gcp.com' #<<CHANGE_THIS>>
+      - 'http://localhost:3000'
+      - 'http://localhost:10001/login'
+      - 'http://localhost:10000/login'
+      - '/device/callback'
+      name: 'google'
+      public: true
+
+    connectors:
+    - type: google
+      id: google
+      name: google
+      config:
+        clientID: "<<CHANGE_THIS>>"
+        clientSecret: "<<CHANGE_THIS>>"
+        redirectURI: "https://api.terrakube.gcp.com/dex/callback"
+        serviceAccountFilePath: "/etc/gcp/secret/gcp-credentials" # GCP CREDENTIAL FILE WILL BE IN THIS PATH
+        adminEmail: "<<CHANGE_THIS>>"
 ```
 
 The firt step is to clone the repository.
@@ -103,19 +91,19 @@ git clone https://github.com/AzBuilder/terrakube-helm-chart.git
 
 Replace _<\<CHANGE\_THIS>>_ with the real values, create the values.yaml file and run the helm install
 
-<pre><code>## Global Name
+```
+## Global Name
 name: "terrakube"
 
 ## Terrakube Security
 security:
-  adminGroup: "&#x3C;&#x3C;CHANGE_THIS>>" # The value should be a gcp group (format: group_name@yourdomain.com example: terrakube_admin@terrakube.org)
-  patSecret: "&#x3C;&#x3C;CHANGE_THIS>>"  # Sample Key 32 characters z6QHX!y@Nep2QDT!53vgH43^PjRXyC3X 
-  internalSecret: "&#x3C;&#x3C;CHANGE_THIS>>" # Sample Key 32 characters Kb^8cMerPNZV6hS!9!kcD*KuUPUBa^B3 
+  adminGroup: "<<CHANGE_THIS>>" # The value should be a gcp group (format: group_name@yourdomain.com example: terrakube_admin@terrakube.org)
+  patSecret: "<<CHANGE_THIS>>"  # Sample Key 32 characters z6QHX!y@Nep2QDT!53vgH43^PjRXyC3X 
+  internalSecret: "<<CHANGE_THIS>>" # Sample Key 32 characters Kb^8cMerPNZV6hS!9!kcD*KuUPUBa^B3 
   dexClientId: "google"
   dexClientScope: "email openid profile offline_access groups"
-  dexIssuerUri: "&#x3C;&#x3C;CHANGE_THIS>>" #The value should be like https://api.terrakube.gcp.com/dex
-<strong>  gcpCredentials: |
-</strong>    ## GCP JSON CREDENTIALS for service account with API Scope https://www.googleapis.com/auth/admin.directory.group.readonly
+  gcpCredentials: |
+    ## GCP JSON CREDENTIALS for service account with API Scope https://www.googleapis.com/auth/admin.directory.group.readonly
     {
       "type": "service_account",
       "project_id": "",
@@ -133,8 +121,8 @@ security:
 ## Terraform Storage
 storage:
   gcp:
-    projectId: "&#x3C;&#x3C;CHANGE_THIS>>"
-    bucketName: "&#x3C;&#x3C;CHANGE_THIS>>"
+    projectId: "<<CHANGE_THIS>>"
+    bucketName: "<<CHANGE_THIS>>"
     credentials: |
       ## GCP JSON CREDENTIALS for service account with access to write to the storage bucket
       {
@@ -150,55 +138,43 @@ storage:
         "client_x509_cert_url": ""
       } 
 
-
 ## Dex
 dex:
   enabled: true
-  version: "v2.32.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  resources:
-    limits:
-      cpu: 512m
-      memory: 256Mi
-    requests:
-      cpu: 256m
-      memory: 128Mi
-  properties:
-    config:
-      issuer: https://api.terrakube.gcp.com/dex #&#x3C;&#x3C;CHANGE_THIS>>
-      storage:
-        type: memory
-      oauth2:
-        responseTypes: ["code", "token", "id_token"] 
-      web:
-        allowedOrigins: ["*"]
-  
-      staticClients:
-      - id: google
-        redirectURIs:
-        - 'https://ui.terrakube.gcp.com' #&#x3C;&#x3C;CHANGE_THIS>>
-        - 'http://localhost:10001/login'
-        - 'http://localhost:10000/login'
-        - '/device/callback'
-        name: 'google'
-        public: true
+  config:
+    issuer: https://api.terrakube.gcp.com/dex #<<CHANGE_THIS>>
+    storage:
+      type: memory
+    oauth2:
+      responseTypes: ["code", "token", "id_token"]
+    web:
+      allowedOrigins: ["*"]
 
-      connectors:
-      - type: google
-        id: google
-        name: google
-        config:
-          clientID: "&#x3C;&#x3C;CHANGE_THIS>>"
-          clientSecret: "&#x3C;&#x3C;CHANGE_THIS>>"
-          redirectURI: "https://api.terrakube.gcp.com/dex/callback"
-          serviceAccountFilePath: "/etc/gcp/secret/gcp-credentials" # GCP CREDENTIAL FILE WILL BE IN THIS PATH
-          adminEmail: "&#x3C;&#x3C;CHANGE_THIS>>" 
+    staticClients:
+    - id: google
+      redirectURIs:
+      - 'https://ui.terrakube.gcp.com' #<<CHANGE_THIS>>
+      - 'http://localhost:3000'
+      - 'http://localhost:10001/login'
+      - 'http://localhost:10000/login'
+      - '/device/callback'
+      name: 'google'
+      public: true
+
+    connectors:
+    - type: google
+      id: google
+      name: google
+      config:
+        clientID: "<<CHANGE_THIS>>"
+        clientSecret: "<<CHANGE_THIS>>"
+        redirectURI: "https://api.terrakube.gcp.com/dex/callback"
+        serviceAccountFilePath: "/etc/gcp/secret/gcp-credentials" # GCP CREDENTIAL FILE WILL BE IN THIS PATH
+        adminEmail: "<<CHANGE_THIS>>" 
 
 ## API properties
 api:
   enabled: true
-  version: "2.6.0"
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
@@ -206,8 +182,7 @@ api:
 
 ## Executor properties
 executor:
-  enabled: true
-  version: "2.6.0"  
+  enabled: true  
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
@@ -217,14 +192,12 @@ executor:
 ## Registry properties
 registry:
   enabled: true
-  version: "2.6.0"
   replicaCount: "1"
   serviceType: "ClusterIP"
 
 ## UI Properties
 ui:
   enabled: true
-  version: "2.6.0"
   replicaCount: "1"
   serviceType: "ClusterIP"
 
@@ -269,17 +242,13 @@ ingress:
       nginx.ingress.kubernetes.io/use-regex: "true"
       nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
       cert-manager.io/cluster-issuer: letsencrypt
-</code></pre>
+```
 
 Run the installation
 
 ```bash
 helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n terrakube
 ```
-
-{% hint style="warning" %}
-
-{% endhint %}
 
 {% hint style="warning" %}
 For any question or feedback please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)
