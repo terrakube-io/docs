@@ -34,47 +34,35 @@ Now you can create the DEX configuration, you will use this config later when de
 ```
 ## Dex
 dex:
-  enabled: true
-  version: "v2.32.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  resources:
-    limits:
-      cpu: 512m
-      memory: 256Mi
-    requests:
-      cpu: 256m
-      memory: 128Mi
-  properties:
-    config:
-      issuer: https://api.terrakube.azure.com/dex #<<CHANGE_THIS>>
-      storage:
-        type: memory
-      oauth2:
-        responseTypes: ["code", "token", "id_token"] 
-        skipApprovalScreen: true
-      web:
-        allowedOrigins: ['*']
+  config:
+    issuer: https://api.terrakube.azure.com/dex
+    storage:
+      type: memory
+    oauth2:
+      responseTypes: ["code", "token", "id_token"] 
+      skipApprovalScreen: true
+    web:
+      allowedOrigins: ['*']
   
-      staticClients:
-      - id: microsoft
-        redirectURIs:
-        - 'https://ui.terrakube.azure.com' #<<CHANGE_THIS>>
-        - 'http://localhost:10001/login'
-        - 'http://localhost:10000/login'
-        - '/device/callback'
-        name: 'microsoft'
-        public: true
+    staticClients:
+    - id: microsoft
+      redirectURIs:
+      - 'https://ui.terrakube.azure.com'
+      - 'http://localhost:10001/login'
+      - 'http://localhost:10000/login'
+      - '/device/callback'
+      name: 'microsoft'
+      public: true
 
-      connectors:
-      - type: microsoft
-        id: microsoft
-        name: microsoft
-        config:
-          clientID: "XXXXXX" #<<CHANGE_THIS>>
-          clientSecret: "XXXXXX" #<<CHANGE_THIS>>
-          redirectURI: "https://api.terrakube.azure.com/dex/callback" #<<CHANGE_THIS>>
-          tenant: "XXXXXX" #<<CHANGE_THIS>>
+    connectors:
+    - type: microsoft
+      id: microsoft
+      name: microsoft
+      config:
+        clientID: "<<CHANGE_THIS>>"
+        clientSecret: "<<CHANGE_THIS>>"
+        redirectURI: "https://api.terrakube.azure.com/dex/callback"
+        tenant: "<<CHANGE_THIS>>"
 ```
 
 The firt step is to clone the repository.
@@ -96,7 +84,6 @@ security:
   internalSecret: "<<CHANGE_THIS>>" # Sample Key 32 characters Kb^8cMerPNZV6hS!9!kcD*KuUPUBa^B3 
   dexClientId: "microsoft"
   dexClientScope: "email openid profile offline_access groups"
-  dexIssuerUri: "<<CHANGE_THIS>>" #The value should be like https://api.terrakube.azure.com/dex
   
 ## Terraform Storage
 storage:
@@ -107,47 +94,35 @@ storage:
 
 ## Dex
 dex:
-  enabled: true
-  version: "v2.32.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  resources:
-    limits:
-      cpu: 512m
-      memory: 256Mi
-    requests:
-      cpu: 256m
-      memory: 128Mi
-  properties:
-    config:
-      issuer: https://api.terrakube.azure.com/dex #<<CHANGE_THIS>>
-      storage:
-        type: memory
-      oauth2:
-        responseTypes: ["code", "token", "id_token"] 
-        skipApprovalScreen: true
-      web:
-        allowedOrigins: ['*']
+  config:
+    issuer: https://api.terrakube.azure.com/dex
+    storage:
+      type: memory
+    oauth2:
+      responseTypes: ["code", "token", "id_token"] 
+      skipApprovalScreen: true
+    web:
+      allowedOrigins: ['*']
   
-      staticClients:
-      - id: microsoft
-        redirectURIs:
-        - 'https://ui.terrakube.azure.com' #<<CHANGE_THIS>>
-        - 'http://localhost:10001/login'
-        - 'http://localhost:10000/login'
-        - '/device/callback'
-        name: 'microsoft'
-        public: true
+    staticClients:
+    - id: microsoft
+      redirectURIs:
+      - 'https://ui.terrakube.azure.com'
+      - 'http://localhost:10001/login'
+      - 'http://localhost:10000/login'
+      - '/device/callback'
+      name: 'microsoft'
+      public: true
 
-      connectors:
-      - type: microsoft
-        id: microsoft
-        name: microsoft
-        config:
-          clientID: "XXXXXX" #<<CHANGE_THIS>>
-          clientSecret: "XXXXXX" #<<CHANGE_THIS>>
-          redirectURI: "https://api.terrakube.azure.com/dex/callback" #<<CHANGE_THIS>>
-          tenant: "XXXXXX" #<<CHANGE_THIS>>
+    connectors:
+    - type: microsoft
+      id: microsoft
+      name: microsoft
+      config:
+        clientID: "<<CHANGE_THIS>>"
+        clientSecret: "<<CHANGE_THIS>>"
+        redirectURI: "https://api.terrakube.azure.com/dex/callback"
+        tenant: "<<CHANGE_THIS>>"
 
 ## API properties
 api:
