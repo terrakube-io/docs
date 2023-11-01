@@ -44,57 +44,45 @@ Now you can create the DEX configuration, you will use this config later when de
 ```
 ## Dex
 dex:
-  enabled: true
-  version: "v2.32.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  resources:
-    limits:
-      cpu: 512m
-      memory: 256Mi
-    requests:
-      cpu: 256m
-      memory: 128Mi
-  properties:
-    config:
-      issuer: https://api.terrakube.aws.com/dex #<<CHANGE_THIS>>
-      storage:
-        type: memory
-      oauth2:
-        responseTypes: ["code", "token", "id_token"] 
-        skipApprovalScreen: true
-      web:
-        allowedOrigins: ["*"]
-  
-      staticClients:
-      - id: cognito
-        redirectURIs:
-        - 'https://ui.terrakube.aws.com' #<<CHANGE_THIS>>
-        - 'http://localhost:3000'
-        - 'http://localhost:10001/login'
-        - 'http://localhost:10000/login'
-        - '/device/callback'
-        name: 'cognito'
-        public: true
+  config:
+    issuer: https://terrakube-api.yourdomain.com/dex #<<CHANGE_THIS>>
+    storage:
+      type: memory
+    oauth2:
+      responseTypes: ["code", "token", "id_token"]
+      skipApprovalScreen: true
+    web:
+      allowedOrigins: ["*"]
 
-      connectors:
-      - type: oidc
-        id: cognito
-        name: cognito
-        config:
-          issuer: "https://cognito-idp.XXXXX.amazonaws.com/XXXXXXX" #<<CHANGE_THIS>>
-          clientID: "XXXX" #<<CHANGE_THIS>>
-          clientSecret: "XXXXX" #<<CHANGE_THIS>>
-          redirectURI: "https://api.terrakube.aws.com/dex/callback" #<<CHANGE_THIS>>
-          scopes:
-            - openid
-            - email
-            - profile
-          insecureSkipEmailVerified: true
-          insecureEnableGroups: true
-          userNameKey: "cognito:username"
-          claimMapping: 
-            groups: "cognito:groups"
+    staticClients:
+    - id: cognito
+      redirectURIs:
+      - 'https://ui.yourdomain.com' #<<CHANGE_THIS>>
+      - 'http://localhost:3000'
+      - 'http://localhost:10001/login'
+      - 'http://localhost:10000/login'
+      - '/device/callback'
+      name: 'cognito'
+      public: true
+
+    connectors:
+    - type: oidc
+      id: cognito
+      name: cognito
+      config:
+        issuer: "https://cognito-idp.XXXXX.amazonaws.com/XXXXXXX" #<<CHANGE_THIS>>
+        clientID: "XXXX" #<<CHANGE_THIS>>
+        clientSecret: "XXXXX" #<<CHANGE_THIS>>
+        redirectURI: "https://terrakube-api.yourdomain.com/dex/callback" #<<CHANGE_THIS>>
+        scopes:
+          - openid
+          - email
+          - profile
+        insecureSkipEmailVerified: true
+        insecureEnableGroups: true
+        userNameKey: "cognito:username"
+        claimMapping:
+          groups: "cognito:groups"
 ```
 
 The firt step is to clone the repository.
@@ -116,7 +104,6 @@ security:
   internalSecret: "<<CHANGE_THIS>>" # Sample Key 32 characters Kb^8cMerPNZV6hS!9!kcD*KuUPUBa^B3 
   dexClientId: "cognito"
   dexClientScope: "email openid profile offline_access groups"
-  dexIssuerUri: "<<CHANGE_THIS>>" #The value should be like https://api.terrakube.azure.com/dex
   
 ## Terraform Storage
 storage:
@@ -128,62 +115,49 @@ storage:
 
 ## Dex
 dex:
-  enabled: true
-  version: "v2.32.0"
-  replicaCount: "1"
-  serviceType: "ClusterIP"
-  resources:
-    limits:
-      cpu: 512m
-      memory: 256Mi
-    requests:
-      cpu: 256m
-      memory: 128Mi
-  properties:
-    config:
-      issuer: https://api.terrakube.aws.com/dex #<<CHANGE_THIS>>
-      storage:
-        type: memory
-      oauth2:
-        responseTypes: ["code", "token", "id_token"] 
-        skipApprovalScreen: true
-      web:
-        allowedOrigins: ["*"]
-  
-      staticClients:
-      - id: cognito
-        redirectURIs:
-        - 'https://ui.terrakube.aws.com' #<<CHANGE_THIS>>
-        - 'http://localhost:3000'
-        - 'http://localhost:10001/login'
-        - 'http://localhost:10000/login'
-        - '/device/callback'
-        name: 'cognito'
-        public: true
+  config:
+    issuer: https://terrakube-api.yourdomain.com/dex #<<CHANGE_THIS>>
+    storage:
+      type: memory
+    oauth2:
+      responseTypes: ["code", "token", "id_token"]
+      skipApprovalScreen: true
+    web:
+      allowedOrigins: ["*"]
 
-      connectors:
-      - type: oidc
-        id: cognito
-        name: cognito
-        config:
-          issuer: "https://cognito-idp.XXXXX.amazonaws.com/XXXXXXX" #<<CHANGE_THIS>>
-          clientID: "XXXX" #<<CHANGE_THIS>>
-          clientSecret: "XXXXX" #<<CHANGE_THIS>>
-          redirectURI: "https://api.terrakube.aws.com/dex/callback" #<<CHANGE_THIS>>
-          scopes:
-            - openid
-            - email
-            - profile
-          insecureSkipEmailVerified: true
-          insecureEnableGroups: true
-          userNameKey: "cognito:username"
-          claimMapping: 
-            groups: "cognito:groups"
+    staticClients:
+    - id: cognito
+      redirectURIs:
+      - 'https://ui.yourdomain.com' #<<CHANGE_THIS>>
+      - 'http://localhost:3000'
+      - 'http://localhost:10001/login'
+      - 'http://localhost:10000/login'
+      - '/device/callback'
+      name: 'cognito'
+      public: true
+
+    connectors:
+    - type: oidc
+      id: cognito
+      name: cognito
+      config:
+        issuer: "https://cognito-idp.XXXXX.amazonaws.com/XXXXXXX" #<<CHANGE_THIS>>
+        clientID: "XXXX" #<<CHANGE_THIS>>
+        clientSecret: "XXXXX" #<<CHANGE_THIS>>
+        redirectURI: "https://terrakube-api.yourdomain.com/dex/callback" #<<CHANGE_THIS>>
+        scopes:
+          - openid
+          - email
+          - profile
+        insecureSkipEmailVerified: true
+        insecureEnableGroups: true
+        userNameKey: "cognito:username"
+        claimMapping:
+          groups: "cognito:groups"
 
 ## API properties
 api:
   enabled: true
-  version: "2.6.0"
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
@@ -191,8 +165,7 @@ api:
 
 ## Executor properties
 executor:
-  enabled: true
-  version: "2.6.0"  
+  enabled: true 
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
@@ -202,14 +175,12 @@ executor:
 ## Registry properties
 registry:
   enabled: true
-  version: "2.6.0"
   replicaCount: "1"
   serviceType: "ClusterIP"
 
 ## UI Properties
 ui:
   enabled: true
-  version: "2.6.0"
   replicaCount: "1"
   serviceType: "ClusterIP"
 
