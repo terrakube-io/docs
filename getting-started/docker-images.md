@@ -27,7 +27,7 @@ From Terrakube 2.17.0 we generate 3 additional  docker images for the API, Regis
 ```
 docker pull azbuilder/api-server:2.17.0-alpaquita
 docker pull azbuilder/open-registry:2.17.0-alpaquita
-docker pull azbuilder/api-server:2.17.0-alpaquita
+docker pull azbuilder/executor:2.17.0-alpaquita
 ```
 
 {% hint style="danger" %}
