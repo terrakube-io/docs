@@ -8,6 +8,7 @@
 * [📐 Architecture](getting-started/design-and-architecture.md)
 * [🔐 Security](getting-started/security.md)
 * [🚀 Getting Started](getting-started/getting-started.md)
+* [💿 Docker Images](getting-started/docker-images.md)
 * [🌐 Docker Compose](getting-started/docker-compose.md)
 * [📥 Deployment](getting-started/deployment/README.md)
   * [🔨 Helm Chart](getting-started/deployment/docker-compose.md)
