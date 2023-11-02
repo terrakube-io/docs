@@ -63,5 +63,8 @@ The [Prometheus](https://github.com/prometheus/docs/blob/master/content/docs/ins
 For more information please check, [the official open telemetry documentation](https://github.com/open-telemetry/opentelemetry-java/blob/main/sdk-extensions/autoconfigure/README.md).
 {% endhint %}
 
-Docker Compose - Telemetry Example
+Open Telemetry Example
 
+One small example to show how to use open telemetry with docker compose can be found in the following URL:
+
+{% embed url="https://github.com/AzBuilder/terrakube/tree/main/telemetry-compose" %}
