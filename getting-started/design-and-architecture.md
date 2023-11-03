@@ -26,7 +26,7 @@ Component descriptions:
 * Terrakube Executor:
   * Service that executes the Terrakube job operations written in Terrakube Configuration Language, handle the terraform state and outputs using cloud storage providers like Azure Storage Account
 * Terrakube Open Registry:
-  * This component allows to expose an open source private repository protected by Azure Active directory that you can use to handle your company private terraform modules or providers.
+  * This component allows to expose an open source private repository protected by Dex that you can use to handle your company private terraform modules or providers.
 * Cloud Storage:
   * Cloud storage to handle terraform state, outputs and terraform modules used by terraform CLI
 * RDBMS:
