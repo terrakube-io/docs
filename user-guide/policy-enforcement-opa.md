@@ -1,4 +1,4 @@
-# Open Policy Agent
+# Policy Enforcement (OPA)
 
 Terrakube can be integrated with Open Policy Agent using the Terrakube extension to validate the Terraform plan, below you can find an example of how this can be achieved. The example is based on this [document](https://www.openpolicyagent.org/docs/latest/terraform/#goals).&#x20;
 
@@ -6,9 +6,9 @@ Terrakube can be integrated with Open Policy Agent using the Terrakube extension
 
 The firts step will be to create some terraform policies inside your Terrakube extensions repository folder, inside the policy folder as you can see in the image below.
 
-<figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (125).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (125).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Terrakube extensions can be stored inside a GIT repository that you can configure when staring the platform. This is an example repository that you can fork or customiza to create your custom extensions [https://github.com/AzBuilder/terrakube-extensions](https://github.com/AzBuilder/terrakube-extensions)
@@ -153,7 +153,8 @@ Once we have defined one or more policies inside your Terrakube extension reposi
           else
             echo "Policy is invalid"
             exit 1
-          fi</code></pre>
+          fi
+</code></pre>
 
 In a high level this template will do the following:
 
@@ -206,25 +207,26 @@ In a high level this template will do the following:
             echo "Policy is invalid"
             exit 1
           fi
-..</code></pre>
+..
+</code></pre>
 
 You can add this template inside your organization settings using a custom template and following these steps.
 
 * Create a new template
 
-<figure><img src="../.gitbook/assets/image (3) (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (268).png" alt=""><figcaption></figcaption></figure>
 
 * Select a blank template.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (176).png" alt=""><figcaption></figcaption></figure>
 
 * Add the template body.
 
-<figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (261).png" alt=""><figcaption></figcaption></figure>
 
 * Save the template
 
-<figure><img src="../.gitbook/assets/image (1) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (277).png" alt=""><figcaption></figcaption></figure>
 
 ### Terrakube Workspace Code
 
@@ -262,9 +264,9 @@ resource "aws_launch_configuration" "my_web_config" {
 
 When you run the Terrakube job for this workspace you can see that the terraform policy is valid for our workspace.
 
-<figure><img src="../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (180).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (245).png" alt=""><figcaption></figcaption></figure>
 
 #### Example 2:
 
@@ -320,9 +322,9 @@ resource "aws_autoscaling_group" "my_asg3" {
 
 When you run this Terrakube job for this particular workspace you will see that the terraform policy is invalid and the job flow will failed.
 
-<figure><img src="../.gitbook/assets/image (53).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (249).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (263).png" alt=""><figcaption></figcaption></figure>
 
 This is how you can make use of Terrakube extension and Open Policy Agent to validate your terraform resources inside your organization before you deployed it to the cloud.&#x20;
 

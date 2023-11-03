@@ -44,7 +44,7 @@ The output of this policy will look like this:
 
 The policy should look like this in your extension repository
 
-<figure><img src="../.gitbook/assets/image (3) (1) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (232).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Terrakube extensions can be stored inside a GIT repository that you can configure when staring the platform. This is an example repository that you can fork or customize to create your custom extensions based on your own requirements [https://github.com/AzBuilder/terrakube-extensions](https://github.com/AzBuilder/terrakube-extensions)
@@ -209,11 +209,11 @@ Now that you have define the template to detect the infraestructure drif you can
 
 The template will look like this:
 
-<figure><img src="../.gitbook/assets/image (6) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (311).png" alt=""><figcaption></figcaption></figure>
 
 Now you can use this template in any workspace inside your organization
 
-<figure><img src="../.gitbook/assets/image (20) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (333).png" alt=""><figcaption></figcaption></figure>
 
 ### Workspace Setup
 
@@ -252,17 +252,17 @@ resource "azurerm_app_service_plan" "example" {
 
 Once our resources are created in Azure we can run the **Drift Detection** template.
 
-<figure><img src="../.gitbook/assets/image (1) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (150).png" alt=""><figcaption></figcaption></figure>
 
 The template will send a message to a Slack channel with the following:
 
 * If there is no infracstructure change you should receive the following message in your slack channel.
 
-<figure><img src="../.gitbook/assets/image (5) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
 * If for some reason the resource in Azure is changed (scale up) and our  state in Terrakube does not match with Azure you will see the following message.
 
-<figure><img src="../.gitbook/assets/image (12) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
 
 ### Schedule Drift Detection
 
@@ -270,11 +270,11 @@ Now that you have tested the Drift Detection template, you can use with the **Wo
 
 You will have to go the the **"Schedule"** option inside your workspace.
 
-<figure><img src="../.gitbook/assets/image (2) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (132).png" alt=""><figcaption></figcaption></figure>
 
 Now you can select the **Drift Detection** template to run at 5:30 AM every day.
 
-<figure><img src="../.gitbook/assets/image (5) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (136).png" alt=""><figcaption></figcaption></figure>
 
 Now you should receive the notification in your Slack channel every day at 5:30 am&#x20;
 

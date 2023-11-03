@@ -4,25 +4,20 @@ This command consists of multiple subcommands to interact with teams. It can be 
 
 #### Usage
 
-```text
+```
 terrakube team [command]
 ```
 
 #### Commands
 
-| Command | Description |
-| :--- | :--- |
+| Command                  | Description   |
+| ------------------------ | ------------- |
 | [create](team-create.md) | create a team |
 | [delete](team-delete.md) | delete a team |
-| [list](team-list.md) | list teams |
+| [list](team-list.md)     | list teams    |
 | [update](team-update.md) | update a team |
 
 #### Aliases
 
 * organization
 * org
-
-
-
-
-

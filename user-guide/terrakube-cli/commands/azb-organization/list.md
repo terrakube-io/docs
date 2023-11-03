@@ -4,13 +4,13 @@ List organizations
 
 #### Usage
 
-```text
+```
 terrakube organization list [flags]
 ```
 
 #### Flags
 
-```text
+```
   -f, --filter string   Filter
   -h, --help            help for list
 ```
@@ -19,9 +19,6 @@ terrakube organization list [flags]
 
 List all existing organizations
 
-```text
+```
 terrakube organization list
 ```
-
-
-

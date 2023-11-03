@@ -57,4 +57,3 @@ org.azbuilder.owner=TERRAKUBE_ADMIN
 {% hint style="info" %}
 For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
 {% endhint %}
-
