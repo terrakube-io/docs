@@ -2,6 +2,81 @@
 
 
 
+### November 2023 (2.17.0)
+
+Welcome to the 2.17.0 release of Terrakube. There are a couple of updates in this version that we hope you'll like, some of the key highlights include:
+
+#### Submodules view
+
+You can now view the submodules of your Terraform Module in the open registry. When you select a submodule, you will see its details, such as inputs, outputs and resources.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/5ef297db-f65c-452f-aea7-bc0ee07a232b)
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/6a82dc09-1935-44b3-ae09-fa5797c69a8e)
+
+#### Workspace Overview
+
+We have enhanced the workspace overview to give you more information at a glance. You can now see the Terraform version, the repository, and the list of resources and outputs for each workspace.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/5910b408-b941-4168-967d-d7405fd7541b)
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/0567a0f2-3159-4563-b6f9-a160c804302a)
+
+#### Team API Tokens
+
+You can now generate team API tokens using the Terrakube UI and specify their expiration time in days/minutes/hours. This gives you more flexibility and control over your team’s access to Terrakube. To learn more, please visit our [documentation](https://docs.terrakube.io/user-guide/organizations/api-tokens#user-api-tokens-1).
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/185b5ec3-c11f-4005-9e57-05d236ca99b3)
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/baf010ef-d190-4894-89ab-36f0db4fc033)
+
+### Terraform provider for Terrakube
+
+You can use the [Terrakube provider](https://registry.terraform.io/providers/AzBuilder/terrakube/latest/docs) for Terraform to manage modules, organizations and so on.
+
+```
+provider "terrakube" {
+  endpoint = "http://terrakube-api.minikube.net"
+  token    = "(PERSONAL ACCESS TOKEN OR TEAM TOKEN)"
+}
+
+data "terrakube_organization" "org" {
+  name = "simple"
+}
+
+data "terrakube_vcs" "vcs" {
+  name            = "sample_vcs"
+  organization_id = data.terrakube_organization.org.id
+}
+
+data "terrakube_ssh" "ssh" {
+  name            = "sample_ssh"
+  organization_id = data.terrakube_organization.org.id
+}
+
+resource "terrakube_team" "team" {
+  name             = "TERRAKUBE_SUPER_ADMIN"
+  organization_id  = data.terrakube_vcs.vcs.organization_id
+  manage_workspace = false
+  manage_module    = false
+  manage_provider  = true
+  manage_vcs       = true
+  manage_template  = true
+}
+
+resource "terrakube_module" "module1" {
+  name            = "module_public_connection"
+  organization_id = data.terrakube_ssh.ssh.organization_id
+  description     = "module_public_connection"
+  provider_name   = "aws"
+  source          = "https://github.com/terraform-aws-modules/terraform-aws-vpc.git"
+}
+```
+
+#### Bug fixes
+
+We’ve addressed some issues reported by the community and fixed some vulnerabilities. You can see the full change log for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.17.0
+
 ### October 2023 (2.16.0)
 
 Welcome to the 2.16.0 release of Terrakube. There are a couple of updates in this version that we hope you'll like, some of the key highlights include:
