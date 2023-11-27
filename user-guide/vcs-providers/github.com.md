@@ -14,9 +14,9 @@ Navigate to the desired organization and click the **Settings** button, then on 
 If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.&#x20;
 {% endhint %}
 
-Click the **Github button**
+Click the **Github button** and then click the **Github Cloud option.**
 
-<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (356).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen click the link to [register a new OAuth Application](https://github.com/settings/applications/new) in Github
 
