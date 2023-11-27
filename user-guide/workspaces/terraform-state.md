@@ -6,18 +6,18 @@ Each Terrakube workspace has its own separate state data, used for jobs within t
 
 Go to the workspace and click the **States** tab and then click in the specific state you want to see.
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (255).png" alt=""><figcaption></figcaption></figure>
 
 You will see the state in JSON format
 
-<figure><img src="../../.gitbook/assets/image (10) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (284).png" alt=""><figcaption></figcaption></figure>
 
 You can click the **Download** button to get a copy of the JSON state file&#x20;
 
-<figure><img src="../../.gitbook/assets/image (9) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (198).png" alt=""><figcaption></figcaption></figure>
 
 ### Visual State
 
 Inside the **states** page, click the **diagram** tab and you will see the visual state for your terraform state.
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (270).png" alt=""><figcaption></figcaption></figure>

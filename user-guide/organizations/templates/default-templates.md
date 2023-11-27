@@ -6,7 +6,7 @@ Terrakube creates the following default templates:
 
 Terrakube use job templates for all executions, Terrakube automatically create the following templates that are used when using the terraform remote state backend operations. This templates are created in all organizations.&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (100).png" alt=""><figcaption></figcaption></figure>
 
 #### Terraform Plan/Apply Cli Template
 

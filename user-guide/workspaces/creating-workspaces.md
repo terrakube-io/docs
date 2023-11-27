@@ -10,7 +10,7 @@
 
 When creating a Workspace, Terrakube supports 3 workflows types and based on the selected workflow you will need to provide some parameters. Please refer to each workflow section for more reference.&#x20;
 
-* [Version Control workflow](creating-workspaces.md#version-control-workflow): Store your Terraform configuration in a git repository, and trigger runs based on pull requests and merges.
+* [Version Control workflow](creating-workspaces.md#version-control-workflow): Store your Terraform configuration in a git repository, and trigger runs based on pull requests and merges.&#x20;
 * [CLI-driven workflow](creating-workspaces.md#cli-driven-workflow): Trigger remote Terraform runs from your local command line.
 * [API-driven workflow](creating-workspaces.md#api-driven-workflow): A more advanced option. Integrate Terraform into a larger pipeline using the [Terrakube API](../../api/getting-started.md).
 
@@ -18,15 +18,15 @@ When creating a Workspace, Terrakube supports 3 workflows types and based on the
 
 Click **Workspaces** in the main menu and then click the **New workspace** button
 
-<figure><img src="../../.gitbook/assets/image (4) (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption></figcaption></figure>
 
 Choose the **Version control workflow**
 
-<figure><img src="../../.gitbook/assets/image (14) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (242).png" alt=""><figcaption></figcaption></figure>
 
 Select an existing version control provider or click **Connect to a different VCS** to configure a new one. See [vcs-providers](../vcs-providers/ "mention") for more details.
 
-<figure><img src="../../.gitbook/assets/image (7) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (217).png" alt=""><figcaption></figcaption></figure>
 
 Provide the git repository URL and click the **Continue** button.
 
@@ -34,7 +34,7 @@ Provide the git repository URL and click the **Continue** button.
 If you want to connect to a private git repo using SSH Keys you will need to provide the url in ssh format. Example git@github.com:jcanizalez/terraform-sample-repository.git. For more information see [ssh.md](../vcs-providers/ssh.md "mention")
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (12) (2) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (240).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.&#x20;
 
@@ -47,25 +47,29 @@ Configure the workspace settings.&#x20;
 
 Once you fill the settings click the **Create Workspace** button.
 
-<figure><img src="../../.gitbook/assets/image (1) (2) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (135).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to the Workspace page
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (107).png" alt=""><figcaption></figcaption></figure>
 
 And if you navigate to the **Workspace** menu, you will see the workspace in the Workspaces list
 
-<figure><img src="../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
+
+Once you create your workspace, Terrakube automatically registers a webhook with your VCS provider. This webhook triggers a job using the "Plan and apply" template for each new push to the workspace branch, allowing for streamlined and efficient workflow. Please note that this feature is only available for the Github VCS provider. For other VCS providers, you will need to execute the job manually using the Terrakube UI or API.
+
+
 
 ### CLI-driven Workflow
 
 Click **Workspaces** in the main menu and then click the **New workspace** button
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (226).png" alt=""><figcaption></figcaption></figure>
 
 Choose the **CLI-driven workflow**
 
-<figure><img src="../../.gitbook/assets/image (5) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (239).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.&#x20;
 
@@ -76,7 +80,7 @@ Configure the workspace settings.&#x20;
 
 Once you fill the settings click the **Create Workspace** button.
 
-<figure><img src="../../.gitbook/assets/image (11) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to the Workspace page.
 
@@ -84,21 +88,21 @@ You will be redirected to the Workspace page.
 The overview page for CLI-driven workspaces show the step to connect to the workspace using the Terraform CLI. For more details see [cli-driven-workflow.md](cli-driven-workflow.md "mention")
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (18) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (181).png" alt=""><figcaption></figcaption></figure>
 
 And if you navigate to the **Workspace** menu you will see the workspace in the Workspaces list
 
-<figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (216).png" alt=""><figcaption></figcaption></figure>
 
 ### API-driven Workflow
 
 Click **Workspaces** in the main menu and then click the **New workspace** button
 
-<figure><img src="../../.gitbook/assets/image (4) (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption></figcaption></figure>
 
 Choose the **API-driven workflow**
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (131).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.&#x20;
 
@@ -109,7 +113,7 @@ Configure the workspace settings.&#x20;
 
 Once you fill the settings click the **Create Workspace** button.
 
-<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (141).png" alt=""><figcaption></figcaption></figure>
 
 ou will be redirected to the Workspace page.
 
@@ -117,8 +121,8 @@ ou will be redirected to the Workspace page.
 For more details how to use the Terrakube API. See [api-driven-workflow.md](api-driven-workflow.md "mention")
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (15) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (214).png" alt=""><figcaption></figcaption></figure>
 
 And if you navigate to the **Workspace** menu you will see the workspace in the Workspaces list
 
-<figure><img src="../../.gitbook/assets/image (3) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>

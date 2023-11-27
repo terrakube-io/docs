@@ -1,6 +1,6 @@
 # VCS Providers
 
-Terrakube empower collaboration between different teams in your organization, and to achieve this you can integrate terrakube with your version control system (VCS) provider. Although you can use terrakube with public git repositories or with private git repositories using SSH, a VCS provider is the preferred way to connect to your Terraform code.
+Terrakube empowers collaboration between different teams in your organization. To achieve this, you can integrate Terrakube with your version control system (VCS) provider. Although Terrakube can be used with public Git repositories or with private Git repositories using SSH, connecting to your Terraform code through a VCS provider is the preferred method. This allows for a more streamlined and secure workflow, as well as easier management of access control and permissions.
 
 Terrakube supports the following VCS providers:
 
@@ -23,3 +23,9 @@ Terrakube supports the following VCS providers:
 {% content-ref url="ssh.md" %}
 [ssh.md](ssh.md)
 {% endcontent-ref %}
+
+### Webhooks <a href="#webhooks" id="webhooks"></a>
+
+Terrakube uses webhooks to monitor new commits. At the moment this is only available in the Github provider.
+
+* When new commits are added to a branch, Terrakube workspaces based on that branch will automatically initiate a Terraform job. Terrakube will use the "Plan and apply" template by default.&#x20;

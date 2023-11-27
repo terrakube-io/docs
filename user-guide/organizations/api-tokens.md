@@ -10,19 +10,19 @@ API tokens may belong directly to a user. User tokens inherit permissions from t
 
 User API tokens can be generated inside the **User Settings**.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (164).png" alt=""><figcaption></figcaption></figure>
 
 Click the **Generate and API token** button
 
-<figure><img src="../../.gitbook/assets/image (1) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (221).png" alt=""><figcaption></figcaption></figure>
 
 Add some small description to the token and the duration
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (2) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (234).png" alt=""><figcaption></figcaption></figure>
 
 The new token will be showed and you can copy it to star calling the Terrakube API using Postman or some other tool.
 
-<figure><img src="../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (210).png" alt=""><figcaption></figcaption></figure>
 
 ### Team API Tokens <a href="#user-api-tokens" id="user-api-tokens"></a>
 
@@ -34,16 +34,16 @@ A team token can only be generated if you are member of the specified team.
 
 To manage the API token for a team, go to **Settings  > Teams > Edit button on the desired team**.
 
-<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (345).png" alt=""><figcaption></figcaption></figure>
 
 Click the **Create a Team Token** button in the Team API Tokens section.
 
-<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (346).png" alt=""><figcaption></figcaption></figure>
 
 Add the token description and duration and click the **Generate token** button
 
-<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (347).png" alt=""><figcaption></figcaption></figure>
 
 The new token will be showed and you can copy it to star calling the Terrakube API using Postman or some other tool.
 
-<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (348).png" alt=""><figcaption></figcaption></figure>

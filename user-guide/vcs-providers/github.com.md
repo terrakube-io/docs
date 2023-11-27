@@ -8,7 +8,7 @@ For using repositories from GitHub.com with Terrakube workspaces and modules you
 
 Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
-<figure><img src="../../.gitbook/assets/image (14) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (308).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.&#x20;
@@ -16,11 +16,11 @@ If you prefer, you can add a new VCS Provider directly from the [Create workspac
 
 Click the **Github button**
 
-<figure><img src="../../.gitbook/assets/image (7) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen click the link to [register a new OAuth Application](https://github.com/settings/applications/new) in Github
 
-<figure><img src="../../.gitbook/assets/image (5) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (238).png" alt=""><figcaption></figcaption></figure>
 
 In the Github page, complete the required fields and click **Register application**
 
@@ -30,24 +30,24 @@ In the Github page, complete the required fields and click **Register applicatio
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (1) (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (142).png" alt=""><figcaption></figcaption></figure>
 
 Next, generate a new client secret
 
-<figure><img src="../../.gitbook/assets/image (8) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (318).png" alt=""><figcaption></figcaption></figure>
 
 Copy the  **Client Id**  and **Client Secret** from Github and go back to Terrakube to complete the required information. Then, click the **Connect and Continue** button
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (237).png" alt=""><figcaption></figcaption></figure>
 
 You will see the Github page, click the **Authorize** button to complete the connection
 
-<figure><img src="../../.gitbook/assets/image (12) (1) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (341).png" alt=""><figcaption></figcaption></figure>
 
 Finally, if the connection was established successfully, you will be redirected to the VCS provider’s page in your organization. You should see the connection status with the date and the user that created the connection.
 
-<figure><img src="../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
 And now, you will be able to use the connection in your workspaces and modules:
 
-<figure><img src="../../.gitbook/assets/image (18) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (56).png" alt=""><figcaption></figcaption></figure>

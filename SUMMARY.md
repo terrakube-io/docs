@@ -21,7 +21,7 @@
     * [Amazon Cloud Storage](getting-started/deployment/storage-backend/amazon-cloud-storage.md)
     * [Google Cloud Storage](getting-started/deployment/storage-backend/google-cloud-storage.md)
     * [Minio (S3 compatible)](getting-started/deployment/storage-backend/minio-s3-compatible.md)
-  * [🛰 Database Backend](getting-started/database-backend.md)
+  * [🛰 Database Backend](getting-started/deployment/database-backend/README.md)
     * [SQL Azure](getting-started/deployment/database-backend/sql-azure.md)
     * [PostgreSQL](getting-started/deployment/database-backend/postgresql.md)
     * [MySQL](getting-started/deployment/database-backend/mysql.md)
@@ -119,7 +119,7 @@
 
 ## 🎓 Learn
 
-* [What is Terrakube](tutorial/what-is-terrakube.md)
+* [What is Terrakube](learn/what-is-terrakube/README.md)
   * [Section Overview](learn/what-is-terrakube/section-overview.md)
   * [Terraform in a Nutshell](learn/what-is-terrakube/terraform-in-a-nutshell.md)
   * [Terraform Challenges at Enterprise Level](learn/what-is-terrakube/terraform-challenges-at-enterprise-level.md)

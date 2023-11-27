@@ -42,9 +42,9 @@ The setup is using jaegertracing/all-in-one
 Jaeger UI will be available in http://localhost:16686/
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (110).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 For more information about Open Telemetry setup check the [following information](deployment/open-telemetry.md)

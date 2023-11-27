@@ -12,7 +12,7 @@ For using repositories from Bitbucket.com with Terrakube workspaces and modules 
 
 Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
 
-<figure><img src="../../.gitbook/assets/image (14) (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (308).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.
@@ -20,17 +20,17 @@ If you prefer, you can add a new VCS Provider directly from the [Create workspac
 
 Click the **Bitbucket** button
 
-<figure><img src="../../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (33).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (213).png" alt=""><figcaption></figcaption></figure>
 
 Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use and click the **settings** button in your workspace
 
-<figure><img src="../../.gitbook/assets/image (58) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
 
 Click the **OAuth consumers** menu and then click the **Add consumer** button
 
-<figure><img src="../../.gitbook/assets/image (3) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
 
 Complete the required fields and click **Save**  button
 
@@ -40,24 +40,24 @@ Complete the required fields and click **Save**  button
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (16) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (223).png" alt=""><figcaption></figcaption></figure>
 
 In the next screen, copy the **Key** and **Secret**
 
-<figure><img src="../../.gitbook/assets/image (13) (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (336).png" alt=""><figcaption></figcaption></figure>
 
 Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-<figure><img src="../../.gitbook/assets/image (6) (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (247).png" alt=""><figcaption></figcaption></figure>
 
 You will see a Bitbucket window, click the **Grant Access** button to complete the connection
 
-<figure><img src="../../.gitbook/assets/image (15) (4) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (323).png" alt=""><figcaption></figcaption></figure>
 
 Finally, if the connection was established successfully, you will be redirected to the VCS provider’s page in your organization. You should see the connection status with the date and the user that created the connection.
 
-<figure><img src="../../.gitbook/assets/image (40) (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
 And now, you will be able to use the connection in your workspaces and modules:
 
-<figure><img src="../../.gitbook/assets/image (9) (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (334).png" alt=""><figcaption></figcaption></figure>
