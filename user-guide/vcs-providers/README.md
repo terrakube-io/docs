@@ -8,6 +8,10 @@ Terrakube supports the following VCS providers:
 [github.com.md](github.com.md)
 {% endcontent-ref %}
 
+{% content-ref url="github-enterprise.md" %}
+[github-enterprise.md](github-enterprise.md)
+{% endcontent-ref %}
+
 {% content-ref url="gitlab.com.md" %}
 [gitlab.com.md](gitlab.com.md)
 {% endcontent-ref %}
@@ -26,6 +30,6 @@ Terrakube supports the following VCS providers:
 
 ### Webhooks <a href="#webhooks" id="webhooks"></a>
 
-Terrakube uses webhooks to monitor new commits. At the moment this is only available in the Github provider.
+Terrakube uses webhooks to monitor new commits. This features is not available in SSH,Azure DevOps and Azure DevOps Server.
 
 * When new commits are added to a branch, Terrakube workspaces based on that branch will automatically initiate a Terraform job. Terrakube will use the "Plan and apply" template by default.&#x20;

@@ -53,6 +53,7 @@
   * [Tags](user-guide/organizations/tags.md)
 * [VCS Providers](user-guide/vcs-providers/README.md)
   * [Github](user-guide/vcs-providers/github.com.md)
+  * [Github Enterprise](user-guide/vcs-providers/github-enterprise.md)
   * [GitLab](user-guide/vcs-providers/gitlab.com.md)
   * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)
   * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)

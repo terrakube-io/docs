@@ -57,7 +57,7 @@ And if you navigate to the **Workspace** menu, you will see the workspace in the
 
 <figure><img src="../../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
 
-Once you create your workspace, Terrakube automatically registers a webhook with your VCS provider. This webhook triggers a job using the "Plan and apply" template for each new push to the workspace branch, allowing for streamlined and efficient workflow. Please note that this feature is only available for the Github VCS provider. For other VCS providers, you will need to execute the job manually using the Terrakube UI or API.
+Once you create your workspace, Terrakube sets up a webhook with your VCS. This webhook runs a job based on the “Plan and apply” template every time you push new changes to the workspace branch. However, this feature does not work yet with Azure DevOps and Azure DevOps Server VCS provider.&#x20;
 
 
 
