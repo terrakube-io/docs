@@ -55,7 +55,10 @@ You will be redirected to Github Enterprise. Click the **Authorize** button to c
 
 <figure><img src="../../.gitbook/assets/image (364).png" alt=""><figcaption></figcaption></figure>
 
-When the connection is successful, you will go back to the VCS provider’s page in your organization. You will see the connection status, the date, and the user who made the connection. You can now use the connection for your workspaces and modules.
+When the connection is successful, you will go back to the VCS provider’s page in your organization. You will see the connection status, the date, and the user who made the connection.&#x20;
 
-<figure><img src="../../.gitbook/assets/Screenshot 2023-11-27 at 16.51.36.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
+You can now use the connection for your workspaces and modules.
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
