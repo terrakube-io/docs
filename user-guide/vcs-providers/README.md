@@ -16,6 +16,10 @@ Terrakube supports the following VCS providers:
 [gitlab.com.md](gitlab.com.md)
 {% endcontent-ref %}
 
+{% content-ref url="gitlab-ee-and-ce.md" %}
+[gitlab-ee-and-ce.md](gitlab-ee-and-ce.md)
+{% endcontent-ref %}
+
 {% content-ref url="bitbucket.com.md" %}
 [bitbucket.com.md](bitbucket.com.md)
 {% endcontent-ref %}
