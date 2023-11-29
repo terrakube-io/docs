@@ -20,7 +20,7 @@ If you prefer, you can add a new VCS Provider directly from the [Create workspac
 
 * On the next screen, enter the following information about your Github Enterprise instance:
 
-<table><thead><tr><th width="240">Field </th><th>Value</th></tr></thead><tbody><tr><td>HTTP URL</td><td><code>https://&#x3C;GITHUB INSTANCE HOSTNAME></code></td></tr><tr><td>API URL</td><td><code>https://&#x3C;GITHUB INSTANCE HOSTNAME>/api/v3</code></td></tr></tbody></table>
+<table><thead><tr><th width="203">Field </th><th>Value</th></tr></thead><tbody><tr><td>HTTP URL</td><td><code>https://&#x3C;GITHUB INSTANCE HOSTNAME></code></td></tr><tr><td>API URL</td><td><code>https://&#x3C;GITHUB INSTANCE HOSTNAME>/api/v3</code></td></tr></tbody></table>
 
 <figure><img src="../../.gitbook/assets/image (360).png" alt=""><figcaption></figcaption></figure>
 
@@ -57,8 +57,8 @@ You will be redirected to Github Enterprise. Click the **Authorize** button to c
 
 When the connection is successful, you will go back to the VCS provider’s page in your organization. You will see the connection status, the date, and the user who made the connection.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 You can now use the connection for your workspaces and modules.
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

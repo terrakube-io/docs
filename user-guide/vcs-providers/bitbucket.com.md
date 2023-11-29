@@ -20,7 +20,7 @@ If you prefer, you can add a new VCS Provider directly from the [Create workspac
 
 Click the **Bitbucket** button and then click the **Bitbucket Cloud** option
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
 
 Open [Bitbucket Cloud](https://bitbucket.org) and log in as whichever account you want Terrakube to use and click the **settings** button in your workspace
 

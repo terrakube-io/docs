@@ -330,7 +330,7 @@ Visit **https://terrakube-ui.minikube.net** and login using **admin@example.com*
 
 We should be able to use the UI using a valid certificate.
 
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Connect to Terrakube
 
@@ -472,4 +472,4 @@ Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 
 #### Checking the UI will show:
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>

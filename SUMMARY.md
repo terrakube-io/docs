@@ -55,6 +55,7 @@
   * [Github](user-guide/vcs-providers/github.com.md)
   * [Github Enterprise](user-guide/vcs-providers/github-enterprise.md)
   * [GitLab](user-guide/vcs-providers/gitlab.com.md)
+  * [Gitlab EE and CE](user-guide/vcs-providers/gitlab-ee-and-ce.md)
   * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)
   * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)
   * [SSH](user-guide/vcs-providers/ssh.md)
