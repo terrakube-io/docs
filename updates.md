@@ -1,6 +1,42 @@
 # Updates
 
+### December 2023 (2.18.0)
 
+Greetings! As the year comes to a close, we are excited to present you the 2.18.0 release of Terrakube. This version brings you some features and enhancements that we hope you’ll enjoy, some of the key highlights include:
+
+#### AWS icons in State Diagram
+
+The state diagram now includes all the AWS architecture icons, so you can easily recognize each resource type. This feature will help you visualize your Terraform state in a more intuitive way. We are also working on improving the diagram to group the resources by VPC, location, etc which will give you a closer look at how your architecture is designed using the Terraform state.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/c27d9cd2-e261-489e-9c65-df4e99d47c2b)
+
+#### Visual State Diagram export option
+
+Following the state diagram enhancements, we have also added the option to save the diagram in different formats. You can export a high-quality image in png, svg or jpeg formats by using the Download and selecting the preferred format. This feature will help you use the diagram for your documentation or presentations.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/3f5eee59-e4cc-4849-91a5-bbcc51239b32)
+
+#### Self Hosted VCS Providers Support
+
+We have added support for Github Enterprise, GitLab Enterprise Edition and GitLab Community Edition. This means that you can now integrate your workspaces and modules using your self-hosted VCS providers. This is a major milestone in our vision of providing an enterprise-grade experience with Terrakube. In the upcoming releases we will add Bitbucket Server and Azure DevOps Server. For more details in how to use this feature check the following links.
+
+* [Github Enterprise](https://docs.terrakube.io/user-guide/vcs-providers/github-enterprise)
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/a341cc42-c4bc-4287-9f77-61d33031a4bc)
+
+* [GitLab Enterprise and Community Editions](https://docs.terrakube.io/user-guide/vcs-providers/gitlab-ee-and-ce)
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/1bca2baf-5f18-4e6b-b8a1-bdc0561770ba)
+
+#### Webhooks support for GitLab (Cloud, EE and CE), BitBucket and Github (Cloud and Enterprise)
+
+We have introduced a new feature that will make your workflow more efficient and convenient. Now, Terrakube will automatically trigger a new Plan and Apply job for each new push in the repository that is linked to the workspace. You no longer have to run the jobs manually using the UI or the terraform CLI. This feature will help you keep your infrastructure in sync with your code changes.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/cbee6cbb-531b-488f-8396-a52f65f49e2a)
+
+#### Bug fixes
+
+We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.18.0
 
 ### November 2023 (2.17.0)
 
