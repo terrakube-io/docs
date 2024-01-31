@@ -43,3 +43,15 @@ module "test" {
 When running the job, internally terraform will be using the selected SSH key to clone the necesary module dependencies like the below image:
 
 <figure><img src="../../.gitbook/assets/image (139).png" alt=""><figcaption></figcaption></figure>
+
+When using a VCS connection you can select wich SSH key should be injected when downloading modules in the workspace settings:
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+This will allow to use modules using the git format inside a workspace with VCS connection like the following:
+
+```
+module "test" {
+  source = "git@github.com:alfespa17/simple-terraform.git"
+}
+```
