@@ -21,3 +21,17 @@ You can click the **Download** button to get a copy of the JSON state file&#x20;
 Inside the **states** page, click the **diagram** tab and you will see the visual state for your terraform state.
 
 <figure><img src="../../.gitbook/assets/image (270).png" alt=""><figcaption></figcaption></figure>
+
+The visual state wil also show some information if you click each element like the following:
+
+<figure><img src="../../.gitbook/assets/image (368).png" alt=""><figcaption></figcaption></figure>
+
+### Resources
+
+All the resources can be shown in the overview page inside the workspace:
+
+<figure><img src="../../.gitbook/assets/image (366).png" alt=""><figcaption></figcaption></figure>
+
+If you click the resources you can check the information about each resouce like the folloing
+
+<figure><img src="../../.gitbook/assets/image (367).png" alt=""><figcaption></figcaption></figure>
