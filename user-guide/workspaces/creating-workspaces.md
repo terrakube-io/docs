@@ -20,6 +20,10 @@ Click **Workspaces** in the main menu and then click the **New workspace** butto
 
 <figure><img src="../../.gitbook/assets/image (220).png" alt=""><figcaption></figcaption></figure>
 
+Select the IaC type for now we support terraform and open tofu
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
 Choose the **Version control workflow**
 
 <figure><img src="../../.gitbook/assets/image (242).png" alt=""><figcaption></figcaption></figure>
