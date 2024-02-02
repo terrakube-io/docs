@@ -22,7 +22,7 @@ Inside the **states** page, click the **diagram** tab and you will see the visua
 
 <figure><img src="../../.gitbook/assets/image (270).png" alt=""><figcaption></figcaption></figure>
 
-The visual state wil also show some information if you click each element like the following:
+The visual state will also show some information if you click each element like the following:
 
 <figure><img src="../../.gitbook/assets/image (368).png" alt=""><figcaption></figcaption></figure>
 
