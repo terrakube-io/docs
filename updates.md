@@ -1,5 +1,123 @@
 # Updates
 
+### January 2024 (2.19.0)
+
+As we step into the new year, we are thrilled to announce the release of Terrakube 2.19.0, a significant update that continues to push the boundaries of Infrastructure as Code (IaC) management. Here are some key highlights of this release:
+
+#### OpenTofu Now Available on Terrakube
+
+With OpenTofu now in General Availability (GA), we've integrated it as an alternative within Terrakube. Now, when you create workspaces, you have the option to select either Terraform or OpenTofu. Terrakube will then tailor the user experience specifically to the tool you choose. Additionally, you can switch your existing workspaces to OpenTofu via the Workspace settings, allowing for a smooth transition between tools.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/a722d515-ec9e-4dc6-b244-03733009ddc2)
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/dca7e280-32d1-4d1c-bb80-ddbdb1398f58)
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/b762358c-b23f-4722-bdcc-b9b24301dc4e)
+
+In the future we are planning to introduce specific features for each Terraform and Opentofu based in their evolution. Also we will introduce support for more Iac tools later.
+
+#### Enhanced Workspace Overview Page
+
+We've upgraded the Workspace Overview Page to enrich your interaction with your infrastructure. Now, you'll find a detailed count of resources and outputs. Each resource is represented by an icon indicating its type, with current support for AWS and Azure icons. Clicking on a resource name unfolds a detailed view of all its attributes and dependencies, and provides direct access to the resource's documentation.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/cff434dc-8b9f-46b0-84ef-29b9dacbb4fa)
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/3e56f159-e763-4596-801d-46f731f6cd8a)
+
+You can access the attributes and dependencies view from both Workspace Overview Page or using the [Visual State](https://docs.terrakube.io/user-guide/workspaces/terraform-state#visual-state).
+
+#### Webhook Improvements
+
+Now, you have the flexibility to select the default template that will execute for each new push in your Version Control System (VCS) at the workspace level. By default, Terrakube performs Plan and Apply operations, but you can now choose a different template tailored to your specific use case. This enhancement allows for the implementation of customized workflows across different organizations or workspaces.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/9b777ada-959f-4014-a5d7-c550dfed936b)
+
+Additionally, Terrakube now checks for the configured directory in the Workspace and will only run the job when a file changes in the specified directory. This feature is particularly useful for monorepositories, where you want to manage different workspaces from a single repository. This functionality has been implemented for GitLab, GitHub, and Bitbucket.
+
+#### CLI Driven workflow
+
+When leveraging the [CLI-driven workflow](https://docs.terrakube.io/user-guide/workspaces/cli-driven-workflow), you now have the option to utilize the `refresh` flag.
+
+Here's an example without the `refresh` flag:
+
+```
+user@pop-os:~/git/simple-terraform$ terraform plan
+
+Running plan in Terraform Cloud. Output will stream here. Pressing Ctrl-C
+will stop streaming the logs, but will not stop the plan running remotely.
+
+Preparing the remote plan...
+
+To view this run in a browser, visit:
+https://8080-azbuilder-terrakube-3it4oxf0vpt.ws-us107.gitpod.io/app/simple/simple-terraform/runs/2
+
+Waiting for the plan to start...
+
+***************************************
+Running Terraform PLAN
+***************************************
+null_resource.previous: Refreshing state... [id=2942672164070633234]
+module.time_module.random_integer.time: Refreshing state... [id=4]
+time_sleep.wait_30_seconds: Refreshing state... [id=2023-12-28T20:29:16Z]
+null_resource.next: Refreshing state... [id=1447023117451433293]
+null_resource.next2: Refreshing state... [id=8910164257527828565]
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # null_resource.next3 will be created
+  + resource "null_resource" "next3" {
+      + id = (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+```
+
+Example setting `refresh` to false:
+
+```
+terraform plan -refresh=false
+
+Running plan in Terraform Cloud. Output will stream here. Pressing Ctrl-C
+will stop streaming the logs, but will not stop the plan running remotely.
+
+Preparing the remote plan...
+
+To view this run in a browser, visit:
+https://8080-azbuilder-terrakube-3it4oxf0vpt.ws-us107.gitpod.io/app/simple/simple-terraform/runs/3
+
+Waiting for the plan to start...
+
+***************************************
+Running Terraform PLAN
+***************************************
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # null_resource.next3 will be created
+  + resource "null_resource" "next3" {
+      + id = (known after apply)
+    }
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+```
+
+#### API Token Revocation
+
+You now have the ability to revoke both Personal and Team API Tokens. Currently, this functionality is exclusively accessible via the API, but it will be extended to the UI in a forthcoming release. For more information, please refer to [our documentation](https://docs.terrakube.io/api/methods/personal-access-token-1).
+
+#### Bug fixes
+
+We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.19.0
+
 ### December 2023 (2.18.0)
 
 Greetings! As the year comes to a close, we are excited to present you the 2.18.0 release of Terrakube. This version brings you some features and enhancements that we hope you’ll enjoy, some of the key highlights include:
