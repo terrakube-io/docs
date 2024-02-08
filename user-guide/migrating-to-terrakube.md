@@ -1,9 +1,9 @@
 # Migrating to Terrakube
 
-When migrating to Terrakube you can use the followin approaches:
+When migrating to Terrakube you can use the following approaches:
 
 * [**Migrating with the Terraform CLI**](migrating-to-terrakube.md#migrating-with-the-terraform-cli): Ideal for users who prefer to migrate workspaces individually, leveraging the familiar Terraform CLI.
-* [**Migrating with the Workspaces Importer**](migrating-to-terrakube.md#migrating-with-the-workspaces-importer): Provides a guided, wizard-like experience within Terrakube, enabling you to seamlessly import workspaces from platforms such as Terraform Cloud or Terraform Enterprise."
+* [**Migrating with the Workspaces Importer**](migrating-to-terrakube.md#migrating-with-the-workspaces-importer): Provides a guided, wizard-like experience within Terrakube, enabling you to seamlessly import workspaces from platforms such as Terraform Cloud or Terraform Enterprise.
 
 ### Migrating with the Terraform CLI
 
