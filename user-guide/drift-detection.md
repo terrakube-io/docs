@@ -97,13 +97,13 @@ The firts step will be to create a Terrakube template that validate if there is 
           def changes =  body.created + body.updated + body.deleted
 
           if (changes > 0) {
-            new SlackApp().sendMessage(
+            new SlackApp().sendMessageWithoutAttachment(
               "#general", 
               "Hello team, Terrakube has deteted an infrastructure drift, please review the following workspace $workspaceId inside organization $organizationId", 
               "$SLACK_TOKEN", 
               terrakubeOutput);
           } else {
-            new SlackApp().sendMessage(
+            new SlackApp().sendMessageWithoutAttachment(
               "#general", 
               "Hello team, Terrakube did not detect any infrastructure drift for workspace $workspaceId inside organization $organizationId", 
               "$SLACK_TOKEN", 
@@ -182,13 +182,13 @@ flow:
 
 ```
           if (changes > 0) {
-            new SlackApp().sendMessage(
+            new SlackApp().sendMessageWithoutAttachment(
               "#general", 
               "Hello team, Terrakube has deteted an infrastructure drift, please review the following workspace $workspaceId inside organization $organizationId", 
               "$SLACK_TOKEN", 
               terrakubeOutput);
           } else {
-            new SlackApp().sendMessage(
+            new SlackApp().sendMessageWithoutAttachment(
               "#general", 
               "Hello team, Terrakube did not detect any infrastructure drift for workspace $workspaceId inside organization $organizationId", 
               "$SLACK_TOKEN", 
