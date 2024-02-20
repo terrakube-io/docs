@@ -87,7 +87,7 @@ To begin migrating your workspaces using the Workspace Importer within Terrakube
 
 <figure><img src="../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
 
-6. **Import Process**: The importer will replicate workspace details such as name, description, Terraform version, variables, and the current state into Terrakube.
+6. **Import Process**: The importer will replicate workspace details such as name, description, Terraform version, execution mode, variables, tags and the current state into Terrakube.
 
 <figure><img src="../.gitbook/assets/image (376).png" alt=""><figcaption></figcaption></figure>
 
