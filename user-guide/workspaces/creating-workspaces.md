@@ -22,7 +22,7 @@ Click **Workspaces** in the main menu and then click the **New workspace** butto
 
 Select the IaC type for now we support terraform and open tofu
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Choose the **Version control workflow**
 
@@ -55,7 +55,7 @@ Once you fill the settings click the **Create Workspace** button.
 
 When using a VCS conection you can also select wich action will be triggered when doing a git push to the selected branch in the repository.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to the Workspace page
 
