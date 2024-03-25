@@ -24,6 +24,12 @@ The new token will be showed and you can copy it to star calling the Terrakube A
 
 <figure><img src="../../.gitbook/assets/image (210).png" alt=""><figcaption></figcaption></figure>
 
+#### Delete API Tokens <a href="#user-api-tokens" id="user-api-tokens"></a>
+
+To delete an API token, navigate to the list of tokens, click the **Delete** button next to the token you wish to remove, and confirm the deletion.
+
+<figure><img src="../../.gitbook/assets/image (378).png" alt=""><figcaption></figcaption></figure>
+
 ### Team API Tokens <a href="#user-api-tokens" id="user-api-tokens"></a>
 
 API tokens may belong to a specific team. Team API tokens allow access Terrakube, without being tied to any specific user.
@@ -47,3 +53,9 @@ Add the token description and duration and click the **Generate token** button
 The new token will be showed and you can copy it to star calling the Terrakube API using Postman or some other tool.
 
 <figure><img src="../../.gitbook/assets/image (348).png" alt=""><figcaption></figcaption></figure>
+
+#### Delete Team API Tokens <a href="#user-api-tokens" id="user-api-tokens"></a>
+
+To delete an API token, navigate to the list of tokens, click the **Delete** button next to the token you wish to remove, and confirm the deletion.
+
+<figure><img src="../../.gitbook/assets/image (379).png" alt=""><figcaption></figcaption></figure>
