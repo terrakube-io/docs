@@ -18,6 +18,7 @@ api:
     databaseUser: "database_user"
     databasePassword: "database_password"
     databaseSslMode: "disable"
+    databasePort: "5432"
 
 ```
 
