@@ -1,5 +1,74 @@
 # Updates
 
+### March 2024 (2.20.0)
+
+Welcome to the 2.20.0 release from Terrakube! In our second update of the year, we're excited to share several key highlights with you:
+
+#### Workspace Importer
+
+Our newly Workspace Importer is designed to improve your migration from Terraform Cloud or Terraform Enterprise to Terrakube. Providing a user-friendly wizard, this feature simplifies the process of transferring all your workspaces to Terrakube, ensuring that variables, tags, state files, and other components are easily copied over. During its beta phase, this feature has been tested with hundreds of workspaces, receiving positive feedback from the community. If you're considering a migration to Terrakube, we highly recommend reviewing [our documentation](https://docs.terrakube.io/user-guide/migrating-to-terrakube#migrating-with-the-workspaces-importer) to see how this feature can save you time and effort.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/0d29073f-587a-4e6c-bd49-1355642b1403)
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/04918c2b-3ba9-4d8b-8826-918248a1a715)
+
+#### Enhanced API Token Management
+
+We've enhanced the UI for managing [API tokens](https://docs.terrakube.io/user-guide/organizations/api-tokens), making it more intuitive and efficient. Now, revoking tokens can be done directly through the UI with ease.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/1f0bf586-b1d1-45bd-b828-0215a94fa645)
+
+#### Organization Default Execution Mode Update
+
+This new feature allows you to set the default execution mode—either `local` or `remote`—at the organization level.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/f6b74739-bdd9-4534-99aa-67298d9da14f)
+
+#### Enhanced Support for Monorepos in Private Registry
+
+Responding to community feedback regarding the management of Terraform modules within a monorepo, we've made significant enhancements to our Private Registry. Now, you have the capability to specify the path of the module within the monorepo and set a tag prefix when creating a module.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/39c2a211-905c-4540-a9fe-2601928c6525)
+
+#### Agents Support
+
+We've expanded Terrakube capabilities with the introduction of multiple `terrakube executor agents`. Now, you have the flexibility to select the specific agent you wish to use for each workspace. This new feature enables a higher level of execution isolation based on workspaces, offering improved security and customization to suit your project's needs.
+
+![image](https://github.com/AzBuilder/terrakube/assets/27365102/eed1353a-562e-40ba-b470-935b0c73a3a4)
+
+#### Prefix Support for Remote Backend
+
+If you are using the remote backend this enhancement allows you to perform operations across multiple workspaces under the same prefix, improving workspace management and operation execution.
+
+```terraform
+terraform {
+  backend "remote" {
+    hostname = "8080-azbuilder-terrakube-7tnuq3gnkgf.ws-us108.gitpod.io"
+    organization = "simple"
+
+    workspaces {
+      prefix = "my-app-"
+    }
+  }
+}
+```
+
+#### Breaking change for POSTGRESQL user
+
+if you are using POSTGRESQL and using the helm chart 3.16.0 it will require you to add the database port using the property
+
+```
+api.properties.databasePort: "5432"
+```
+
+More information can be found in this [issue](https://github.com/AzBuilder/terrakube/issues/784)
+
+#### Bug fixes
+
+We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.20.0
+
+
+
 ### January 2024 (2.19.0)
 
 As we step into the new year, we are thrilled to announce the release of Terrakube 2.19.0, a significant update that continues to push the boundaries of Infrastructure as Code (IaC) management. Here are some key highlights of this release:
