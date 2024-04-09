@@ -51,7 +51,7 @@
     * [Persistent Context](user-guide/organizations/templates/persistent-context.md)
     * [Import Templates](user-guide/organizations/templates/import-templates.md)
     * [UI Templates](user-guide/organizations/templates/ui-templates.md)
-    * [Filter gloval variables in jobs](user-guide/organizations/templates/filter-gloval-variables-in-jobs.md)
+    * [Filter global variables in jobs](user-guide/organizations/templates/filter-gloval-variables-in-jobs.md)
     * [Template Scheduling in Jobs](user-guide/organizations/templates/template-scheduling-in-jobs.md)
   * [Tags](user-guide/organizations/tags.md)
 * [VCS Providers](user-guide/vcs-providers/README.md)
