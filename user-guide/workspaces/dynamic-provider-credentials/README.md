@@ -6,7 +6,7 @@ This feature is available from version 2.21.0
 
 ### Generate Public and Private Key.
 
-To use Azure Dynamic Provider credentials we need to genera a public and private key that will be use to generate a validate the federated tokens, we can use the following commands
+To use Dynamic Provider credentials we need to genera a public and private key that will be use to generate a validate the federated tokens, we can use the following commands
 
 ```
 openssl genrsa -out private_temp.pem 2048
