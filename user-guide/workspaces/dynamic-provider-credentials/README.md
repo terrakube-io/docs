@@ -26,7 +26,7 @@ The public and private key need to be mounted inside the container and the path 
 
 ### Public Endpoints Requirements
 
-To use Azure Dynamic Provider credentials the following public endpoints were added and need to be accessible so Azure Entra can validate the federated token.
+To use Dynamic Provider credentials the following public endpoints were added. This endpoint needs to be accessible for your different cloud providers.
 
 ```
 GET https://TERRAKUBE.MYSUPERDOMAIN.COM/.well-known/openid-configuration
@@ -83,3 +83,54 @@ The following environment variables can be used to customize the dynamic credent
 * DynamicCredentialTtl= The TTL for the federated token generated internally in Terrakube (Defafult: 30)
 * DynamicCredentialPublicKeyPath= The path to the public key to validate the federated tokens
 * DynamicCredentialPrivateKeyPath=The path to the private key to generate the federated tokens
+
+### Token structure
+
+Terrakube will generate a JWT token internally, this token will be used to authenticate to your cloud provider.
+
+The token structure looks like the following for Azure
+
+```
+JWT HEADER
+{
+  "kid": "12345",
+  "alg": "RS256"
+}
+JWT BODY
+{
+  "sub": "organization:TERRAKUBE_ORG_NAME:workspace:TERRAKUBE_WORKSPACE_NAME",
+  "aud": "api://AzureADTokenExchange",
+  "jti": "12345678",
+  "terrakube_workspace_id": "1",
+  "terrakube_organization_id": "2",
+  "terrakube_job_id": "3",
+  "iat": 1713397293,
+  "iss": "https://97a1-2800-b20-1116-148e-81aa-1ff3-5a46-7557.ngrok-free.app",
+  "exp": 1713397353
+}
+SIGNATURE
+```
+
+The token structure looks like the following for GCP
+
+```
+JWT HEADER
+{
+  "kid": "03446895-220d-47e1-9564-4eeaa3691b42",
+  "alg": "RS256"
+}
+JWT BODY
+{
+  "sub": "organization:TERRAKUBE_ORG_NAME:workspace:TERRAKUBE_WORKSPACE_NAME",
+  "aud": "https://iam.googleapis.com/projects/xxxxx/locations/global/workloadIdentityPools/xxxxx/providers/xxxxx",
+  "jti": "d4432299-5dad-4b1e-9756-544639e84cec",
+  "terrakube_workspace_id": "d9b58bd3-f3fc-4056-a026-1163297e80a8",
+  "terrakube_organization_id": "8abe206b-29a8-4ed8-8a3b-30237e295659",
+  "terrakube_job_id": "1",
+  "iat": 1713915600,
+  "iss": "https://8080-azbuilder-terrakube-2vs2w68kc0p.ws-us110.gitpod.io",
+  "exp": 1713917400
+}
+SIGNATURE
+```
+

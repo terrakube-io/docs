@@ -70,6 +70,7 @@
   * [Variables](user-guide/workspaces/variables.md)
   * [Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/README.md)
     * [Azure Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/azure-dynamic-provider-credentials.md)
+    * [GCP Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/gcp-dynamic-provider-credentials.md)
   * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
   * [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md)
   * [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md)
