@@ -13,6 +13,7 @@ api:
     databaseName: "database_name"
     databaseUser: "database_user"
     databasePassword: "database_password"
+    databaseSchema: "dbo"
 
 ```
 
