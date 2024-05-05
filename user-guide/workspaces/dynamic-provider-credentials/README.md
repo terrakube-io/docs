@@ -105,7 +105,7 @@ JWT BODY
   "terrakube_organization_id": "2",
   "terrakube_job_id": "3",
   "iat": 1713397293,
-  "iss": "https://97a1-2800-b20-1116-148e-81aa-1ff3-5a46-7557.ngrok-free.app",
+  "iss": "https://terrakube-api.example.com",
   "exp": 1713397353
 }
 SIGNATURE
@@ -128,9 +128,31 @@ JWT BODY
   "terrakube_organization_id": "8abe206b-29a8-4ed8-8a3b-30237e295659",
   "terrakube_job_id": "1",
   "iat": 1713915600,
-  "iss": "https://8080-azbuilder-terrakube-2vs2w68kc0p.ws-us110.gitpod.io",
+  "iss": "https://terrakube-api.example.com",
   "exp": 1713917400
 }
 SIGNATURE
 ```
 
+The token structure looks like the following for AWS
+
+```
+JWT HEADER
+{
+  "kid": "03446895-220d-47e1-9564-4eeaa3691b42",
+  "alg": "RS256"
+}
+JWT BODY
+{
+  "sub": "organization:TERRAKUBE_ORG_NAME:workspace:TERRAKUBE_WORKSPACE_NAME",
+  "aud": "aws.workload.identity",
+  "jti": "d4432299-5dad-4b1e-9756-544639e84cec",
+  "terrakube_workspace_id": "d9b58bd3-f3fc-4056-a026-1163297e80a8",
+  "terrakube_organization_id": "8abe206b-29a8-4ed8-8a3b-30237e295659",
+  "terrakube_job_id": "1",
+  "iat": 1713915600,
+  "iss": "https://terrakube-api.example.com",
+  "exp": 1713917400
+}
+SIGNATURE
+```
