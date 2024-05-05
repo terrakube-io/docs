@@ -21,7 +21,7 @@ To use the CLI-driven workflow the firts step will be to setup our project to us
 ```
 terraform {
   backend "remote" {
-    hostname = "8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io"
+    hostname = "terrakube-api.example.com"
     organization = "simple"
     workspaces {
       name = "workspace1"
@@ -42,7 +42,7 @@ resource "random_string" "random" {
 terraform {
   cloud {
     organization = "simple"
-    hostname = "8080-azbuilder-terrakube-sscrnu9jbie.ws-us99.gitpod.io"
+    hostname = "terrakube-api.example.com"
     workspaces {
       name = "samplecloud"
     }
@@ -62,7 +62,7 @@ resource "random_string" "random" {
 terraform {
   cloud {
     organization = "simple"
-    hostname = "8080-azbuilder-terrakube-0musnfsxh7g.ws-us102.gitpod.io"
+    hostname = "terrakube-api.example.com"
 
     workspaces {
       tags = ["development", "networking"]
