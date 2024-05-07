@@ -69,6 +69,7 @@
   * [Share Workspace State](user-guide/workspaces/share-workspace-state.md)
   * [Variables](user-guide/workspaces/variables.md)
   * [Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/README.md)
+    * [AWS Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/aws-dynamic-provider-credentials.md)
     * [Azure Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/azure-dynamic-provider-credentials.md)
     * [GCP Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/gcp-dynamic-provider-credentials.md)
   * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
