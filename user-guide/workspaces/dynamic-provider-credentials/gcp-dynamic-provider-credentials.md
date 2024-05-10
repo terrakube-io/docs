@@ -1,87 +1,73 @@
 # GCP Dynamic Provider Credentials
 
-To use GCP Dynamic Provider Credentials to authenticate to GCP without storing any sensitive credential in a workspace please use the following:
+### Requirements
 
-### Workload Identity Federation
+The dynamic provider credential setup in GCP  can be done with the Terrraform code available in the following link:
 
-To create an identity federation open the you GCP project and create a new identity pool
+[https://github.com/AzBuilder/terrakube/tree/main/dynamic-credential-setup/gcp](https://github.com/AzBuilder/terrakube/tree/main/dynamic-credential-setup/gcp)
 
-<figure><img src="../../../.gitbook/assets/image (380).png" alt=""><figcaption></figcaption></figure>
-
-Select OIDC , add a provider name, use the Terrakube API for the issuer URL and leave the default audience
-
-<figure><img src="../../../.gitbook/assets/image (381).png" alt=""><figcaption></figcaption></figure>
-
-{% hint style="info" %}
-You can copy the audience value without the "https", this value will be require in your Terrakube workspace.
+{% hint style="warning" %}
+The code will also create a sample workspace with all the require environment variables that can be used to test the functionality using the CLI driven workflow.
 {% endhint %}
 
-Setup the provider attributes, the mapping should look like the following:
-
-OIDC 1:
-
-```
-assertion.sub
-```
-
-Condition CEL
-
-```
-assertion.sub.startsWith("organization:TERRAKUBE_ORGANIZATION_NAME:workspace:TERRAKUBE_WORKSPACE_NAME")
-```
-
-<figure><img src="../../../.gitbook/assets/image (382).png" alt=""><figcaption></figcaption></figure>
-
-Once the identity provider is created we need to grant access to one particular service account that has the require access permission for our Terraform deployments
-
-<figure><img src="../../../.gitbook/assets/image (383).png" alt=""><figcaption></figcaption></figure>
-
-### Terrakube Workspace Setup
-
-To enable gcp dynamic credentials in our workspace inside Terrakube we need to add the following environment variables:
-
-* ENABLE\_DYNAMIC\_CREDENTIALS\_GCP=true
-* WORKLOAD\_IDENTITY\_SERVICE\_ACCOUNT\_EMAIL=[xxxx@xxxx.iam.gserviceaccount.com](mailto:xxxx@xxxx.iam.gserviceaccount.com)
-* WORKLOAD\_IDENTITY\_AUDIENCE\_GCP=//iam.googleapis.com/projects/\{{PROJECT-NUMBER\}}/locations/global/workloadIdentityPools/\{{PROJECT\_NAME\}}/providers/\{{PROVIDER\}}
+Make sure to mount your public and private key to the API container as explained [here](https://docs.terrakube.io/user-guide/workspaces/dynamic-provider-credentials#generate-public-and-private-key)
 
 {% hint style="info" %}
-Make sure there are no GOOGLE\_CREDENTIALS or GOOGLE\_APPLICATION\_CREDENTIALS in your workspace configuration
+Mare sure the private key is in _**"pkcs8"**_ format
 {% endhint %}
 
-Your workspace should look like the following:
+Validate the following terrakube api endpoints are working:
 
-<figure><img src="../../../.gitbook/assets/image (384).png" alt=""><figcaption></figcaption></figure>
+* [https://terrakube-api.mydomain.com/.well-known/jwks](https://terrakube-api.mydomain.com/.well-known/jwks)
+* [https://terrakube-api.mydomain.com/.well-known/openid-configuration](https://terrakube-api.mydomain.com/.well-known/openid-configuration)
 
-When you workspace job is running Terrakube will autenthicate to your GCP project automatically without using any kind of credential like the following example:
+Set terraform variables using: _**"variables.auto.tfvars"**_
 
+```
+terrakube_token = "TERRAKUBE_PERSONAL_ACCESS_TOKEN"
+terrakube_hostname = "terrakube-api.mydomain.com"
+terrakube_organization_name = "simple"
+terrakube_workspace_name = "dynamic-workspace"
+gcp_project_id = "my-gcp-project"
 
+```
+
+{% hint style="info" %}
+To generate the API token check [here](https://docs.terrakube.io/user-guide/organizations/api-tokens)
+{% endhint %}
+
+Run Terraform apply to create all the federated credential setup in GCP and a sample workspace in terrakube for testing
+
+To test the following terraform code can be used:
 
 ```
 terraform {
 
   cloud {
-    organization = "simple"
-    hostname = "8080-azbuilder-terrakube-2vs2w68kc0p.ws-us110.gitpod.io"
+    organization = "terrakube_organization_name"
+    hostname = "terrakube-api.mydomain.com"
 
     workspaces {
-      name = "simple"
+      name = "terrakube_workspace_name"
     }
   }
 }
 
 provider "google" {
-  project     = "XXXXXXX"
+  project     = "my-gcp-project"
   region      = "us-central1"
   zone        = "us-central1-c"
 }
 
 resource "google_storage_bucket" "auto-expire" {
-  name          = "XXXXXXXXX"
+  name          = "mysuperbukcetname"
   location      = "US"
   force_destroy = true
 
   public_access_prevention = "enforced"
 }
 ```
+
+### Running Example
 
 <figure><img src="../../../.gitbook/assets/image (385).png" alt=""><figcaption></figcaption></figure>
