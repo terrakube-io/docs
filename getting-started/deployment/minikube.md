@@ -54,6 +54,16 @@ It will take some minutes for all the pods to be available, the status can be ch
 kubectl get pods -n terrakube
 {% endhint %}
 
+{% hint style="warning" %}
+If you found the following message "_**Snippet directives are disabled by the Ingress administrator**_", please update the _**ingres-nginx-controller configMap in namespace ingress-nginx adding the following:**_
+
+```
+allow-snippet-annotations: "true"
+
+Reference: https://github.com/AzBuilder/terrakube/issues/618#issuecomment-1838980451
+```
+{% endhint %}
+
 The environment has some users, groups and sample data so you can test it quickly.
 
 Visit http://terrakube-ui.minikube.net and login using admin@example.com with password admin

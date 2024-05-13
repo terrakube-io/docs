@@ -322,6 +322,18 @@ ingress:
 helm install terrakube terrakube-repo/terrakube -n terrakube --values values.yaml 
 ```
 
+###
+
+{% hint style="warning" %}
+If you found the following message "_**Snippet directives are disabled by the Ingress administrator**_", please update the _**ingres-nginx-controller configMap in namespace ingress-nginx adding the following:**_
+
+```
+allow-snippet-annotations: "true"
+
+Reference: https://github.com/AzBuilder/terrakube/issues/618#issuecomment-1838980
+```
+{% endhint %}
+
 ### Using Terrakube&#x20;
 
 The environment has some users, groups and sample data so you can test it quickly.&#x20;
