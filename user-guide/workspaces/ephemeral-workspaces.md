@@ -4,15 +4,15 @@ The following will show how easy is to implement an ephemeral workspace using Te
 
 The first step will be to create a new organization, lets call it "playground".
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once we have the playground organization, we need to add a team with access to create templates like the following:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 We will also need a team with access to create/delete a workspace only, like the following:
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Teams names will depend on your Dex configuration.
@@ -41,7 +41,7 @@ Now we can update the default template that is used when we are using the remote
 
 We need to go the the templates inside the organization settings and edit the template
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 We will add a new step in the template, this will allow to schedule a job that will be using the "delete-playground" template that we have created above.
 
