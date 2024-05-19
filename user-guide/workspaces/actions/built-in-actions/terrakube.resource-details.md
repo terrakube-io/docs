@@ -1,0 +1,3 @@
+# terrakube.resource-details
+
+WIP
