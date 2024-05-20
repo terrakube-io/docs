@@ -80,6 +80,7 @@
     * [Built in Actions](user-guide/workspaces/actions/built-in-actions/README.md)
       * [Open Documentation](user-guide/workspaces/actions/built-in-actions/terrakube.open-documentation.md)
       * [Resource Details](user-guide/workspaces/actions/built-in-actions/terrakube.resource-details.md)
+      * [Open in Azure Portal](user-guide/workspaces/actions/built-in-actions/terrakube.open-azure.md)
     * [Filtering Actions](user-guide/workspaces/actions/filtering-actions.md)
     * [Developing Actions](user-guide/workspaces/actions/developing-actions/README.md)
       * [Quick start](user-guide/workspaces/actions/developing-actions/quick-start.md)
