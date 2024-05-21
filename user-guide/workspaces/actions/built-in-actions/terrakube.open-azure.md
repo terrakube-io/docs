@@ -1,12 +1,12 @@
 # Open in Azure Portal
 
-Description
+### Description
 
 The Open In Azure Portal action is designed to provide quick access to the Azure portal for a specific resource. By using the context of the current state, this action constructs the appropriate URL and presents it as a clickable button.
 
 ### Display Criteria
 
-By default, this Action is enabled and will appear for all the azurerm resources. If you want to display this action only for certain resources, please check  [filtering actions](../filtering-actions.md).
+By default, this Action is enabled and will appear for all the azurerm resources. If you want to display this action only for certain resources, please check  [filtering actions](../developing-actions/filtering-actions.md).
 
 ### Usage
 
