@@ -1,12 +1,12 @@
-# Restart Azure VM
+# Azure Monitor
 
-### Description&#x20;
+### Description
 
-The Restart VM action is designed to restart a specific virtual machine in Azure. By using the context of the current state, this action fetches an Azure access token and issues a restart command to the specified VM. The action ensures that the VM is restarted successfully and provides feedback on the process.
+The Azure Monitor Metrics action allows users to fetch and visualize metrics from Azure Monitor for a specified resource.&#x20;
 
 ### Display Criteria
 
-By default, this Action is enabled and will appear for all resources that have resource type `azurerm_virtual_machine`. If you want to display this action only for certain resources, please check [filtering actions](../developing-actions/display-criteria.md).
+By default, this Action is enabled and will appear for all the `azurerm` resources. If you want to display this action only for certain resources, please check  [filtering actions](../developing-actions/display-criteria.md).&#x20;
 
 ### Setup
 
@@ -29,10 +29,14 @@ The Client ID should have at least Virtual Machine Contributor access on the VM 
 
 <figure><img src="../../../../.gitbook/assets/image (394).png" alt=""><figcaption></figcaption></figure>
 
-* In the Resource Drawer, click the "Restart" button.
+* Click the **Monitor** tab to view metrics for the selected resource.
 
-<figure><img src="../../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-* The VM will be restarted, and a success or error message will be displayed.
+* You can view additional details for the metrics using the tooltip.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+* You can see more details for each chart by navigating through it.
+
+<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>

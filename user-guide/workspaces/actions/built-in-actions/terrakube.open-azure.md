@@ -6,7 +6,7 @@ The Open In Azure Portal action is designed to provide quick access to the Azure
 
 ### Display Criteria
 
-By default, this Action is enabled and will appear for all the azurerm resources. If you want to display this action only for certain resources, please check  [filtering actions](../developing-actions/filtering-actions.md).
+By default, this Action is enabled and will appear for all the azurerm resources. If you want to display this action only for certain resources, please check  [filtering actions](../developing-actions/display-criteria.md).
 
 ### Usage
 

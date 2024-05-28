@@ -6,16 +6,16 @@ The Resource Details action is designed to show detailed information about a spe
 
 ### Display Criteria
 
-By default this Action is enabled and will appear for all the resources. If you want to display this action only for certain resources, please check [filtering actions](../developing-actions/filtering-actions.md).
+By default this Action is enabled and will appear for all the resources. If you want to display this action only for certain resources, please check [filtering actions](../developing-actions/display-criteria.md).
 
 ### Usage
 
 * Navigate to the `Workspace Overview` or the `Visual State` and click a resource name.&#x20;
 
-<figure><img src="../../../../.gitbook/assets/image (3).png" alt=""><figcaption><p>Workspace Overview</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Workspace Overview</p></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>Visual State</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>Visual State</p></figcaption></figure>
 
 * In the Resource Drawer, you will see a new tab `Details` with the resource attributes and dependencies.
 
-<figure><img src="../../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>

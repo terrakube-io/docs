@@ -1,6 +1,6 @@
 # Built-in Actions
 
-The following actions are added by default in Terrakube. Not all the actions are enabled by default. Please check the documentation below if you are interested in activating the actions.
+The following actions are added by default in Terrakube. However, not all actions are enabled by default. Please refer to the documentation below if you are interested in activating these actions.
 
 ### **General**
 
@@ -14,5 +14,8 @@ The following actions are added by default in Terrakube. Not all the actions are
 
 ### **Monitor**
 
-* Prometheus Metrics: Adds a panel to visualize the metrics for the resource
+* [Azure Monitor](terrakube.azure-monitor.md): Adds a panel to visualize the metrics for the resource.
 
+### **AI**
+
+* [Open AI](terrakube.open-ai.md):  Adds a button to ask questions or get recommendations using OpenAI based on the workspace data.
