@@ -1,6 +1,6 @@
 # Quick start
 
-## Hello Actions
+### Hello Actions
 
 Let's start writing our Hello World action. This action will include a single button with the text "Quick Start".
 
@@ -123,10 +123,89 @@ Now the button will appear only for the `sample_simple` workspace. If you notice
 
 <figure><img src="../../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Button doesn't appear</p></figcaption></figure>
 
-### Accessing external APIs
+At this moment, our action only interacts with Terrakube data. However, a common requirement is to access other APIs to get some data, for example, to connect to the GitHub API to get the issues related to the workspace, or to connect to a cloud provider to interact with their APIs.
 
-At this moment our action only interacts with the same Terrakube data. But a common requirement is to access other apis to get some data, for example to connect to the Gtibhu api to get the issues related to the workspace, or connect to a Cloud provider to interact with their apis.&#x20;
+In these cases, we can make use of the Action Proxy. The proxy provides a way to connect to other backend services without needing to directly configure CORS for the API. The proxy also provides a secure way to use credentials without exposing sensitive data to the client.
 
-In this cases we can make use of the Action Proxy. The proxy provides a way to connect to other backend service without need to directly configure CORS for the API. The proxy also provides a secure way to use credentials without the need that the client knows the sensitive data.
+Let's add a simple interaction using mock data from the JSONPlaceholder API that reads the comments from a post.
 
-Lets add a simple interaction
+```javascript
+({ context }) => {
+  const [dialogVisible, setDialogVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [comments, setComments] = useState([]);
+
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      const response = await axiosInstance.get(`${context.apiUrl}/proxy/v1`, {
+        params: {
+          targetUrl: 'https://jsonplaceholder.typicode.com/posts/1/comments',
+          proxyheaders: JSON.stringify({
+            'Content-Type': 'application/json',
+          }),
+          workspaceId: context.workspace.id
+        }
+      });
+
+      setComments(response.data);
+      setDialogVisible(true);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      message.error('Error fetching data');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const closeDialog = () => {
+    setDialogVisible(false);
+  };
+
+  return (
+    <>
+      <Button
+        type="default"
+        onClick={fetchData}
+        loading={loading}
+      >
+        Quick Start
+      </Button>
+
+      <Modal
+        title="Comments"
+        visible={dialogVisible}
+        onCancel={closeDialog}
+        footer={[
+          <Button key="close" onClick={closeDialog}>
+            Close
+          </Button>,
+        ]}
+      >
+        {comments.map((comment) => (
+          <div key={comment.id} style={{ marginBottom: '10px' }}>
+            <p><b>ID:</b> {comment.id}</p>
+            <p><b>Name:</b> {comment.name}</p>
+            <p><b>Email:</b> {comment.email}</p>
+            <p><b>Comment:</b> {comment.body}</p>
+          </div>
+        ))}
+      </Modal>
+    </>
+  );
+};
+```
+
+Now if you click the Quick Start button, you will see a dialog with the comments data from the API. The proxy allows to interact with external apis and securely manage credentials. To know more about the Actions proxy check the documentation.
+
+<figure><img src="../../../../.gitbook/assets/image (397).png" alt=""><figcaption></figcaption></figure>
+
+Now, if you click the `Quick Start` button, you will see a dialog with the comments data from the API. The proxy allows you to interact with external APIs and securely manage credentials. To learn more about the Actions proxy, check the [documentation](action-proxy.md).
+
+### Summary
+
+Actions in Terrakube allow you to enhance the Workspace experience by creating custom interactions and functionalities tailored to your needs. You can start by exploring the [Built-in Actions ](../built-in-actions/)to understand their implementation and gain more experience.
+
+Actions are React components, and you define an [Action Type](action-types.md) to determine where the action will appear within the interface. Using [Display Criteria](display-criteria.md), you can specify the precise conditions under which an action should be displayed, such as for specific organizations or Terraform versions.
+
+Additionally, the [Action Proxy](action-proxy.md) enables integration with external APIs, securely managing credentials without requiring CORS configuration on the Terrakube front end. This is particularly useful when you don't have control over the external API's CORS settings.&#x20;
