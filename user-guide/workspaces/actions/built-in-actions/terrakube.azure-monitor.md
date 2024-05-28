@@ -18,7 +18,7 @@ This action requires the following variables as [Workspace Variables](../../vari
 * `ARM_SUBSCRIPTION_ID`: The Azure Subscription ID where the VM is located.
 
 {% hint style="info" %}
-The Client ID should have at least Virtual Machine Contributor access on the VM or resource group.
+The Client ID should have at least **Monitoring Reader** or **Reader** access on resource group or subscription.
 {% endhint %}
 
 ### Usage
