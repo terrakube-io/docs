@@ -6,7 +6,7 @@ The Azure Monitor Metrics action allows users to fetch and visualize metrics fro
 
 ### Display Criteria
 
-By default, this Action is disabled and will appear for all the `azurerm` resources. If you want to display this action only for certain resources, please check  [display criteria](terrakube.azure-monitor.md#display-criteria).&#x20;
+By default, this Action is disabled and when enabled will appear for all the `azurerm` resources. If you want to display this action only for certain resources, please check  [display criteria](terrakube.azure-monitor.md#display-criteria).&#x20;
 
 ### Setup
 

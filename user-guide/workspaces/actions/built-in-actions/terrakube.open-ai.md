@@ -10,6 +10,10 @@ The current action shares the state with the OpenAI API, so it's not recommended
 
 The Ask Workspace action allows users to interact with OpenAI's GPT-4o model to ask questions and get assistance related to their Terraform Workspace. This action provides a chat interface where users can ask questions about their Workspace's Terraform state and receive helpful responses from the AI.
 
+### Display Criteria
+
+By default, this Action is disabled and when enabled will appear for all resources. If you want to display this action only for certain resources, please check [display criteria](terrakube.open-ai.md#display-criteria).
+
 ### Setup
 
 This action requires the following variables as [Workspace Variables](../../variables.md#workspace-specific-variables) or [Global Variables](../../../organizations/global-variables.md) in the Workspace Organization:

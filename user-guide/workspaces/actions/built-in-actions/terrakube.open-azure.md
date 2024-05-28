@@ -6,7 +6,7 @@ The Open In Azure Portal action is designed to provide quick access to the Azure
 
 ### Display Criteria
 
-By default, this Action is disabled and will appear  and when enabled will appear for all the azurerm resources. If you want to display this action only for certain resources, please check  [display criteria](terrakube.open-azure.md#display-criteria).
+By default, this Action is disabled and when enabled will appear for all the azurerm resources. If you want to display this action only for certain resources, please check  [display criteria](terrakube.open-azure.md#display-criteria).
 
 ### Usage
 
