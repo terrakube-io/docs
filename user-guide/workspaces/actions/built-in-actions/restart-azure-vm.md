@@ -6,7 +6,7 @@ The Restart VM action is designed to restart a specific virtual machine in Azure
 
 ### Display Criteria
 
-By default, this Action is enabled and will appear for all resources that have resource type `azurerm_virtual_machine`. If you want to display this action only for certain resources, please check [filtering actions](../developing-actions/display-criteria.md).
+By default, this Action is disabled and when enabled will appear for all resources that have resource type `azurerm_virtual_machine`. If you want to display this action only for certain resources, please check [display criteria](restart-azure-vm.md#display-criteria).
 
 ### Setup
 
@@ -35,4 +35,4 @@ The Client ID should have at least Virtual Machine Contributor access on the VM 
 
 * The VM will be restarted, and a success or error message will be displayed.
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
