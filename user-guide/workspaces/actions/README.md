@@ -1,6 +1,8 @@
 # Actions
 
+{% hint style="info" %}
 Only users that belongs to Terrakube administrator group can create and edit actions. This group is defined in the terrakube settings during deployment, for more details see [#administrator-group](../../../getting-started/security.md#administrator-group "mention")
+{% endhint %}
 
 Terrakube actions allow you to extend the UI in Workspaces, functioning similarly to plugins. These actions enable you to add new functions to your Workspace, transforming it into a hub where you can monitor and manage your infrastructure and gain valuable insights. With Terrakube actions, you can quickly observe your infrastructure and apply necessary actions.
 
