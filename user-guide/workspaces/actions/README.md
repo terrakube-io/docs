@@ -34,7 +34,7 @@ Terrakube actions allow you to extend the UI in Workspaces, functioning similarl
 
 ### Built-in Actions
 
-Terrakube provides several [built-in actions](./#built-in-actions) that you can start using some are enabled by default. Please refer to the documentation for detailed information on each action, including usage and setup instructions.
+Terrakube provides several [built-in actions](built-in-actions/) that you can start using some are enabled by default. Please refer to the documentation for detailed information on each action, including usage and setup instructions.
 
 ### Developing Actions
 
