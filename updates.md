@@ -1,5 +1,131 @@
 # Updates
 
+### May 2024 (2.21.0)
+
+Welcome to the 2.21.0 release from Terrakube! As we reach the midpoint of the year, we’re excited to introduce several new features and enhancements that improve the overall user experience and functionality. Let’s dive into the key highlights:
+
+#### Terrakube Actions
+
+Terrakube actions allow you to extend the UI in Workspaces, functioning similarly to plugins. These actions enable you to add new functions to your Workspace, transforming it into a hub where you can monitor and manage your infrastructure and gain valuable insights. With Terrakube actions, you can quickly observe your infrastructure and apply necessary actions.
+
+In the below demo, you can view how to use a couple of the new actions to [monitor metrics](https://docs.terrakube.io/user-guide/workspaces/actions/built-in-actions/terrakube.azure-monitor) and [restart an Azure VM](https://docs.terrakube.io/user-guide/workspaces/actions/built-in-actions/restart-azure-vm).
+
+![actions](https://github.com/AzBuilder/terrakube/assets/27365102/940862ef-7d20-4bab-9fe7-c76d62e5d589)
+
+Additionally, we are providing an action to interact with OpenAI directly from the workspace. Check out the [Terrakube OpenAI Action](https://docs.terrakube.io/user-guide/workspaces/actions/built-in-actions/terrakube.open-ai) for more details.
+
+![openai](https://github.com/AzBuilder/terrakube/assets/27365102/d5cbf5c8-ce6c-4023-99bc-c8e6ed2eba72)
+
+Check our [documentation](https://docs.terrakube.io/user-guide/workspaces/actions) for more details on how to use and start creating Terrakube actions.
+
+#### Authenticate Providers with Dynamic Credentials
+
+Terrakube's dynamic provider credentials feature allows you to establish a secure trust relationship between Terraform/OpenTofu and your cloud provider. By using unique, short-lived credentials for each job, this feature significantly reduces the risk of compromised credentials. We are excited to announce support for dynamic credentials for the following cloud providers:
+
+* [**AWS**](https://docs.terrakube.io/user-guide/workspaces/dynamic-provider-credentials/aws-dynamic-provider-credentials)
+* [**Google Cloud Platform**](https://docs.terrakube.io/user-guide/workspaces/dynamic-provider-credentials/gcp-dynamic-provider-credentials)
+* [**Azure**](https://docs.terrakube.io/user-guide/workspaces/dynamic-provider-credentials/azure-dynamic-provider-credentials)
+
+This enhancement ensures that your infrastructure management is both secure and efficient, minimizing potential security vulnerabilities while maintaining seamless integration with your cloud environments.
+
+#### Support for --auto-approve Flag
+
+We are pleased to announce the addition of support for the --auto-approve flag in the CLI-driven workflow. This feature allows for the automatic approval of Terraform and OpenTofu apply operations.
+
+```
+user@pop-os:~/git/simple-terraform$ terraform apply --auto-approve
+
+Running apply in Terraform Cloud. Output will stream here. Pressing Ctrl-C
+will cancel the remote apply if it's still pending. If the apply started it
+will stop streaming the logs, but will not stop the apply running remotely.
+
+Preparing the remote apply...
+
+To view this run in a browser, visit:
+https://8080-azbuilder-terrakube-jdlq1j61x7k.ws-us110.gitpod.io/app/simple/auto-approve/runs/1
+
+Waiting for the plan to start...
+
+***************************************
+Running Terraform PLAN
+***************************************
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # null_resource.next will be created
+  + resource "null_resource" "next" {
+      + id = (known after apply)
+    }
+
+  # time_sleep.wait_30_seconds will be created
+  + resource "time_sleep" "wait_30_seconds" {
+      + create_duration = (known after apply)
+      + id              = (known after apply)
+    }
+
+  # module.time_module.random_integer.time will be created
+  + resource "random_integer" "time" {
+      + id     = (known after apply)
+      + max    = 5
+      + min    = 1
+      + result = (known after apply)
+    }
+
+Plan: 3 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + creation_time = (known after apply)
+  + fake_data     = {
+      + data     = "Hello World"
+      + resource = {
+          + resource1 = "fake"
+        }
+    }
+
+module.time_module.random_integer.time: Creating...
+module.time_module.random_integer.time: Creation complete after 0s [id=5]
+time_sleep.wait_30_seconds: Creating...
+time_sleep.wait_30_seconds: Creation complete after 5s [id=2024-04-16T22:25:15Z]
+null_resource.next: Creating...
+null_resource.next: Creation complete after 0s [id=7860036023219461249]
+
+Apply complete! Resources: 6 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+creation_time = "5s"
+fake_data = {
+  "data" = "Hello World"
+  "resource" = {
+    "resource1" = "fake"
+  }
+}
+
+```
+
+#### UI Enhancements
+
+We have made several enhancements to the UI, focusing on improving the overall user experience:
+
+* **Buttons:** Basic rounded corner adjustments.
+* **Global Shadow Optimization:** Adjusted from three layers of shadows to two layers, used in various components.
+* **Loading Spinners:** Added spinners for loading main pages instead of static loading text.
+* **Field Validations:** Added validations for fields to improve form submission accuracy.
+
+&#x20;
+
+<figure><img src="https://github.com/AzBuilder/terrakube/assets/27365102/1723b589-121e-47df-9d66-df734b6c548c" alt=""><figcaption></figcaption></figure>
+
+These updates aim to make the Terrakube interface more intuitive and visually appealing.
+
+#### Bug fixes
+
+We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.21.0
+
 ### March 2024 (2.20.0)
 
 Welcome to the 2.20.0 release from Terrakube! In our second update of the year, we're excited to share several key highlights with you:
