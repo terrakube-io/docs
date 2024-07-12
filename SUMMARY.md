@@ -30,6 +30,7 @@
   * [🔐 Custom CA Certs](getting-started/deployment/custom-ca-certs.md)
   * [⚙️ Custom Terraform CLI Builds](getting-started/deployment/custom-terraform-cli-builds.md)
   * [👮 Self-Hosted Agents](getting-started/deployment/self-hosted-agents.md)
+  * [🕑 Ephemeral Agents](getting-started/deployment/ephemeral-agents.md)
   * [📶 Proxy Configuration](getting-started/deployment/proxy-configuration.md)
   * [🛡️ Token Security](getting-started/deployment/token-security.md)
   * [🚦 Open Telemetry](getting-started/deployment/open-telemetry.md)
