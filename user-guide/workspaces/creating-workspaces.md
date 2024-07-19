@@ -45,15 +45,17 @@ Configure the workspace settings.&#x20;
 | Field                       | Description                                                                                                                                                                                                                            |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Workspace Name              | The name of your workspace is unique and used in tools, routing, and UI. Dashes, underscores, and alphanumeric characters are permitted.                                                                                               |
-| VCS branch                  | The branch from which to import new versions.                                                                                                                                                                                          |
+| VCS branch                  | A list of branches separated by comma that jobs are allowed to kicked off from VCS webhook. This is not used for CLI workflow.
 | Terraform Working Directory | Default workspace directory. Use / for the root folder                                                                                                                                                                                 |
 | Terraform Version           | The version of Terraform to use for this workspace. Check [custom-terraform-cli-builds.md](../../getting-started/deployment/custom-terraform-cli-builds.md "mention") if you want to restrict the versions in your Terrakube instance. |
 
 Once you fill the settings click the **Create Workspace** button.
 
-<figure><img src="../../.gitbook/assets/image (135).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/workspace-settings-vcs.png" alt=""><figcaption></figcaption></figure>
 
-When using a VCS conection you can also select wich action will be triggered when doing a git push to the selected branch in the repository.
+When using a VCS workflow you can select which branches, folder and action (aka, Default template (VCS push)) the runs will be triggered from when a git push action happens. 
+
+The `VCS branches` accepts a list of branches separated by comma, the first in the list is used as the default for the runs kicked off from UI. The branches are compared as prefixes against the branch included in the payload sent from VCS provider.
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -65,7 +67,7 @@ And if you navigate to the **Workspace** menu, you will see the workspace in the
 
 <figure><img src="../../.gitbook/assets/image (222).png" alt=""><figcaption></figcaption></figure>
 
-Once you create your workspace, Terrakube sets up a webhook with your VCS. This webhook runs a job based on the “Plan and apply” template every time you push new changes to the workspace branch. However, this feature does not work yet with Azure DevOps VCS provider.&#x20;
+Once you create your workspace, Terrakube sets up a webhook with your VCS. This webhook runs a job based on the selected template every time you push new changes to the set workspace branches. However, this feature does not work yet with Azure DevOps VCS provider.&#x20;
 
 
 
