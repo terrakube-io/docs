@@ -107,3 +107,26 @@ Plan Running in a pod:
 Apply Running in a different pod:
 
 <figure><img src="../../.gitbook/assets/image (403).png" alt=""><figcaption></figcaption></figure>
+
+### Node Selector.
+
+If required you can specify the node selector configuration where the pod will be created using something like the following:
+
+```yaml
+api:
+  env:
+  - name: JAVA_TOOL_OPTIONS
+    value: "-Dorg.terrakube.executor.ephemeral.nodeSelector.diskType=ssd -Dorg.terrakube.executor.ephemeral.nodeSelector.nodeType=spot"
+```
+
+The above will be the equivalent to use the Kubernetes YAML like:
+
+```yaml
+  nodeSelector:
+    disktype: ssd
+    nodeType: spot
+```
+
+{% hint style="warning" %}
+Adding node selector configuration is available from version 2.23.0
+{% endhint %}
