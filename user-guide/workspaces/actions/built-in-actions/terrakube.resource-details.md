@@ -14,7 +14,7 @@ By default this Action is enabled and will appear for all the resources. If you 
 
 <figure><img src="../../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>Workspace Overview</p></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption><p>Visual State</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption><p>Visual State</p></figcaption></figure>
 
 * In the Resource Drawer, you will see a new tab `Details` with the resource attributes and dependencies.
 

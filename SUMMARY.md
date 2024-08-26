@@ -39,6 +39,7 @@
   * [Google Cloud Identity](getting-started/user-management/google-cloud-identity.md)
   * [Amazon Cognito](getting-started/user-management/amazon-cognito.md)
   * [Github](getting-started/user-management/docker-desktop.md)
+  * [Keycloak](getting-started/user-management/keycloak.md)
 
 ## 📓 User Guide
 
