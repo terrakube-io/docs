@@ -9,6 +9,7 @@ To authenticate users Terrakube implement [DEX](https://dexidp.io/) so you can a
 * Gitlab Authentictaion
 * OIDC
 * LDAP
+* Keycloak
 * etc.
 
 {% hint style="info" %}
