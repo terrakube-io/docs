@@ -17,3 +17,7 @@ You can handle Terrakube users with differen authentication providers like the f
 {% content-ref url="docker-desktop.md" %}
 [docker-desktop.md](docker-desktop.md)
 {% endcontent-ref %}
+
+{% content-ref url="keycloak.md" %}
+[keycloak.md](keycloak.md)
+{% endcontent-ref %}
