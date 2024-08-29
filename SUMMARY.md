@@ -95,6 +95,7 @@
 * [Private Registry](user-guide/private-registry/README.md)
   * [Publishing Private Modules](user-guide/private-registry/publishing-private-modules.md)
   * [Using Private Modules](user-guide/private-registry/using-private-modules.md)
+  * [Using Providers](user-guide/private-registry/using-providers.md)
 * [Policy Enforcement (OPA)](user-guide/policy-enforcement-opa.md)
 * [Cost Estimation](user-guide/cost-estimation.md)
 * [Drift Detection](user-guide/drift-detection.md)
