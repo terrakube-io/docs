@@ -22,7 +22,7 @@ Now you can select the "Thunder Client" and open the "Getting Started" collectio
 
 ### Authentication
 
-The firt step wil be to get the authorization token for the Terrakube API.&#x20;
+The first step will be to get the authorization token for the Terrakube API.&#x20;
 
 Execute the request "Get Device Code" and open the URL in field "verification\_uri\_complete" inside the response to get the authentication token
 
@@ -78,7 +78,7 @@ The team name should be a valid "group" name in Azure Active Directory, Google C
 
 ### Templates
 
-This is the basic flow a job inside Terrakube will execute when running a workspace jobs. Templates allows you to define different logic using "Terrakube Configuration Language" using a yaml and small scripts written in Bash or Groovy that can be reused accross an organization. To understand better templates lets create some examples:
+This is the basic flow a job inside Terrakube will execute when running a workspace jobs. Templates allows you to define different logic using "Terrakube Configuration Language" using a yaml and small scripts written in Bash or Groovy that can be reused across an organization. To understand better templates lets create some examples:
 
 {% hint style="info" %}
 Templates are sent to the API in base64 encoding.
@@ -110,11 +110,11 @@ Response:
 
 <figure><img src="../.gitbook/assets/image (208).png" alt=""><figcaption></figcaption></figure>
 
-Now we have a template that we can reuse when running jobs accross an organization, lets define a couple of more templates.
+Now we have a template that we can reuse when running jobs across an organization, lets define a couple of more templates.
 
 #### Template 2 - Terraform Basic Destroy.
 
-This is a small template that can be used to destoy the terraform infraestructure.
+This is a small template that can be used to destroy the terraform infraestructure.
 
 Template body:
 
@@ -181,7 +181,7 @@ Response:
 
 #### Template 4 - Static Code Analysis Terrascan
 
-Lets define a new template that use **Terrascan** open source tool to run a static code analisys of our terraform code.
+Lets define a new template that use **Terrascan** open source tool to run a static code analysis of our terraform code.
 
 Template body:
 
@@ -217,7 +217,7 @@ Response:
 
 <figure><img src="../.gitbook/assets/image (143).png" alt=""><figcaption></figcaption></figure>
 
-This template is importing the **Terrascan** extension and running a analisys for one particular workspace.
+This template is importing the **Terrascan** extension and running a analysis for one particular workspace.
 
 **Template 5 - Static Code Analysis Snyk**
 
@@ -268,10 +268,10 @@ Now we have the following template available inside our organization:
 Lets create some workspace where we can use our templates.
 
 {% hint style="info" %}
-For more information about Terrakube extension please refer to the followin Github [repository](https://github.com/AzBuilder/terrakube-extensions). If you want to create a new extension feel free to create an issue and send a pull request. You can even for the repository and create some private extension.
+For more information about Terrakube extension please refer to the following Github [repository](https://github.com/AzBuilder/terrakube-extensions). If you want to create a new extension feel free to create an issue and send a pull request. You can even for the repository and create some private extension.
 {% endhint %}
 
-### Worspaces
+### workspaces
 
 A workspace is a folder inside a git repository where we store our terraform code, we can define all the terraform resources or we can just call a terraform module that is available inside Terrakube modules.
 
@@ -279,7 +279,7 @@ A workspace is a folder inside a git repository where we store our terraform cod
 Workspace Git repository can be public or private using the following providers: Github, Gitlab, Azure DevOps, Bitbucket or SSH keys (rsa and ed25519). If you are using a private git respository please refer to the following[ document](https://github.com/AzBuilder/docs/blob/master/api/broken-reference/README.md).
 {% endhint %}
 
-To create it we will use the request inside the postman collection "Step 4 - Worspace"
+To create it we will use the request inside the postman collection "Step 4 - workspace"
 
 <figure><img src="../.gitbook/assets/image (188).png" alt=""><figcaption></figcaption></figure>
 
@@ -313,9 +313,9 @@ Response.
 
 <figure><img src="../.gitbook/assets/image (201).png" alt=""><figcaption></figcaption></figure>
 
-### Worspaces Schedule
+### workspaces Schedule
 
-When a workspace is created inside Terrakube we can define some schedules, this can be usefull for example when running cloud infrastructure and we need to create some development environment every day at 8 AM and destroy the environment every day at 5 PM when our IT team stop working.
+When a workspace is created inside Terrakube we can define some schedules, this can be useful for example when running cloud infrastructure and we need to create some development environment every day at 8 AM and destroy the environment every day at 5 PM when our IT team stop working.
 
 Request
 
@@ -325,9 +325,9 @@ Request
 This schedule will run the workspace using one template every minute
 {% endhint %}
 
-The Terrakube scheduler is based in "**Quartz**". You can create different schedules for your workspace. Please refer to the [following information](http://www.quartz-scheduler.org) to define the "**cron expression**" or you can use the following link to build the [expresion](https://www.freeformatter.com/cron-expression-generator-quartz.html).
+The Terrakube scheduler is based in "**Quartz**". You can create different schedules for your workspace. Please refer to the [following information](http://www.quartz-scheduler.org) to define the "**cron expression**" or you can use the following link to build the [expression](https://www.freeformatter.com/cron-expression-generator-quartz.html).
 
-### Worspace History
+### workspace History
 
 When Terrakube runs a job it will start saving all the states and changes inside the workspace history. To validate all the state changes we can use the workspace history endpoint.
 
@@ -335,13 +335,13 @@ Request
 
 <figure><img src="../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
-### Worspace (Azure/GCP/AWS)
+### workspace (Azure/GCP/AWS)
 
-To understan how you can create workspace for any cloud provider please refer to the following examples inside the collection:
+To understand how you can create workspace for any cloud provider please refer to the following examples inside the collection:
 
 <figure><img src="../.gitbook/assets/image (272).png" alt=""><figcaption></figcaption></figure>
 
-Basically to use any terraform provider we just need to define the worspace environment variables.
+Basically to use any terraform provider we just need to define the workspace environment variables.
 
 This is an example of an Azure workspace.
 
@@ -356,7 +356,7 @@ For more information about the workspace please check the api methods for:
 
 ### Jobs
 
-After we have a workspace we can star creating jobs for our workspaces using the templates the we have define earlier.
+After we have a workspace we can start creating jobs for our workspaces using the templates that we have define earlier.
 
 To create it we will use the request inside the postman collection "Step 5 - Jobs"
 
