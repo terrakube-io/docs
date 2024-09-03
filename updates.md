@@ -1,5 +1,49 @@
 # Updates
 
+### Jul 2024 (2.22.0)
+
+Welcome to the 2.22.0 release of Terrakube! As the summer season comes to a close, we’re focusing on enhancing the stability of the recent features we’ve introduced. While this is a smaller update compared to previous releases, we’re excited to see an increase in contributions from the community. Let’s dive into the key highlights:
+
+#### Ephemeral Agents
+
+Before this version, the executor component—responsible for running jobs like plan, apply, destroy, etc.—was more static, with the API always running and listening for new jobs. In this update, we’re introducing a more dynamic and efficient approach: ephemeral agents. Now, a new executor is created for each job and is disposed of once the job is finished. This enhancement leverages Kubernetes jobs to schedule each run, plan, and apply, making the process more resource-efficient and scalable.
+
+![image](https://github.com/user-attachments/assets/36c2970f-816f-45e1-a78d-cb21fbbec17a)
+
+![image](https://github.com/user-attachments/assets/166f3481-8bd4-496f-8e1d-066787c4de5d)
+
+If you’re interested in switching to ephemeral agents, follow our [guide](https://docs.terrakube.io/getting-started/deployment/ephemeral-agents) to get started.
+
+#### Enhanced GitHub Integration with Status Checks
+
+In this version, we’ve enhanced the GitHub integration by adding status checks. Previously, every push to the branch configured in your Terrakube workspace would trigger a Terraform/OpenTofu apply, but there was no way to monitor the job’s progress or navigate to the workspaces directly from GitHub. With this update, you can now see the status (completed or failed) of the job directly within GitHub, and by clicking the "Details" button, you can easily navigate to Terrakube to view more information.
+
+![image](https://github.com/user-attachments/assets/8d95d6b3-3e4b-4e3d-89ae-d7276d8cf967)
+
+Thanks to @stanleyz for this contribution!
+
+#### ARM64 Support for Terrakube Images
+
+In this version, we’ve converted all Terrakube images for the UI, API, and executor to multi-architecture images. This means you can now run Terrakube on both Linux/AMD64 and Linux/ARM64 platforms, providing greater flexibility and compatibility across different environments.
+
+For more details about our official images, take a look at our [documentation](https://docs.terrakube.io/getting-started/docker-images).
+
+#### Custom Releases Endpoint for OpenTofu
+
+As OpenTofu continues to gain popularity, we’ve added a new feature in this version that allows you to specify a custom releases endpoint. By default, Terrakube uses the official OpenTofu repository to list available versions. With this update, you now have the option to define a custom releases endpoint, giving you more control over the versions you allow internally for your workspaces. This also enables you to create and use custom builds from OpenTofu in your Terrakube jobs.
+
+Thanks to @gespinozat for this contribution!
+
+#### Multiple Branches Support in a Workspace
+
+In this version, we’ve added the option to specify multiple branches within a single workspace. This feature is particularly useful if you need to run Terrakube jobs across different branches within the same workspace, such as during development. It provides greater flexibility and control over your infrastructure management process, allowing you to test and deploy changes in various branches without needing separate workspaces.
+
+Thanks @akozhuharov for this contribution!
+
+#### Other Fixes and Dependency Updates
+
+As always, we’ve updated a bunch of dependencies to keep Terrakube up to date and secure, and we’ve also fixed multiple bugs reported by the community. You can see the full list of changes [here](https://github.com/AzBuilder/terrakube/releases/tag/2.22.0).
+
 ### May 2024 (2.21.0)
 
 Welcome to the 2.21.0 release from Terrakube! As we reach the midpoint of the year, we’re excited to introduce several new features and enhancements that improve the overall user experience and functionality. Let’s dive into the key highlights:
