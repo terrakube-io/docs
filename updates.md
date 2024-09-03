@@ -1,6 +1,6 @@
 # Updates
 
-### Jul 2024 (2.22.0)
+### July 2024 (2.22.0)
 
 Welcome to the 2.22.0 release of Terrakube! As the summer season comes to a close, we’re focusing on enhancing the stability of the recent features we’ve introduced. While this is a smaller update compared to previous releases, we’re excited to see an increase in contributions from the community. Let’s dive into the key highlights:
 
