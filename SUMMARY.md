@@ -7,7 +7,7 @@
 
 * [📐 Architecture](getting-started/design-and-architecture.md)
 * [🔐 Security](getting-started/security.md)
-* [🚀 Getting Started](getting-started/getting-started.md)
+* [⭐ Getting Started](getting-started/getting-started.md)
 * [💿 Docker Images](getting-started/docker-images.md)
 * [🌐 Docker Compose](getting-started/docker-compose.md)
 * [🚗 Docker Compose + Traefik](getting-started/docker-compose-+-traefik.md)
@@ -34,6 +34,8 @@
   * [📶 Proxy Configuration](getting-started/deployment/proxy-configuration.md)
   * [🛡️ Token Security](getting-started/deployment/token-security.md)
   * [🚦 Open Telemetry](getting-started/deployment/open-telemetry.md)
+* [🏗️ Development](getting-started/development/README.md)
+  * [🚀 Gitpod](getting-started/development/getting-started.md)
 * [🤵 User Management](getting-started/user-management/README.md)
   * [Azure Active Directory](getting-started/user-management/azure-active-directory.md)
   * [Google Cloud Identity](getting-started/user-management/google-cloud-identity.md)
