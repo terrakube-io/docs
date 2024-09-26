@@ -101,6 +101,6 @@ Click on `Log in with TerrakubeClient`. You will be redirected to a login form i
 
 After login, you are redirected back to Terrakube and a dialog asking you to grant access is shown
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
 
 Click on `Grant Access`. That is the last step. If everything went right, now you should be logged in Terrakube.

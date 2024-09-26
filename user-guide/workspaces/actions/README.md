@@ -18,16 +18,16 @@ Terrakube actions allow you to extend the UI in Workspaces, functioning similarl
 
 * **Manage Infrastructure:** Restart your Azure VM or add an action to quickly navigate to the resource in the Azure portal directly from Terrakube.
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Monitor Metrics:** Track and display resource metrics for performance monitoring using tools like Prometheus, Azure Monitor or AWS Cloudwatch.
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Integrate with Tools:** Seamlessly integrate with tools like Infracost to display resource and Workspace costs.
 * **AI Integration:** Use AI to diagnose issues in your Workspaces. By integrating with models like OpenAI, Claude, and Gemini, you can quickly resolve errors in your infrastructure.
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Project and Incident Management:** Integrate with Jira, GitHub Issues, and ServiceNow to identify Workspaces with pending work items or reported errors.
 * **Documentation:** Link your Confluence documentation or wiki pages in your preferred tool, allowing quick access to documents related to your Workspace infrastructure.
@@ -46,11 +46,11 @@ After you develop your action. To create a new action in Terrakube:
 
 1. Navigate to the settings in any Terrakube organization.
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 2. Click the `Add Action` button.
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 3. Provide the required information as detailed in the table below:
 
@@ -69,7 +69,7 @@ After you develop your action. To create a new action in Terrakube:
 
 4. Click the `Save` button.
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 \
 

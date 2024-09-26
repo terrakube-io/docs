@@ -56,7 +56,7 @@ context.workspace.attributes.startsWith("dev")
 
 By setting these configurations, you ensure that your action dynamically adapts to different environments or conditions, enhancing reusability and maintainability.
 
-<figure><img src="../../../../.gitbook/assets/image (5).png" alt=""><figcaption><p>Multiple conditions using settings</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>Multiple conditions using settings</p></figcaption></figure>
 
 ### Sensitive Settings
 
@@ -67,7 +67,7 @@ For example, instead of directly storing an API key in the settings, you can ref
 * For the development environment: `${{var.dev_api_key}}`
 * For the production environment: `${{var.prod_api_key}}`
 
-<figure><img src="../../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 For the previous example, you will need to create the variables at workspace level or use global variables with the names `dev_api_key`and `prod_api_key`
 

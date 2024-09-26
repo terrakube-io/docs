@@ -24,7 +24,7 @@ Terrakube uses [Ant Design (antd) components](https://ant.design/components/over
 
 To create the action in your Terrakube instance, navigate to the Organization settings and click the `Create Action` button
 
-<figure><img src="../../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 Add the following data and click the save button.
 
@@ -41,11 +41,11 @@ Add the following data and click the save button.
 | Action           | Add the above code                                                                  |
 | Active           | Enable                                                                              |
 
-<figure><img src="../../../../.gitbook/assets/image (12).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
 
 If you go to any workspace, the quick start button should appear.
 
-<figure><img src="../../../../.gitbook/assets/image (13).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Adding Interaction to the Action
 
@@ -72,7 +72,7 @@ Now let's add some interaction to the button. In the next example, we will use t
 
 Now, if you update the action code, navigate to any workspace, and click the `Quick Start` button, you will see the `Hello Actions` message.
 
-<figure><img src="../../../../.gitbook/assets/image (14).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Using the context to access workspace data
 
@@ -101,7 +101,7 @@ For our quick start action, we will add the name of the workspace to the message
 
 Update the action code using the code above, click the `Quick Start` button, and you will see the message now displays the Workspace Name.
 
-<figure><img src="../../../../.gitbook/assets/image (15).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Using display criteria
 
@@ -119,9 +119,9 @@ context.workspace.attributes.name === "sample_simple"
 
 Now the button will appear only for the `sample_simple` workspace. If you notice, the display criteria is a conditional JavaScript code. So you can use any JavaScript code to display the action based on a regular expression, for organizations starting with certain names, or even combine multiple conditions.
 
-<figure><img src="../../../../.gitbook/assets/image (16).png" alt=""><figcaption><p>Button appears</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (16) (1).png" alt=""><figcaption><p>Button appears</p></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (17).png" alt=""><figcaption><p>Button doesn't appear</p></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (17) (1).png" alt=""><figcaption><p>Button doesn't appear</p></figcaption></figure>
 
 At this moment, our action only interacts with Terrakube data. However, a common requirement is to access other APIs to get some data, for example, to connect to the GitHub API to get the issues related to the workspace, or to connect to a cloud provider to interact with their APIs.
 
