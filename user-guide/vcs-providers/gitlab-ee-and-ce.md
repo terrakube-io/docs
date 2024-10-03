@@ -18,13 +18,13 @@ If you prefer, you can add a new VCS Provider directly from the [Create workspac
 
 * Click the **Gitlab button** and then click the **GitLab Enterprise** option**.**
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * On the next screen, enter the following information about your GitLab instance:
 
 <table><thead><tr><th width="302">Field</th><th>Value</th></tr></thead><tbody><tr><td>HTTP URL</td><td>https://&#x3C;GITLAB INSTANCE HOSTNAME></td></tr><tr><td>API URL</td><td>https://&#x3C;GITLAB INSTANCE HOSTNAME>/api/v4</td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Use a different browser tab to access your GitLab instance and sign in with the account that you want Terrakube to use. You should use a service user account for your organization, but you can also use a personal account.
 
