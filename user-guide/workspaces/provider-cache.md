@@ -11,7 +11,7 @@ TF_PLUGIN_CACHE_DIR=/home/cnb/.terraform.d/plugin-cache
 When deploying the helm chart the following can be used to add an emptyDir volume to cache the providers.
 
 ```
-api:
+executor:
   volumes:
     - name: cache-volume
       emptyDir:
@@ -20,3 +20,7 @@ api:
   - mountPath: /home/cnb/.terraform.d/plugin-cache
     name: cache-volume
 ```
+
+{% hint style="warning" %}
+Make sure to use the correct size for the volume mount, in the example is only using 1024Mi, more information can be found in this [link](https://developer.hashicorp.com/terraform/cli/config/config-file#provider-plugin-cache)
+{% endhint %}
