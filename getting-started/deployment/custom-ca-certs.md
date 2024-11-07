@@ -61,7 +61,6 @@ security:
 
 ## API properties
 api:
-  version: "2.11.2"
   env:
   - name: SERVICE_BINDING_ROOT
     value: /mnt/platform/bindings
@@ -74,7 +73,7 @@ api:
           path: "terrakubeDemo1.pem"
         - key: "terrakubeDemo2.pem"
           path: "terrakubeDemo2.pem"
-        - key: "type'
+        - key: "type"
           path: "type"
   volumeMounts:
   - name: ca-certs
