@@ -10,9 +10,9 @@ terrakube job [command]
 
 #### Commands
 
-| Command                                                | Description  |
-| ------------------------------------------------------ | ------------ |
-| [create](../../commands/terrakube-team/team-create.md) | create a job |
-| [list](../../commands/terrakube-team/team-list.md)     | list jobs    |
+| Command                   | Description  |
+| ------------------------- | ------------ |
+| [create](job-create.md)   | create a job |
+| [list](job-list.md)       | list jobs    |
 
 ####
