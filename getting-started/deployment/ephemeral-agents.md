@@ -110,6 +110,10 @@ Apply Running in a different pod:
 
 ### Node Selector.
 
+{% hint style="warning" %}
+Adding node selector configuration is available from version 2.23.0
+{% endhint %}
+
 If required you can specify the node selector configuration where the pod will be created using something like the following:
 
 ```yaml
@@ -127,6 +131,29 @@ The above will be the equivalent to use the Kubernetes YAML like:
     nodeType: spot
 ```
 
+### Using Environment Variables for Configuration
+
 {% hint style="warning" %}
-Adding node selector configuration is available from version 2.23.0
+This feature is supported from version 2.23.0 or 2.24.0
 {% endhint %}
+
+The following environment variables can be used to customize the ephemeral executor adding the following values inside the workspace settings:
+
+* EPHEMERAL\_CONFIG\_NODE\_SELECTOR\_TAGS
+  * Example: key1=value1;key2=value2
+  * [Reference](https://github.com/AzBuilder/terrakube/pull/1243)
+* EPHEMERAL\_CONFIG\_SERVICE\_ACCOUNT
+  * Example: myserviceaccount
+  * [Reference](https://github.com/AzBuilder/terrakube/pull/1243)
+* EPHEMERAL\_CONFIG\_ANNOTATIONS
+  * Example: key1=value1;key2=value2
+  * [Reference](https://github.com/AzBuilder/terrakube/pull/1243)
+* EPHEMERAL\_CONFIG\_TOLERATIONS
+  * Example: `key:operator:effect`
+  * [`Reference`](https://github.com/AzBuilder/terrakube/pull/1579)
+* EPHEMERAL\_CONFIG\_MAP\_NAME
+  * [Reference](https://github.com/AzBuilder/terrakube/pull/1505)
+* EPHEMERAL\_CONFIG\_MAP\_MOUNT\_PATH
+  * [Reference](https://github.com/AzBuilder/terrakube/pull/1505)
+
+More information can be found inside this [code](https://github.com/AzBuilder/terrakube/blob/main/api/src/main/java/org/terrakube/api/plugin/scheduler/job/tcl/executor/ephemeral/EphemeralExecutorService.java)
