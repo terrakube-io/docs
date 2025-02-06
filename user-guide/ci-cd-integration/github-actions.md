@@ -85,26 +85,27 @@ To define terrakube variables to connect to cloud providers it is recommended to
 
 ### GitHub Action Inputs
 
-| Variable                       | Usage                                                                                |
-| ------------------------------ | ------------------------------------------------------------------------------------ |
-| TERRAKUBE\_TOKEN (\*)          | Terrakube Personal Access Token                                                      |
-| TERRAKUBE\_TEMPLATE (\*)       | Terrakube template name                                                              |
-| TERRAKUBE\_ENDPOINT (\*)       | Terrakbue api endpoint                                                               |
-| TERRAKUBE\_ORGANIZATION (\*)   | Terrakbue organization                                                               |
-| TERRAKUBE\_BRANCH (\*)         | Github Branch when running a job                                                     |
-| TERRAKUBE\_SSH\_KEY\_NAME (\*) | ssh key name define in the terrakube organization to connect to private repositories |
-| GITHUB\_TOKEN (\*)             | Github Token                                                                         |
-| SHOW\_OUTPUT (\*)              | Show terrakube logs inside PR comments                                               |
+| Variable                     | Usage                                                                                |
+|------------------------------| ------------------------------------------------------------------------------------ |
+| TERRAKUBE\_TOKEN (\*)        | Terrakube Personal Access Token                                                      |
+| TERRAKUBE\_TEMPLATE (\*)     | Terrakube template name                                                              |
+| TERRAKUBE\_ENDPOINT (\*)     | Terrakbue api endpoint                                                               |
+| TERRAKUBE\_ORGANIZATION (\*) | Terrakbue organization                                                               |
+| TERRAKUBE\_BRANCH (\*)       | Github Branch when running a job                                                     |
+| TERRAKUBE\_SSH\_KEY\_NAME    | ssh key name define in the terrakube organization to connect to private repositories |
+| GITHUB\_TOKEN (\*)           | Github Token                                                                         |
+| SHOW\_OUTPUT (\*)            | Show terrakube logs inside PR comments                                               |
 
 _(\*) = required variable._
 
-### Terraform Version Configuration
+### Terraform Workspace Configuration
 
-Create a file called "terrakube.json" and include the terraform version that will be used for the job execution
+Create a file called "terrakube.json"; includes workspace name and the terraform version that will be used for the job execution.
 
 ```
 {
-	"terraform": "1.2.9"
+    "workspace": "workspaceA"
+    "terraform": "1.2.9"
 }
 ```
 
