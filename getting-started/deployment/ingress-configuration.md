@@ -1,4 +1,4 @@
-# ✈ Ingress Configuration
+# ✈️ Ingress Configuration
 
 The default ingress configuration for terrakube can be customize using a terrakube.yaml like the following:
 
@@ -16,7 +16,7 @@ ingress:
   ui:
     enabled: true
     domain: "terrakube-ui.minikube.net" ## CHANGE THIS DOMAIN
-    path: "/(.*)"
+    path: "/"
     pathType: "Prefix" 
     annotations:
       kubernetes.io/ingress.class: nginx
@@ -24,7 +24,7 @@ ingress:
   api:
     enabled: true
     domain: "terrakube-api.minikube.net" ## CHANGE THIS DOMAIN
-    path: "/(.*)"
+    path: "/"
     pathType: "Prefix"
     annotations:
       kubernetes.io/ingress.class: nginx
@@ -33,7 +33,7 @@ ingress:
   registry:
     enabled: true
     domain: "terrakube-reg.minikube.net" ## Change to your customer domain
-    path: "/(.*)"
+    path: "/"
     pathType: "Prefix"
     annotations:
       kubernetes.io/ingress.class: nginx
@@ -41,7 +41,7 @@ ingress:
       nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
   dex:
     enabled: true
-    path: "/dex/(.*)"
+    path: "/dex/"
     pathType: "Prefix"
     annotations:
       kubernetes.io/ingress.class: nginx
