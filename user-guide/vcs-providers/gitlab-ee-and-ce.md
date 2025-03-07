@@ -16,7 +16,7 @@ To use Terrakube’s VCS features with a self-hosted GitLab Enterprise Edition (
 If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.&#x20;
 {% endhint %}
 
-* Click the **Gitlab button** and then click the **GitLab Enterprise** option**.**
+* Click the **Gitlab button** and then click the **GitLab Enterprise** optio&#x6E;**.**
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
