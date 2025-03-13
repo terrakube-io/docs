@@ -276,6 +276,7 @@ dex:
       name: 'example-app'
       public: true
 
+
 ## Ingress properties
 ingress:
   useTls: true
@@ -286,6 +287,7 @@ ingress:
     path: "/"
     pathType: "Prefix"
     tlsSecretName: tls-secret-ui-terrakube
+    ingressClassName: "nginx"
     annotations:
       nginx.ingress.kubernetes.io/use-regex: "true"
   api:
@@ -294,26 +296,27 @@ ingress:
     path: "/"
     pathType: "Prefix"
     tlsSecretName: tls-secret-api-terrakube
+    ingressClassName: "nginx"
     annotations:
       nginx.ingress.kubernetes.io/use-regex: "true"
-      nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
+      nginx.ingress.kubernetes.io/proxy-set-headers: "terrakube/custom-headers"
   registry:
     enabled: true
     domain: "terrakube-reg.minikube.net"
     path: "/"
     pathType: "Prefix"
     tlsSecretName: tls-secret-reg-terrakube
+    ingressClassName: "nginx"
     annotations:
       nginx.ingress.kubernetes.io/use-regex: "true"
-      nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
+      nginx.ingress.kubernetes.io/proxy-set-headers: "terrakube/custom-headers"
   dex:
     enabled: true
     path: "/dex/"
     pathType: "Prefix"
     annotations:
       nginx.ingress.kubernetes.io/use-regex: "true"
-      nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
-
+      nginx.ingress.kubernetes.io/proxy-set-headers: "terrakube/custom-headers"
 ```
 
 ### Install Terrakube with local HTTPS support
