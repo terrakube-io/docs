@@ -24,7 +24,6 @@
   * [🛰️ Database Backend](getting-started/deployment/database-backend/README.md)
     * [SQL Azure](getting-started/deployment/database-backend/sql-azure.md)
     * [PostgreSQL](getting-started/deployment/database-backend/postgresql.md)
-    * [MySQL](getting-started/deployment/database-backend/mysql.md)
     * [H2](getting-started/deployment/database-backend/h2.md)
   * [🔐 Custom CA Certs](getting-started/deployment/custom-ca-certs.md)
   * [⚙️ Custom Terraform CLI Builds](getting-started/deployment/custom-terraform-cli-builds.md)
