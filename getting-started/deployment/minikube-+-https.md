@@ -119,7 +119,7 @@ minikube addons enable ingress
 
 ### Helm Values.
 
-We need to generate a file called **value.yaml** with the following using the content of our rootCa.pem from the previous step:
+We need to generate a file called **values.yaml** with the following using the content of our rootCa.pem from the previous step:
 
 ```
 security:
