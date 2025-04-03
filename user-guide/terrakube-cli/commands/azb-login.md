@@ -1,6 +1,6 @@
 # terrakube login
 
-Authenticate with a Terrakube Server
+Authenticate with a Terrakube Server using a Personal Access Token (PAT)
 
 #### Usage
 
@@ -11,19 +11,21 @@ terrakube login [flags]
 #### Flags
 
 ```bash
-  -c, --client-id string   Azure application Client id (required)
   -h, --help               help for login
-  -p, --path string        Terrakube Server path
-      --scheme string      Terrakube Server scheme: http or https (default "http")
-  -s, --server string      Terrakube Server url (required)
-  -t, --tenant-id string   Azure tenant Id (required)
+      --api-url string     Terrakube Server API URL (required)
+  -t, --pat string         Personal Access Token (PAT) for authentication (required)
 ```
 
 #### Examples
 
-Login to a local Terrakube Server
+Login to a local Terrakube Server with a PAT token
 
 ```
-terrakube login -s localhost:8080 -c 853b26d6-1849-4c00-8543-da5805b0e593 -t 0e6427af-ab9e-4af6-9f6f-bc098f470d75
+terrakube login --api-url http://localhost:8080 --pat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
+Login to a remote Terrakube Server with a PAT token
+
+```
+terrakube login --api-url https://terrakube.example.com --pat eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+``` 
