@@ -35,20 +35,9 @@ You can also pass this values using [`terrakube login`](commands/azb-login.md) h
 Open your terminal and execute the following commands in order to setup your terrakube environment and get authenticated. You can get the server, path, scheme, tenant id and client id values during the [Terrakube server deployment](../../getting-started/deployment/)
 
 ```
-export TERRAKUBE_SERVER="my-terrakube.com"
-export TERRAKUBE_PATH="terrakube"
-export TERRAKUBE_SCHEME="https"
-export TERRAKUBE_TENANT_ID="59a1b348-548d-4360-b2e2-9d2b849527a8"
-export TERRAKUBE_CLIENT_ID="7a307a36-e08b-4954-a9fb-03a67e082fc4"
-
+export TERRAKUBE_API_URL="http://localhost:8080"
+export TERRAKUBE_PAT="your-pat-token"
 terrakube login
-```
-
-You will receive a code, open the url in a web browser and provide your account details. See below code as reference
-
-```
-To sign in, use a web browser to open the page 
-https://microsoft.com/devicelogin and enter the code AAM4MVU96 to authenticate.
 ```
 
 ### Create your Organization
