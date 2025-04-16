@@ -337,15 +337,21 @@ Reference: https://github.com/AzBuilder/terrakube/issues/618#issuecomment-183898
 ```
 {% endhint %}
 
-### Using Terrakube&#x20;
+### Using Terrakube
 
-The environment has some users, groups and sample data so you can test it quickly.&#x20;
+The environment has some users, groups and sample data so you can test it quickly.
 
 Visit **https://terrakube-ui.minikube.net** and login using **admin@example.com** with password **admin**
 
 We should be able to use the UI using a valid certificate.
 
 <figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+
+### Mac Networking
+
+When using mac there is an additional step to access terrakube please check the following tool to access the app
+
+[https://github.com/chipmk/docker-mac-net-connect](https://github.com/chipmk/docker-mac-net-connect)
 
 ### Connect to Terrakube
 
