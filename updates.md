@@ -624,7 +624,7 @@ terraform login 8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io
 terraform init -migrate-state
 ```
 
-Check out our [documentation](https://docs.terrakube.org/user-guide/remote-state-migration) for further details about the process.
+Check out our [documentation](https://docs.terrakube.io/user-guide/remote-state-migration) for further details about the process.
 
 #### Improved Log streaming in the UI
 
@@ -654,7 +654,7 @@ You can now connect to a vcs provider in one step, instead of creating it first 
 
 #### Open Telemetry
 
-We added Open Telemetry to the api, registry and executor components for monitoring Terrakube. In future versions, we will also provide Grafana templates for custom metrics like jobs execution and workspaces usage. Check the [documentation](https://docs.terrakube.org/getting-started/deployment/open-telemetry) for further information.
+We added Open Telemetry to the api, registry and executor components for monitoring Terrakube. In future versions, we will also provide Grafana templates for custom metrics like jobs execution and workspaces usage. Check the [documentation](https://docs.terrakube.io/getting-started/deployment/open-telemetry) for further information.
 
 ![image](https://user-images.githubusercontent.com/4461895/223861732-82bf163b-f3c8-4463-af51-3953c7ae9f76.png)
 
@@ -680,7 +680,7 @@ flow:
     step: 200
 ```
 
-Check the [documentation](https://docs.terrakube.org/user-guide/organizations/templates/filter-gloval-variables-in-jobs) for more details.
+Check the [documentation](https://docs.terrakube.io/user-guide/organizations/templates/filter-gloval-variables-in-jobs) for more details.
 
 * And if you want to create a schedule for a template, you can do it easily now with `scheduleTemplates`.
 
@@ -705,15 +705,15 @@ flow:
         schedule: "0 0/10 * ? * * *"
 ```
 
-Check [here](https://docs.terrakube.org/user-guide/organizations/templates/template-scheduling-in-jobs) for more details.
+Check [here](https://docs.terrakube.io/user-guide/organizations/templates/template-scheduling-in-jobs) for more details.
 
 #### Restrict Terraform Versions or Provide your own Terraform build
 
-You can now use a custom Terraform CLI build or restrict the Terraform versions in your organization with terrakube. Check the [documentation](https://docs.terrakube.org/getting-started/deployment/custom-terraform-cli-builds) for more details.
+You can now use a custom Terraform CLI build or restrict the Terraform versions in your organization with terrakube. Check the [documentation](https://docs.terrakube.io/getting-started/deployment/custom-terraform-cli-builds) for more details.
 
 #### Terrakube Installation
 
-We improved the helm chart to make the installation easy and now you can quickly install Terrakube for a Sandbox Test environment in [Minikube](https://docs.terrakube.org/getting-started/deployment/minikube). If you prefer you can now try Terrakube using [Docker compose](https://docs.terrakube.org/getting-started/docker-compose)
+We improved the helm chart to make the installation easy and now you can quickly install Terrakube for a Sandbox Test environment in [Minikube](https://docs.terrakube.io/getting-started/deployment/minikube). If you prefer you can now try Terrakube using [Docker compose](https://docs.terrakube.io/getting-started/docker-compose)
 
 Thanks for the community contribution, specially thanks to @Diliz and @jstewart612 for their contributions in the Helm Chart. For the full changelog for this version please check https://github.com/AzBuilder/terrakube/releases/tag/2.12.0
 
@@ -727,13 +727,13 @@ Welcome to the 2.11.0 release of Terrakube. There are a couple of updates in thi
 
 #### Adding Global Variables to Organization Settings
 
-Global Variables allow you to define and apply variables one time across all workspaces within an organization. So you can set your cloud provider credentials and reuse it in all the workspaces inside the same organization. See more details in [our documentation](https://docs.terrakube.org/user-guide/organizations/global-variables)
+Global Variables allow you to define and apply variables one time across all workspaces within an organization. So you can set your cloud provider credentials and reuse it in all the workspaces inside the same organization. See more details in [our documentation](https://docs.terrakube.io/user-guide/organizations/global-variables)
 
 ![image](https://user-images.githubusercontent.com/27365102/221226933-ee19e11e-ed97-448f-8213-5c4848d5289b.png)
 
 #### Adding CLI and API Driven workflows to workspaces
 
-[CLI-driven](https://docs.terrakube.org/user-guide/workspaces/creating-workspaces#cli-driven-workflow) and [API-driven](https://docs.terrakube.org/user-guide/workspaces/creating-workspaces#cli-driven-workflow) workflows are available now. This mean you can create a workspace in the UI and then connect to the same using the Terraform cli or the Terrakube API. Or if you prefer you can go ahead and connect to your Terrakube organization locally from the Terraform cli. Check the [CLI-driven worflow documentation](https://docs.terrakube.org/user-guide/workspaces/cli-driven-workflow) for further details.
+[CLI-driven](https://docs.terrakube.io/user-guide/workspaces/creating-workspaces#cli-driven-workflow) and [API-driven](https://docs.terrakube.io/user-guide/workspaces/creating-workspaces#cli-driven-workflow) workflows are available now. This mean you can create a workspace in the UI and then connect to the same using the Terraform cli or the Terrakube API. Or if you prefer you can go ahead and connect to your Terrakube organization locally from the Terraform cli. Check the [CLI-driven worflow documentation](https://docs.terrakube.io/user-guide/workspaces/cli-driven-workflow) for further details.
 
 For CLI or API driven workspaces you will see the steps directly in the overview tab:
 
@@ -751,7 +751,7 @@ If you have an error in your template yaml syntax will be easy to identify it. Y
 
 #### Import scripts inside the templates
 
-If you have some scripts that you want to reuse, you can import it using the new `importCommand` this will improve the reuse of templates, so you can share some commons steps with the community in your github repos. See [Terrakube docs](https://docs.terrakube.org/user-guide/organizations/templates/import-templates) for more details in how to import scripts
+If you have some scripts that you want to reuse, you can import it using the new `importCommand` this will improve the reuse of templates, so you can share some commons steps with the community in your github repos. See [Terrakube docs](https://docs.terrakube.io/user-guide/organizations/templates/import-templates) for more details in how to import scripts
 
 ```yaml
 flow:

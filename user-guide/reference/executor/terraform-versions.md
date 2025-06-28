@@ -17,7 +17,7 @@ https://releases.hashicorp.com/terraform/index.json
 
 This can be changed using the environment variable CustomTerraformReleasesUrl
 
-For more information check [https://docs.terrakube.org/getting-started/deployment/custom-terraform-cli-builds](https://docs.terrakube.org/getting-started/deployment/custom-terraform-cli-builds)
+For more information check [https://docs.terrakube.io/getting-started/deployment/custom-terraform-cli-builds](https://docs.terrakube.io/getting-started/deployment/custom-terraform-cli-builds)
 {% endhint %}
 
 Terraform binary is extracted to:
