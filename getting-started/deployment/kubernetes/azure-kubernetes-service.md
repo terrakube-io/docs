@@ -17,9 +17,9 @@ If you are using Azure Kubernetes Service the following information can be usefu
 
 For this example we will have to update our DNS records adding the following domains and the public IP address of the nginx ingress controller in our kubernetes cluster:&#x20;
 
-* terrakube-registry.sandbox.terrakube.org
-* terrakube-ui.sandbox.terrakube.org
-* terrakube-api.sandbox.terrakube.org
+* terrakube-registry.sandbox.terrakube.io
+* terrakube-ui.sandbox.terrakube.io
+* terrakube-api.sandbox.terrakube.io
 
 ### Setup Azure Authentication
 
@@ -46,7 +46,7 @@ Create the application using:
 * Name:&#x20;
   * TerrakubeDex
 * Redirect URI:&#x20;
-  * https://terrakube-api.sandbox.terrakube.org/dex/callback (Web)
+  * https://terrakube-api.sandbox.terrakube.io/dex/callback (Web)
 
 <figure><img src="../../../.gitbook/assets/image (57) (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -83,11 +83,11 @@ security:
   adminGroup: "TERRAKUBE_ADMIN"
   dexClientId: "microsoft"
   dexClientScope: "email openid profile offline_access groups"
-  dexIssuerUri: "https://terrakube-api.sandbox.terrakube.org/dex"
+  dexIssuerUri: "https://terrakube-api.sandbox.terrakube.io/dex"
 
 dex:
   config:
-    issuer: https://terrakube-api.sandbox.terrakube.org/dex
+    issuer: https://terrakube-api.sandbox.terrakube.io/dex
     storage:
       type: memory
     oauth2:
@@ -99,7 +99,7 @@ dex:
     staticClients:
     - id: microsoft
       redirectURIs:
-      - 'https://terrakube-ui.sandbox.terrakube.org'
+      - 'https://terrakube-ui.sandbox.terrakube.io'
       - 'http://localhost:10001/login'
       - 'http://localhost:10000/login'
       - '/device/callback'
@@ -113,7 +113,7 @@ dex:
       config:
         clientID: "<<CLIENT ID VALUE>>"
         clientSecret: "<<CLIENT ID SECRET>>"
-        redirectURI: "https://terrakube-api.sandbox.terrakube.org/dex/callback"
+        redirectURI: "https://terrakube-api.sandbox.terrakube.io/dex/callback"
         tenant: "<<TENANT ID>>"
 
 ## Ingress properties
@@ -121,7 +121,7 @@ ingress:
   useTls: true
   ui:
     enabled: true
-    domain: "terrakube-ui.sandbox.terrakube.org"
+    domain: "terrakube-ui.sandbox.terrakube.io"
     path: "/(.*)"
     pathType: "Prefix" 
     annotations:
@@ -130,7 +130,7 @@ ingress:
       cert-manager.io/cluster-issuer: letsencrypt
   api:
     enabled: true
-    domain: "terrakube-api.sandbox.terrakube.org"
+    domain: "terrakube-api.sandbox.terrakube.io"
     path: "/(.*)"
     pathType: "Prefix"
     annotations:
@@ -140,7 +140,7 @@ ingress:
       cert-manager.io/cluster-issuer: letsencrypt
   registry:
     enabled: true
-    domain: "terrakube-reg.sandbox.terrakube.org"
+    domain: "terrakube-reg.sandbox.terrakube.io"
     path: "/(.*)"
     pathType: "Prefix"
     annotations:
@@ -174,7 +174,7 @@ helm install terrakube terrakube-repo/terrakube --values terrakube.yaml -n terra
 
 If the setup was correct we should be able to login using&#x20;
 
-https://terrakube-ui.sandbox.terrakube.org
+https://terrakube-ui.sandbox.terrakube.io
 
 <figure><img src="../../../.gitbook/assets/image (1) (2) (3).png" alt=""><figcaption></figcaption></figure>
 
