@@ -1,4 +1,4 @@
-# 📥 Deployment
+# Deployment
 
 The easiest way to deploy Terrakube is using our Helm Chart, to learn more about this please review the following:
 

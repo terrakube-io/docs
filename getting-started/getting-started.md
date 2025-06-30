@@ -1,4 +1,4 @@
-# ⭐ Getting Started
+# Getting Started
 
 To quickly run terrakube in your test environment please check the following:
 

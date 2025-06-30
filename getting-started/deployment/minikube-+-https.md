@@ -1,4 +1,4 @@
-# 🔑 Minikube + HTTPS
+# Minikube + HTTPS
 
 Terrakube can be installed in **minikube** as a sandbox environment with **HTTPS**, using terrakube with **HTTPS** will allow to use the Terraform registry and the Terraform remote state backend to be used locally without any issue.
 

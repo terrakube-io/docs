@@ -1,4 +1,4 @@
-# 🔨 Helm Chart
+# Helm Chart
 
 You can deploy Terrakube to any Kubernetes cluster using the helm chart available in the following repository:
 

@@ -1,4 +1,4 @@
-# 🚦 Open Telemetry
+# Open Telemetry
 
 Terrakube components support [Open Telemetry](https://opentelemetry.io/) by default to enable effective observability.
 
@@ -42,7 +42,7 @@ The [Jaeger](https://www.jaegertracing.io/docs/1.21/apis/#protobuf-via-grpc-stab
 
 #### Zipkin exporter
 
-The [Zipkin](https://zipkin.io/zipkin-api/) exporter. It sends JSON in [Zipkin format](https://zipkin.io/zipkin-api/#/default/post\_spans) to a specified HTTP URL.
+The [Zipkin](https://zipkin.io/zipkin-api/) exporter. It sends JSON in [Zipkin format](https://zipkin.io/zipkin-api/#/default/post_spans) to a specified HTTP URL.
 
 | System property               | Environment variable             | Description                                                                                                           |
 | ----------------------------- | -------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ The [Zipkin](https://zipkin.io/zipkin-api/) exporter. It sends JSON in [Zipkin f
 
 #### Prometheus exporter
 
-The [Prometheus](https://github.com/prometheus/docs/blob/master/content/docs/instrumenting/exposition\_formats.md) exporter.
+The [Prometheus](https://github.com/prometheus/docs/blob/master/content/docs/instrumenting/exposition_formats.md) exporter.
 
 | System property                  | Environment variable               | Description                                                                        |
 | -------------------------------- | ---------------------------------- | ---------------------------------------------------------------------------------- |

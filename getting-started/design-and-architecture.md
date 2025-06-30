@@ -1,4 +1,4 @@
-# 📐 Architecture
+# Architecture
 
 This is the high level architecture of the platform
 

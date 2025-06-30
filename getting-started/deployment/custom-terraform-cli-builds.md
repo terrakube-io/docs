@@ -1,4 +1,4 @@
-# ⚙ Custom Terraform CLI Builds
+# Custom Terraform CLI Builds
 
 Terrakube will support terraform cli custom builds or custom cli mirrors, the only requirement is to expose an endpoint with the following structure:
 

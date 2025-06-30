@@ -1,4 +1,4 @@
-# 🕑 Ephemeral Agents
+# Ephemeral Agents
 
 {% hint style="warning" %}
 This feature is supported from version 2.22.0

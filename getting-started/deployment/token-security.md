@@ -1,4 +1,4 @@
-# 🛡 Token Security
+# Token Security
 
 Terrakube use two secrets internally to sign the personal access token and one internal token for intercomponent comunnication when using the helm deployment you can change this values using the following keys:
 

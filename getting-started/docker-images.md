@@ -2,7 +2,7 @@
 description: 'Images for Terrakube components can be found in the following links:'
 ---
 
-# 💿 Docker Images
+# Docker Images
 
 | Component          | Link                                                                                                           |
 | ------------------ | -------------------------------------------------------------------------------------------------------------- |

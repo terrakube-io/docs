@@ -1,4 +1,4 @@
-# 🤵 User Management
+# User Management
 
 You can handle Terrakube users with differen authentication providers like the following
 

@@ -1,4 +1,4 @@
-# 🔐 Custom CA Certs
+# Custom CA Certs
 
 ### Adding certificates at runtime
 
@@ -109,7 +109,7 @@ Picked up JAVA_TOOL_OPTIONS: -Djava.security.properties=/layers/paketo-buildpack
 
 Additinal information about buildpacks can be found in this link:
 
-* [https://blog.dahanne.net/2021/02/06/customizing-cloud-native-buildpacks-practical-examples/#Add\_certificates\_binding\_at\_runtime:\~:text=ca%2Dcertificates-,Add%20certificates%20binding%20at%20runtime,-If%20your%20image](https://blog.dahanne.net/2021/02/06/customizing-cloud-native-buildpacks-practical-examples/#Add\_certificates\_binding\_at\_runtime)
+* [https://blog.dahanne.net/2021/02/06/customizing-cloud-native-buildpacks-practical-examples/#Add\_certificates\_binding\_at\_runtime:\~:text=ca%2Dcertificates-,Add%20certificates%20binding%20at%20runtime,-If%20your%20image](https://blog.dahanne.net/2021/02/06/customizing-cloud-native-buildpacks-practical-examples/#Add_certificates_binding_at_runtime)
 * [https://github.com/paketo-buildpacks/ca-certificates](https://github.com/paketo-buildpacks/ca-certificates)
 * [https://github.com/paketo-buildpacks/spring-boot](https://github.com/paketo-buildpacks/spring-boot)
 

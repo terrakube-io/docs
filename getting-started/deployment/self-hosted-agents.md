@@ -1,4 +1,4 @@
-# 👮 Self-Hosted Agents
+# Self-Hosted Agents
 
 {% hint style="info" %}
 This feature is supported from version 2.20.0 and helm chart version 3.16.0

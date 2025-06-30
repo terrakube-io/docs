@@ -1,4 +1,4 @@
-# 📶 Proxy Configuration
+# Proxy Configuration
 
 When Terrrakube needs to run behind a corporate proxy the following environment variable can be used in each container:
 

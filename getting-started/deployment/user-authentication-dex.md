@@ -1,6 +1,6 @@
-# 🔐 User Authentication (DEX)
+# User Authentication (DEX)
 
-To authenticate users Terrakube implement [DEX](https://dexidp.io/) so you can authenticate using differente providers  using [dex connectors](https://dexidp.io/docs/connectors/) like the following:
+To authenticate users Terrakube implement [DEX](https://dexidp.io/) so you can authenticate using differente providers using [dex connectors](https://dexidp.io/docs/connectors/) like the following:
 
 * Azure Active Direcory
 * Google Cloud Identity
@@ -112,4 +112,3 @@ dex:
 {% hint style="success" %}
 Dex configuration examples can be found [here](https://dexidp.io/docs/connectors/).
 {% endhint %}
-

@@ -5,43 +5,43 @@
 
 ## Getting started
 
-* [📐 Architecture](getting-started/design-and-architecture.md)
-* [🔐 Security](getting-started/security.md)
-* [⭐ Getting Started](getting-started/getting-started.md)
-* [💿 Docker Images](getting-started/docker-images.md)
-* [🌐 Docker Compose](getting-started/docker-compose.md)
-* [📥 Deployment](getting-started/deployment/README.md)
-  * [🔨 Helm Chart](getting-started/deployment/docker-compose.md)
-  * [🚀 Minikube](getting-started/deployment/minikube.md)
-  * [🔑 Minikube + HTTPS](getting-started/deployment/minikube-+-https.md)
-  * [✈️ Ingress Configuration](getting-started/deployment/ingress-configuration.md)
-  * [🔐 User Authentication (DEX)](getting-started/deployment/user-authentication-dex.md)
-  * [💾 Storage backend](getting-started/deployment/storage-backend/README.md)
+* [Architecture](getting-started/design-and-architecture.md)
+* [Security](getting-started/security.md)
+* [Getting Started](getting-started/getting-started.md)
+* [Docker Images](getting-started/docker-images.md)
+* [Docker Compose](getting-started/docker-compose.md)
+* [Deployment](getting-started/deployment/README.md)
+  * [Helm Chart](getting-started/deployment/docker-compose.md)
+  * [Minikube](getting-started/deployment/minikube.md)
+  * [Minikube + HTTPS](getting-started/deployment/minikube-+-https.md)
+  * [Ingress Configuration](getting-started/deployment/ingress-configuration.md)
+  * [User Authentication (DEX)](getting-started/deployment/user-authentication-dex.md)
+  * [Storage backend](getting-started/deployment/storage-backend/README.md)
     * [Azure Storage Account](getting-started/deployment/storage-backend/azure-storage-account.md)
     * [Amazon Cloud Storage](getting-started/deployment/storage-backend/amazon-cloud-storage.md)
     * [Google Cloud Storage](getting-started/deployment/storage-backend/google-cloud-storage.md)
     * [Minio (S3 compatible)](getting-started/deployment/storage-backend/minio-s3-compatible.md)
-  * [🛰️ Database Backend](getting-started/deployment/database-backend/README.md)
+  * [Database Backend](getting-started/deployment/database-backend/README.md)
     * [SQL Azure](getting-started/deployment/database-backend/sql-azure.md)
     * [PostgreSQL](getting-started/deployment/database-backend/postgresql.md)
     * [H2](getting-started/deployment/database-backend/h2.md)
-  * [🔐 Custom CA Certs](getting-started/deployment/custom-ca-certs.md)
-  * [⚙️ Custom Terraform CLI Builds](getting-started/deployment/custom-terraform-cli-builds.md)
-  * [👮 Self-Hosted Agents](getting-started/deployment/self-hosted-agents.md)
-  * [🕑 Ephemeral Agents](getting-started/deployment/ephemeral-agents.md)
-  * [📶 Proxy Configuration](getting-started/deployment/proxy-configuration.md)
-  * [🛡️ Token Security](getting-started/deployment/token-security.md)
-  * [🚦 Open Telemetry](getting-started/deployment/open-telemetry.md)
-* [🏗️ Development](getting-started/development/README.md)
-  * [🚀 Gitpod](getting-started/development/getting-started.md)
-* [🤵 User Management](getting-started/user-management/README.md)
+  * [Custom CA Certs](getting-started/deployment/custom-ca-certs.md)
+  * [Custom Terraform CLI Builds](getting-started/deployment/custom-terraform-cli-builds.md)
+  * [Self-Hosted Agents](getting-started/deployment/self-hosted-agents.md)
+  * [Ephemeral Agents](getting-started/deployment/ephemeral-agents.md)
+  * [Proxy Configuration](getting-started/deployment/proxy-configuration.md)
+  * [Token Security](getting-started/deployment/token-security.md)
+  * [Open Telemetry](getting-started/deployment/open-telemetry.md)
+* [Development](getting-started/development/README.md)
+  * [Gitpod](getting-started/development/getting-started.md)
+* [User Management](getting-started/user-management/README.md)
   * [Azure Active Directory](getting-started/user-management/azure-active-directory.md)
   * [Google Cloud Identity](getting-started/user-management/google-cloud-identity.md)
   * [Amazon Cognito](getting-started/user-management/amazon-cognito.md)
   * [Github](getting-started/user-management/docker-desktop.md)
   * [Keycloak](getting-started/user-management/keycloak.md)
 
-## 📓 User Guide
+## User Guide
 
 * [Organizations](user-guide/organizations/README.md)
   * [Creating an Organization](user-guide/organizations/organizations.md)
@@ -145,7 +145,7 @@
     * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
 * [Migrating to Terrakube](user-guide/migrating-to-terrakube.md)
 
-## 🎓 Learn
+## Learn
 
 * [What is Terrakube](learn/what-is-terrakube/README.md)
   * [Section Overview](learn/what-is-terrakube/section-overview.md)
@@ -155,10 +155,10 @@
   * [Summary and Up Next](learn/what-is-terrakube/summary-and-up-next.md)
 * [Deploying using Terrakube](learn/deploying-using-terrakube.md)
 
-## 📖 API
+## API
 
-* [🌟 Getting started](api/getting-started.md)
-* [⚙️ Methods](api/methods/README.md)
+* [Getting started](api/getting-started.md)
+* [Methods](api/methods/README.md)
   * [Globalvar](api/methods/globalvar.md)
   * [Organization](api/methods/organization.md)
   * [Teams](api/methods/teams.md)

@@ -1,2 +1,2 @@
-# 💾 Storage backend
+# Storage backend
 

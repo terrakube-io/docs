@@ -1,6 +1,6 @@
-# 🌟 Getting started
+# Getting started
 
-You can have a complete development environment to test the API  with one click with Gitpod using the following button.
+You can have a complete development environment to test the API with one click with Gitpod using the following button.
 
 [![Gitpod ready-to-code](https://camo.githubusercontent.com/791bd446c60d39e9a296e8d02837c81fe0af6108f02a04afbc93edda0cb93ad6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f476974706f642d72656164792d2d746f2d2d636f64652d626c75653f6c6f676f3d676974706f64267374796c653d666c61742d737175617265)](https://gitpod.io/#https://github.com/AzBuilder/terrakube)
 
@@ -22,13 +22,13 @@ Now you can select the "Thunder Client" and open the "Getting Started" collectio
 
 ### Authentication
 
-The first step will be to get the authorization token for the Terrakube API.&#x20;
+The first step will be to get the authorization token for the Terrakube API.
 
 Execute the request "Get Device Code" and open the URL in field "verification\_uri\_complete" inside the response to get the authentication token
 
 <figure><img src="../.gitbook/assets/image (200).png" alt=""><figcaption></figcaption></figure>
 
-When you open the "verification\__uri\__complete" field you should see a similar page.
+When you open the "verification\_\_uri\_\_complete" field you should see a similar page.
 
 <figure><img src="../.gitbook/assets/image (172).png" alt=""><figcaption></figcaption></figure>
 

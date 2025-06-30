@@ -1,4 +1,4 @@
-# 🚀 Minikube
+# Minikube
 
 {% hint style="warning" %}
 This following will install Terrakube using "HTTP" a few features like the Terraform registry and the Terraform remote state won't be available because they require "HTTPS", to install with HTTPS support locally with minikube check [this](minikube-+-https.md)

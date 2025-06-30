@@ -1,4 +1,4 @@
-# 🏗️ Development
+# Development
 
 To quickly develop Terrakube you can use the following guides:
 

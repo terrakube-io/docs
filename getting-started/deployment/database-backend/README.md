@@ -1,3 +1,3 @@
-# 🛰 Database Backend
+# Database Backend
 
 WIP

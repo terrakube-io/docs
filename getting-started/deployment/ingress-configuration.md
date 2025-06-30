@@ -1,4 +1,4 @@
-# ✈️ Ingress Configuration
+# Ingress Configuration
 
 The default ingress configuration for terrakube can be customize using a terrakube.yaml like the following:
 
