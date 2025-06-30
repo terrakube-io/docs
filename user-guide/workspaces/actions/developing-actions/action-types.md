@@ -6,7 +6,7 @@ Action Types define where an action will appear in Terrakube. Here is the list o
 
 The action will appear on the Workspace page, next to the Lock button. Actions are not limited to buttons, but this section is particularly suitable for adding various kinds of buttons. Use this type for actions that involves interaction with the Workspace
 
-<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Workspace/ResourceDrawer/Action
 

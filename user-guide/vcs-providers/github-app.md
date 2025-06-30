@@ -16,11 +16,11 @@ Navigate to the desired organization and click the **Settings** button, then on 
 
 Select the option for Github App
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the next page click [https://github.com/settings/apps/new](https://github.com/settings/apps/new) to create a new application adding the required information
 
-<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Complete the information like the following:
 
