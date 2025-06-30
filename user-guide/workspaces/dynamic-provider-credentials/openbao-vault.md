@@ -4,7 +4,7 @@
 
 The dynamic provider credential setup in OpenBao/Vault  can be found inside the following link:
 
-[https://github.com/AzBuilder/terrakube/tree/main/dynamic-credential-setup/vault](https://github.com/AzBuilder/terrakube/tree/main/vault)
+[https://github.com/AzBuilder/terrakube/tree/main/dynamic-credential-setup/openbao-vault](https://github.com/AzBuilder/terrakube/tree/main/dynamic-credential-setup/openbao-vault)
 
 {% hint style="warning" %}
 The code will also create a sample workspace with all the require environment variables that can be used to test the functionality using the CLI driven workflow.
