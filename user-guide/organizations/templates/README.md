@@ -90,10 +90,10 @@ The previous example is using [Terratag](https://www.terratag.io/) to add the en
 Using templates you can define all the business logic you need to execute in your workspace, basically you can integrate terrakube with any external tool. For example you can use [Infracost](https://www.infracost.io/) to calculate the cost of the resources to be created in your workspace or verify some policies using [Open Policy Agent](https://www.openpolicyagent.org/).
 
 {% hint style="warning" %}
-Terrakube extensions can be stored inside a GIT repository that you can configure when staring the platform. This is an example repository that you can fork or customiza to create your custom extensions [https://github.com/terrakube-io/terrakube-extensions](https://github.com/terrakube-io/terrakube-extensions)
+Terrakube extensions can be stored inside a GIT repository that you can configure when staring the platform. This is an example repository that you can fork or customiza to create your custom extensions [https://github.com/AzBuilder/terrakube-extensions](https://github.com/AzBuilder/terrakube-extensions)
 {% endhint %}
 
-There are some tools that are very common, and you don't want repeat the same code everytime or maybe other engineer already created the code and the logic to integrate with a specific tool. For these cases, inside the template is possible to reuse some logic using [Terrakube extensions](https://github.com/terrakube-io/terrakube-extensions). Basically if someone else developed an integration with an external third party service, you don't need to implement it again, you can use the extension. Let's see how the template looks like using the [Terratag extension](https://github.com/terrakube-io/terrakube-extensions/tree/main/groovy/TerraTag):
+There are some tools that are very common, and you don't want repeat the same code everytime or maybe other engineer already created the code and the logic to integrate with a specific tool. For these cases, inside the template is possible to reuse some logic using [Terrakube extensions](https://github.com/AzBuilder/terrakube-extensions). Basically if someone else developed an integration with an external third party service, you don't need to implement it again, you can use the extension. Let's see how the template looks like using the [Terratag extension](https://github.com/AzBuilder/terrakube-extensions/tree/main/groovy/TerraTag):
 
 ```
 flow:
@@ -118,7 +118,7 @@ If you notice the above script is more compact as is reusing some logic. If you 
 Using Templates you can even customize the UI for each job, see [UI templates](ui-templates.md) for more details.
 
 {% hint style="info" %}
-To see the complete list for terrakube extensions see the [github repo](https://github.com/terrakube-io/terrakube-extensions). This repo is always growing so its possible the tool you need is already there. In this repo you can also see more templates examples for things like approvals, variable injection and so on.
+To see the complete list for terrakube extensions see the [github repo](https://github.com/AzBuilder/terrakube-extensions). This repo is always growing so its possible the tool you need is already there. In this repo you can also see more templates examples for things like approvals, variable injection and so on.
 {% endhint %}
 
 ### Persistent Context

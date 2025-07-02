@@ -38,7 +38,7 @@ Terrakube provides several [built-in actions](built-in-actions/) that you can st
 
 ### Developing Actions
 
-If you are interested in creating your own actions, you only need knowledge of JavaScript and React, as an action is essentially a React component. For more details please check our [quick start guide](developing-actions/quick-start.md), or visit our [GitHub Terrakube Actions repository](https://github.com/terrakube-io/terrakube-actions) to see some examples, contribute new actions or suggest improvements.
+If you are interested in creating your own actions, you only need knowledge of JavaScript and React, as an action is essentially a React component. For more details please check our [quick start guide](developing-actions/quick-start.md), or visit our [GitHub Terrakube Actions repository](https://github.com/AzBuilder/terrakube-actions) to see some examples, contribute new actions or suggest improvements.
 
 ### Creating an Action
 

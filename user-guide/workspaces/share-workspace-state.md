@@ -7,7 +7,7 @@ data "terraform_remote_state" "remote_creation_time" {
   backend = "remote"
   config = {
     organization = "simple"
-    hostname = "8080-terrakube-io-terrakube-vg8s9w8fhaj.ws-us102.gitpod.io"
+    hostname = "8080-azbuilder-terrakube-vg8s9w8fhaj.ws-us102.gitpod.io"
     workspaces = {
       name = "simple_tag1"
     }
@@ -22,7 +22,7 @@ data "terraform_remote_state" "remote_creation_time" {
   backend = "remote"
   config = {
     organization = "simple"
-    hostname = "8080-terrakube-io-terrakube-vg8s9w8fhaj.ws-us102.gitpod.io"
+    hostname = "8080-azbuilder-terrakube-vg8s9w8fhaj.ws-us102.gitpod.io"
     workspaces = {
       name = "simple_tag1"
     }

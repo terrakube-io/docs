@@ -118,7 +118,7 @@ Additinal information about buildpacks can be found in this link:
 Terrakube allow to add the certs when building the application, to use this option use the following:
 
 ```
-git clone https://github.com/terrakube-io/terrakube
+git clone https://github.com/AzBuilder/terrakube
 cd terrakube
 git checkout <<TERRAKUBE-VERSION>>
 mv EXAMPLE.pem bindings/ca-certificates

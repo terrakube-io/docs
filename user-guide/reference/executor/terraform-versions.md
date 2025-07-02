@@ -2,7 +2,7 @@
 
 Terrakube is using the following java library to handle all the different terraform versions:
 
-[https://github.com/terrakube-io/terraform-spring-boot](https://github.com/terrakube-io/terraform-spring-boot)
+[https://github.com/AzBuilder/terraform-spring-boot](https://github.com/AzBuilder/terraform-spring-boot)
 
 This library can download different terraform versions and it is used to execute all the terraform commands, each terraform command is executed a new process instance at the OS level
 

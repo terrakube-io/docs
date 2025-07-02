@@ -25,7 +25,7 @@ Once SSH keys are added inside your organization you can use them like the follo
 <figure><img src="../../.gitbook/assets/image (225).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-When using SSH keys make sure to use your repository URL using the ssh format. For github it is something like [_**git@github.com**_](mailto:git@github.com)_**:terrakube-io/terrakube-docker-compose.git**_
+When using SSH keys make sure to use your repository URL using the ssh format. For github it is something like [_**git@github.com**_](mailto:git@github.com)_**:AzBuilder/terrakube-docker-compose.git**_
 {% endhint %}
 
 ### SSH Key Injection

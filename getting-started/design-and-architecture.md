@@ -39,5 +39,5 @@ Component descriptions:
   * React based frontend to handle all Terrakube Operations.
 
 {% hint style="info" %}
-Terrakube can installed in any kuberentes cluster using any cloud provider. We provide a Helm Chart that can be found in the following [link](https://github.com/terrakube-io/terrakube-helm-chart).
+Terrakube can installed in any kuberentes cluster using any cloud provider. We provide a Helm Chart that can be found in the following [link](https://github.com/AzBuilder/terrakube-helm-chart).
 {% endhint %}

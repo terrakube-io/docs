@@ -88,7 +88,7 @@ dex:
 The firt step is to clone the repository.
 
 ```
-git clone https://github.com/terrakube-io/terrakube-helm-chart.git
+git clone https://github.com/AzBuilder/terrakube-helm-chart.git
 ```
 
 Replace _<\<CHANGE\_THIS>>_ with the real values, create the values.yaml file and run the helm install
@@ -169,7 +169,7 @@ executor:
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
-    toolsRepository: "https://github.com/terrakube-io/terrakube-extensions"
+    toolsRepository: "https://github.com/AzBuilder/terrakube-extensions"
     toolsBranch: "main"
 
 ## Registry properties
@@ -235,5 +235,5 @@ helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n
 ```
 
 {% hint style="warning" %}
-For any question or feedback please open an issue in our [helm chart repository](https://github.com/terrakube-io/terrakube-helm-chart)
+For any question or feedback please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)
 {% endhint %}

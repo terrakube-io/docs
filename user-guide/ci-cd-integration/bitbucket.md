@@ -8,7 +8,7 @@ Add the following snippet to the script section of your `bitbucket-pipelines.yml
 
 ```
 script:
-  - pipe: terrakube-io/terrakube-pipe:1.0.0
+  - pipe: azbuilder/terrakube-pipe:1.0.0
     variables:
       LOGIN_ENDPOINT: "<string>" #optional Default: https://login.microsoftonline.com
       TERRAKUBE_TENANT_ID: "<string>"
@@ -44,7 +44,7 @@ Basic example:
 
 ```
 script:
-  - pipe: docker://terrakube-io/terrakube-pipe:1.0.0
+  - pipe: docker://azbuilder/terrakube-pipe:1.0.0
     variables:
       TERRAKUBE_TENANT_ID: "36857254-c824-409f-96f5-d3f2de37b016"
       TERRAKUBE_APPLICATION_ID: "36857254-c824-409f-96f5-d3f2de37b016"
@@ -59,7 +59,7 @@ Advanced example:
 
 ```
 script:
-  - pipe: docker://terrakube-io/terrakube-pipe:1.0.0
+  - pipe: docker://azbuilder/terrakube-pipe:1.0.0
     variables:
       LOGIN_ENDPOINT: "https://login.microsoftonline.com"
       TERRAKUBE_TENANT_ID: "36857254-c824-409f-96f5-d3f2de37b016"
@@ -73,4 +73,4 @@ script:
       DEBUG: "true"
 ```
 
-For more information about this pipe please refer to the following [repository](https://github.com/terrakube-io/terrakube-pipe-bitbucket).
+For more information about this pipe please refer to the following [repository](https://github.com/AzBuilder/terrakube-pipe-bitbucket).
