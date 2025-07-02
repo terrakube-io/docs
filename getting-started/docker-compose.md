@@ -60,7 +60,7 @@ After 1 or 2 minutes Terrakube will be available in the following URL once all t
   * Username: [admin@example.com](mailto:admin@example.com)
   * Password: admin
 
-<figure><img src="../.gitbook/assets/image (404).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (481).png" alt=""><figcaption></figcaption></figure>
 
 Special thanks to [SolomonHD](https://gist.github.com/SolomonHD) who has created the [Traefik](https://doc.traefik.io/traefik/) setup example to use Terrakube
 

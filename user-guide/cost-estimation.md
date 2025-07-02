@@ -112,7 +112,7 @@ flow:
 
 You can use the Terrakube UI to setup the new template and use it across the Terrakube organization.
 
-<figure><img src="../.gitbook/assets/image (317).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (394).png" alt=""><figcaption></figcaption></figure>
 
 ### Terraform resources
 
@@ -155,11 +155,11 @@ This will deploy an Azure Service Plan which cost 73 USD every month
 
 Lets create a workspace with this information in Terrakube to test the template and run the deployment.
 
-<figure><img src="../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (156).png" alt=""><figcaption></figcaption></figure>
 
 You will have to define the correct credentials to deploy the resource and setup the environment variables and include the infracost key.
 
-<figure><img src="../.gitbook/assets/image (337).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (414).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 Azure Credentials and Infracost key can be define using Global Variables inside the organization so you dont have to define it in every workspace. For more information check [Global Variables](../api/methods/globalvar.md)
@@ -167,15 +167,15 @@ Azure Credentials and Infracost key can be define using Global Variables inside 
 
 Now we can start the Terrakube job using the template which include the cost validation.
 
-<figure><img src="../.gitbook/assets/image (338).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (415).png" alt=""><figcaption></figcaption></figure>
 
 After a couple of seconds you should be able to see the monthly the terraform plan information and the cost validation.
 
-<figure><img src="../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (166).png" alt=""><figcaption></figcaption></figure>
 
 You can also visit the infracost dashboard to see the cost detail.
 
-<figure><img src="../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (141).png" alt=""><figcaption></figcaption></figure>
 
 Now lets update the terraform resource and use a more expensive one.
 
@@ -216,6 +216,6 @@ This will deploy an Azure Service Plan which cost 146 USD every month
 
 Now you can run the workspace again and the deployment will fail because it does not comply with the max cost of 100 USD every month, that you defined in the Terrakube template.
 
-<figure><img src="../.gitbook/assets/image (175).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (252).png" alt=""><figcaption></figcaption></figure>
 
 This is how you can integrate Terrakube with infracost to validate the cost of the resources that you will be deploying and even adding some custom business rules inside the jobs.

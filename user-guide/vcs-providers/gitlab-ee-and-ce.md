@@ -10,7 +10,7 @@ To use Terrakube’s VCS features with a self-hosted GitLab Enterprise Edition (
 
 * Got to the organization settings you want to configure.  Select the **VCS Providers** on the left menu and click the **Add VCS provider** button on the top right corner.
 
-<figure><img src="../../.gitbook/assets/image (359).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (436).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.&#x20;
@@ -18,13 +18,13 @@ If you prefer, you can add a new VCS Provider directly from the [Create workspac
 
 * Click the **Gitlab button** and then click the **GitLab Enterprise** optio&#x6E;**.**
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
 
 * On the next screen, enter the following information about your GitLab instance:
 
 <table><thead><tr><th width="302">Field</th><th>Value</th></tr></thead><tbody><tr><td>HTTP URL</td><td>https://&#x3C;GITLAB INSTANCE HOSTNAME></td></tr><tr><td>API URL</td><td>https://&#x3C;GITLAB INSTANCE HOSTNAME>/api/v4</td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
 
 * Use a different browser tab to access your GitLab instance and sign in with the account that you want Terrakube to use. You should use a service user account for your organization, but you can also use a personal account.
 
@@ -45,24 +45,24 @@ If you have GitLab CE or EE 10.6 or higher, you might also need to turn on Allow
 You can complete the fields using the information suggested by terrakube in the VCS provider screen
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
 
 * On the next screen, copy the **Application ID** and **Secret**
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
 
 * Go back to Terrakube to enter the information you copied from the previous step. Then, click the **Connect and Continue** button.
 
-<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (180).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to GitLab. Click the **Authorize** button to complete the connection.
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
 
 Finally, if the connection was established successfully, you will be redirected to the VCS provider’s page in your organization. You should see the connection status with the date and the user that created the connection.
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
 
 And now, you will be able to use the connection in your workspaces and modules:
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>

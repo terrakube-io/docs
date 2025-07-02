@@ -68,6 +68,6 @@ resource "aws_s3_bucket" "example" {
 }
 ```
 
-<figure><img src="../../../.gitbook/assets/image (392).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (469).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (391).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (468).png" alt=""><figcaption></figcaption></figure>

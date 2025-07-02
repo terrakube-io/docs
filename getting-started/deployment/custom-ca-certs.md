@@ -129,4 +129,4 @@ mv EXAMPLE.pem bindings/ca-certificates
 
 The certs will be added at runtime as the following image.
 
-<figure><img src="../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (112).png" alt=""><figcaption></figcaption></figure>

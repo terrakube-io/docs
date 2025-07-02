@@ -18,6 +18,6 @@ You can handle Terrakube users with differen authentication providers like the f
 [docker-desktop.md](docker-desktop.md)
 {% endcontent-ref %}
 
-{% content-ref url="keycloak.md" %}
-[keycloak.md](keycloak.md)
+{% content-ref url="https://github.com/AzBuilder/docs/blob/main/getting-started/user-management/keycloak.md" %}
+[https://github.com/AzBuilder/docs/blob/main/getting-started/user-management/keycloak.md](https://github.com/AzBuilder/docs/blob/main/getting-started/user-management/keycloak.md)
 {% endcontent-ref %}

@@ -32,7 +32,7 @@ Contains the settings that you configured in the display criteria.
 
 * **context.settings.Repository:** the value of repository that you set for the setting. Example:
 
-<figure><img src="../../../../.gitbook/assets/image (398).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (475).png" alt=""><figcaption></figcaption></figure>
 
 #### Available for action types
 

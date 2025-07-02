@@ -8,7 +8,7 @@ You can manage tags for the organization in the Settings panel. This section let
 
 Once you are in the desired organization, click the **Settings** button, then in the left menu select the **Tags** option and click the **Add global variable** button
 
-<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (164).png" alt=""><figcaption></figcaption></figure>
 
 In the popup, provide the required values. Use the below table as reference:
 
@@ -18,11 +18,11 @@ In the popup, provide the required values. Use the below table as reference:
 
 Finally click the **Save tag** button and the variable will be created
 
-<figure><img src="../../.gitbook/assets/image (117).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (194).png" alt=""><figcaption></figcaption></figure>
 
 You will see the new tag in the list. And now you can use the tag in the workspaces within the organization
 
-<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (163).png" alt=""><figcaption></figcaption></figure>
 
 ### Edit a Tag
 
@@ -38,4 +38,4 @@ Change the fields you need and click the **Save tag** button
 
 Click the **Delete** button next to the tag you want to delete, and then click the Yes button to confirm the deletion. Please take in consideration the deletion is irreversible and the tag will be removed from all the workspaces using it.
 
-<figure><img src="../../.gitbook/assets/image (115).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (192).png" alt=""><figcaption></figcaption></figure>

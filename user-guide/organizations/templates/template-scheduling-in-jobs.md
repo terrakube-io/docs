@@ -52,7 +52,7 @@ Once the workspace is executed creating the infrasctructure two automatic shedul
 
 Differente jobs will be executed.
 
-<figure><img src="../../../.gitbook/assets/image (108).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (185).png" alt=""><figcaption></figcaption></figure>
 
 ### Resize Template (schedule1)
 

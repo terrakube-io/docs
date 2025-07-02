@@ -24,8 +24,8 @@ This action requires the following variables as [Workspace Variables](../../vari
 
 * Navigate to the `Workspace` and click on the `Ask Workspace` button.
 
-<figure><img src="../../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 * Enter your questions and click the **Send** button or press the **Enter** key.
 
-<figure><img src="../../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>

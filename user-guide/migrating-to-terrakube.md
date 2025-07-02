@@ -63,32 +63,32 @@ To begin migrating your workspaces using the Workspace Importer within Terrakube
 
 1. Navigate to the Workspaces List within your organization and click on "Import Workspaces".
 
-<figure><img src="../.gitbook/assets/image (369).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (446).png" alt=""><figcaption></figcaption></figure>
 
 2. **Select Your Platform**: Choose the platform where your workspaces are currently hosted. Terrakube currently supports both Terraform Cloud and Terraform Enterprise.
 
-<figure><img src="../.gitbook/assets/image (370).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (447).png" alt=""><figcaption></figcaption></figure>
 
 3. **Choose Your Workflow**: Decide on the workflow type you wish to use for the import. If you need to import from multiple workflows, you will need to execute the importer for each one separately.
 
-<figure><img src="../.gitbook/assets/image (371).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (448).png" alt=""><figcaption></figcaption></figure>
 
 4. **Configure VCS Workflow (If Applicable)**: For a Version control workflow, select your VCS provider connection. For guidance on connecting your VCS provider, refer to the VCS provider section.
 
-<figure><img src="../.gitbook/assets/image (372).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (449).png" alt=""><figcaption></figcaption></figure>
 
 
 
 5. **Enter API Keys**: Provide your Terraform Cloud or Terraform Enterprise API keys. For Terraform Enterprise, you will also need to supply your host URL. For more information, consult the Terraform Cloud documentation.
 
-<figure><img src="../.gitbook/assets/image (373).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (450).png" alt=""><figcaption></figcaption></figure>
 
 6. **Select Workspaces for Import**: A list of available workspaces will be displayed. Select the ones you wish to import and then click the "Import Workspaces" button.
 
-<figure><img src="../.gitbook/assets/image (375).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (452).png" alt=""><figcaption></figcaption></figure>
 
 6. **Import Process**: The importer will replicate workspace details such as name, description, Terraform version, execution mode, variables, tags and the current state into Terrakube.
 
-<figure><img src="../.gitbook/assets/image (376).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (453).png" alt=""><figcaption></figcaption></figure>
 
 7. Once the import process is finished, you can view the imported workspaces in Terrakube.

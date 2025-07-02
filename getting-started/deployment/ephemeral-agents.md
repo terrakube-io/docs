@@ -88,25 +88,25 @@ api:
 
 Add the environment variable `TERRAKUBE_ENABLE_EPHEMERAL_EXECUTOR=1` like the image below
 
-<figure><img src="../../.gitbook/assets/image (399).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (476).png" alt=""><figcaption></figcaption></figure>
 
 #### Workspace Execution
 
 Now when the job is running internally Terrakube will create a K8S job and will execute each step of the job in a `"ephemeral executor"`
 
-<figure><img src="../../.gitbook/assets/image (400).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (477).png" alt=""><figcaption></figcaption></figure>
 
 Internal Kubernetes Job Example:
 
-<figure><img src="../../.gitbook/assets/image (401).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (478).png" alt=""><figcaption></figcaption></figure>
 
 Plan Running in a pod:
 
-<figure><img src="../../.gitbook/assets/image (402).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (479).png" alt=""><figcaption></figcaption></figure>
 
 Apply Running in a different pod:
 
-<figure><img src="../../.gitbook/assets/image (403).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (480).png" alt=""><figcaption></figcaption></figure>
 
 ### Node Selector.
 

@@ -97,7 +97,7 @@ WORKLOAD_IDENTITY_VAULT_ROLE=tfc-role
 
 Example:
 
-<figure><img src="../../../.gitbook/assets/image (406).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (483).png" alt=""><figcaption></figcaption></figure>
 
 Now running cli driven workflow with the following terraform code to test
 

@@ -82,5 +82,5 @@ helm install --debug --values ./your-values.yaml terrakube terrakube-repo/terrak
 
 Now we have a single executor component ready to accept jobs or we could change the number or replicas to have multiple replicas like a pool of agent:
 
-<figure><img src="../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 

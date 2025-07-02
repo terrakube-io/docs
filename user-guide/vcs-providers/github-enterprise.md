@@ -8,7 +8,7 @@ To use Terrakube’s VCS features with a self-hosted GitHub Enterprise, follow t
 
 * Got to the organization settings you want to configure.  Select the **VCS Providers** on the left menu and click the **Add VCS provider** button on the top right corner..
 
-<figure><img src="../../.gitbook/assets/image (359).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (436).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.&#x20;
@@ -16,13 +16,13 @@ If you prefer, you can add a new VCS Provider directly from the [Create workspac
 
 * Click the **Github button** and then click the **Github Enterprise option.**
 
-<figure><img src="../../.gitbook/assets/image (357).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (434).png" alt=""><figcaption></figcaption></figure>
 
 * On the next screen, enter the following information about your Github Enterprise instance:
 
 <table><thead><tr><th width="203">Field </th><th>Value</th></tr></thead><tbody><tr><td>HTTP URL</td><td><code>https://&#x3C;GITHUB INSTANCE HOSTNAME></code></td></tr><tr><td>API URL</td><td><code>https://&#x3C;GITHUB INSTANCE HOSTNAME>/api/v3</code></td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/image (360).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (437).png" alt=""><figcaption></figcaption></figure>
 
 * Use a different browser tab to access your GitHub Enterprise instance and sign in with the account that you want Terrakube to use. You should use a service user account for your organization, but you can also use a personal account.
 
@@ -41,24 +41,24 @@ You can complete the fields using the information suggested by terrakube in the 
 
 
 
-<figure><img src="../../.gitbook/assets/image (361).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (438).png" alt=""><figcaption></figcaption></figure>
 
 Next, generate a new client secret
 
-<figure><img src="../../.gitbook/assets/image (362).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (439).png" alt=""><figcaption></figcaption></figure>
 
 Copy the  **Client Id**  and **Client Secret** from Github Enterprise and go back to Terrakube to complete the required information. Then, click the **Connect and Continue** button
 
-<figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (440).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to Github Enterprise. Click the **Authorize** button to complete the connection.
 
-<figure><img src="../../.gitbook/assets/image (364).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (441).png" alt=""><figcaption></figcaption></figure>
 
 When the connection is successful, you will go back to the VCS provider’s page in your organization. You will see the connection status, the date, and the user who made the connection.&#x20;
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
 
 You can now use the connection for your workspaces and modules.
 
-<figure><img src="../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>

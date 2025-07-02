@@ -70,4 +70,4 @@ resource "google_storage_bucket" "auto-expire" {
 
 ### Running Example
 
-<figure><img src="../../../.gitbook/assets/image (385).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (462).png" alt=""><figcaption></figcaption></figure>

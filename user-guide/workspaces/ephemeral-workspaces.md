@@ -4,15 +4,15 @@ The following will show how easy is to implement an ephemeral workspace using Te
 
 The first step will be to create a new organization, lets call it "playground".
 
-<figure><img src="../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
 
 Once we have the playground organization, we need to add a team with access to create templates like the following:
 
-<figure><img src="../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
 
 We will also need a team with access to create/delete a workspace only, like the following:
 
-<figure><img src="../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 Teams names will depend on your Dex configuration.
@@ -20,7 +20,7 @@ Teams names will depend on your Dex configuration.
 
 Once we have the two teams in our new playground organization, we can proceed and create a new template that we will be using to auto destroy all the workspace:
 
-<figure><img src="../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
 
 Lets call it "delete-playground" and it will have the following code:
 
@@ -35,17 +35,17 @@ flow:
 
 ```
 
-<figure><img src="../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
 
 Now we can update the default template that is used when we are using the remote CLI-driven workflow, this template is inside every organization by default and is called "**Terraform-Plan/Apply-Cli**", usually we don't need to update this template but we will do some small changes to enable ephemeral workspaces in the playground organization.
 
 We need to go the the templates inside the organization settings and edit the template
 
-<figure><img src="../../.gitbook/assets/image (5) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
 
 We will add a new step in the template, this will allow to schedule a job that will be using the "delete-playground" template that we have created above.
 
-<figure><img src="../../.gitbook/assets/image (7) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
 
 We need to use the following template code:
 
@@ -124,7 +124,7 @@ terraform login 8080-azbuilder-terrakube-h128dcdc7l1.ws-us105.gitpod.io
 
 Now we can run **terraform init** to initialize our workspace inside the playground organization, lets use "myplayground" for the name of our new workspace
 
-<figure><img src="../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
 
 Let's run terraform apply and create our resources:
 
@@ -190,44 +190,44 @@ creation_time = "5s"
 
 Our new workspace is created and if we go the organization we can see all the information
 
-<figure><img src="../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
 
 The job will be running to create the resources:
 
-<figure><img src="../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
 
 We can see that our job is completed and the setup auto destroy have created a new schedule for our workspace:
 
-<figure><img src="../../.gitbook/assets/image (16) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
 
 We could go to the schedules tab:
 
-<figure><img src="../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (87).png" alt=""><figcaption></figcaption></figure>
 
 This schedule will run in 5 minutes:
 
-<figure><img src="../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
 
 After waiting for 5 minutes we will see that Terrakube have created a new Job automatically
 
-<figure><img src="../../.gitbook/assets/image (17) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
 
 If we check the details for the new job we can see that a terraform destroy will be executed:
 
-<figure><img src="../../.gitbook/assets/image (18) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (95).png" alt=""><figcaption></figcaption></figure>
 
 All of the workspace resources are deleted and the workspace will be deleted automatically after the destroy is completed.
 
-<figure><img src="../../.gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (96).png" alt=""><figcaption></figcaption></figure>
 
 Once the Job is completed, our workspace information is deleted from Terrakube
 
-<figure><img src="../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (97).png" alt=""><figcaption></figcaption></figure>
 
 If we are using AWS, AZURE, GCP or any other terraform provider that allow to inject the credentials using environment variables we could use "global variables" to define those.&#x20;
 
 Global variables will be injected automatically to any workspace inside the playground organization.
 
-<figure><img src="../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (98).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (99).png" alt=""><figcaption></figcaption></figure>

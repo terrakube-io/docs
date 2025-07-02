@@ -6,15 +6,15 @@ All users in an organization with **Manage Modules** permission can view the Ter
 
 Click **Registry** in the main menu. And then click the module you want to use.
 
-<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (121).png" alt=""><figcaption></figcaption></figure>
 
 In the module page, select the version in the dropdown list
 
-<figure><img src="../../.gitbook/assets/image (106).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>
 
 You can copy the code reference from the module page
 
-<figure><img src="../../.gitbook/assets/image (116).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (193).png" alt=""><figcaption></figcaption></figure>
 
 For example:
 
@@ -30,11 +30,11 @@ module "google-network" {
 
 If your repository has submodules, Terrakube will scan the **modules** folder to identify all the submodules. Then, you will see a dropdown list with the submodules in the UI.
 
-<figure><img src="../../.gitbook/assets/image (351).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (428).png" alt=""><figcaption></figcaption></figure>
 
 To view the readme file, inputs, outputs, resources and other information for any submodule, you can choose the submodule you want.
 
-<figure><img src="../../.gitbook/assets/image (352).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (429).png" alt=""><figcaption></figcaption></figure>
 
 You can also copy the details of how to configure any submodule, just like the main module. Example:
 
@@ -48,11 +48,11 @@ module "iam" {
 
 In the submodule view you can switch to the differents submodules.
 
-<figure><img src="../../.gitbook/assets/image (353).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (430).png" alt=""><figcaption></figcaption></figure>
 
 Or you can back to the main module with the **Back** button on the top of the page.
 
-<figure><img src="../../.gitbook/assets/image (354).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (431).png" alt=""><figcaption></figcaption></figure>
 
 ### **Configure Authentication**
 

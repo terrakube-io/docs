@@ -12,15 +12,15 @@ By default, this Action is disabled and when enabled will appear for all the azu
 
 * Navigate to the `Workspace Overview` or the `Visual State` and click a resource name.
 
-<figure><img src="../../../../.gitbook/assets/image (393).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (470).png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../../../.gitbook/assets/image (394).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (471).png" alt=""><figcaption></figcaption></figure>
 
 * In the Resource Drawer, click the Open in Azure button.
 
-<figure><img src="../../../../.gitbook/assets/image (395).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (472).png" alt=""><figcaption></figcaption></figure>
 
 * You will be able to see the Azure portal for that resource.
 
-<figure><img src="../../../../.gitbook/assets/image (396).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (473).png" alt=""><figcaption></figcaption></figure>
 
