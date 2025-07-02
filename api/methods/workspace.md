@@ -27,7 +27,7 @@ To use this endpoint you should have "manageWorkspace" access at team level and 
         "attributes": {
             "branch": "main",
             "name": "Terrakube Workspace",
-            "source": "https://github.com/AzBuilder/terraform-sample-repository.git",
+            "source": "https://github.com/terrakube-io/terraform-sample-repository.git",
             "terraformVersion": "0.15.0"
         },
         "relationships": {
@@ -44,22 +44,22 @@ To use this endpoint you should have "manageWorkspace" access at team level and 
 
 ### Supported Operations
 
-{% swagger src="https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/workspace/{workspaceId}" method="get" %}
-[https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/workspace/{workspaceId}" method="get" %}
+[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/workspace" method="post" %}
-[https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/workspace" method="post" %}
+[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/workspace/{workspaceId}" method="delete" %}
-[https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/workspace/{workspaceId}" method="delete" %}
+[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/workspace/{workspaceId}" method="patch" %}
-[https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/workspace/{workspaceId}" method="patch" %}
+[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/terrakube-io/terrakube-server/tree/main/openapi-spec)
 {% endhint %}

@@ -7,7 +7,7 @@
 Workspace can be created using just the terraform CLI, to use this feature you need to firts login to the Terrakube API using the terraform command:
 
 ```
-terraform login 8080-azbuilder-terrakube-sscrnu9jbie.ws-us99.gitpod.io
+terraform login 8080-terrakube-io-terrakube-sscrnu9jbie.ws-us99.gitpod.io
 ```
 
 Once the authentication is completed we can create the workspace using the following backend configuration in our terraform code.
@@ -18,7 +18,7 @@ Once the authentication is completed we can create the workspace using the follo
 terraform {
   cloud {
     organization = "simple"
-    hostname = "8080-azbuilder-terrakube-sscrnu9jbie.ws-us99.gitpod.io"
+    hostname = "8080-terrakube-io-terrakube-sscrnu9jbie.ws-us99.gitpod.io"
 
     workspaces {
       name = "samplecloud"
@@ -36,7 +36,7 @@ Make sure to use an organization name that is already created in the Terrakube U
 ```
 terraform {
   backend "remote" {
-    hostname = "8080-azbuilder-terrakube-3xqsq270uq1.ws-us82.gitpod.io"
+    hostname = "8080-terrakube-io-terrakube-3xqsq270uq1.ws-us82.gitpod.io"
     organization = "simple"
     workspaces {
       name = "workspace1"

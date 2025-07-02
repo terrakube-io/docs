@@ -2,7 +2,7 @@
 
 You can have a complete development environment to test the API with one click with Gitpod using the following button.
 
-[![Gitpod ready-to-code](https://camo.githubusercontent.com/791bd446c60d39e9a296e8d02837c81fe0af6108f02a04afbc93edda0cb93ad6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f476974706f642d72656164792d2d746f2d2d636f64652d626c75653f6c6f676f3d676974706f64267374796c653d666c61742d737175617265)](https://gitpod.io/#https://github.com/AzBuilder/terrakube)
+[![Gitpod ready-to-code](https://camo.githubusercontent.com/791bd446c60d39e9a296e8d02837c81fe0af6108f02a04afbc93edda0cb93ad6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f476974706f642d72656164792d2d746f2d2d636f64652d626c75653f6c6f676f3d676974706f64267374796c653d666c61742d737175617265)](https://gitpod.io/#https://github.com/terrakube-io/terrakube)
 
 {% hint style="warning" %}
 Gitpod is [free for 50 hours](https://www.gitpod.io/pricing) every month, so you dont have to worry for testing the application.
@@ -268,7 +268,7 @@ Now we have the following template available inside our organization:
 Lets create some workspace where we can use our templates.
 
 {% hint style="info" %}
-For more information about Terrakube extension please refer to the following Github [repository](https://github.com/AzBuilder/terrakube-extensions). If you want to create a new extension feel free to create an issue and send a pull request. You can even for the repository and create some private extension.
+For more information about Terrakube extension please refer to the following Github [repository](https://github.com/terrakube-io/terrakube-extensions). If you want to create a new extension feel free to create an issue and send a pull request. You can even for the repository and create some private extension.
 {% endhint %}
 
 ### workspaces
@@ -276,14 +276,14 @@ For more information about Terrakube extension please refer to the following Git
 A workspace is a folder inside a git repository where we store our terraform code, we can define all the terraform resources or we can just call a terraform module that is available inside Terrakube modules.
 
 {% hint style="info" %}
-Workspace Git repository can be public or private using the following providers: Github, Gitlab, Azure DevOps, Bitbucket or SSH keys (rsa and ed25519). If you are using a private git respository please refer to the following[ document](https://github.com/AzBuilder/docs/blob/master/api/broken-reference/README.md).
+Workspace Git repository can be public or private using the following providers: Github, Gitlab, Azure DevOps, Bitbucket or SSH keys (rsa and ed25519). If you are using a private git respository please refer to the following[ document](https://github.com/terrakube-io/docs/blob/master/api/broken-reference/README.md).
 {% endhint %}
 
 To create it we will use the request inside the postman collection "Step 4 - workspace"
 
 <figure><img src="../.gitbook/assets/image (265).png" alt=""><figcaption></figcaption></figure>
 
-Lets create a very simple workspace using the following terraform code inside this public git repository "[https://github.com/AzBuilder/terrakube-docker-compose.git](https://github.com/AzBuilder/terrakube-docker-compose.git)" using the root folder "/"
+Lets create a very simple workspace using the following terraform code inside this public git repository "[https://github.com/terrakube-io/terrakube-docker-compose.git](https://github.com/terrakube-io/terrakube-docker-compose.git)" using the root folder "/"
 
 ```
 # This resource will destroy (potentially immediately) after null_resource.next

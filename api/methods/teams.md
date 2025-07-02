@@ -10,7 +10,7 @@ You need to be part of the administrator Active Directory Group to work with thi
 The default group is handled using the Spring Boot property
 
 ```
-org.azbuilder.owner=TERRAKUBE_ADMIN
+org.terrakube-io.owner=TERRAKUBE_ADMIN
 ```
 {% endhint %}
 
@@ -46,22 +46,22 @@ org.azbuilder.owner=TERRAKUBE_ADMIN
 
 ### Supported Operations
 
-{% swagger src="https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="get" %}
-[https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="get" %}
+[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team" method="post" %}
-[https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team" method="post" %}
+[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="delete" %}
-[https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="delete" %}
+[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="patch" %}
-[https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/AzBuilder/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="patch" %}
+[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/terrakube-io/terrakube-server/tree/main/openapi-spec)
 {% endhint %}

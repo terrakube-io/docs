@@ -4,7 +4,7 @@
 
 The dynamic provider credential setup in GCP  can be done with the Terrraform code available in the following link:
 
-[https://github.com/AzBuilder/terrakube/tree/main/dynamic-credential-setup/gcp](https://github.com/AzBuilder/terrakube/tree/main/dynamic-credential-setup/gcp)
+[https://github.com/terrakube-io/terrakube/tree/main/dynamic-credential-setup/gcp](https://github.com/terrakube-io/terrakube/tree/main/dynamic-credential-setup/gcp)
 
 {% hint style="warning" %}
 The code will also create a sample workspace with all the require environment variables that can be used to test the functionality using the CLI driven workflow.

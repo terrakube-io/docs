@@ -42,7 +42,7 @@ Thanks @akozhuharov for this contribution!
 
 #### Other Fixes and Dependency Updates
 
-As always, we’ve updated a bunch of dependencies to keep Terrakube up to date and secure, and we’ve also fixed multiple bugs reported by the community. You can see the full list of changes [here](https://github.com/AzBuilder/terrakube/releases/tag/2.22.0).
+As always, we’ve updated a bunch of dependencies to keep Terrakube up to date and secure, and we’ve also fixed multiple bugs reported by the community. You can see the full list of changes [here](https://github.com/terrakube-io/terrakube/releases/tag/2.22.0).
 
 ### May 2024 (2.21.0)
 
@@ -54,11 +54,11 @@ Terrakube actions allow you to extend the UI in Workspaces, functioning similarl
 
 In the below demo, you can view how to use a couple of the new actions to [monitor metrics](https://docs.terrakube.io/user-guide/workspaces/actions/built-in-actions/terrakube.azure-monitor) and [restart an Azure VM](https://docs.terrakube.io/user-guide/workspaces/actions/built-in-actions/restart-azure-vm).
 
-![actions](https://github.com/AzBuilder/terrakube/assets/27365102/940862ef-7d20-4bab-9fe7-c76d62e5d589)
+![actions](https://github.com/terrakube-io/terrakube/assets/27365102/940862ef-7d20-4bab-9fe7-c76d62e5d589)
 
 Additionally, we are providing an action to interact with OpenAI directly from the workspace. Check out the [Terrakube OpenAI Action](https://docs.terrakube.io/user-guide/workspaces/actions/built-in-actions/terrakube.open-ai) for more details.
 
-![openai](https://github.com/AzBuilder/terrakube/assets/27365102/d5cbf5c8-ce6c-4023-99bc-c8e6ed2eba72)
+![openai](https://github.com/terrakube-io/terrakube/assets/27365102/d5cbf5c8-ce6c-4023-99bc-c8e6ed2eba72)
 
 Check our [documentation](https://docs.terrakube.io/user-guide/workspaces/actions) for more details on how to use and start creating Terrakube actions.
 
@@ -86,7 +86,7 @@ will stop streaming the logs, but will not stop the apply running remotely.
 Preparing the remote apply...
 
 To view this run in a browser, visit:
-https://8080-azbuilder-terrakube-jdlq1j61x7k.ws-us110.gitpod.io/app/simple/auto-approve/runs/1
+https://8080-terrakube-io-terrakube-jdlq1j61x7k.ws-us110.gitpod.io/app/simple/auto-approve/runs/1
 
 Waiting for the plan to start...
 
@@ -162,13 +162,13 @@ We have made several enhancements to the UI, focusing on improving the overall u
 
 &#x20;
 
-<figure><img src="https://github.com/AzBuilder/terrakube/assets/27365102/1723b589-121e-47df-9d66-df734b6c548c" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://github.com/terrakube-io/terrakube/assets/27365102/1723b589-121e-47df-9d66-df734b6c548c" alt=""><figcaption></figcaption></figure>
 
 These updates aim to make the Terrakube interface more intuitive and visually appealing.
 
 #### Bug fixes
 
-We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.21.0
+We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/terrakube-io/terrakube/releases/tag/2.21.0
 
 ### March 2024 (2.20.0)
 
@@ -178,33 +178,33 @@ Welcome to the 2.20.0 release from Terrakube! In our second update of the year, 
 
 Our newly Workspace Importer is designed to improve your migration from Terraform Cloud or Terraform Enterprise to Terrakube. Providing a user-friendly wizard, this feature simplifies the process of transferring all your workspaces to Terrakube, ensuring that variables, tags, state files, and other components are easily copied over. During its beta phase, this feature has been tested with hundreds of workspaces, receiving positive feedback from the community. If you're considering a migration to Terrakube, we highly recommend reviewing [our documentation](https://docs.terrakube.io/user-guide/migrating-to-terrakube#migrating-with-the-workspaces-importer) to see how this feature can save you time and effort.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/0d29073f-587a-4e6c-bd49-1355642b1403)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/0d29073f-587a-4e6c-bd49-1355642b1403)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/04918c2b-3ba9-4d8b-8826-918248a1a715)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/04918c2b-3ba9-4d8b-8826-918248a1a715)
 
 #### Enhanced API Token Management
 
 We've enhanced the UI for managing [API tokens](https://docs.terrakube.io/user-guide/organizations/api-tokens), making it more intuitive and efficient. Now, revoking tokens can be done directly through the UI with ease.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/1f0bf586-b1d1-45bd-b828-0215a94fa645)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/1f0bf586-b1d1-45bd-b828-0215a94fa645)
 
 #### Organization Default Execution Mode Update
 
 This new feature allows you to set the default execution mode—either `local` or `remote`—at the organization level.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/f6b74739-bdd9-4534-99aa-67298d9da14f)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/f6b74739-bdd9-4534-99aa-67298d9da14f)
 
 #### Enhanced Support for Monorepos in Private Registry
 
 Responding to community feedback regarding the management of Terraform modules within a monorepo, we've made significant enhancements to our Private Registry. Now, you have the capability to specify the path of the module within the monorepo and set a tag prefix when creating a module.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/39c2a211-905c-4540-a9fe-2601928c6525)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/39c2a211-905c-4540-a9fe-2601928c6525)
 
 #### Agents Support
 
 We've expanded Terrakube capabilities with the introduction of multiple `terrakube executor agents`. Now, you have the flexibility to select the specific agent you wish to use for each workspace. This new feature enables a higher level of execution isolation based on workspaces, offering improved security and customization to suit your project's needs.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/eed1353a-562e-40ba-b470-935b0c73a3a4)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/eed1353a-562e-40ba-b470-935b0c73a3a4)
 
 #### Prefix Support for Remote Backend
 
@@ -213,7 +213,7 @@ If you are using the remote backend this enhancement allows you to perform opera
 ```terraform
 terraform {
   backend "remote" {
-    hostname = "8080-azbuilder-terrakube-7tnuq3gnkgf.ws-us108.gitpod.io"
+    hostname = "8080-terrakube-io-terrakube-7tnuq3gnkgf.ws-us108.gitpod.io"
     organization = "simple"
 
     workspaces {
@@ -231,11 +231,11 @@ if you are using POSTGRESQL and using the helm chart 3.16.0 it will require you 
 api.properties.databasePort: "5432"
 ```
 
-More information can be found in this [issue](https://github.com/AzBuilder/terrakube/issues/784)
+More information can be found in this [issue](https://github.com/terrakube-io/terrakube/issues/784)
 
 #### Bug fixes
 
-We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.20.0
+We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/terrakube-io/terrakube/releases/tag/2.20.0
 
 
 
@@ -247,11 +247,11 @@ As we step into the new year, we are thrilled to announce the release of Terraku
 
 With OpenTofu now in General Availability (GA), we've integrated it as an alternative within Terrakube. Now, when you create workspaces, you have the option to select either Terraform or OpenTofu. Terrakube will then tailor the user experience specifically to the tool you choose. Additionally, you can switch your existing workspaces to OpenTofu via the Workspace settings, allowing for a smooth transition between tools.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/a722d515-ec9e-4dc6-b244-03733009ddc2)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/a722d515-ec9e-4dc6-b244-03733009ddc2)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/dca7e280-32d1-4d1c-bb80-ddbdb1398f58)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/dca7e280-32d1-4d1c-bb80-ddbdb1398f58)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/b762358c-b23f-4722-bdcc-b9b24301dc4e)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/b762358c-b23f-4722-bdcc-b9b24301dc4e)
 
 In the future we are planning to introduce specific features for each Terraform and Opentofu based in their evolution. Also we will introduce support for more Iac tools later.
 
@@ -259,9 +259,9 @@ In the future we are planning to introduce specific features for each Terraform 
 
 We've upgraded the Workspace Overview Page to enrich your interaction with your infrastructure. Now, you'll find a detailed count of resources and outputs. Each resource is represented by an icon indicating its type, with current support for AWS and Azure icons. Clicking on a resource name unfolds a detailed view of all its attributes and dependencies, and provides direct access to the resource's documentation.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/cff434dc-8b9f-46b0-84ef-29b9dacbb4fa)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/cff434dc-8b9f-46b0-84ef-29b9dacbb4fa)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/3e56f159-e763-4596-801d-46f731f6cd8a)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/3e56f159-e763-4596-801d-46f731f6cd8a)
 
 You can access the attributes and dependencies view from both Workspace Overview Page or using the [Visual State](https://docs.terrakube.io/user-guide/workspaces/terraform-state#visual-state).
 
@@ -269,7 +269,7 @@ You can access the attributes and dependencies view from both Workspace Overview
 
 Now, you have the flexibility to select the default template that will execute for each new push in your Version Control System (VCS) at the workspace level. By default, Terrakube performs Plan and Apply operations, but you can now choose a different template tailored to your specific use case. This enhancement allows for the implementation of customized workflows across different organizations or workspaces.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/9b777ada-959f-4014-a5d7-c550dfed936b)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/9b777ada-959f-4014-a5d7-c550dfed936b)
 
 Additionally, Terrakube now checks for the configured directory in the Workspace and will only run the job when a file changes in the specified directory. This feature is particularly useful for monorepositories, where you want to manage different workspaces from a single repository. This functionality has been implemented for GitLab, GitHub, and Bitbucket.
 
@@ -288,7 +288,7 @@ will stop streaming the logs, but will not stop the plan running remotely.
 Preparing the remote plan...
 
 To view this run in a browser, visit:
-https://8080-azbuilder-terrakube-3it4oxf0vpt.ws-us107.gitpod.io/app/simple/simple-terraform/runs/2
+https://8080-terrakube-io-terrakube-3it4oxf0vpt.ws-us107.gitpod.io/app/simple/simple-terraform/runs/2
 
 Waiting for the plan to start...
 
@@ -327,7 +327,7 @@ will stop streaming the logs, but will not stop the plan running remotely.
 Preparing the remote plan...
 
 To view this run in a browser, visit:
-https://8080-azbuilder-terrakube-3it4oxf0vpt.ws-us107.gitpod.io/app/simple/simple-terraform/runs/3
+https://8080-terrakube-io-terrakube-3it4oxf0vpt.ws-us107.gitpod.io/app/simple/simple-terraform/runs/3
 
 Waiting for the plan to start...
 
@@ -355,7 +355,7 @@ You now have the ability to revoke both Personal and Team API Tokens. Currently,
 
 #### Bug fixes
 
-We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.19.0
+We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/terrakube-io/terrakube/releases/tag/2.19.0
 
 ### December 2023 (2.18.0)
 
@@ -365,13 +365,13 @@ Greetings! As the year comes to a close, we are excited to present you the 2.18.
 
 The state diagram now includes all the AWS architecture icons, so you can easily recognize each resource type. This feature will help you visualize your Terraform state in a more intuitive way. We are also working on improving the diagram to group the resources by VPC, location, etc which will give you a closer look at how your architecture is designed using the Terraform state.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/c27d9cd2-e261-489e-9c65-df4e99d47c2b)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/c27d9cd2-e261-489e-9c65-df4e99d47c2b)
 
 #### Visual State Diagram export option
 
 Following the state diagram enhancements, we have also added the option to save the diagram in different formats. You can export a high-quality image in png, svg or jpeg formats by using the Download and selecting the preferred format. This feature will help you use the diagram for your documentation or presentations.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/3f5eee59-e4cc-4849-91a5-bbcc51239b32)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/3f5eee59-e4cc-4849-91a5-bbcc51239b32)
 
 #### Self Hosted VCS Providers Support
 
@@ -379,21 +379,21 @@ We have added support for Github Enterprise, GitLab Enterprise Edition and GitLa
 
 * [Github Enterprise](https://docs.terrakube.io/user-guide/vcs-providers/github-enterprise)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/a341cc42-c4bc-4287-9f77-61d33031a4bc)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/a341cc42-c4bc-4287-9f77-61d33031a4bc)
 
 * [GitLab Enterprise and Community Editions](https://docs.terrakube.io/user-guide/vcs-providers/gitlab-ee-and-ce)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/1bca2baf-5f18-4e6b-b8a1-bdc0561770ba)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/1bca2baf-5f18-4e6b-b8a1-bdc0561770ba)
 
 #### Webhooks support for GitLab (Cloud, EE and CE), BitBucket and Github (Cloud and Enterprise)
 
 We have introduced a new feature that will make your workflow more efficient and convenient. Now, Terrakube will automatically trigger a new Plan and Apply job for each new push in the repository that is linked to the workspace. You no longer have to run the jobs manually using the UI or the terraform CLI. This feature will help you keep your infrastructure in sync with your code changes.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/cbee6cbb-531b-488f-8396-a52f65f49e2a)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/cbee6cbb-531b-488f-8396-a52f65f49e2a)
 
 #### Bug fixes
 
-We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.18.0
+We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/terrakube-io/terrakube/releases/tag/2.18.0
 
 ### November 2023 (2.17.0)
 
@@ -403,29 +403,29 @@ Welcome to the 2.17.0 release of Terrakube. There are a couple of updates in thi
 
 You can now view the submodules of your Terraform Module in the open registry. When you select a submodule, you will see its details, such as inputs, outputs and resources.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/5ef297db-f65c-452f-aea7-bc0ee07a232b)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/5ef297db-f65c-452f-aea7-bc0ee07a232b)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/6a82dc09-1935-44b3-ae09-fa5797c69a8e)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/6a82dc09-1935-44b3-ae09-fa5797c69a8e)
 
 #### Workspace Overview
 
 We have enhanced the workspace overview to give you more information at a glance. You can now see the Terraform version, the repository, and the list of resources and outputs for each workspace.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/5910b408-b941-4168-967d-d7405fd7541b)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/5910b408-b941-4168-967d-d7405fd7541b)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/0567a0f2-3159-4563-b6f9-a160c804302a)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/0567a0f2-3159-4563-b6f9-a160c804302a)
 
 #### Team API Tokens
 
 You can now generate team API tokens using the Terrakube UI and specify their expiration time in days/minutes/hours. This gives you more flexibility and control over your team’s access to Terrakube. To learn more, please visit our [documentation](https://docs.terrakube.io/user-guide/organizations/api-tokens#user-api-tokens-1).
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/185b5ec3-c11f-4005-9e57-05d236ca99b3)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/185b5ec3-c11f-4005-9e57-05d236ca99b3)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/baf010ef-d190-4894-89ab-36f0db4fc033)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/baf010ef-d190-4894-89ab-36f0db4fc033)
 
 ### Terraform provider for Terrakube
 
-You can use the [Terrakube provider](https://registry.terraform.io/providers/AzBuilder/terrakube/latest/docs) for Terraform to manage modules, organizations and so on.
+You can use the [Terrakube provider](https://registry.terraform.io/providers/terrakube-io/terrakube/latest/docs) for Terraform to manage modules, organizations and so on.
 
 ```
 provider "terrakube" {
@@ -468,7 +468,7 @@ resource "terrakube_module" "module1" {
 
 #### Bug fixes
 
-We’ve addressed some issues reported by the community and fixed some vulnerabilities. You can see the full change log for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.17.0
+We’ve addressed some issues reported by the community and fixed some vulnerabilities. You can see the full change log for this version here https://github.com/terrakube-io/terrakube/releases/tag/2.17.0
 
 ### October 2023 (2.16.0)
 
@@ -478,7 +478,7 @@ Welcome to the 2.16.0 release of Terrakube. There are a couple of updates in thi
 
 We have added more filters to workspaces, so you can easily find the one you need. You can now use the tags or description of the workspaces to narrow down your search. Additionally, you can see the tags of each workspace on its card, without having to enter it. This way, you can quickly identify the workspaces that are relevant to you.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/08efcfaa-cf37-4c46-8919-2f34b4e057fc)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/08efcfaa-cf37-4c46-8919-2f34b4e057fc)
 
 #### Team API Tokens
 
@@ -497,7 +497,7 @@ Request Body:
 
 #### Bug fixes and Performance
 
-We’ve addressed some issues reported by the community regarding performance,bugs and security. You can see the full change log for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.16.0
+We’ve addressed some issues reported by the community regarding performance,bugs and security. You can see the full change log for this version here https://github.com/terrakube-io/terrakube/releases/tag/2.16.0
 
 
 
@@ -509,7 +509,7 @@ Welcome to the 2.15.0 release of Terrakube. There are a couple of updates in thi
 
 In the previous version, all executions were run remotely in Terrakube. However, starting from this version, you can choose to define the execution mode as either local or remote. By default, all workspaces run remotely. If you want to disable remote execution for a workspace, you can change its execution mode to “Local”. This mode allows you to perform Terraform runs locally using the CLI-driven run workflow.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/d0e40b6c-0830-4153-abe3-3ce43c14e97c)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/d0e40b6c-0830-4153-abe3-3ce43c14e97c)
 
 #### Accessing State from Other Workspaces
 
@@ -520,7 +520,7 @@ data "terraform_remote_state" "remote_creation_time" {
   backend = "remote"
   config = {
     organization = "simple"
-    hostname = "8080-azbuilder-terrakube-vg8s9w8fhaj.ws-us102.gitpod.io"
+    hostname = "8080-terrakube-io-terrakube-vg8s9w8fhaj.ws-us102.gitpod.io"
     workspaces = {
       name = "simple_tag1"
     }
@@ -536,7 +536,7 @@ In our previous version, we introduced support for adding tags to Workspaces. St
 terraform {
   cloud {
     organization = "simple"
-    hostname = "8080-azbuilder-terrakube-md8dylvuzta.ws-us101.gitpod.io"
+    hostname = "8080-terrakube-io-terrakube-md8dylvuzta.ws-us101.gitpod.io"
 
     workspaces {
       tags = ["networking", "development"]
@@ -551,7 +551,7 @@ We’ve added a search function to the Modules pages, making it easier to find m
 
 #### Bug fixes
 
-We’ve addressed some issues reported by the community, so Terrakube is becoming more stable. You can see the full change log for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.15.0
+We’ve addressed some issues reported by the community, so Terrakube is becoming more stable. You can see the full change log for this version here https://github.com/terrakube-io/terrakube/releases/tag/2.15.0
 
 Thanks for all the community support and contributions. Special thanks to @klinux for implementing the search feature inside Modules.
 
@@ -568,7 +568,7 @@ This new version lets you use the [terraform cloud block](https://developer.hash
 ```
 terraform {
   cloud {
-    hostname = "8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io"
+    hostname = "8080-terrakube-io-terrakube-q8aleg88vlc.ws-us92.gitpod.io"
     organization = "migrate-org"
     workspaces {
       name = "migrate-state"
@@ -581,33 +581,33 @@ terraform {
 
 We have enhanced the UI to handle authorization errors more gracefully.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/fd556517-e663-42d4-ba46-f20199cb322e)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/fd556517-e663-42d4-ba46-f20199cb322e)
 
 #### Workspace Tags
 
 We have enabled tagging functionality within the workspaces. In an upcoming release, you will be able to use these tags in the cloud block feature. For more details please check the [terrakube documentation](https://docs.terrakube.io/user-guide/organizations/tags).
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/07551e69-a52f-45e8-ba64-cbd8f8acf663)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/07551e69-a52f-45e8-ba64-cbd8f8acf663)
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/78cecea5-503d-4672-a46b-04e48831ea87)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/78cecea5-503d-4672-a46b-04e48831ea87)
 
 #### Overview Workspace page
 
 With Terrakube’s new workspace Overview page, you can access all the essential information for each of your workspaces in a simple and convenient panel. Initially we are including the last run and workspace tags. We will add more information in upcoming releases.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/7d5fff7d-eed6-48a9-b1bc-8a4f114224f7)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/7d5fff7d-eed6-48a9-b1bc-8a4f114224f7)
 
 #### Improved CLI run workflow logs
 
 From this version onwards, you can view the logs in real time when you use the Terraform CLI remote backend or the cloud block.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/d3082abe-5ed1-4221-88c9-9eaa13dbe5e8)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/d3082abe-5ed1-4221-88c9-9eaa13dbe5e8)
 
 #### SSH key injection
 
 Before, Terrakube only used SSH keys to clone private git repos. Now, Terrakube will inject the keys into the workspace. This way, if your terraform modules use git as source, Terraform will access the modules with the keys. Check the [documentation](https://docs.terrakube.io/user-guide/vcs-providers/ssh#ssh-key-injection) for further details.
 
-For the full changelog for this version please check https://github.com/AzBuilder/terrakube/releases/tag/2.14.0
+For the full changelog for this version please check https://github.com/terrakube-io/terrakube/releases/tag/2.14.0
 
 
 
@@ -620,7 +620,7 @@ Welcome to the 2.13.0 release of Terrakube. There are a couple of updates in thi
 Now you can easily migrate your Terraform state from other tools like TFE or Terraform Cloud to Terrakube. The migration command is supported by using the terraform CLI.
 
 ```
-terraform login 8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io
+terraform login 8080-terrakube-io-terrakube-q8aleg88vlc.ws-us92.gitpod.io
 terraform init -migrate-state
 ```
 
@@ -630,9 +630,9 @@ Check out our [documentation](https://docs.terrakube.io/user-guide/remote-state-
 
 Starting with this version, you can see the logs in the Terrakube UI in almost real time, so you can easily follow up on your Terraform changes.
 
-![image](https://github.com/AzBuilder/terrakube/assets/27365102/069d08dd-9ba4-4b1c-b98d-549661a59077)
+![image](https://github.com/terrakube-io/terrakube/assets/27365102/069d08dd-9ba4-4b1c-b98d-549661a59077)
 
-Also we optimized the code and updated most libs to the latest versions For the full changelog for this version please check https://github.com/AzBuilder/terrakube/releases/tag/2.13.0
+Also we optimized the code and updated most libs to the latest versions For the full changelog for this version please check https://github.com/terrakube-io/terrakube/releases/tag/2.13.0
 
 
 
@@ -667,7 +667,7 @@ flow:
   - type: "terraformPlan"
     step: 100
     importComands:
-      repository: "https://github.com/AzBuilder/terrakube-extensions"
+      repository: "https://github.com/terrakube-io/terrakube-extensions"
       folder: "templates/terratag"
       branch: "import-template"
       inputsEnv:
@@ -715,7 +715,7 @@ You can now use a custom Terraform CLI build or restrict the Terraform versions 
 
 We improved the helm chart to make the installation easy and now you can quickly install Terrakube for a Sandbox Test environment in [Minikube](https://docs.terrakube.io/getting-started/deployment/minikube). If you prefer you can now try Terrakube using [Docker compose](https://docs.terrakube.io/getting-started/docker-compose)
 
-Thanks for the community contribution, specially thanks to @Diliz and @jstewart612 for their contributions in the Helm Chart. For the full changelog for this version please check https://github.com/AzBuilder/terrakube/releases/tag/2.12.0
+Thanks for the community contribution, specially thanks to @Diliz and @jstewart612 for their contributions in the Helm Chart. For the full changelog for this version please check https://github.com/terrakube-io/terrakube/releases/tag/2.12.0
 
 And if you have any idea or suggestion don't hesitate to let us know.
 
@@ -758,7 +758,7 @@ flow:
   - type: "terraformPlan"
     step: 100
     importComands:
-      repository: "https://github.com/AzBuilder/terrakube-extensions"
+      repository: "https://github.com/terrakube-io/terrakube-extensions"
       folder: "templates/terratag"
       branch: "import-template"
   - type: "terraformApply"
@@ -781,6 +781,6 @@ UI templates will allow to create better UI experiences. And brings new ways to 
 
 When you login to Terrakube for the first time and if you have multiple organizations assigned, then you will see a screen to select your organization.
 
-For the full changelog for this version please check https://github.com/AzBuilder/terrakube/releases/tag/2.11.0
+For the full changelog for this version please check https://github.com/terrakube-io/terrakube/releases/tag/2.11.0
 
 And if you have any idea or suggestion don't hesitate to let us know.

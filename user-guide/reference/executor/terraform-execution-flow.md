@@ -9,7 +9,7 @@ When running a job inside the executor component the following logic is used:
 * All the files inside ".originalRepository" are moved to \{{ORGANIZATION\_ID\}}//\{{WORKSPACE\_ID\}} folder from previous step.
 * Te executor component will create the extension folders where you can store BASH or GROOVY extensions:
   * /home/cnb/.terraform-spring-boot/executor/\{{ORGANIZATION\_ID\}}/\{{WORKSPACE\_ID\}}/.terrakube/toolsRepository
-    * By default it will clone the repository "[https://github.com/AzBuilder/terrakube-extensions](https://github.com/AzBuilder/terrakube-extensions)", this can be change by using TerrakubeToolsRepository and TerrakubeToolsBranch environment variables.
+    * By default it will clone the repository "[https://github.com/terrakube-io/terrakube-extensions](https://github.com/terrakube-io/terrakube-extensions)", this can be change by using TerrakubeToolsRepository and TerrakubeToolsBranch environment variables.
   * The executor component will scan the extension folder and will add all the "sh" files to the linux path when using BASH commands.
   * The executor component will scan the extension folder and will add all the ".groovy" files as Groovy dependencies dynamical when using GROOVY commands.
     * When using GROOVY extension to download an external tools, the extension can use the following folder /home/cnb/.terraform-spring-boot/executor/\{{ORGANIZATION\_ID\}}/\{{WORKSPACE\_ID\}}/.terrakube/tools all the folder inside the "tools" folder are also included in the linux execution PATH
@@ -20,7 +20,7 @@ When running a job inside the executor component the following logic is used:
 {% hint style="warning" %}
 An example of how to import external tools can be found in the Terratag Groovy extension
 
-[https://github.com/AzBuilder/terrakube-extensions/tree/main/groovy/TerraTag](https://github.com/AzBuilder/terrakube-extensions/tree/main/groovy/TerraTag)
+[https://github.com/terrakube-io/terrakube-extensions/tree/main/groovy/TerraTag](https://github.com/terrakube-io/terrakube-extensions/tree/main/groovy/TerraTag)
 
 This extension download the terratag binary and expose the binary to be used inside the linux PATH when using BASH commands.
 {% endhint %}
@@ -50,7 +50,7 @@ flow:
           helloWorld.sh
 ```
 
-The following directory structure will be generating when using a workspace with the workspace with "[https://github.com/AzBuilder/terrakube-docker-compose](https://github.com/AzBuilder/terrakube-docker-compose)"
+The following directory structure will be generating when using a workspace with the workspace with "[https://github.com/terrakube-io/terrakube-docker-compose](https://github.com/terrakube-io/terrakube-docker-compose)"
 
 ```
   | - .originRepository
