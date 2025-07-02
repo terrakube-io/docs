@@ -91,7 +91,7 @@ Now we need to define our Terraform code, lets use the following simple example:
 terraform {
   cloud {
     organization = "playground"
-    hostname = "8080-terrakube-io-terrakube-h128dcdc7l1.ws-us105.gitpod.io"
+    hostname = "8080-azbuilder-terrakube-h128dcdc7l1.ws-us105.gitpod.io"
 
     workspaces {
       tags = ["myplayground", "example"]
@@ -119,7 +119,7 @@ output "creation_time" {
 Run **terraform login** to connect to our Terrakube instance:
 
 ```
-terraform login 8080-terrakube-io-terrakube-h128dcdc7l1.ws-us105.gitpod.io
+terraform login 8080-azbuilder-terrakube-h128dcdc7l1.ws-us105.gitpod.io
 ```
 
 Now we can run **terraform init** to initialize our workspace inside the playground organization, lets use "myplayground" for the name of our new workspace
@@ -132,7 +132,7 @@ Let's run terraform apply and create our resources:
 Preparing the remote apply...
 
 To view this run in a browser, visit:
-https://8080-terrakube-io-terrakube-h128dcdc7l1.ws-us105.gitpod.io/app/playground/myplayground/runs/1
+https://8080-azbuilder-terrakube-h128dcdc7l1.ws-us105.gitpod.io/app/playground/myplayground/runs/1
 
 Waiting for the plan to start...
 

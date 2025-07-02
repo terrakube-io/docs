@@ -16,7 +16,7 @@ To authenticate users Terrakube implement [DEX](https://dexidp.io/) so you can a
 Any dex connector that implements the "groups" scope should work without any issue
 {% endhint %}
 
-The Terrakube [helm chart](https://terrakube-io.github.io/terrakube-helm-chart/) is using DEX as dependency, so you can quickly implement it using any exiting dex configuration.
+The Terrakube [helm chart](https://azbuilder.github.io/terrakube-helm-chart/) is using DEX as dependency, so you can quickly implement it using any exiting dex configuration.
 
 {% hint style="danger" %}
 Make sure to update the dex configuration when deploying terrakube in a real kubernetes environment, by default it is using a very basic openLDAP with some sample data. To disable udpate security.useOpenLDAP in your terrakube.yaml

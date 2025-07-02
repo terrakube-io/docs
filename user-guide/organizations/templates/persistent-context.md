@@ -26,7 +26,7 @@ GET {{terrakubeApi}}/context/v1/{{jobId}}
 
 #### Using Persistent Contexts in Templates
 
-The persistent context can be used using the [Context](https://github.com/terrakube-io/terrakube-extensions/tree/main/groovy/Context) extension from the Terrakube extension repository. It supports saving a JSON file or saving a new property inside the context JSON.
+The persistent context can be used using the [Context](https://github.com/AzBuilder/terrakube-extensions/tree/main/groovy/Context) extension from the Terrakube extension repository. It supports saving a JSON file or saving a new property inside the context JSON.
 
 ```
 import Context

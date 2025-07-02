@@ -95,7 +95,7 @@ The `cloud` block is available in Terraform v1.1 and later. Previous versions ca
 Once we have added the terraform remote state configuration we will need to authenticate to Terrakube using the following command with the Terrakube API as the following:
 
 ```
-terraform login 8080-terrakube-io-terrakube-3xqsq270uq1.ws-us82.gitpod.io
+terraform login 8080-azbuilder-terrakube-3xqsq270uq1.ws-us82.gitpod.io
 ```
 
 The output will look something like the following:
@@ -103,8 +103,8 @@ The output will look something like the following:
 <figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption></figcaption></figure>
 
 ```
-terraform login 8080-terrakube-io-terrakube-po7evw1u15x.ws-us86.gitpod.io
-Terraform will request an API token for 8080-terrakube-io-terrakube-po7evw1u15x.ws-us86.gitpod.io using OAuth.
+terraform login 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io
+Terraform will request an API token for 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io using OAuth.
 
 This will work only if you are able to use a web browser on this computer to
 complete a login process. If not, you must obtain an API token by another
@@ -119,10 +119,10 @@ Do you want to proceed?
 
   Enter a value: yes
 
-Terraform must now open a web browser to the login page for 8080-terrakube-io-terrakube-po7evw1u15x.ws-us86.gitpod.io.
+Terraform must now open a web browser to the login page for 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io.
 
 If a browser does not open this automatically, open the following URL to proceed:
-    https://5556-terrakube-io-terrakube-po7evw1u15x.ws-us86.gitpod.io/dex/auth?scope=openid+profile+email+offline_access+groups&client_id=example-app&code_challenge=YYe059U9HyeMy1-RmuEzSajPJYGdcY4IkNr0pZz4LZ8&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A10000%2Flogin&response_type=code&state=f8b6da79-35f3-2b92-d8d8-179cda386f91
+    https://5556-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io/dex/auth?scope=openid+profile+email+offline_access+groups&client_id=example-app&code_challenge=YYe059U9HyeMy1-RmuEzSajPJYGdcY4IkNr0pZz4LZ8&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A10000%2Flogin&response_type=code&state=f8b6da79-35f3-2b92-d8d8-179cda386f91
 
 Terraform will now wait for the host to signal that login was successful.
 
@@ -132,7 +132,7 @@ Terraform will now wait for the host to signal that login was successful.
 Success! Terraform has obtained and saved an API token.
 
 The new API token will be used for any future Terraform command that must make
-authenticated requests to 8080-terrakube-io-terrakube-po7evw1u15x.ws-us86.gitpod.io.
+authenticated requests to 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io.
 ```
 
 ### Terraform Init
@@ -186,7 +186,7 @@ will stop streaming the logs, but will not stop the plan running remotely.
 Preparing the remote plan...
 
 To view this run in a browser, visit:
-https://8080-terrakube-io-terrakube-po7evw1u15x.ws-us86.gitpod.io/app/simple/workspace1/runs/1
+https://8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io/app/simple/workspace1/runs/1
 
 Waiting for the plan to start...
 
@@ -241,7 +241,7 @@ will stop streaming the logs, but will not stop the apply running remotely.
 Preparing the remote apply...
 
 To view this run in a browser, visit:
-https://8080-terrakube-io-terrakube-po7evw1u15x.ws-us86.gitpod.io/app/simple/workspace1/runs/2
+https://8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io/app/simple/workspace1/runs/2
 
 Waiting for the plan to start...
 
@@ -306,7 +306,7 @@ will stop streaming the logs, but will not stop the apply running remotely.
 Preparing the remote apply...
 
 To view this run in a browser, visit:
-https://8080-terrakube-io-terrakube-po7evw1u15x.ws-us86.gitpod.io/app/simple/workspace1/runs/3
+https://8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io/app/simple/workspace1/runs/3
 
 Waiting for the plan to start...
 

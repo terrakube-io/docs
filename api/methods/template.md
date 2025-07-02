@@ -13,7 +13,7 @@ This endpoint is used to create, update, search or delete teamplates inside an o
 | data.attribute.version     | string | Template version                              |
 
 {% hint style="info" %}
-To better understand Terrakube Configuration Language job templates please refer to the following [GitHub repository.](https://github.com/terrakube-io/terrakube-extensions)
+To better understand Terrakube Configuration Language job templates please refer to the following [GitHub repository.](https://github.com/AzBuilder/terrakube-extensions)
 {% endhint %}
 
 ### Example:
@@ -34,22 +34,22 @@ To better understand Terrakube Configuration Language job templates please refer
 
 ### Supported Operations
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml" path="/organization/{organizationId}/template/{templateId}" method="get" %}
-[https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml](https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml)
+{% swagger src="https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml" path="/organization/{organizationId}/template/{templateId}" method="get" %}
+[https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml](https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml" path="/organization/{organizationId}/template" method="post" %}
-[https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml](https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml)
+{% swagger src="https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml" path="/organization/{organizationId}/template" method="post" %}
+[https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml](https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml" path="/organization/{organizationId}/template/{templateId}" method="delete" %}
-[https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml](https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml)
+{% swagger src="https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml" path="/organization/{organizationId}/template/{templateId}" method="delete" %}
+[https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml](https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml" path="/organization/{organizationId}/template/{templateId}" method="patch" %}
-[https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml](https://raw.githubusercontent.com/terrakube-io/terrakube-server/main/openapi-spec/v1_6.yml)
+{% swagger src="https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml" path="/organization/{organizationId}/template/{templateId}" method="patch" %}
+[https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml](https://raw.githubusercontent.com/AzBuilder/terrakube-server/main/openapi-spec/v1_6.yml)
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/terrakube-io/terrakube-server/blob/main/openapi-spec/v1\_6.yml)
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/blob/main/openapi-spec/v1\_6.yml)
 {% endhint %}

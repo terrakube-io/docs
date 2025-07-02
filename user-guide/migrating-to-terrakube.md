@@ -20,7 +20,7 @@ terraform state pull > tf.state
 ```
 terraform {
   backend "remote" {
-    hostname = "8080-terrakube-io-terrakube-q8aleg88vlc.ws-us92.gitpod.io"
+    hostname = "8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io"
     organization = "migrate-org"
 
     workspaces {
@@ -35,7 +35,7 @@ terraform {
 ```
 terraform {
   cloud {
-    hostname = "8080-terrakube-io-terrakube-q8aleg88vlc.ws-us92.gitpod.io"
+    hostname = "8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io"
     organization = "migrate-org"
     workspaces {
       name = "migrate-state"
@@ -49,7 +49,7 @@ terraform {
 3. And run the following commands
 
 ```
-terraform login 8080-terrakube-io-terrakube-q8aleg88vlc.ws-us92.gitpod.io
+terraform login 8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io
 terraform init 
 terraform state push tf.state
 

@@ -6,10 +6,10 @@ description: 'Images for Terrakube components can be found in the following link
 
 | Component          | Link                                                                                                           |
 | ------------------ | -------------------------------------------------------------------------------------------------------------- |
-| Terrakube API      | [https://hub.docker.com/r/terrakube-io/api-server/tags](https://hub.docker.com/r/terrakube-io/api-server/tags)       |
-| Terrakube Registry | [https://hub.docker.com/r/terrakube-io/open-registry/tags](https://hub.docker.com/r/terrakube-io/open-registry/tags) |
-| Terrakube Executor | [https://hub.docker.com/r/terrakube-io/executor/tags](https://hub.docker.com/r/terrakube-io/executor/tags)           |
-| Terrakube UI       | [https://hub.docker.com/r/terrakube-io/terrakube-ui/tags](https://hub.docker.com/r/terrakube-io/terrakube-ui/tags)   |
+| Terrakube API      | [https://hub.docker.com/r/azbuilder/api-server/tags](https://hub.docker.com/r/azbuilder/api-server/tags)       |
+| Terrakube Registry | [https://hub.docker.com/r/azbuilder/open-registry/tags](https://hub.docker.com/r/azbuilder/open-registry/tags) |
+| Terrakube Executor | [https://hub.docker.com/r/azbuilder/executor/tags](https://hub.docker.com/r/azbuilder/executor/tags)           |
+| Terrakube UI       | [https://hub.docker.com/r/azbuilder/terrakube-ui/tags](https://hub.docker.com/r/azbuilder/terrakube-ui/tags)   |
 
 {% hint style="success" %}
 Default Images are based on Ubuntu Jammy (linux/amd64)
@@ -25,9 +25,9 @@ The docker images are generated using cloud native buildpacks with the maven plu
 From Terrakube 2.17.0 we generate 3 additional  docker images for the API, Registry and Executor components that are based on [Alpaquita Linux](https://bell-sw.com/alpaquita-linux/) that are designed and optimized for Spring Boot applications.
 
 ```
-docker pull terrakube-io/api-server:2.17.0-alpaquita
-docker pull terrakube-io/open-registry:2.17.0-alpaquita
-docker pull terrakube-io/executor:2.17.0-alpaquita
+docker pull azbuilder/api-server:2.17.0-alpaquita
+docker pull azbuilder/open-registry:2.17.0-alpaquita
+docker pull azbuilder/executor:2.17.0-alpaquita
 ```
 
 {% hint style="danger" %}

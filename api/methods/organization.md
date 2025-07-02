@@ -10,7 +10,7 @@ You need to be part of the administrator Active Directory Group to work with thi
 The default group is handled using the Spring Boot property
 
 ```
-org.terrakube-io.owner=TERRAKUBE_ADMIN
+org.azbuilder.owner=TERRAKUBE_ADMIN
 ```
 {% endhint %}
 
@@ -55,6 +55,6 @@ org.terrakube-io.owner=TERRAKUBE_ADMIN
 {% endswagger %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/terrakube-io/terrakube-server/tree/main/openapi-spec)
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
 {% endhint %}
 

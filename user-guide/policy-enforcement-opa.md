@@ -11,7 +11,7 @@ The firts step will be to create some terraform policies inside your Terrakube e
 <figure><img src="../.gitbook/assets/image (202).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-Terrakube extensions can be stored inside a GIT repository that you can configure when staring the platform. This is an example repository that you can fork or customiza to create your custom extensions [https://github.com/terrakube-io/terrakube-extensions](https://github.com/terrakube-io/terrakube-extensions)
+Terrakube extensions can be stored inside a GIT repository that you can configure when staring the platform. This is an example repository that you can fork or customiza to create your custom extensions [https://github.com/AzBuilder/terrakube-extensions](https://github.com/AzBuilder/terrakube-extensions)
 {% endhint %}
 
 The following policy computes a score for a Terraform that combines
