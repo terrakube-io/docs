@@ -46,20 +46,20 @@ org.terrakube-io.owner=TERRAKUBE_ADMIN
 
 ### Supported Operations
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="get" %}
-[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="get" %}
+[https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team" method="post" %}
-[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team" method="post" %}
+[https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="delete" %}
-[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="delete" %}
+[https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="patch" %}
-[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml" path="/organization/{organizationId}/team/{teamId}" method="patch" %}
+[https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
 {% hint style="info" %}

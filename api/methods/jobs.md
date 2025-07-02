@@ -44,20 +44,20 @@ To better understand Terrakube Configuration Language job templates please refer
 
 ### Supported Operations
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/workspace/{workspaceId}/job/{jobId}" method="get" %}
-[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml" path="/workspace/{workspaceId}/job/{jobId}" method="get" %}
+[https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/workspace/{workspaceId}/job" method="post" %}
-[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml" path="/workspace/{workspaceId}/job" method="post" %}
+[https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/workspace/{workspaceId}/job/{jobId}" method="delete" %}
-[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml" path="/workspace/{workspaceId}/job/{jobId}" method="delete" %}
+[https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
-{% swagger src="https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml" path="/workspace/{workspaceId}/job/{jobId}" method="patch" %}
-[https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/azb-server/main/openapi-spec/v1_3.yml)
+{% swagger src="https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml" path="/workspace/{workspaceId}/job/{jobId}" method="patch" %}
+[https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml](https://raw.githubusercontent.com/terrakube-io/terrakube/main/openapi-spec/v1_3.yml)
 {% endswagger %}
 
 {% hint style="info" %}
