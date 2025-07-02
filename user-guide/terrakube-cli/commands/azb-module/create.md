@@ -24,5 +24,5 @@ Create a module
 Create a new module
 
 ```
-terrakube module create --organization-id e5ad0642-f9b3-48b3-9bf4-35997febe1fb -n myModule -d "module description" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git 
+terrakube module create --organization-id e5ad0642-f9b3-48b3-9bf4-35997febe1fb -n myModule -d "module description" -p azurerm -s https://github.com/terrakube-io/terraform-sample-repository.git 
 ```

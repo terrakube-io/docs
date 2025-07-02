@@ -4,7 +4,7 @@ Integrate Terrakube with GitHub Actions is easy and you can handle your workspac
 
 The GIT repository will represent a Terrakube Organization and each folder inside the repository will be a new workspace.
 
-There is an example available in the following [link](https://github.com/AzBuilder/terraform-sample-repository)
+There is an example available in the following [link](https://github.com/terrakube-io/terraform-sample-repository)
 
 ### Configuration
 
@@ -32,7 +32,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: AzBuilder/terrakube-action-github@main
+      - uses: terrakube-io/terrakube-action-github@main
         with:
           TERRAKUBE_TOKEN:  ${{ secrets.TERRAKUBE_PAT }} 
           TERRAKUBE_TEMPLATE: "Terraform-Plan"
@@ -68,7 +68,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: AzBuilder/terrakube-action-github@main
+      - uses: terrakube-io/terrakube-action-github@main
         with:
           TERRAKUBE_TOKEN:  ${{ secrets.TERRAKUBE_PAT }} 
           TERRAKUBE_TEMPLATE: "Terraform-Plan/Apply"
@@ -114,7 +114,7 @@ Create a file called "terrakube.json"; includes workspace name and the terraform
 To build the github action in your local machine use the following.
 
 ```
-git clone https://github.com/AzBuilder/terrakube-action-github.git
+git clone https://github.com/terrakube-io/terrakube-action-github.git
 yarn install
 yarn build
 ```

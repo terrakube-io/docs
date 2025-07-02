@@ -167,7 +167,7 @@ Dex configuration is using inside the redirect URIs http://localhost:10001/login
 Run the installation
 
 ```bash
-helm repo add terrakube-repo https://AzBuilder.github.io/terrakube-helm-chart
+helm repo add terrakube-repo https://terrakube-io.github.io/terrakube-helm-chart
 helm repo update
 helm install terrakube terrakube-repo/terrakube --values terrakube.yaml -n terrakube
 ```

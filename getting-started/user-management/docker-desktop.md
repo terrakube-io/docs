@@ -136,7 +136,7 @@ executor:
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
-    toolsRepository: "https://github.com/AzBuilder/terrakube-extensions"
+    toolsRepository: "https://github.com/terrakube-io/terrakube-extensions"
     toolsBranch: "main"
 
 ## Registry properties
@@ -200,5 +200,5 @@ helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n
 ```
 
 {% hint style="warning" %}
-For any question please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)
+For any question please open an issue in our [helm chart repository](https://github.com/terrakube-io/terrakube-helm-chart)
 {% endhint %}

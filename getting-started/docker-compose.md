@@ -46,7 +46,7 @@ Update the /etc/hosts file adding the following entries:
 ### Running Terrakube Locally with HTTPS
 
 ```
-git clone https://github.com/AzBuilder/terrakube.git
+git clone https://github.com/terrakube-io/terrakube.git
 cd terrakube/docker-compose
 mkcert -key-file key.pem -cert-file cert.pem platform.local "*.platform.local"
 CAROOT=$(mkcert -CAROOT)/rootCA.pem

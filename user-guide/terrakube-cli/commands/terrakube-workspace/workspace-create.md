@@ -24,6 +24,6 @@ Create a workspace
 Create a new workspace
 
 ```text
-terrakube workspace create --organization-id 312b4415-806b-47a9-9452-b71f0753136e -n myWorkspace -s https://github.com/AzBuilder/terraform-sample-repository.git -b master -t 0.15.0
+terrakube workspace create --organization-id 312b4415-806b-47a9-9452-b71f0753136e -n myWorkspace -s https://github.com/terrakube-io/terraform-sample-repository.git -b master -t 0.15.0
 ```
 

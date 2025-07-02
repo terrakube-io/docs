@@ -25,4 +25,4 @@ executor:
     value: "-Dhttp.proxyHost=your.proxy.net -Dhttp.proxyPort=8080 -Dhttp.nonProxyHosts=XXXXX -Dhttps.proxyHost=your.proxy.net -Dhttps.proxyPort=8080 -Dhttps.nonProxyHosts=XXXXX"
 ```
 
-[Reference](https://github.com/AzBuilder/terrakube/issues/699)
+[Reference](https://github.com/terrakube-io/terrakube/issues/699)

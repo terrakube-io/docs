@@ -2,7 +2,7 @@
 
 We use Gitpod to develop the platform. You can have a complete development environment to test all the components and features with one click using the following button.
 
-[![Gitpod ready-to-code](https://camo.githubusercontent.com/791bd446c60d39e9a296e8d02837c81fe0af6108f02a04afbc93edda0cb93ad6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f476974706f642d72656164792d2d746f2d2d636f64652d626c75653f6c6f676f3d676974706f64267374796c653d666c61742d737175617265)](https://gitpod.io/#https://github.com/AzBuilder/terrakube)
+[![Gitpod ready-to-code](https://camo.githubusercontent.com/791bd446c60d39e9a296e8d02837c81fe0af6108f02a04afbc93edda0cb93ad6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f476974706f642d72656164792d2d746f2d2d636f64652d626c75653f6c6f676f3d676974706f64267374796c653d666c61742d737175617265)](https://gitpod.io/#https://github.com/terrakube-io/terrakube)
 
 {% hint style="warning" %}
 Gitpod is [free for 50 hours](https://www.gitpod.io/pricing) every month, so you dont have to worry for testing the application.
@@ -124,7 +124,7 @@ Each organization is preloaded with the following templates to run Terrakube job
 
 <figure><img src="https://user-images.githubusercontent.com/4461895/181139239-ee39bb71-e52d-43ca-b791-075701d4d9eb.png" alt=""><figcaption></figcaption></figure>
 
-For more information of how to use templates please refer to the following [repository](https://github.com/AzBuilder/terrakube-extensions)
+For more information of how to use templates please refer to the following [repository](https://github.com/terrakube-io/terrakube-extensions)
 
 #### Workspaces
 
@@ -165,8 +165,8 @@ The response should look like the following and you can use the _**verification\
 {
   "device_code": "htlj4w73ftjfplinifqntp7ept6xaratvgauu2nj3nldlcgxjym",
   "user_code": "HLMH-WKXX",
-  "verification_uri": "https://5556-azbuilder-terrakube-XXXXX.ws-us54.gitpod.io/dex/device",
-  "verification_uri_complete": "https://5556-azbuilder-terrakube-XXXX.ws-us54.gitpod.io/dex/device?user_code=HLMH-WKXX",
+  "verification_uri": "https://5556-terrakube-io-terrakube-XXXXX.ws-us54.gitpod.io/dex/device",
+  "verification_uri_complete": "https://5556-terrakube-io-terrakube-XXXX.ws-us54.gitpod.io/dex/device?user_code=HLMH-WKXX",
   "expires_in": 300,
   "interval": 5
 }

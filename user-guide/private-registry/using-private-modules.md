@@ -20,7 +20,7 @@ For example:
 
 ```
 module "google-network" { 
-  source = "8075-azbuilder-terrakube-gmnub6flawx.ws-us89b.gitpod.io/terrakube/google-network/google" 
+  source = "8075-terrakube-io-terrakube-gmnub6flawx.ws-us89b.gitpod.io/terrakube/google-network/google" 
   version = "v6.0.1" 
   # insert required variables here 
 }
@@ -40,7 +40,7 @@ You can also copy the details of how to configure any submodule, just like the m
 
 ```
 module "iam" { 
-  source = "8075-azbuilder-terrakube-7qovhyoq3u9.ws-eu105.gitpod.io/aws/iam/aws//modules/iam-account" 
+  source = "8075-terrakube-io-terrakube-7qovhyoq3u9.ws-eu105.gitpod.io/aws/iam/aws//modules/iam-account" 
   version = "v5.30.0" 
   # insert required variables here 
 }
@@ -61,7 +61,7 @@ When running Terraform on the CLI, you must configure credentials in [.terraform
 For example:
 
 ```
-credentials "8075-azbuilder-terrakube-gmnub6flawx.ws-us89b.gitpod.io" { 
+credentials "8075-terrakube-io-terrakube-gmnub6flawx.ws-us89b.gitpod.io" { 
   # valid user API token:
   token = "xxxxxx.yyyyyy.zzzzzzzzzzzzz"
 }

@@ -61,7 +61,7 @@ Now we have all the necessary to install Terrakube with **HTTPS**
 ### Setup Helm Repository
 
 ```
-helm repo add terrakube-repo https://AzBuilder.github.io/terrakube-helm-chart
+helm repo add terrakube-repo https://terrakube-io.github.io/terrakube-helm-chart
 helm repo update
 ```
 
@@ -333,7 +333,7 @@ If you found the following message "_**Snippet directives are disabled by the In
 ```
 allow-snippet-annotations: "true"
 
-Reference: https://github.com/AzBuilder/terrakube/issues/618#issuecomment-1838980
+Reference: https://github.com/terrakube-io/terrakube/issues/618#issuecomment-1838980
 ```
 {% endhint %}
 

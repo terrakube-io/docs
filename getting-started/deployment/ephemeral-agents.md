@@ -9,7 +9,7 @@ The following will explain how to run the executor component in`"ephemeral"` mod
 These environment variables can be used to customize the API component:
 
 * ExecutorEphemeralNamespace (Default value: "terrakube")
-* ExecutorEphemeralImage (Defatul value: "azbuilder/executor:2.22.0" )
+* ExecutorEphemeralImage (Defatul value: "terrakube-io/executor:2.22.0" )
 * ExecutorEphemeralSecret (Default value: "terrakube-executor-secrets" )
 
 > The above is basically to control where the job will be created and executed and to mount the secrets required by the executor component
@@ -72,14 +72,14 @@ Once the above configuration is created we can deploy the Terrakube API like the
 ```
 ## API properties
 api:
-  image: "azbuilder/api-server"
+  image: "terrakube-io/api-server"
   version: "2.22.0"
   serviceAccountName: "terrakube-api-service-account"
   env:
   - name: ExecutorEphemeralNamespace
     value: terrakube
   - name: ExecutorEphemeralImage
-    value: azbuilder/executor:2.22.0
+    value: terrakube-io/executor:2.22.0
   - name: ExecutorEphemeralSecret
     value: terrakube-executor-secrets
 ```
@@ -141,19 +141,19 @@ The following environment variables can be used to customize the ephemeral execu
 
 * EPHEMERAL\_CONFIG\_NODE\_SELECTOR\_TAGS
   * Example: key1=value1;key2=value2
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1243)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1243)
 * EPHEMERAL\_CONFIG\_SERVICE\_ACCOUNT
   * Example: myserviceaccount
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1243)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1243)
 * EPHEMERAL\_CONFIG\_ANNOTATIONS
   * Example: key1=value1;key2=value2
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1243)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1243)
 * EPHEMERAL\_CONFIG\_TOLERATIONS
   * Example: `key:operator:effect`
-  * [`Reference`](https://github.com/AzBuilder/terrakube/pull/1579)
+  * [`Reference`](https://github.com/terrakube-io/terrakube/pull/1579)
 * EPHEMERAL\_CONFIG\_MAP\_NAME
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1505)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1505)
 * EPHEMERAL\_CONFIG\_MAP\_MOUNT\_PATH
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1505)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1505)
 
-More information can be found inside this [code](https://github.com/AzBuilder/terrakube/blob/main/api/src/main/java/org/terrakube/api/plugin/scheduler/job/tcl/executor/ephemeral/EphemeralExecutorService.java)
+More information can be found inside this [code](https://github.com/terrakube-io/terrakube/blob/main/api/src/main/java/org/terrakube/api/plugin/scheduler/job/tcl/executor/ephemeral/EphemeralExecutorService.java)

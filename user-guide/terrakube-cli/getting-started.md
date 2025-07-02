@@ -91,7 +91,7 @@ In the previous command we are creating a new team inside our new Organization a
 After having given permissions to our teams we can create a workspace.
 
 ```
-terrakube workspace create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name MyWorkspace --source https://github.com/AzBuilder/terraform-sample-repository.git --branch master --terraform-version 0.15.0
+terrakube workspace create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name MyWorkspace --source https://github.com/terrakube-io/terraform-sample-repository.git --branch master --terraform-version 0.15.0
 ```
 
 And define some variables for the created workspace
@@ -104,7 +104,7 @@ If you want to avoid entering the organization or the workspace in each command 
 
 ```
 export TERRAKUBE_ORGANIZATION_ID=8a6e9998-165c-49f0-953c-d3fb0924731a
-terrakube workspace create --name MyWorkspace --source https://github.com/AzBuilder/terraform-sample-repository.git --branch master --terraform-version 0.15.0
+terrakube workspace create --name MyWorkspace --source https://github.com/terrakube-io/terraform-sample-repository.git --branch master --terraform-version 0.15.0
 export TERRAKUBE_WORKSPACE_ID=38b6635a-d38e-46f2-a95e-d00a416de4fd
 terrakube workspace variable create --key tag_name --value "Hola mundo" --hcl=false --sensitive=false --category TERRAFORM 
 ```
@@ -132,7 +132,7 @@ You can use a curl command to retrieve the log result from the terminal
 Usually you will want to define your infrastructure templates as code using terraform and for this you can use the modules so others can reuse them.
 
 ```bash
-terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule --description "module description" --provider azurerm --source https://github.com/AzBuilder/terraform-sample-repository.git 
+terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule --description "module description" --provider azurerm --source https://github.com/terrakube-io/terraform-sample-repository.git 
 ```
 
 ### Simplifying the commands
@@ -167,13 +167,13 @@ terrakube org create -n MyOrganization -d "Getting started Organization"
 
 ```bash
 # creating multiple modules without env variables
-terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule --description "module description" --provider azurerm --source https://github.com/AzBuilder/terraform-sample-repository.git 
-terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule2 --description "module description 2" --provider azurerm --source https://github.com/AzBuilder/terraform-sample-repository.git
-terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule3 --description "module description 3" --provider azurerm --source https://github.com/AzBuilder/terraform-sample-repository.git
+terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule --description "module description" --provider azurerm --source https://github.com/terrakube-io/terraform-sample-repository.git 
+terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule2 --description "module description 2" --provider azurerm --source https://github.com/terrakube-io/terraform-sample-repository.git
+terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule3 --description "module description 3" --provider azurerm --source https://github.com/terrakube-io/terraform-sample-repository.git
 
 # creating multiple modules using shorthand, alias and env variables
 export TERRAKUBE_ORGANIZATION_ID=8a6e9998-165c-49f0-953c-d3fb0924731a
-terrakube mod create -n myModule -d "module description" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git 
-terrakube mod create -n myModule2 -d "module description 2" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git
-terrakube mod create -n myModule3 -d "module description 3" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git
+terrakube mod create -n myModule -d "module description" -p azurerm -s https://github.com/terrakube-io/terraform-sample-repository.git 
+terrakube mod create -n myModule2 -d "module description 2" -p azurerm -s https://github.com/terrakube-io/terraform-sample-repository.git
+terrakube mod create -n myModule3 -d "module description 3" -p azurerm -s https://github.com/terrakube-io/terraform-sample-repository.git
 ```
