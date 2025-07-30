@@ -6,7 +6,7 @@ The component use to execute terraform/opentofu configuration is stateless so ev
 TF_PLUGIN_CACHE_DIR=/home/cnb/.terraform.d/plugin-cache
 ```
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 When deploying the helm chart the following can be used to add an emptyDir volume to cache the providers.
 

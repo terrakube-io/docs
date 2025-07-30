@@ -1,5 +1,76 @@
 # Updates
 
+### July 2025 (2.27.0)
+
+This release introduces several significant advancements designed to enhance the functionality, security, and integration capabilities of Terrakube.
+
+#### New UI container
+
+The `terrakube-ui` container now utilizes the `nginxinc/nginx-unprivileged` image, replacing the `bitnami/nginx` image used in previous versions.&#x20;
+
+#### Centralized Terraform Module Version Management
+
+Terraform module versions are now persistently managed within the database, transitioning from the prior Redis-based ephemeral storage. Upon the initial startup following this update, Terrakube will initiate a comprehensive update of all modules. This process may require several minutes, depending on the volume of existing modules.&#x20;
+
+#### Dynamic Credential Authentication
+
+&#x20;Enhanced support has been implemented for dynamic credential authentication with Openbao or Vault, streamlining secure access and integration with these systems.
+
+Inside the workspace settings it only requires to use the following variables
+
+<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+When running a job for example using the terraform cloud block it will work like the following:
+
+```
+terraform plan
+
+Preparing the remote plan...
+
+To view this run in a browser, visit:
+https://terrakube-api.platform.local/app/simple/vault/runs/run-1
+
+Waiting for the plan to start...
+
+***************************************
+Running Terraform PLAN
+***************************************
+data.vault_kv_secret_v2.password: Reading...
+data.vault_kv_secret_v2.password: Read complete after 0s [id=shared/data/kv/creds]
+
+No changes. Your infrastructure matches the configuration.
+```
+
+#### GitLab Integration
+
+Jobs can now be automatically triggered by `merge request` and `release` events within GitLab repositories when defining the webhook configuration like the following:
+
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+A gitlab webhook will be created inside the repository
+
+<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+After every job execution a status will be shown inside gitlab&#x20;
+
+<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+
+#### Bitbucket Integration
+
+Support has been added for triggering jobs through `pull request` and `release` events in Bitbucket.
+
+<figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+
+#### Improved Development Environment Support&#x20;
+
+The `devcontainer` environment now offers enhanced support for both PostgreSQL and MSSQL databases, facilitating more flexible development workflows.
+
+<figure><img src=".gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+
+#### Internal System Migration
+
+The entire project codebase has been migrated to the `io.terrakube` package structure. Concurrently, all previously defined Quartz jobs have been successfully migrated to this new package hierarchy, ensuring consistency and maintainability.
+
 ### July 2024 (2.22.0)
 
 Welcome to the 2.22.0 release of Terrakube! As the summer season comes to a close, we’re focusing on enhancing the stability of the recent features we’ve introduced. While this is a smaller update compared to previous releases, we’re excited to see an increase in contributions from the community. Let’s dive into the key highlights:
@@ -160,8 +231,6 @@ We have made several enhancements to the UI, focusing on improving the overall u
 * **Loading Spinners:** Added spinners for loading main pages instead of static loading text.
 * **Field Validations:** Added validations for fields to improve form submission accuracy.
 
-&#x20;
-
 <figure><img src="https://github.com/AzBuilder/terrakube/assets/27365102/1723b589-121e-47df-9d66-df734b6c548c" alt=""><figcaption></figcaption></figure>
 
 These updates aim to make the Terrakube interface more intuitive and visually appealing.
@@ -236,8 +305,6 @@ More information can be found in this [issue](https://github.com/AzBuilder/terra
 #### Bug fixes
 
 We have made some improvements and fixes based on the feedback from the community and the security analysis. You can find the full list of changes for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.20.0
-
-
 
 ### January 2024 (2.19.0)
 
@@ -499,8 +566,6 @@ Request Body:
 
 We’ve addressed some issues reported by the community regarding performance,bugs and security. You can see the full change log for this version here https://github.com/AzBuilder/terrakube/releases/tag/2.16.0
 
-
-
 ### August 2023 (2.15.0)
 
 Welcome to the 2.15.0 release of Terrakube. There are a couple of updates in this version that we hope you'll like, some of the key highlights include:
@@ -609,8 +674,6 @@ Before, Terrakube only used SSH keys to clone private git repos. Now, Terrakube 
 
 For the full changelog for this version please check https://github.com/AzBuilder/terrakube/releases/tag/2.14.0
 
-
-
 ### May 2023 (2.13.0)
 
 Welcome to the 2.13.0 release of Terrakube. There are a couple of updates in this version that we hope you'll like, some of the key highlights include:
@@ -633,8 +696,6 @@ Starting with this version, you can see the logs in the Terrakube UI in almost r
 ![image](https://github.com/AzBuilder/terrakube/assets/27365102/069d08dd-9ba4-4b1c-b98d-549661a59077)
 
 Also we optimized the code and updated most libs to the latest versions For the full changelog for this version please check https://github.com/AzBuilder/terrakube/releases/tag/2.13.0
-
-
 
 ### Mar 2023 (2.12.0)
 
@@ -718,8 +779,6 @@ We improved the helm chart to make the installation easy and now you can quickly
 Thanks for the community contribution, specially thanks to @Diliz and @jstewart612 for their contributions in the Helm Chart. For the full changelog for this version please check https://github.com/AzBuilder/terrakube/releases/tag/2.12.0
 
 And if you have any idea or suggestion don't hesitate to let us know.
-
-
 
 ### February 2023 (2.11.0)
 
