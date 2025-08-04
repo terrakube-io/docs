@@ -178,3 +178,5 @@
   * [Team API Tokens](api/methods/personal-access-token-1.md)
   * [SSH Key](api/methods/ssh-key.md)
   * [Agent](api/methods/agent.md)
+  * [Collection](api/methods/collection.md)
+  * [Collection Item](api/methods/collection-item.md)
