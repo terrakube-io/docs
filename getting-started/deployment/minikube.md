@@ -9,7 +9,7 @@ Terrakube can be installed in minikube as a sandbox environment to test, to use 
 ### Setup Helm Repository
 
 ```
-helm repo add terrakube-repo https://AzBuilder.github.io/terrakube-helm-chart
+helm repo add terrakube-repo https://charts.terrakube.io
 helm repo update
 ```
 
@@ -60,7 +60,7 @@ If you found the following message "_**Snippet directives are disabled by the In
 ```
 allow-snippet-annotations: "true"
 
-Reference: https://github.com/AzBuilder/terrakube/issues/618#issuecomment-1838980451
+Reference: https://github.com/terrakube-io/terrakube/issues/618#issuecomment-1838980451
 ```
 {% endhint %}
 
@@ -110,5 +110,5 @@ Select the "simple" organization and the "sample\_simple" workspace and run a jo
 {% hint style="info" %}
 For more advance configuration options to install Terrakube visit:
 
-[https://github.com/AzBuilder/terrakube-helm-chart](https://github.com/AzBuilder/terrakube-helm-chart)
+[https://github.com/terrakube-io/terrakube-helm-chart](https://github.com/terrakube-io/terrakube-helm-chart/)
 {% endhint %}
