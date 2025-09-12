@@ -1,5 +1,9 @@
 # Azure DevOps
 
+{% hint style="danger" %}
+OAuth apps are deprecated in Azure DevOps [https://devblogs.microsoft.com/devops/no-new-azure-devops-oauth-apps](https://devblogs.microsoft.com/devops/no-new-azure-devops-oauth-apps/) as an alternative for now a managed identity can be used but the setup is only available using the API, for more information please check [https://github.com/terrakube-io/terrakube/pull/2101](https://github.com/terrakube-io/terrakube/pull/2101)
+{% endhint %}
+
 For using repositories from Azure Devops with Terrakube workspaces and modules you will need to follow these steps:
 
 {% hint style="info" %}
