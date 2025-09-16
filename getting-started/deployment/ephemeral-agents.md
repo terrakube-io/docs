@@ -73,13 +73,13 @@ Once the above configuration is created we can deploy the Terrakube API like the
 ## API properties
 api:
   image: "azbuilder/api-server"
-  version: "2.22.0"
+  version: "2.27.2"
   serviceAccountName: "terrakube-api-service-account"
   env:
   - name: ExecutorEphemeralNamespace
     value: terrakube
   - name: ExecutorEphemeralImage
-    value: azbuilder/executor:2.22.0
+    value: azbuilder/executor:2.27.2
   - name: ExecutorEphemeralSecret
     value: terrakube-executor-secrets
 ```
