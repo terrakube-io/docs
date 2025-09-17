@@ -104,3 +104,7 @@ After login, you are redirected back to Terrakube and a dialog asking you to gra
 <figure><img src="../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
 
 Click on `Grant Access`. That is the last step. If everything went right, now you should be logged in Terrakube.
+
+Dex can be further configured by setting `dex.config.web.skipApprovalScreen` to avoid granting access everytime.
+It is also recommended to switch to a `database` mode instead of `memory` to avoid forcing all users to re-authenticate
+each time dex pod crashes. Switching to `database` mode will also allow you to run several dex pods for better availability.
