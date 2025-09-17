@@ -1,0 +1,42 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="Eslint" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="HILUnknownResourceType" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="WARNING_ATTRIBUTES" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="15">
+            <item index="0" class="java.lang.String" itemvalue="pytest-celery" />
+            <item index="1" class="java.lang.String" itemvalue="factory-boy" />
+            <item index="2" class="java.lang.String" itemvalue="requests-mock" />
+            <item index="3" class="java.lang.String" itemvalue="robotframework" />
+            <item index="4" class="java.lang.String" itemvalue="ipython" />
+            <item index="5" class="java.lang.String" itemvalue="bottle" />
+            <item index="6" class="java.lang.String" itemvalue="robotframework-jsonlibrary" />
+            <item index="7" class="java.lang.String" itemvalue="newrelic" />
+            <item index="8" class="java.lang.String" itemvalue="moto" />
+            <item index="9" class="java.lang.String" itemvalue="flake8" />
+            <item index="10" class="java.lang.String" itemvalue="coveralls" />
+            <item index="11" class="java.lang.String" itemvalue="sentry-sdk" />
+            <item index="12" class="java.lang.String" itemvalue="freezegun" />
+            <item index="13" class="java.lang.String" itemvalue="robotframework-requests" />
+            <item index="14" class="java.lang.String" itemvalue="robotbackgroundlogger" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyPep8NamingInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="N812" />
+          <option value="N803" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="TFMissingModule" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="DUPLICATE_FROM_SERVER" />
+    <inspection_tool class="TfUnknownBlockType" enabled="true" level="WEAK WARNING" enabled_by_default="true" editorAttributes="DUPLICATE_FROM_SERVER" />
+    <inspection_tool class="TfUnknownProperty" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="WARNING_ATTRIBUTES" />
+    <inspection_tool class="TfUnknownResource" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="DUPLICATE_FROM_SERVER" />
+  </profile>
+</component>

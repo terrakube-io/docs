@@ -279,3 +279,17 @@ Now you can select the **Drift Detection** template to run at 5:30 AM every day.
 Now you should receive the notification in your Slack channel every day at 5:30 am&#x20;
 
 Implementing Drift detection in Terrakube is easy, you just need to make use of extension and write a small script, this is just an example of easy is to extend Terrakube functionality using extensions, you can even create more complex templates quickly, for example you could create a webhook or send emails using the sendgrid extension.
+
+### Handling errors
+One could also be tempted to return a slack message when a drift template ended with an error. By default, Terrakube
+template execution will stop when encountering an error. This behavior can be modified by setting `ignoreError` parameter.
+
+```
+flow:
+  - type: "terraformPlan"
+    step: 100
+    name: "Running Terraform Plan with Drift Detection and Slack Notification"
+    ignoreError: true
+    commands:
+    ... rest of your drift template
+```
