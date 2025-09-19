@@ -20,7 +20,6 @@ api:
     redisPort: "6380"
 
 executor:
-  version: "2.23.2"
   env:
   - name: SERVICE_BINDING_ROOT
     value: /mnt/platform/bindings
