@@ -29,6 +29,7 @@
   * [Custom Terraform CLI Builds](getting-started/deployment/custom-terraform-cli-builds.md)
   * [Self-Hosted Agents](getting-started/deployment/self-hosted-agents.md)
   * [Ephemeral Agents](getting-started/deployment/ephemeral-agents.md)
+  * [External Redis](getting-started/deployment/external-redis.md)
   * [Proxy Configuration](getting-started/deployment/proxy-configuration.md)
   * [Token Security](getting-started/deployment/token-security.md)
   * [Open Telemetry](getting-started/deployment/open-telemetry.md)
