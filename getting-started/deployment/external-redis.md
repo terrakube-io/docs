@@ -34,3 +34,19 @@ executor:
 {% hint style="warning" %}
 "changeit" is the default password for the java keystore included in the container in this path "/layers/paketo-buildpacks\_bellsoft-liberica/jre/lib/security/cacerts"
 {% endhint %}
+
+### Ephemeral Executor with Redis SSL
+
+{% hint style="info" %}
+Using EPHEMERAL\_JOB\_ENV\_VARS is supported from version 2.28.0
+{% endhint %}
+
+To add the additional environment variables to the ephemeral executor the following could be used:
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+Value:
+
+```
+EPHEMERAL_JOB_ENV_VARS=TerrakubeRedisSSL=true;TerrakubeRedisTruststorePath=/layers/paketo-buildpacks_bellsoft-liberica/jre/lib/security/cacerts;TerrakubeRedisTruststorePassword=changeit;ExecutorEphemeralSecret=terrakube-executor-secrets-ephemeral
+```

@@ -18,7 +18,7 @@ Terraform module versions are now persistently managed within the database, tran
 
 Inside the workspace settings it only requires to use the following variables
 
-<figure><img src=".gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 When running a job for example using the terraform cloud block it will work like the following:
 
@@ -45,7 +45,7 @@ No changes. Your infrastructure matches the configuration.
 
 Jobs can now be automatically triggered by `merge request` and `release` events within GitLab repositories when defining the webhook configuration like the following:
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 A gitlab webhook will be created inside the repository
 
