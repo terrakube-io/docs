@@ -24,6 +24,37 @@ The public and private key need to be mounted inside the container and the path 
 * DynamicCredentialPublicKeyPath
 * DynamicCredentialPrivateKeyPath
 
+### Kubernetes Deployment
+
+To enable dynamic credentials when using the helm chart add the following values.
+
+```yaml
+api:
+  dynamicCredentials:
+    enabled: true
+    publicKey: |
+      -----BEGIN PUBLIC KEY-----
+      REDACTED
+      -----END PUBLIC KEY-----
+    privateKey: |
+      -----BEGIN PRIVATE KEY-----
+      REDACTED
+      -----END PRIVATE KEY-----
+  volumes:
+    - name: dynamic-credentials
+      secret:
+        secretName: terrakube-dynamic-credentials
+        items:
+          - key: public-key.pem
+            path: public-key.pem
+          - key: private-key.pem
+            path: private-key.pem
+  volumeMounts:
+  - name: dynamic-credentials
+    mountPath: /etc/terrakube/credentials
+    readOnly: true
+```
+
 ### Public Endpoints Requirements
 
 To use Dynamic Provider credentials the following public endpoints were added. This endpoint needs to be accessible for your different cloud providers.
