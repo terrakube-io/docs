@@ -44,7 +44,7 @@ When running the job, internally terraform will be using the selected SSH key to
 
 <figure><img src="../../.gitbook/assets/image (216).png" alt=""><figcaption></figcaption></figure>
 
-When using a VCS connection you can select wich SSH key should be injected when downloading modules in the workspace settings:
+When using a VCS connection you can select which SSH key should be injected when downloading modules in the workspace settings:
 
 <figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
 
