@@ -4,7 +4,7 @@
 This guide will assume that you are using the minikube deployment, but the storage backend can be used in any real kubernetes environment.
 {% endhint %}
 
-The first step will be to create one azure storage account with the folling containers:
+The first step will be to create one azure storage account with the following containers:
 
 * content
 * registry
