@@ -4,7 +4,7 @@ Terrakube can be integrated with [Infracost](https://www.infracost.io/) using th
 
 ### Template Definition
 
-The firts step will be to create a Terrakube template that calculate the estimated cost of the resources using infracost and validate the total monthly cost to check if we could deploy the resource or not if the price is bellow 100 USD.
+The firts step will be to create a Terrakube template that calculate the estimated cost of the resources using infracost and validate the total monthly cost to check if we could deploy the resource or not if the price is below 100 USD.
 
 ```yaml
 flow:
