@@ -5,7 +5,7 @@ When migrating to Terrakube you can use the following approaches:
 * [**Migrating with the Terraform CLI**](migrating-to-terrakube.md#migrating-with-the-terraform-cli): Ideal for users who prefer to migrate workspaces individually, leveraging the familiar Terraform CLI.
 * [**Migrating with the Workspaces Importer**](migrating-to-terrakube.md#migrating-with-the-workspaces-importer): Provides a guided, wizard-like experience within Terrakube, enabling you to seamlessly import workspaces from platforms such as Terraform Cloud or Terraform Enterprise.
 
-### Migrating with the Terraform CLI
+### Migrating local state with the Terraform CLI
 
 1. Begin by downloading the current state from Terraform Cloud / Enterprise with the following command:
 
@@ -52,6 +52,64 @@ terraform {
 terraform login 8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io
 terraform init 
 terraform state push tf.state
+
+```
+
+Once the migration process is completed you should see the terraform state in your storage backend (azure, aws, gcp or minio) depending of your configuration
+
+### Migrating remote HCP state with the Terraform CLI
+
+
+1. Confirm you have a .terraform.rc in your home directory with a similar content. Refer to https://developer.hashicorp.com/terraform/cli/config/config-file
+
+```
+plugin_cache_dir   = "$HOME/.terraform.d/plugin-cache"
+disable_checkpoint = true
+```
+
+2. Ensure you have a working terraform cli login with HCP. If you are not sure, you can login again:
+
+```
+terraform login app.terraform.io
+```
+3. Proceed to modify your Terraform configuration to introduce Terrakube as the replacement cloud backend. It's crucial to include the `hostname` parameter:
+
+{% tabs %}
+{% tab title="remote backend" %}
+```
+terraform {
+  backend "remote" {
+    hostname = "8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io"
+    organization = "migrate-org"
+
+    workspaces {
+      name = "migrate-state"
+    }
+  }
+}
+```
+{% endtab %}
+
+{% tab title="cloud block" %}
+```
+terraform {
+  cloud {
+    hostname = "8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io"
+    organization = "migrate-org"
+    workspaces {
+      name = "migrate-state"
+    }
+  }
+}
+```
+{% endtab %}
+{% endtabs %}
+
+3. And run the following commands
+
+```
+terraform login 8080-azbuilder-terrakube-q8aleg88vlc.ws-us92.gitpod.io
+terraform init -migrate-state
 
 ```
 
