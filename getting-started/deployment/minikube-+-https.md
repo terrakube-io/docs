@@ -267,6 +267,10 @@ ingress:
       nginx.ingress.kubernetes.io/proxy-set-headers: "terrakube/custom-headers"
 ```
 
+{% hint style="warning" %}
+If you are following this guild for Terrakube 4.2.5 or lower, you will also have to mount the CA certs explicitly. For more information, see [Custom CA certs](custom-ca-certs.md)
+{% endhint %}
+
 ### Install Terrakube with local HTTPS support
 
 ```

@@ -55,10 +55,37 @@ security:
     terrakubeDemo2.pem: |
       -----BEGIN CERTIFICATE-----
       MIIDZTCCA.....
-      
 
       -----END CERTIFICATE-----
 ```
+
+Version 4.2.6 and later will automatically mount certificates passed via `security.caCerts`. If you are using version 4.2.5 or below of the Helm chart, you also need to explicitly mount the certificates. Repeat for `api`, `executor` and `registry`:
+
+```yaml
+api:
+  env:
+  - name: SERVICE_BINDING_ROOT
+    value: /mnt/platform/bindings
+  volumes:
+    - name: ca-certs
+      secret:
+        secretName: terrakube-ca-secrets
+        items:
+        - key: "terrakubeDemo1.pem"
+          path: "terrakubeDemo1.pem"
+        - key: "terrakubeDemo2.pem"
+          path: "terrakubeDemo2.pem"
+        - key: "type"
+          path: "type"
+  volumeMounts:
+  - name: ca-certs
+    mountPath: /mnt/platform/bindings/ca-certificates
+    readOnly: true
+```
+
+{% hint style="warning" %}
+When mounting the volume with the ca secrets dont forget to add the key "type", the content of the file is already defined inside the helm chart
+{% endhint %}
 
 Checking the terrakube component two additional ca certs are added inside the sytem truststore
 
