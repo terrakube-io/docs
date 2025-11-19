@@ -55,11 +55,13 @@ security:
     terrakubeDemo2.pem: |
       -----BEGIN CERTIFICATE-----
       MIIDZTCCA.....
-      
 
       -----END CERTIFICATE-----
+```
 
-## API properties
+Version 4.2.6 and later will automatically mount certificates passed via `security.caCerts`. If you are using version 4.2.5 or below of the Helm chart, you also need to explicitly mount the certificates. Repeat for `api`, `executor` and `registry`:
+
+```yaml
 api:
   env:
   - name: SERVICE_BINDING_ROOT

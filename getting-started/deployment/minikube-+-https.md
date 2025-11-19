@@ -139,66 +139,14 @@ security:
       XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
       -----END CERTIFICATE-----
 
-## API properties
 api:
-  env:
-  - name: SERVICE_BINDING_ROOT
-    value: /mnt/platform/bindings
-  volumes:
-    - name: ca-certs
-      secret:
-        secretName: terrakube-ca-secrets
-        items:
-        - key: "rootCA.pem"
-          path: "rootCA.pem"
-        - key: "type"
-          path: "type"
-  volumeMounts:
-  - name: ca-certs
-    mountPath: /mnt/platform/bindings/ca-certificates
-    readOnly: true
   properties:
     databaseType: "H2"
 
-executor:
-  env:
-  - name: SERVICE_BINDING_ROOT
-    value: /mnt/platform/bindings
-  volumes:
-    - name: ca-certs
-      secret:
-        secretName: terrakube-ca-secrets
-        items:
-        - key: "rootCA.pem"
-          path: "rootCA.pem"
-        - key: "type"
-          path: "type"
-  volumeMounts:
-  - name: ca-certs
-    mountPath: /mnt/platform/bindings/ca-certificates
-    readOnly: true
-
-## Registry properties
 registry:
   enabled: true
   replicaCount: "1"
   serviceType: "ClusterIP"
-  env:
-  - name: SERVICE_BINDING_ROOT
-    value: /mnt/platform/bindings
-  volumes:
-    - name: ca-certs
-      secret:
-        secretName: terrakube-ca-secrets
-        items:
-        - key: "rootCA.pem"
-          path: "rootCA.pem"
-        - key: "type"
-          path: "type"
-  volumeMounts:
-  - name: ca-certs
-    mountPath: /mnt/platform/bindings/ca-certificates
-    readOnly: true
 
 dex:
   config:
@@ -318,6 +266,10 @@ ingress:
       nginx.ingress.kubernetes.io/use-regex: "true"
       nginx.ingress.kubernetes.io/proxy-set-headers: "terrakube/custom-headers"
 ```
+
+{% hint style="warning" %}
+If you are following this guild for Terrakube 4.2.5 or lower, you will also have to mount the CA certs explicitly. For more information, see [Custom CA certs](custom-ca-certs.md)
+{% endhint %}
 
 ### Install Terrakube with local HTTPS support
 
