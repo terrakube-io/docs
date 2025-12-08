@@ -60,7 +60,7 @@ We have to configure a Dex connector to use with Keycloak. Add a new connector i
           id: TerrakubeClient
           name: TerrakubeClient
           config:
-            issuer: "[http|https]://<KEYCLOAK_SERVER>/auth/realms/<MY_REALM>"
+            issuer: "[http|https]://<KEYCLOAK_SERVER>/realms/<MY_REALM>"
             clientID: "TerrakubeClient"
             clientSecret: "<TerrakubeClient's secret>"
             redirectURI: "[http|https]://<TERRAKUBE-API URL>/dex/callback"
@@ -71,7 +71,7 @@ This is the simpler configuration that we can use. Let's see some notes about th
 
 * **type:** must be `oidc` (OpenID Connect).
 * **name:** this is the string shown in the connectors list in Terrakube GUI.
-* **issuer:** it refers to the Keycloak server. It has the form `[http|https]://<KEYCLOAK_SERVER>/auth/realms/<REALM_NAME>`
+* **issuer:** it refers to the Keycloak server. It has the form `[http|https]://<KEYCLOAK_SERVER>/realms/<REALM_NAME>`
 * **clientID:** refers to the Client ID configured in Keycloak. They must match.
 * **clientSecret:** must be the secret in the Credentials tab in Keycloak..
 * **redirectURI:** has the form `[http|https]://<TERRAKUBE_API>/dex/callback`. Notice this is the **Terrakube API** URL and not the UI URL.
