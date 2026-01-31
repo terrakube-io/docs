@@ -6,12 +6,12 @@ For using repositories from GitHub.com with Terrakube workspaces and modules you
 **Manage VCS Providers** permission is required to perform this action, please check [team-management.md](../organizations/team-management.md "mention") for more info.
 {% endhint %}
 
-Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
+Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**
 
 <figure><img src="../../.gitbook/assets/image (385).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.&#x20;
+If you prefer, you can add a new VCS Provider directly from the [Create workspace](../workspaces/creating-workspaces.md) or Create Module screen.
 {% endhint %}
 
 Click the **Github button** and then click the **Github Cloud option.**
@@ -20,7 +20,7 @@ Click the **Github button** and then click the **Github Cloud option.**
 
 In the next screen click the link to [register a new OAuth Application](https://github.com/settings/applications/new) in Github
 
-<figure><img src="../../.gitbook/assets/image (315).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (179) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the Github page, complete the required fields and click **Register application**
 
@@ -36,7 +36,7 @@ Next, generate a new client secret
 
 <figure><img src="../../.gitbook/assets/image (395).png" alt=""><figcaption></figcaption></figure>
 
-Copy the  **Client Id**  and **Client Secret** from Github and go back to Terrakube to complete the required information. Then, click the **Connect and Continue** button
+Copy the **Client Id** and **Client Secret** from Github and go back to Terrakube to complete the required information. Then, click the **Connect and Continue** button
 
 <figure><img src="../../.gitbook/assets/image (314).png" alt=""><figcaption></figcaption></figure>
 

@@ -29,15 +29,15 @@ You can keep the default values
 
 Add the domain name to cognito
 
-<figure><img src="../../.gitbook/assets/image (145) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (171) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once the user pool is created you will need to create a new application.
 
-<figure><img src="../../.gitbook/assets/image (124) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (109) (1).png" alt=""><figcaption></figcaption></figure>
 
 Update the application configuration and update the redirect URL configuration.
 
-<figure><img src="../../.gitbook/assets/image (105) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (153) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 

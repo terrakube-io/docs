@@ -16,7 +16,7 @@ In the popup, provide the team name and the permissions assigned to the team. Us
 
 <table><thead><tr><th width="341">Field</th><th>Description</th></tr></thead><tbody><tr><td>Name</td><td><p>Must be a valid group based on the Dex connector you are using to manage users and groups.</p><p>For example if you are using Azure Active Directory, you must use a valid Active Directory Group like TERRAKUBE_ADMIN, or if you are using Github the format should be MyGithubOrg:TERRAKUBE_ADMIN</p></td></tr><tr><td>Manage Workspaces</td><td>Allow members to create and administrate all workspaces within the organization</td></tr><tr><td>Manage Modules</td><td>Allow members to create and administrate all modules within the organization</td></tr><tr><td>Manage Providers</td><td>Allow members to create and administrate all providers within the organization</td></tr><tr><td>Manage <a href="templates/">Templates</a></td><td>Allow members to create and administrate all <a href="templates/">templates</a> within the organization</td></tr><tr><td>Manage <a href="../vcs-providers/">VCS Settings</a></td><td>Allow members to create and administrate all <a href="../vcs-providers/">VCS Providers</a> within the organization</td></tr><tr><td>Manage State</td><td>Allow members to see the terraform/tofu state from the UI</td></tr></tbody></table>
 
-<figure><img src="../../.gitbook/assets/image (427).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (426) (1).png" alt=""><figcaption></figcaption></figure>
 
 Finally click the **Create team** button and the team will be created
 

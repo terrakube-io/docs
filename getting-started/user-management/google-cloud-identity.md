@@ -21,11 +21,11 @@ You need to complete the Google authentication setup for Dex. You can found info
 
 You need to go to your GCP projet and create a new OAuth Application you can follow this steps: firts select "APIs & Services => Credentials"
 
-<figure><img src="../../.gitbook/assets/image (134) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (233) (1).png" alt=""><figcaption></figcaption></figure>
 
 Once inside the "Credentials" page, you will have to create a new OAuth Client
 
-<figure><img src="../../.gitbook/assets/image (142) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (401) (1).png" alt=""><figcaption></figcaption></figure>
 
 The OAuth application should look like this with the redirect URL "[https://api.terrakube.gcp.com/dex/callback](https://api.terrakube.docker.com/dex/callback)"
 
@@ -43,7 +43,7 @@ Using the following permission "[https://www.googleapis.com/auth/admin.directory
 
 You can now generate the JSON credentials file for your application, you will use this file later in the helm chart.
 
-<figure><img src="../../.gitbook/assets/image (95) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (139) (1).png" alt=""><figcaption></figcaption></figure>
 
 Now you can create the DEX configuration, you will use this config later when deploying the helm chart.
 

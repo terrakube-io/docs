@@ -19,7 +19,18 @@ Internally the Executor component will use the following to run in `"ephemeral"`
 * EphemeralFlagBatch (Default value: "false")
 * EphemeralJobData, this contains all the data that the executor need to run.
 
-### Requirements
+### Helm Chat (Automatic Installation)
+
+To enable the ephemeral executor using the helm chart please use the following options:
+
+```yaml
+api:
+  serviceAccountName: "terrakube-api-service-account"
+  ephemeralExecution:
+    enabled: true
+```
+
+### Requirements (Manual Installation)
 
 To use Ephemeral executors we need to create the following configuration:
 
