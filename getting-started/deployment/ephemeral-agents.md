@@ -19,7 +19,7 @@ Internally the Executor component will use the following to run in `"ephemeral"`
 * EphemeralFlagBatch (Default value: "false")
 * EphemeralJobData, this contains all the data that the executor need to run.
 
-### Helm Chat (Automatic Installation)
+### Helm Chat Configuration (Automatic)
 
 To enable the ephemeral executor using the helm chart please use the following options:
 
@@ -30,7 +30,7 @@ api:
     enabled: true
 ```
 
-### Requirements (Manual Installation)
+### Manual Configuration
 
 To use Ephemeral executors we need to create the following configuration:
 
@@ -74,25 +74,6 @@ roleRef:
   kind: Role
   name: terrakube-api-role
   apiGroup: rbac.authorization.k8s.io
-```
-
-#### Helm Chart Configuration
-
-Once the above configuration is created we can deploy the Terrakube API like the following example:
-
-```
-## API properties
-api:
-  image: "azbuilder/api-server"
-  version: "2.27.2"
-  serviceAccountName: "terrakube-api-service-account"
-  env:
-  - name: ExecutorEphemeralNamespace
-    value: terrakube
-  - name: ExecutorEphemeralImage
-    value: azbuilder/executor:2.27.2
-  - name: ExecutorEphemeralSecret
-    value: terrakube-executor-secrets
 ```
 
 #### Workspace Configuration
