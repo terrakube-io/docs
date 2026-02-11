@@ -1,6 +1,6 @@
 # Drift Detection
 
-Terrakube can be used to detect any infraestructure drift, this can be done using Terrakube extensions(open policy and slack), templates and schedules, below you can find an example of how this can be achieved.&#x20;
+Terrakube can be used to detect any infrastructure drift, this can be done using Terrakube extensions(open policy and slack), templates and schedules, below you can find an example of how this can be achieved.&#x20;
 
 ### Open Policy Definition
 
@@ -52,7 +52,7 @@ Terrakube extensions can be stored inside a GIT repository that you can configur
 
 ### Template Definition
 
-The firts step will be to create a Terrakube template that validate if there is a change in our infraestructure.
+The firts step will be to create a Terrakube template that validate if there is a change in our infrastructure.
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>flow:
 </strong>  - type: "terraformPlan"
@@ -205,7 +205,7 @@ You can also setup this using the global variables in your organization
 
 ### Template Setup
 
-Now that you have define the template to detect the infraestructure drif you can add the template in your Terrakube organization using the name "Drift Detection"
+Now that you have define the template to detect the infrastructure drift you can add the template in your Terrakube organization using the name "Drift Detection"
 
 The template will look like this:
 
