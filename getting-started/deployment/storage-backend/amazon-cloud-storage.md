@@ -52,8 +52,6 @@ If need it Terrakube can authenticate without using the access key or secret dep
 storage:
   defaultStorage: false
   aws:
-    accessKey: "12345"
-    secretKey: "12345"
     bucketName: "my-bucket-name"
     region: "us-east-1"
 
@@ -78,7 +76,3 @@ registry:
   - name: AwsEnableRoleAuth
     value: true
 ```
-
-{% hint style="info" %}
-Using "12345" for the access key and secret key is required because the helm chart require those values internally.
-{% endhint %}
