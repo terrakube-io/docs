@@ -5,7 +5,7 @@ Terrakube components support [Open Telemetry](https://opentelemetry.io/) by defa
 To enable telemetry inside the Terrakube components please add the following environment variable:
 
 ```
-OTEL_JAVAAGENT_ENABLE=true
+OTEL_JAVAAGENT_ENABLED=true
 ```
 
 {% hint style="success" %}
