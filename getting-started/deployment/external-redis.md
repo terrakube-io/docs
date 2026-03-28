@@ -43,7 +43,7 @@ Using EPHEMERAL\_JOB\_ENV\_VARS is supported from version 2.28.0
 
 To add the additional environment variables to the ephemeral executor the following could be used:
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
 
 Value:
 

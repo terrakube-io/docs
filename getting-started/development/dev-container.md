@@ -1,16 +1,18 @@
 # Dev Container
 
-This page contains the configuration for a development container that provides a consistent environment for working with Terrakube.&#x20;
+This page contains the configuration for a development container that provides a consistent environment for working with Terrakube.
 
 The devcontainer includes all the necessary tools and dependencies to develop both the Java backend, TypeScript frontend components and includes terraform CLI.
 
-> Make sure The below was tested using Ubuntu-based distribution, not sure if this will work with macos, windows or codespaces
+{% hint style="info" %}
+The below was tested using Ubuntu-based distribution and Windows 11 with Firefox browser.
+{% endhint %}
 
 ### Features
 
-* Java 17 (Liberica)
+* Java 25 (Liberica)
 * Maven 3.9.9
-* Node.js 20.x with Yarn
+* Node.js 22.x with Yarn
 * VS Code extensions for Java, JavaScript/TypeScript
 
 ### Getting Started
@@ -44,23 +46,15 @@ The local CA is now installed in the system trust store! ⚡️
 The local CA is now installed in the Firefox trust store (requires browser restart)! 🦊
 ```
 
-**Create Docker Network for the devcontainer**
-
-```
-docker network create terrakube-network -d bridge --subnet 10.25.25.0/24 --gateway 10.25.25.254
-```
-
-We will be using `10.25.25.253` for our the traefik gateway
-
 **Local DNS entries**
 
-Update the /etc/hosts file adding the following entries:
+Update the /etc/hosts or C:\Windows\System32\drivers\etc\hosts file adding the following entries:
 
 ```
-10.25.25.253 terrakube.platform.local
-10.25.25.253 terrakube-api.platform.local
-10.25.25.253 terrakube-registry.platform.local
-10.25.25.253 terrakube-dex.platform.local
+127.0.0.1 terrakube.platform.local
+127.0.0.1 terrakube-api.platform.local
+127.0.0.1 terrakube-registry.platform.local
+127.0.0.1 terrakube-dex.platform.local
 ```
 
 #### Opening the Project in a Dev Container
@@ -81,14 +75,27 @@ Update the /etc/hosts file adding the following entries:
    * Press F1 or Ctrl+Shift+P
    * Type "Remote-Containers: Reopen in Container" and press Enter
 2. Wait for the container to build and start. This may take a few minutes the first time.
-3.  Start all Terrakube components
+3. Start all Terrakube component
+4. Terrakube should be availabe with the following url `https://terrakube.platform.local` using `admin@example.com` with password `admin`
 
-    [![image](https://private-user-images.githubusercontent.com/4461895/444196515-34a4d4c9-d1b0-443f-834e-c4d76db26187.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTM3MTc2MzMsIm5iZiI6MTc1MzcxNzMzMywicGF0aCI6Ii80NDYxODk1LzQ0NDE5NjUxNS0zNGE0ZDRjOS1kMWIwLTQ0M2YtODM0ZS1jNGQ3NmRiMjYxODcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDcyOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA3MjhUMTU0MjEzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NTYxNmE0NjJjNmYzNzVhMDExYWExM2E1MGNhM2Q1YzhkYmQ5MjhmMGM4OGUwNDYwMzQ5NWY2NTE5MWVkYzQ0NyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.sYgHUp5kaSsse6EL6XXFncvCTW-jveq4eFqvfrdnRI0)](https://private-user-images.githubusercontent.com/4461895/444196515-34a4d4c9-d1b0-443f-834e-c4d76db26187.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTM3MTc2MzMsIm5iZiI6MTc1MzcxNzMzMywicGF0aCI6Ii80NDYxODk1LzQ0NDE5NjUxNS0zNGE0ZDRjOS1kMWIwLTQ0M2YtODM0ZS1jNGQ3NmRiMjYxODcucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDcyOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA3MjhUMTU0MjEzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NTYxNmE0NjJjNmYzNzVhMDExYWExM2E1MGNhM2Q1YzhkYmQ5MjhmMGM4OGUwNDYwMzQ5NWY2NTE5MWVkYzQ0NyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.sYgHUp5kaSsse6EL6XXFncvCTW-jveq4eFqvfrdnRI0)
-4.  Terrakube should be availabe with the following url `https://terrakube.platform.local` using `admin@example.com` with password `admin`
+### Windows devcontainer
 
+Sometimes in windows the `postCreateCommand` fails because of how windows manage the new lines characters
 
+<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
 
-    <figure><img src="https://private-user-images.githubusercontent.com/4461895/444197287-c92b5f7a-c484-47b5-bb31-4edd4513278e.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTM3MTc2MzMsIm5iZiI6MTc1MzcxNzMzMywicGF0aCI6Ii80NDYxODk1LzQ0NDE5NzI4Ny1jOTJiNWY3YS1jNDg0LTQ3YjUtYmIzMS00ZWRkNDUxMzI3OGUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDcyOCUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTA3MjhUMTU0MjEzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NzI5ZTgxYTliZGI2NjdjY2Q4NmRhMWE4ODRkZjYzNTUzMzhiYjg0MWQwZmRmM2NkNGYxZjEwNWEwNzFmNDhjMCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.gNl8kp021D8YOexDQYDCXbSxieHg9mustSpaT_AJpUM" alt=""><figcaption></figcaption></figure>
+To fix this it is required to open a terminal in VS Code and run the following:
+
+```bash
+sed -i 's/\r$//' ./scripts/setupDevelopmentEnvironment.sh
+bash ./scripts/setupDevelopmentEnvironment.sh
+```
+
+### Running Terrakube
+
+<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
 
 ### Ports
 

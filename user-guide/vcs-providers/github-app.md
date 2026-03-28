@@ -16,17 +16,17 @@ For using repositories from GitHub.com with Terrakube workspaces and modules you
 **Manage VCS Providers** permission is required to perform this action, please check [team-management.md](../organizations/team-management.md "mention") for more info.
 {% endhint %}
 
-Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**&#x20;
+Navigate to the desired organization and click the **Settings** button, then on the left menu select **VCS Providers**
 
 <figure><img src="../../.gitbook/assets/image (385).png" alt=""><figcaption></figcaption></figure>
 
 Select the option for Github App
 
-<figure><img src="../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 In the next page click [https://github.com/settings/apps/new](https://github.com/settings/apps/new) to create a new application adding the required information
 
-<figure><img src="../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 Complete the information like the following:
 
@@ -49,7 +49,7 @@ Add "Webhooks" with "Read and Write"
 <figure><img src="../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-Webhooks  are need it if you will create workspace with webhooks enabled
+Webhooks are need it if you will create workspace with webhooks enabled
 {% endhint %}
 
 Add "Commit statuses" to "Read and write"
@@ -90,7 +90,7 @@ The final step will be to install the application to your Github account like th
 
 <figure><img src="../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
 
-And select which repositories will be used with terrakube&#x20;
+And select which repositories will be used with terrakube
 
 <figure><img src="../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
 

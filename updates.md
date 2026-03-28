@@ -6,19 +6,19 @@ This release introduces several significant advancements designed to enhance the
 
 #### New UI container
 
-The `terrakube-ui` container now utilizes the `nginxinc/nginx-unprivileged` image, replacing the `bitnami/nginx` image used in previous versions.&#x20;
+The `terrakube-ui` container now utilizes the `nginxinc/nginx-unprivileged` image, replacing the `bitnami/nginx` image used in previous versions.
 
 #### Centralized Terraform Module Version Management
 
-Terraform module versions are now persistently managed within the database, transitioning from the prior Redis-based ephemeral storage. Upon the initial startup following this update, Terrakube will initiate a comprehensive update of all modules. This process may require several minutes, depending on the volume of existing modules.&#x20;
+Terraform module versions are now persistently managed within the database, transitioning from the prior Redis-based ephemeral storage. Upon the initial startup following this update, Terrakube will initiate a comprehensive update of all modules. This process may require several minutes, depending on the volume of existing modules.
 
 #### Dynamic Credential Authentication
 
-&#x20;Enhanced support has been implemented for dynamic credential authentication with Openbao or Vault, streamlining secure access and integration with these systems.
+Enhanced support has been implemented for dynamic credential authentication with Openbao or Vault, streamlining secure access and integration with these systems.
 
 Inside the workspace settings it only requires to use the following variables
 
-<figure><img src=".gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 When running a job for example using the terraform cloud block it will work like the following:
 
@@ -45,15 +45,15 @@ No changes. Your infrastructure matches the configuration.
 
 Jobs can now be automatically triggered by `merge request` and `release` events within GitLab repositories when defining the webhook configuration like the following:
 
-<figure><img src=".gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 A gitlab webhook will be created inside the repository
 
-<figure><img src=".gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-After every job execution a status will be shown inside gitlab&#x20;
+After every job execution a status will be shown inside gitlab
 
-<figure><img src=".gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 #### Bitbucket Integration
 
@@ -61,7 +61,7 @@ Support has been added for triggering jobs through `pull request` and `release` 
 
 <figure><img src=".gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
 
-#### Improved Development Environment Support&#x20;
+#### Improved Development Environment Support
 
 The `devcontainer` environment now offers enhanced support for both PostgreSQL and MSSQL databases, facilitating more flexible development workflows.
 
