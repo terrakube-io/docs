@@ -170,6 +170,8 @@
   * [Organization](api/methods/organization.md)
   * [Teams](api/methods/teams.md)
   * [Workspace](api/methods/workspace.md)
+  * [Project](api/methods/project.md)
+  * [Project Access](api/methods/project-access.md)
   * [Variables](api/methods/variables.md)
   * [History](api/methods/history.md)
   * [Jobs](api/methods/jobs.md)

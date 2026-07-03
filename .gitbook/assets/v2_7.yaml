@@ -1,0 +1,630 @@
+swagger: '2.0'
+info:
+  version: ''
+  title: Elide Service
+basePath: /api/v1
+tags:
+  - name: project
+  - name: projectAccess
+paths:
+  /organization/{organizationId}/project:
+    get:
+      tags:
+        - project
+      description: Returns the relationship project
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: sort
+          in: query
+          description: Sorts the collection on the selected attributes.  A prefix of '-' sorts descending
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - '-name'
+              - description
+              - '-description'
+              - id
+              - '-id'
+          collectionFormat: csv
+        - name: fields[project]
+          in: query
+          description: Selects the set of project fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - description
+              - projectAccess
+              - organization
+          collectionFormat: csv
+        - name: include
+          in: query
+          description: Selects the set of relationships that should be expanded as a compound document in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - projectAccess
+              - organization
+          collectionFormat: csv
+        - name: filter[project]
+          in: query
+          description: Filters the collection of project using a 'disjoint' RSQL expression
+          required: false
+          type: string
+        - name: page[number]
+          in: query
+          description: Number of pages to return.  Can be used with page[size]
+          required: false
+          type: integer
+        - name: page[size]
+          in: query
+          description: Number of elements per page.  Can be used with page[number]
+          required: false
+          type: integer
+        - name: page[offset]
+          in: query
+          description: Offset from 0 to start paginating.  Can be used with page[limit]
+          required: false
+          type: integer
+        - name: page[limit]
+          in: query
+          description: Maximum number of items to return.  Can be used with page[offset]
+          required: false
+          type: integer
+        - name: page[totals]
+          in: query
+          description: For requesting total pages/records be included in the response page meta data
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/definitions/project'
+              included:
+                type: array
+                description: Included resources
+                uniqueItems: true
+                items:
+                  type: object
+                  properties:
+                    attributes:
+                      type: object
+                    id:
+                      type: string
+                    relationships:
+                      type: object
+                    type:
+                      type: string
+    post:
+      tags:
+        - project
+      description: Creates an item of type project and adds it to project
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: project
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/project'
+      responses:
+        '201':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/project'
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+  /organization/{organizationId}/project/{projectId}:
+    get:
+      tags:
+        - project
+      description: Returns an instance of type project
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: fields[project]
+          in: query
+          description: Selects the set of project fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - description
+              - projectAccess
+              - organization
+          collectionFormat: csv
+        - name: include
+          in: query
+          description: Selects the set of relationships that should be expanded as a compound document in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - projectAccess
+              - organization
+          collectionFormat: csv
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/project'
+              included:
+                type: array
+                description: Included resources
+                uniqueItems: true
+                items:
+                  type: object
+                  properties:
+                    attributes:
+                      type: object
+                    id:
+                      type: string
+                    relationships:
+                      type: object
+                    type:
+                      type: string
+    delete:
+      tags:
+        - project
+      description: Deletes an instance of type project
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters: []
+      responses:
+        '204':
+          description: Successful response
+    patch:
+      tags:
+        - project
+      description: Modifies an instance of type project
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: project
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/project'
+      responses:
+        '204':
+          description: Successful response
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+      - name: projectId
+        in: path
+        description: project Identifier
+        required: true
+        type: string
+  /organization/{organizationId}/project/{projectId}/projectAccess:
+    get:
+      tags:
+        - projectAccess
+      description: Returns the relationship projectAccess
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: sort
+          in: query
+          description: Sorts the collection on the selected attributes.  A prefix of '-' sorts descending
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - '-name'
+              - role
+              - '-role'
+              - id
+              - '-id'
+          collectionFormat: csv
+        - name: fields[projectAccess]
+          in: query
+          description: Selects the set of project_access fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - role
+              - manageWorkspace
+              - manageState
+              - manageJob
+              - planJob
+              - approveJob
+              - project
+          collectionFormat: csv
+        - name: page[number]
+          in: query
+          description: Number of pages to return.  Can be used with page[size]
+          required: false
+          type: integer
+        - name: page[size]
+          in: query
+          description: Number of elements per page.  Can be used with page[number]
+          required: false
+          type: integer
+        - name: page[offset]
+          in: query
+          description: Offset from 0 to start paginating.  Can be used with page[limit]
+          required: false
+          type: integer
+        - name: page[limit]
+          in: query
+          description: Maximum number of items to return.  Can be used with page[offset]
+          required: false
+          type: integer
+        - name: page[totals]
+          in: query
+          description: For requesting total pages/records be included in the response page meta data
+          required: false
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/definitions/projectAccess'
+              included:
+                type: array
+                description: Included resources
+                uniqueItems: true
+                items:
+                  type: object
+                  properties:
+                    attributes:
+                      type: object
+                    id:
+                      type: string
+                    relationships:
+                      type: object
+                    type:
+                      type: string
+    post:
+      tags:
+        - projectAccess
+      description: Creates an item of type project_access and adds it to projectAccess
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: projectAccess
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/projectAccess'
+      responses:
+        '201':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/projectAccess'
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+      - name: projectId
+        in: path
+        description: project Identifier
+        required: true
+        type: string
+  /organization/{organizationId}/project/{projectId}/projectAccess/{projectAccessId}:
+    get:
+      tags:
+        - projectAccess
+      description: Returns an instance of type project_access
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: fields[projectAccess]
+          in: query
+          description: Selects the set of project_access fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - role
+              - manageWorkspace
+              - manageState
+              - manageJob
+              - planJob
+              - approveJob
+              - project
+          collectionFormat: csv
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/projectAccess'
+    delete:
+      tags:
+        - projectAccess
+      description: Deletes an instance of type project_access
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters: []
+      responses:
+        '204':
+          description: Successful response
+    patch:
+      tags:
+        - projectAccess
+      description: Modifies an instance of type project_access
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: projectAccess
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/projectAccess'
+      responses:
+        '204':
+          description: Successful response
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+      - name: projectId
+        in: path
+        description: project Identifier
+        required: true
+        type: string
+      - name: projectAccessId
+        in: path
+        description: project_access Identifier
+        required: true
+        type: string
+  /organization/{organizationId}/workspace/{workspaceId}/relationships/project:
+    patch:
+      tags:
+        - project
+      description: Assigns or unassigns a workspace to a project
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: body
+          required: false
+          schema:
+            type: object
+            properties:
+              data:
+                description: Project resource linkage. Set to null to unassign.
+                type: object
+                properties:
+                  type:
+                    type: string
+                    enum:
+                      - project
+                  id:
+                    type: string
+      responses:
+        '204':
+          description: Successful response
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+      - name: workspaceId
+        in: path
+        description: workspace Identifier
+        required: true
+        type: string
+definitions:
+  project:
+    properties:
+      type:
+        type: string
+        description: |-
+          Create Permissions : (team manage project)
+          Delete Permissions : (team manage project)
+      id:
+        type: string
+      attributes:
+        type: object
+        properties:
+          name:
+            type: string
+            description: |-
+              Read Permissions : (team view project OR team project access view project)
+              Update Permissions : (team manage project)
+          description:
+            type: string
+            description: |-
+              Read Permissions : (team view project OR team project access view project)
+              Update Permissions : (team manage project)
+          createdBy:
+            type: string
+            description: |-
+              Read Permissions : (team view project OR team project access view project)
+              Update Permissions : (team manage project)
+          createdDate:
+            type: string
+            format: date-time
+            description: |-
+              Read Permissions : (team view project OR team project access view project)
+              Update Permissions : (team manage project)
+          updatedBy:
+            type: string
+            description: |-
+              Read Permissions : (team view project OR team project access view project)
+              Update Permissions : (team manage project)
+          updatedDate:
+            type: string
+            format: date-time
+            description: |-
+              Read Permissions : (team view project OR team project access view project)
+              Update Permissions : (team manage project)
+      relationships:
+        type: object
+        properties:
+          organization:
+            type: object
+            description: |-
+              Read Permissions : (team view project OR team project access view project)
+              Update Permissions : (team manage project)
+            properties:
+              id:
+                type: string
+              type:
+                type: string
+                enum:
+                  - organization
+          projectAccess:
+            type: object
+            description: |-
+              Read Permissions : (team manage project access OR team project limited manage project access)
+              Update Permissions : (team manage project OR team project admin manages project access field)
+            properties:
+              id:
+                type: string
+              type:
+                type: string
+                enum:
+                  - project_access
+  projectAccess:
+    properties:
+      type:
+        type: string
+        description: |-
+          Create Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+          Delete Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+      id:
+        type: string
+      attributes:
+        type: object
+        properties:
+          name:
+            type: string
+            description: |-
+              Read Permissions : (team manage project access OR team project limited manage project access)
+              Update Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+          role:
+            type: string
+            enum:
+              - admin
+              - write
+              - plan
+              - read
+            description: |-
+              Read Permissions : (team manage project access OR team project limited manage project access)
+              Update Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+          manageWorkspace:
+            type: boolean
+            description: |-
+              Read Permissions : (team manage project access OR team project limited manage project access)
+              Update Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+          manageState:
+            type: boolean
+            description: |-
+              Read Permissions : (team manage project access OR team project limited manage project access)
+              Update Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+          manageJob:
+            type: boolean
+            description: |-
+              Read Permissions : (team manage project access OR team project limited manage project access)
+              Update Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+          planJob:
+            type: boolean
+            description: |-
+              Read Permissions : (team manage project access OR team project limited manage project access)
+              Update Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+          approveJob:
+            type: boolean
+            description: |-
+              Read Permissions : (team manage project access OR team project limited manage project access)
+              Update Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+      relationships:
+        type: object
+        properties:
+          project:
+            type: object
+            description: |-
+              Read Permissions : (team manage project access OR team project limited manage project access)
+              Update Permissions : (user is a superuser OR team manage project access OR team project limited manage project access)
+            properties:
+              id:
+                type: string
+              type:
+                type: string
+                enum:
+                  - project
