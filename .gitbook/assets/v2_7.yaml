@@ -6,6 +6,9 @@ basePath: /api/v1
 tags:
   - name: project
   - name: projectAccess
+  - name: agent
+  - name: collection
+  - name: item
 paths:
   /organization/{organizationId}/project:
     get:
@@ -489,6 +492,489 @@ paths:
         description: workspace Identifier
         required: true
         type: string
+  /organization/{organizationId}/agent:
+    get:
+      tags:
+        - agent
+      description: Returns the collection of agent
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: sort
+          in: query
+          description: Sorts the collection on the selected attributes.  A prefix of '-' sorts descending
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - '-name'
+              - id
+              - '-id'
+          collectionFormat: csv
+        - name: fields[agent]
+          in: query
+          description: Selects the set of agent fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - description
+              - url
+          collectionFormat: csv
+        - name: page[number]
+          in: query
+          required: false
+          type: integer
+        - name: page[size]
+          in: query
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/definitions/agent'
+    post:
+      tags:
+        - agent
+      description: Creates an item of type agent
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: agent
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/agent'
+      responses:
+        '201':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/agent'
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+  /organization/{organizationId}/agent/{agentId}:
+    get:
+      tags:
+        - agent
+      description: Returns an instance of type agent
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: fields[agent]
+          in: query
+          description: Selects the set of agent fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - description
+              - url
+          collectionFormat: csv
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/agent'
+    delete:
+      tags:
+        - agent
+      description: Deletes an instance of type agent
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters: []
+      responses:
+        '204':
+          description: Successful response
+    patch:
+      tags:
+        - agent
+      description: Modifies an instance of type agent
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: agent
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/agent'
+      responses:
+        '204':
+          description: Successful response
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+      - name: agentId
+        in: path
+        description: agent Identifier
+        required: true
+        type: string
+  /organization/{organizationId}/collection:
+    get:
+      tags:
+        - collection
+      description: Returns the collection of collection
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: sort
+          in: query
+          description: Sorts the collection on the selected attributes.  A prefix of '-' sorts descending
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - '-name'
+              - id
+              - '-id'
+          collectionFormat: csv
+        - name: fields[collection]
+          in: query
+          description: Selects the set of collection fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - description
+              - priority
+              - item
+          collectionFormat: csv
+        - name: page[number]
+          in: query
+          required: false
+          type: integer
+        - name: page[size]
+          in: query
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/definitions/collection'
+    post:
+      tags:
+        - collection
+      description: Creates an item of type collection
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: collection
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/collection'
+      responses:
+        '201':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/collection'
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+  /organization/{organizationId}/collection/{collectionId}:
+    get:
+      tags:
+        - collection
+      description: Returns an instance of type collection
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: fields[collection]
+          in: query
+          description: Selects the set of collection fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - name
+              - description
+              - priority
+              - item
+          collectionFormat: csv
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/collection'
+    delete:
+      tags:
+        - collection
+      description: Deletes an instance of type collection
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters: []
+      responses:
+        '204':
+          description: Successful response
+    patch:
+      tags:
+        - collection
+      description: Modifies an instance of type collection
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: collection
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/collection'
+      responses:
+        '204':
+          description: Successful response
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+      - name: collectionId
+        in: path
+        description: collection Identifier
+        required: true
+        type: string
+  /organization/{organizationId}/collection/{collectionId}/item:
+    get:
+      tags:
+        - item
+      description: Returns the collection of item
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: sort
+          in: query
+          description: Sorts the collection on the selected attributes.  A prefix of '-' sorts descending
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - key
+              - '-key'
+              - id
+              - '-id'
+          collectionFormat: csv
+        - name: fields[item]
+          in: query
+          description: Selects the set of item fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - key
+              - value
+              - description
+              - category
+              - sensitive
+              - hcl
+          collectionFormat: csv
+        - name: page[number]
+          in: query
+          required: false
+          type: integer
+        - name: page[size]
+          in: query
+          required: false
+          type: integer
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                type: array
+                items:
+                  $ref: '#/definitions/item'
+    post:
+      tags:
+        - item
+      description: Creates an item of type item
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: item
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/item'
+      responses:
+        '201':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/item'
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+      - name: collectionId
+        in: path
+        description: collection Identifier
+        required: true
+        type: string
+  /organization/{organizationId}/collection/{collectionId}/item/{itemId}:
+    get:
+      tags:
+        - item
+      description: Returns an instance of type item
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - name: fields[item]
+          in: query
+          description: Selects the set of item fields that should be returned in the result.
+          required: false
+          type: array
+          items:
+            type: string
+            enum:
+              - key
+              - value
+              - description
+              - category
+              - sensitive
+              - hcl
+          collectionFormat: csv
+      responses:
+        '200':
+          description: Successful response
+          schema:
+            type: object
+            properties:
+              data:
+                $ref: '#/definitions/item'
+    delete:
+      tags:
+        - item
+      description: Deletes an instance of type item
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters: []
+      responses:
+        '204':
+          description: Successful response
+    patch:
+      tags:
+        - item
+      description: Modifies an instance of type item
+      consumes:
+        - application/vnd.api+json
+      produces:
+        - application/vnd.api+json
+      parameters:
+        - in: body
+          name: item
+          required: false
+          schema:
+            properties:
+              data:
+                $ref: '#/definitions/item'
+      responses:
+        '204':
+          description: Successful response
+    parameters:
+      - name: organizationId
+        in: path
+        description: organization Identifier
+        required: true
+        type: string
+      - name: collectionId
+        in: path
+        description: collection Identifier
+        required: true
+        type: string
+      - name: itemId
+        in: path
+        description: item Identifier
+        required: true
+        type: string
 definitions:
   project:
     properties:
@@ -628,3 +1114,99 @@ definitions:
                 type: string
                 enum:
                   - project
+  agent:
+    properties:
+      type:
+        type: string
+      id:
+        type: string
+      attributes:
+        type: object
+        properties:
+          name:
+            type: string
+          description:
+            type: string
+          url:
+            type: string
+      relationships:
+        type: object
+        properties:
+          organization:
+            type: object
+            properties:
+              id:
+                type: string
+              type:
+                type: string
+                enum:
+                  - organization
+  collection:
+    properties:
+      type:
+        type: string
+      id:
+        type: string
+      attributes:
+        type: object
+        properties:
+          name:
+            type: string
+          description:
+            type: string
+          priority:
+            type: integer
+      relationships:
+        type: object
+        properties:
+          organization:
+            type: object
+            properties:
+              id:
+                type: string
+              type:
+                type: string
+                enum:
+                  - organization
+          item:
+            type: object
+            properties:
+              id:
+                type: string
+              type:
+                type: string
+                enum:
+                  - item
+  item:
+    properties:
+      type:
+        type: string
+      id:
+        type: string
+      attributes:
+        type: object
+        properties:
+          key:
+            type: string
+          value:
+            type: string
+          description:
+            type: string
+          category:
+            type: string
+          sensitive:
+            type: boolean
+          hcl:
+            type: boolean
+      relationships:
+        type: object
+        properties:
+          collection:
+            type: object
+            properties:
+              id:
+                type: string
+              type:
+                type: string
+                enum:
+                  - collection
