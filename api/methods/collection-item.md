@@ -1,34 +1,36 @@
 # Collection Item
 
-This endpoint is used to manager collection item for a collection inside the organization
+This endpoint is used to manage collection items for a collection inside the organization.
 
 ### Entity fields:
 
-| Path                                    | Type    | Description            |
-| --------------------------------------- | ------- | ---------------------- |
-| data.type                               | string  | Should be "step"       |
-| data.attributes.category                | string  | Collection description |
-| data.attributes.description             | string  | Collection name        |
-| data.attributes.hcl                     | int     | Collection priority    |
-| data.attribute.key                      | string  | Collection item name   |
-| data.attributes.value                   | string  | Collection item value  |
-| <p>data.attributes.s</p><p>ensitive</p> | boolean | Values is sensitive    |
+| Path                        | Type    | Description                                    |
+| --------------------------- | ------- | ---------------------------------------------- |
+| data.type                   | string  | Should be "item"                               |
+| data.attributes.key         | string  | Variable key name                              |
+| data.attributes.value       | string  | Variable value                                 |
+| data.attributes.description | string  | Item description                               |
+| data.attributes.category    | string  | Variable category: "ENV" or "TERRAFORM"        |
+| data.attributes.sensitive   | boolean | Whether the value is sensitive                 |
+| data.attributes.hcl         | boolean | Whether the value is HCL formatted             |
 
 ### Example
 
 ```json
-POST /api/v1/organization/${ORGANIZATION_ID}/collection/"${COLLECTION_ID}/item/
+POST /api/v1/organization/${ORGANIZATION_ID}/collection/${COLLECTION_ID}/item
 
 {
     "data": {
         "type": "item",
         "attributes": {
-            "category": "ENV",
-            "description": "random_description",
-            "hcl": false,
             "key": "random_key",
-            "sensitive": true
+            "value": "random_value",
+            "description": "random_description",
+            "category": "ENV",
+            "sensitive": true,
+            "hcl": false
         }
+    }
 }
 ```
 

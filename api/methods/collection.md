@@ -1,15 +1,15 @@
 # Collection
 
-This endpoint is used to manager collection inside an organization.
+This endpoint is used to manage collections inside an organization.
 
 ### Entity fields:
 
-| Path                        | Type   | Description            |
-| --------------------------- | ------ | ---------------------- |
-| data.type                   | string | Should be "step"       |
-| data.attributes.description | string | Collection description |
-| data.attributes.name        | string | Collection name        |
-| data.attributes.priority    | int    | Collection priority    |
+| Path                        | Type    | Description            |
+| --------------------------- | ------- | ---------------------- |
+| data.type                   | string  | Should be "collection" |
+| data.attributes.name        | string  | Collection name        |
+| data.attributes.description | string  | Collection description |
+| data.attributes.priority    | integer | Collection priority    |
 
 ### Example:
 
@@ -20,12 +20,12 @@ POST /api/v1/organization/${ORGANIZATION_ID}/collection/
     "data": {
         "type": "collection",
         "attributes": {
-            "description": "Sample Description",
             "name": "Collection1",
-            "priority": 10,
+            "description": "Sample Description",
+            "priority": 10
         }
+    }
 }
-
 ```
 
 ### Supported Operation

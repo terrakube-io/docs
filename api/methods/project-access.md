@@ -3,7 +3,7 @@
 This endpoint is used to manage team access within a Terrakube project. Project-level permissions are inherited by all workspaces within the project.
 
 {% hint style="warning" %}
-To use this endpoint you should have "manageProject" access at team level or be a project admin
+To use this endpoint you should have "manageWorkspace" access at team level or be a project admin
 {% endhint %}
 
 ### Roles

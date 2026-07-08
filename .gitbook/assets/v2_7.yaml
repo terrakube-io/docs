@@ -998,28 +998,6 @@ definitions:
             description: |-
               Read Permissions : (team view project OR team project access view project)
               Update Permissions : (team manage project)
-          createdBy:
-            type: string
-            description: |-
-              Read Permissions : (team view project OR team project access view project)
-              Update Permissions : (team manage project)
-          createdDate:
-            type: string
-            format: date-time
-            description: |-
-              Read Permissions : (team view project OR team project access view project)
-              Update Permissions : (team manage project)
-          updatedBy:
-            type: string
-            description: |-
-              Read Permissions : (team view project OR team project access view project)
-              Update Permissions : (team manage project)
-          updatedDate:
-            type: string
-            format: date-time
-            description: |-
-              Read Permissions : (team view project OR team project access view project)
-              Update Permissions : (team manage project)
       relationships:
         type: object
         properties:

@@ -3,7 +3,7 @@
 This endpoint is used to create, update, search or delete project information inside a Terrakube organization. Projects allow you to group workspaces and manage team access at the project level.
 
 {% hint style="warning" %}
-To use this endpoint you should have "manageProject" access at team level and a Terrakube organization
+To use this endpoint you should have "manageWorkspace" access at team level and a Terrakube organization
 {% endhint %}
 
 ### Entity fields:
