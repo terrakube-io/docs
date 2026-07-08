@@ -11,7 +11,7 @@ You need to be part of the administrator group to work with this endpoint
 | Path                        | Type   | Description                                                                                                                                                                    |
 | --------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | data.type                   | string | Should be "agent"                                                                                                                                                              |
-| data.attributes.name        | string | Agent pool name (POST only; cannot be updated after creation)                                                                                                                  |
+| data.attributes.name        | string | Agent pool name                                                                                                                                                                |
 | data.attributes.description | string | Agent pool description                                                                                                                                                         |
 | data.attributes.url         | string | URL where the executor component will be available.  Example: [http://terrakube-executor-service.self-hosted-executor](http://terrakube-executor-service.self-hosted-executor) |
 

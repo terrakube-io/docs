@@ -1168,12 +1168,14 @@ definitions:
             type: string
           value:
             type: string
+            description: 'Item value. Not returned in GET responses when sensitive is true (Read Permissions: user read collection)'
           description:
             type: string
           category:
             type: string
           sensitive:
             type: boolean
+            description: When true, the value field is hidden in GET responses and cannot be retrieved after creation
           hcl:
             type: boolean
       relationships:

@@ -11,8 +11,12 @@ This endpoint is used to manage collection items for a collection inside the org
 | data.attributes.value       | string  | Variable value                                 |
 | data.attributes.description | string  | Item description                               |
 | data.attributes.category    | string  | Variable category: "ENV" or "TERRAFORM"        |
-| data.attributes.sensitive   | boolean | Whether the value is sensitive                 |
+| data.attributes.sensitive   | boolean | To hide the value when the output is sensitive |
 | data.attributes.hcl         | boolean | Whether the value is HCL formatted             |
+
+{% hint style="warning" %}
+When `sensitive` is set to `true`, the `value` field will not be returned in GET responses. Sensitive values cannot be retrieved after creation.
+{% endhint %}
 
 ### Example
 
