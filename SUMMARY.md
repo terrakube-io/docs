@@ -74,6 +74,7 @@
 * [Workspaces](user-guide/workspaces/README.md)
   * [Overview](user-guide/workspaces/overview.md)
   * [Creating Workspaces](user-guide/workspaces/creating-workspaces.md)
+  * [Webhooks](user-guide/workspaces/webhooks.md)
   * [Terraform State](user-guide/workspaces/terraform-state.md)
   * [Share Workspace State](user-guide/workspaces/share-workspace-state.md)
   * [Provider Cache](user-guide/workspaces/provider-cache.md)

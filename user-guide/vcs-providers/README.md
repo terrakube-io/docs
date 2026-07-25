@@ -34,7 +34,8 @@ Terrakube supports the following VCS providers:
 
 ### Webhooks <a href="#webhooks" id="webhooks"></a>
 
-Terrakube uses webhooks to monitor new commits. This features is not available in SSH and Azure DevOps.
+Terrakube uses webhooks to monitor new commits. This feature is not available for SSH-based repositories. Azure DevOps is supported via inbound service hooks by default, with an outbound polling fallback for private networks that the Azure DevOps cloud can't reach — see [azure-devops.md](azure-devops.md#webhooks "mention").
 
 * When new commits are added to a branch, Terrakube workspaces based on that branch will automatically initiate a Terraform job. Terrakube will use the "Plan and apply" template by default, but you can specify a different Template during the Workspace creation.
 * When you specify a directory in the Workspace. Terrakube will run the job only if a file changes in that directory
+* For GitHub, GitLab, and Bitbucket, pull requests can also get plan/apply results posted as comments — see [webhooks.md](../workspaces/webhooks.md "mention") for the full per-workspace webhook configuration.

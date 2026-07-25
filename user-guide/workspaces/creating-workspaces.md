@@ -63,7 +63,7 @@ And if you navigate to the **Workspace** menu, you will see the workspace in the
 
 <figure><img src="../../.gitbook/assets/image (299).png" alt=""><figcaption></figcaption></figure>
 
-Once you create your workspace, Terrakube sets up a webhook with your VCS. This webhook runs a job based on the selected template every time you push new changes to the set workspace branches. However, this feature does not work yet with Azure DevOps VCS provider.
+Once you create your workspace, Terrakube sets up a webhook with your VCS. This webhook runs a job based on the selected template every time you push new changes to the set workspace branches. See [webhooks.md](webhooks.md "mention") for how to configure additional events (pull requests, releases) and the PR comment workflow.
 
 ### CLI-driven Workflow
 
