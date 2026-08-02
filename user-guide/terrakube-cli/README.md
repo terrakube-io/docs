@@ -1,17 +1,20 @@
-# Terrakube CLI
+# Terrakube CLI Reference
 
-`terrakube cli` is Terrakube on the command line. It brings organizations, workspaces and other Terrakube concepts to the terminal.
+`terrakube` brings Terrakube infrastructure automation, workspace lifecycle management, organization management, private registry, access control, and dynamic provider credentials directly to your terminal.
 
-In this section:
+---
 
-{% content-ref url="getting-started.md" %}
-[getting-started.md](getting-started.md)
-{% endcontent-ref %}
+## Guide Index
 
-{% content-ref url="install.md" %}
-[install.md](install.md)
-{% endcontent-ref %}
+- **[Installation](install.md)**: Download official release binaries for Linux, macOS, and Windows or build from source.
+- **[Getting Started](getting-started.md)**: Login/Logout setup, authentication options, configuration files, global flags, and complete shell quickstart script.
+- **[Command Reference](commands/README.md)**: Complete detailed CRUD reference for all CLI resources and subcommands.
 
-{% content-ref url="commands/" %}
-[commands](commands/)
-{% endcontent-ref %}
+---
+
+## CLI Features
+
+- **JSON:API Native Integration**: Full CRUD support for Organizations, Workspaces, Teams, Projects, Private Registry (Modules & Providers), Templates, Collections, Agents, SSH Keys, VCS, and OIDC Federated Identity.
+- **Flexible Output Formats**: Render output as formatted tables (`--output table`), clean JSON (`--output json`), YAML (`--output yaml`), or TSV (`--output tsv`).
+- **Flexible Parent Scopes**: Identify parent entities via UUID flags (e.g. `--organization-id`) or human-readable names (e.g. `--organization` / `-o`).
+- **Automation Ready**: Fully scriptable via environment variables (`TERRAKUBE_API_URL`, `TERRAKUBE_TOKEN`, `TERRAKUBE_ORGANIZATION`).
