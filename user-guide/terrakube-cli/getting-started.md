@@ -1,179 +1,170 @@
-# Getting started
+# Getting Started
 
-`terrakube cli` is Terrakube on the command line. It brings organizations, workspaces and other Terrakube concepts to the terminal.
+The Terrakube CLI (`terrakube`) is the command-line interface for managing Terrakube Server resources. This guide walks you through authenticating, configuring environment defaults, and running an end-to-end management script.
 
-### Installation
+---
 
-You can find installation instructions here [Install](install.md)
+## 1. Authentication (`login` & `logout`)
 
-### Getting help
+To interact with a Terrakube instance, you must authenticate using your Terrakube Server API URL and a Personal Access Token (PAT).
 
-When you are working with terrakube cli probably you will need some help with the supported commands and flags and you can use [Commands sections](commands/) for that, however a better option is to use the same cli to get help using --help flag or -h shortand. The embedded help provides you more detail for each command and some examples you can use as reference
+### Login
+
+Authenticate and persist your credentials locally:
 
 ```bash
-# using help flag
-terrakube --help
-
-# using shorthand
-terrakube -h
-
-# getting help for an specific command
-terrakube organization -h
-
-# getting help for an specific sub command
-terrakube organization create -h
+terrakube login --api-url "https://terrakube-api.example.com" --token "YOUR_PERSONAL_ACCESS_TOKEN"
 ```
 
-### Authentication
-
-Run [`terrakube login`](commands/azb-login.md) to authenticate with your account. But first you need to set some environment variables.
-
-{% hint style="info" %}
-You can also pass this values using [`terrakube login`](commands/azb-login.md) however is recommended to use environment variables in the case you need to authenticate several times or if you are running an automatic script.
-{% endhint %}
-
-Open your terminal and execute the following commands in order to setup your terrakube environment and get authenticated. You can get the server, path, scheme, tenant id and client id values during the [Terrakube server deployment](../../getting-started/deployment/)
-
+Short flags can also be used:
+```bash
+terrakube login -a "https://terrakube-api.example.com" -t "YOUR_PERSONAL_ACCESS_TOKEN"
 ```
+
+This command validates your credentials and writes configuration settings to `~/.terrakube-cli.yaml`.
+
+### Logout
+
+To clear saved credentials from your machine:
+
+```bash
+terrakube logout
+```
+
+---
+
+## 2. Configuration & Environment Variables
+
+`terrakube` resolves parameters using the following order of precedence:
+1. **Command-line flags** (e.g. `--organization`, `--output`)
+2. **Environment variables**
+3. **Configuration file** (`~/.terrakube-cli.yaml`)
+
+### Environment Variables
+
+| Variable | Description |
+| :--- | :--- |
+| `TERRAKUBE_API_URL` | Base API URL of your Terrakube instance (e.g., `http://localhost:8080`) |
+| `TERRAKUBE_TOKEN` | Bearer token / Personal Access Token |
+| `TERRAKUBE_ORGANIZATION` | Default Organization ID or Name |
+| `TERRAKUBE_CONFIG` | Custom path to config file |
+
+Example environment configuration:
+```bash
 export TERRAKUBE_API_URL="http://localhost:8080"
-export TERRAKUBE_PAT="your-pat-token"
-terrakube login
+export TERRAKUBE_TOKEN="secret-pat-token"
+export TERRAKUBE_ORGANIZATION="my-org"
 ```
 
-### Create your Organization
+---
 
-Organizations are privately shared spaces for teams to collaborate on infrastructure.
+## 3. Global Command Options
 
-* You can check the organizations you have access using [`terrakube organization`](commands/azb-organization/)
+All `terrakube` subcommands support the following global options:
 
-```
-terrakube organization list
-```
+- `--output`, `-o`: Sets output format (`json`, `table`, `yaml`, `tsv`, `none`). Default: `json`.
+- `--hide-nulls`: Hides null fields in JSON/YAML output (boolean). Default: `true`.
+- `--organization`, `-o`: Default organization ID or name for org-scoped resources.
+- `--config`: Path to configuration file. Default: `~/.terrakube-cli.yaml`.
 
-* If you don't have an organization created yet, you can create a new one.
+---
 
-```
-terrakube organization create --name MyOrganization --description "Getting started Organization" 
-```
+## 4. End-to-End Quickstart Script
 
-The result for the above command should be something like this
-
-```
-{
-    "attributes": {
-        "description": "Getting started Organization",
-        "name": "MyOrganization"
-    },
-    "id": "8a6e9998-165c-49f0-953c-d3fb0924731a",
-    "relationships": {
-        "job": {},
-        "module": {},
-        "workspace": {}
-    },
-    "type": "organization"
-}
-```
-
-For more commands and options in organization see the full documentation for [`terrakube organization`](commands/azb-organization/)
-
-### Working with Teams
-
-Once you create your organization you will probably want to define the teams and permissions for the organization, so you can use the team command for that.
-
-```
-terrakube team create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name AZB_USER --manage-workspace=true --manage-module=true --manage-provider=true
-```
-
-In the previous command we are creating a new team inside our new Organization and for this case we are providing permissions to manage workspaces, modules and providers. In the name flag we are using an Azure AD Group, so all the team members are defined inside the AD group. For more details about teams and permissions you can see [Security Page](../../getting-started/security.md).
-
-### Create a Workspace
-
-After having given permissions to our teams we can create a workspace.
-
-```
-terrakube workspace create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name MyWorkspace --source https://github.com/AzBuilder/terraform-sample-repository.git --branch master --terraform-version 0.15.0
-```
-
-And define some variables for the created workspace
-
-```
-terrakube workspace variable create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --workspace-id 38b6635a-d38e-46f2-a95e-d00a416de4fd --key tag_name --value "Hola mundo" --hcl=false --sensitive=false --category TERRAFORM 
-```
-
-If you want to avoid entering the organization or the workspace in each command you can use environment variables, so the previous commands would be simplified as follows.
-
-```
-export TERRAKUBE_ORGANIZATION_ID=8a6e9998-165c-49f0-953c-d3fb0924731a
-terrakube workspace create --name MyWorkspace --source https://github.com/AzBuilder/terraform-sample-repository.git --branch master --terraform-version 0.15.0
-export TERRAKUBE_WORKSPACE_ID=38b6635a-d38e-46f2-a95e-d00a416de4fd
-terrakube workspace variable create --key tag_name --value "Hola mundo" --hcl=false --sensitive=false --category TERRAFORM 
-```
-
-### Run a Job
-
-Now that you have a workspace with all the variables defined, you can execute a job, basically a job is a remote terraform apply, plan or destroy. So if you want to run apply we can execute the following command.
+Below is a complete Bash script demonstrating how to log in, create an organization, set up an admin team, launch a workspace with OpenTofu, configure workspace environment variables, create a project, and assign the workspace to the project.
 
 ```bash
-terrakube job create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --workspace-id 38b6635a-d38e-46f2-a95e-d00a416de4fd  --command apply 
-```
+#!/usr/bin/env bash
+set -e
 
-After a few minutes the job will finish and you can check the result
+# Configurable parameters
+TERRAKUBE_API_URL="${TERRAKUBE_API_URL:-http://localhost:8080}"
+TERRAKUBE_PAT="${TERRAKUBE_PAT:-your-pat-token}"
 
-```bash
-terrakube job list --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a
-```
+# Generate random 4-character alphanumeric suffix
+RAND_SUFFIX=$(head /dev/urandom | tr -dc 'a-z0-9' | head -c 4)
+ORG_NAME="production${RAND_SUFFIX}"
+WS_NAME="networking${RAND_SUFFIX}"
+PRJ_NAME="core${RAND_SUFFIX}"
 
-{% hint style="info" %}
-You can use a curl command to retrieve the log result from the terminal
-{% endhint %}
+echo "==> 1. Authenticating with Terrakube Server..."
+terrakube login -a "$TERRAKUBE_API_URL" -t "$TERRAKUBE_PAT"
 
-### Defining your Modules
+echo "==> 2. Creating Organization '$ORG_NAME'..."
+ORG_JSON=$(terrakube organization create \
+  --name "$ORG_NAME" \
+  --description "Production Workloads" \
+  --execution-mode "remote" \
+  --output json)
+ORG_ID=$(echo "$ORG_JSON" | jq -r '.id')
+echo "Organization created with ID: $ORG_ID"
 
-Usually you will want to define your infrastructure templates as code using terraform and for this you can use the modules so others can reuse them.
+echo "==> 3. Creating Admin Team 'TERRAKUBE_ADMIN'..."
+TEAM_JSON=$(terrakube team create \
+  -o "$ORG_ID" \
+  --name "TERRAKUBE_ADMIN" \
+  --role "Admin" \
+  --manage-workspace \
+  --manage-module \
+  --manage-provider \
+  --manage-state \
+  --manage-template \
+  --manage-job \
+  --output json)
+TEAM_ID=$(echo "$TEAM_JSON" | jq -r '.id')
+echo "Team created with ID: $TEAM_ID"
 
-```bash
-terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule --description "module description" --provider azurerm --source https://github.com/AzBuilder/terraform-sample-repository.git 
-```
+echo "==> 4. Creating Workspace '$WS_NAME'..."
+WS_JSON=$(terrakube workspace create \
+  -o "$ORG_ID" \
+  --name "$WS_NAME" \
+  --description "Production Virtual Networks" \
+  --source "https://github.com/terrakube-io/terrakube-docker-compose" \
+  --branch "main" \
+  --folder "/" \
+  --iac-type "tofu" \
+  --iac-version "1.12.5" \
+  --execution-mode "remote" \
+  --output json)
+WS_ID=$(echo "$WS_JSON" | jq -r '.id')
+echo "Workspace created with ID: $WS_ID"
 
-### Simplifying the commands
+echo "==> 5. Adding Workspace Variables..."
+terrakube variable create \
+  -o "$ORG_ID" \
+  -w "$WS_ID" \
+  --key "REGION" \
+  --value "us-east-1" \
+  --category "ENV"
 
-In order to simplify the commands when you are working with the cli, you can use shortands and alias and some environment variables. See the following sections for more details.
+terrakube variable create \
+  -o "$ORG_ID" \
+  -w "$WS_ID" \
+  --key "ENVIRONMENT" \
+  --value "production" \
+  --category "ENV"
 
-{% hint style="info" %}
-Use the --help flag to get the details about available shorthands and alias for each command
-{% endhint %}
+echo "==> 6. Creating Project '$PRJ_NAME'..."
+PRJ_JSON=$(terrakube project create \
+  -o "$ORG_ID" \
+  --name "$PRJ_NAME" \
+  --description "Core cloud setup" \
+  --output json)
+PRJ_ID=$(echo "$PRJ_JSON" | jq -r '.id')
+echo "Project created with ID: $PRJ_ID"
 
-### Using shorthands
+echo "==> 7. Assigning Workspace to Project..."
+terrakube workspace update \
+  -o "$ORG_ID" \
+  --id "$WS_ID" \
+  --name "$WS_NAME" \
+  --project "$PRJ_ID" \
+  --source "https://github.com/terrakube-io/terrakube-docker-compose" \
+  --branch "main" \
+  --folder "/" \
+  --iac-type "tofu" \
+  --iac-version "1.12.5" \
+  --execution-mode "remote"
 
-```bash
-# without shorthand
-terrakube organization create --name MyOrganization --description "Getting started Organization" 
-
-# using shorthand
-terrakube organization create -n MyOrganization -d "Getting started Organization" 
-```
-
-### Using alias
-
-```bash
-# without alias
-terrakube organization create --name MyOrganization --description "Getting started Organization"
-
-# using alias and shorthand
-terrakube org create -n MyOrganization -d "Getting started Organization"
-```
-
-### Using environment variables
-
-```bash
-# creating multiple modules without env variables
-terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule --description "module description" --provider azurerm --source https://github.com/AzBuilder/terraform-sample-repository.git 
-terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule2 --description "module description 2" --provider azurerm --source https://github.com/AzBuilder/terraform-sample-repository.git
-terrakube module create --organization-id 8a6e9998-165c-49f0-953c-d3fb0924731a --name myModule3 --description "module description 3" --provider azurerm --source https://github.com/AzBuilder/terraform-sample-repository.git
-
-# creating multiple modules using shorthand, alias and env variables
-export TERRAKUBE_ORGANIZATION_ID=8a6e9998-165c-49f0-953c-d3fb0924731a
-terrakube mod create -n myModule -d "module description" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git 
-terrakube mod create -n myModule2 -d "module description 2" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git
-terrakube mod create -n myModule3 -d "module description 3" -p azurerm -s https://github.com/AzBuilder/terraform-sample-repository.git
+echo "==> Quickstart workflow completed successfully!"
 ```
