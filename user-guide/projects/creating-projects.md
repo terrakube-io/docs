@@ -24,7 +24,7 @@ Only organization members with organization-level Write permissions or higher ca
 
 ### Editing a Project
 
-Open the project you want to edit by clicking its name in the projects list. Navigate to the ** ** tab on the project detail page.
+Open the project you want to edit by clicking its name in the projects list. Navigate to the **General** tab on the project detail page.
 
 <figure><img src="../../.gitbook/assets/projects-settings-tab.png" alt=""><figcaption></figcaption></figure>
 
