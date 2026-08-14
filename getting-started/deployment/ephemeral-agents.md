@@ -147,5 +147,17 @@ The following environment variables can be used to customize the ephemeral execu
   * [Reference](https://github.com/AzBuilder/terrakube/pull/1505)
 * EPHEMERAL\_CONFIG\_MAP\_MOUNT\_PATH
   * [Reference](https://github.com/AzBuilder/terrakube/pull/1505)
+* EPHEMERAL\_CPU\_REQUEST
+  * Example: `100m` or `1`
+* EPHEMERAL\_CPU\_LIMIT
+  * Example: `200m` or `2`
+* EPHEMERAL\_MEMORY\_REQUEST
+  * Example: `50Mi` or `1Gi`
+* EPHEMERAL\_MEMORY\_LIMIT
+  * Example: `100Mi` or `2Gi`
+* EPHEMERAL\_STORAGE\_REQUEST
+  * Example: `2Gi`
+* EPHEMERAL\_STORAGE\_LIMIT
+  * Example: `4Gi`
 
 More information can be found inside this [code](https://github.com/AzBuilder/terrakube/blob/main/api/src/main/java/org/terrakube/api/plugin/scheduler/job/tcl/executor/ephemeral/EphemeralExecutorService.java)
