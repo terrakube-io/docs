@@ -8,7 +8,22 @@ This guide outlines how to download, install, and configure the Terrakube CLI (`
 
 Pre-compiled binary releases of `terrakube` are available on the [Terrakube CLI Releases](https://github.com/terrakube-io/terrakube-cli/releases) page.
 
-### Linux / macOS
+### Snap Package (Ubuntu / Linux)
+
+On Ubuntu and systems with `snapd`, you can install Terrakube CLI via the Snap package:
+
+```bash
+sudo snap install --dangerous terrakube-cli_*.snap
+```
+
+Both `terrakube` and `terrakube-cli` commands will be available:
+
+```bash
+terrakube --version
+terrakube-cli --help
+```
+
+### Linux / macOS (Direct Binary Download)
 
 1. Download the archive matching your operating system and architecture from the GitHub Releases page.
 2. Extract the binary:
