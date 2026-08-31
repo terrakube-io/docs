@@ -78,6 +78,7 @@
   * [Terraform State](user-guide/workspaces/terraform-state.md)
   * [Share Workspace State](user-guide/workspaces/share-workspace-state.md)
   * [Provider Cache](user-guide/workspaces/provider-cache.md)
+  * [Module Cache](user-guide/workspaces/module-cache.md)
   * [Variables](user-guide/workspaces/variables.md)
   * [Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/README.md)
     * [AWS Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/aws-dynamic-provider-credentials.md)
