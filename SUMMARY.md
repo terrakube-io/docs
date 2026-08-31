@@ -111,6 +111,7 @@
 * [Drift Detection](user-guide/drift-detection.md)
 * [CI/CD Integration](user-guide/ci-cd-integration/README.md)
   * [Github Actions](user-guide/ci-cd-integration/github-actions.md)
+  * [Federated OIDC Authentication](user-guide/ci-cd-integration/federated-oidc-authentication.md)
   * [Bitbucket](user-guide/ci-cd-integration/bitbucket.md)
 * [Terrakube CLI](user-guide/terrakube-cli/README.md)
   * [Installation](user-guide/terrakube-cli/install.md)

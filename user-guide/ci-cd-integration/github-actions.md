@@ -2,6 +2,10 @@
 
 Integrate Terrakube with GitHub Actions is easy and you can handle your workspace from GitHub.
 
+{% hint style="info" %}
+The examples on this page use a Terrakube Personal Access Token. To avoid storing a long-lived PAT, see [Federated OIDC Authentication](federated-oidc-authentication.md).
+{% endhint %}
+
 The GIT repository will represent a Terrakube Organization and each folder inside the repository will be a new workspace.
 
 There is an example available in the following [link](https://github.com/AzBuilder/terraform-sample-repository)
@@ -118,4 +122,3 @@ git clone https://github.com/AzBuilder/terrakube-action-github.git
 yarn install
 yarn build
 ```
-
