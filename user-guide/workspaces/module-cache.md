@@ -51,6 +51,7 @@ The directory must be on a volume mounted in the executor (the same `cache-volum
 * Terrakube runs one job at a time per workspace, so no two jobs write to the same data directory. With several executor replicas sharing one volume the claim must be `ReadWriteMany`.
 * Space: one copy of each module call plus one copy of each provider version per workspace. An emptyDir is emptied when the pod restarts; use a PersistentVolumeClaim to keep the cache across restarts.
 * To reset a workspace's cache simply delete its directory under the cache root.
+* Terraform does not create `TF_PLUGIN_CACHE_DIR` itself ("the directory must already exist"), and a freshly mounted volume is empty, so `init` reports `The specified plugin cache dir ... cannot be opened`. The chart's `executor.cache` block creates the sub-directories with an init container; if you mount the volume by hand, add an init container (or a pre-init script) that runs `mkdir -p` for them. `TF_DATA_DIR` directories are created by Terraform on demand.
 
 {% hint style="info" %}
 This only speeds up module and provider downloads. Modules published in the Terrakube private registry are additionally cached in the Terrakube storage and served from there, see [Private Registry](../private-registry/README.md).
