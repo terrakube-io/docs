@@ -15,6 +15,11 @@ Enable the signals independently, per component and environment:
 | Logs | Your Collector is configured for OTLP logs | ECS JSON stdout or OTLP logs, not both unless deduplicated |
 | Browser RUM | You have consent, a public OTLP endpoint with CORS policy, and a privacy policy | OTLP/HTTP with a low sampling rate |
 
+The Helm chart defaults to ECS JSON on stdout and `otel.logs.enabled: false`, which is the
+recommended Kubernetes model when a DaemonSet/agent tails container logs. Set
+`otel.logs.enabled: true` only when your platform deliberately uses OTLP log export and excludes
+Terrakube pod stdout from its node-level log collector; otherwise each record is ingested twice.
+
 For Kubernetes, use exactly one of the Helm chart's `serviceMonitor`, `podMonitor`,
 `vmPodScrape`, or scrape-annotation options. Metrics use Micrometer/Prometheus directly;
 do **not** configure the OpenTelemetry agent's Prometheus exporter on port 9464.
