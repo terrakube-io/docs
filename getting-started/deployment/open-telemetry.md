@@ -1,6 +1,29 @@
 # Open Telemetry
 
-Terrakube components support [Open Telemetry](https://opentelemetry.io/) by default to enable effective observability.
+Terrakube observability is **opt-in**. A default deployment does not expose Prometheus metrics,
+record Terrakube business metrics, load the OpenTelemetry Java agent, export telemetry, or change
+the console log format.
+
+## Production model
+
+Enable the signals independently, per component and environment:
+
+| Signal | Enable when | Recommended transport |
+| --- | --- | --- |
+| Metrics | You operate a Prometheus-compatible scraper | Scrape `/actuator/prometheus` on the existing `http` port |
+| Traces | You have an OTLP Collector and a trace-retention policy | OTLP to an in-cluster OpenTelemetry Collector |
+| Logs | Your Collector is configured for OTLP logs | ECS JSON stdout or OTLP logs, not both unless deduplicated |
+| Browser RUM | You have consent, a public OTLP endpoint with CORS policy, and a privacy policy | OTLP/HTTP with a low sampling rate |
+
+For Kubernetes, use exactly one of the Helm chart's `serviceMonitor`, `podMonitor`,
+`vmPodScrape`, or scrape-annotation options. Metrics use Micrometer/Prometheus directly;
+do **not** configure the OpenTelemetry agent's Prometheus exporter on port 9464.
+
+Production traces should use `parentbased_traceidratio` for head sampling and Collector-side
+tail sampling to retain error and slow traces. Keep identifiers such as job and workspace IDs in
+traces only, and restrict retention and access accordingly.
+
+Terrakube components support [Open Telemetry](https://opentelemetry.io/) when explicitly enabled.
 
 To enable telemetry inside the Terrakube components please add the following environment variable:
 
@@ -77,12 +100,22 @@ Each component (`api`, `executor`, `registry`) exposes the same settings under i
 api: # also executor, registry
   otel:
     enabled: true
-    metrics:
-      port: "9464"
-      host: "0.0.0.0"
+    protocol: otlp
+    otlp:
+      endpoint: "http://opentelemetry-collector.monitoring:4318"
+    traces:
+      samplerArg: "0.1"
+    logs:
+      enabled: false
+  metrics:
+    enabled: true
+    serviceMonitor:
+      enabled: true
     traces:
       type: jaeger # or "zipkin"
       endpoint: "http://jaeger-all-in-one:14250"
 ```
 
-`otel.metrics.port`/`host` bind a Prometheus-scrapable metrics endpoint, independent of `otel.traces` which controls where spans are exported. The bundled `telemetry-compose` example above uses Jaeger specifically; Zipkin is supported by setting `traces.type: zipkin` and pointing `endpoint` at a Zipkin collector instead.
+`metrics.enabled` enables the application's Micrometer endpoint and custom Terrakube metrics;
+the selected scrape resource discovers `/actuator/prometheus` on the existing HTTP port.
+`otel` remains independent, so metrics-only deployments carry no Java-agent trace/log overhead.
