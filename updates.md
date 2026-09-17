@@ -1,5 +1,117 @@
 # Updates
 
+### August 2026 (2.33.0)
+
+#### Notifications
+
+Organizations and workspaces can now send Slack, Microsoft Teams, or generic webhook notifications when a job's status changes — configurable at either scope, additively. See [Notifications](user-guide/workspaces/notifications.md).
+
+#### Target and Replace Resources in New Run
+
+The native **New Run** dialog gained an **Additional planning options** section for Terraform's `-target`/`-replace` flags, autocompleted against the workspace's actual state resources. See [Starting a Run](user-guide/workspaces/starting-a-run.md).
+
+#### Federated Identity (OIDC) and Variable Collections
+
+Organizations can now trust an external OIDC issuer (e.g. GitHub Actions) to authenticate directly to the API, CLI, and module registry without a stored token — see [Federated Identity](user-guide/organizations/federated-identity.md). Variables can also be grouped into reusable, filterable [Variable Collections](user-guide/organizations/variable-collections.md) shared across workspaces.
+
+#### Structured Job Output, Apply and Imports
+
+The structured plan output view introduced in 2.31.0 now covers `apply` runs and resource imports as well, with real-time diff rendering and strict sensitive-attribute handling. See [Job Output](user-guide/workspaces/job-output.md).
+
+#### Executor Reliability
+
+Executor pools can now safely scale across multiple replicas. Distributed admission control keeps each pod to one job, the dispatcher schedules queued work FIFO and recovers stuck jobs automatically, and a `503` retry backstop handles brief readiness races. Terraform/OpenTofu binaries are cached in cloud storage rather than re-downloaded per job, and Terrakube falls back to the last-known release index if HashiCorp's/OpenTofu's index is briefly unreachable. See [Self-Hosted Agents](getting-started/deployment/self-hosted-agents.md) and [Terraform Versions](user-guide/reference/executor/terraform-versions.md).
+
+#### AWS Dynamic Credentials ABAC
+
+AWS dynamic credentials can now emit session tags in their OIDC JWT. This enables IAM policies based on `aws:PrincipalTag`, so a single role can enforce attribute-based access control across workspaces. See [AWS Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/aws-dynamic-provider-credentials.md).
+
+#### Registry and Modules
+
+Module registry versions are now validated and published as canonical SemVer instead of raw git tags, and registered federated credentials now also authenticate registry/module-pull requests.
+
+#### Other improvements
+
+* Workspace and organization list pages were modernized with a condensed, filterable, groupable view (alongside the previous table view).
+* Azure DevOps v1/v2 webhooks, GitLab shared repository-level webhooks, and repository auto-discovery make workspace VCS onboarding and webhook management more complete. See [Creating Workspaces](user-guide/workspaces/creating-workspaces.md) and [Azure DevOps](user-guide/vcs-providers/azure-devops.md).
+* GitLab joined GitHub for shared-repository webhook consolidation, and approval steps gained an `onReject` command hook.
+* An in-app API reference is now available from the **Help & Support** menu.
+* Run status and logs now stream via SSE/GraphQL subscriptions instead of polling.
+
+#### Supply-Chain Safeguards
+
+Terrakube's build pipeline now runs OpenSSF Scorecard analysis, generates Syft software bills of materials (SBOMs) for container builds, and uses digest-pinned base images to make build inputs reproducible. These safeguards are built into the release process and require no runtime configuration. See [Security](getting-started/security.md).
+
+### June 2026 (2.32.0)
+
+#### Project Management UI
+
+Projects — introduced in 2.28.0 as an organizational layer above workspaces — gained dedicated management pages in the UI, including project-level team permissions with inline role editing on the project access tab. See [Projects](user-guide/projects/README.md).
+
+#### Terraform Version Constraints
+
+The workspace **Terraform Version** field now accepts semantic version constraints (e.g. `>= 1.12.5`) in addition to an exact version, resolved at run time. See [Terraform Versions](user-guide/reference/executor/terraform-versions.md).
+
+#### VCS Provider Client Editing
+
+VCS provider settings gained an **Edit Client** option for updating OAuth/App client credentials without deleting and recreating the provider connection.
+
+### April 2026 (2.31.0)
+
+#### RBAC v2 Refinements and Structured Plan Output
+
+Following 2.30.0's RBAC v2 rollout, this release introduced the first version of the structured plan output view (expanded further in 2.33.0) and an improved Terraform import experience in the UI.
+
+#### Atlantis-Style PR Workflow
+
+Webhook-triggered jobs gained an Atlantis-style pull request workflow — plan output posted as PR comments, with `terrakube plan`/`terrakube apply` PR comment commands to drive runs.
+
+#### Federated Authentication
+
+Initial federated authentication support landed, handling multiple trusted OIDC issuers, later extended with claim-condition scoping (repository, branch, environment, etc.) and documented in full as [Federated Identity](user-guide/organizations/federated-identity.md) in 2.33.0.
+
+#### Shared Repository Webhooks v3 and Remote State
+
+Shared repository-level VCS webhooks were reworked (v3), and workspaces gained support for global and shared remote state configuration. Executor-to-API communication also moved to JWT-based authentication.
+
+### February 2026 (2.30.0)
+
+#### RBAC v2 and Frontend Redesign
+
+This release shipped RBAC v2 — granular, TFC-style permissions across the organization/project/workspace hierarchy — alongside a broader frontend redesign adopting an HCP Terraform-style UI and performance optimizations. See [Team Management](user-guide/organizations/team-management.md).
+
+#### onFailure Hooks and Job History Retention
+
+Templates gained `onFailure` scripts that run when a Terraform operation fails, and job history retention became configurable per workspace via a `KEEP_JOB_HISTORY` variable.
+
+#### UI Improvements
+
+A new terminal-style job log viewer (with toolbar), sortable workspace and variable listings, sensitive-output copy support, and a modal for editing Variable Collection entries.
+
+### December 2025 (2.29.0)
+
+#### Module and Provider Performance
+
+Module and provider services were refactored onto GraphQL with caching, meaningfully speeding up module/version lookups, alongside job deletion support and importing templates from a private repository.
+
+#### Job and Workspace UI
+
+The job run view now shows workspace and VCS details inline, variable tables gained sortable columns, and dark mode received a round of polish.
+
+### October 2025 (2.28.0)
+
+#### Projects
+
+Terrakube introduced **Projects**, a grouping layer between organizations and workspaces for organizing workspaces by team or environment. See [Projects](user-guide/projects/README.md).
+
+#### Dynamic Credentials and Storage
+
+Dynamic provider credentials gained a configurable hostname override for non-default cloud endpoints, and Cloudflare R2 joined the supported object storage backends alongside AWS, Azure, and GCP.
+
+#### Ephemeral Executor Environment Variables
+
+The `EPHEMERAL_JOB_ENV_VARS` variable was added to pass additional environment variables into ephemeral executor jobs, and bash-script steps gained the ability to persist environment variables for later steps.
+
 ### July 2025 (2.27.0)
 
 This release introduces several significant advancements designed to enhance the functionality, security, and integration capabilities of Terrakube.

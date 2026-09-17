@@ -52,3 +52,7 @@ api:
 executor:
   version: "2.12.0"
 ```
+
+{% hint style="info" %}
+For workspaces set to **OpenTofu** instead of Terraform, the equivalent override is the `CustomTofuReleasesUrl` environment variable (`api.tofuReleasesUrl` in the Helm chart), which defaults to the OpenTofu GitHub releases API rather than `releases.hashicorp.com`.
+{% endhint %}

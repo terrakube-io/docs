@@ -6,6 +6,7 @@ When running a job inside the executor component the following logic is used:
   * /home/cnb/.terraform-spring-boot/executor/\{{ORGANIZATION\_ID\}}//\{{WORKSPACE\_ID\}}
 * The executor component will initially clone the workspace to the following folder:
   * /home/cnb/.terraform-spring-boot/executor/\{{ORGANIZATION\_ID\}}//\{{WORKSPACE\_ID\}}/.originRepository
+  * This is a shallow clone (`--depth 1`) of the branch tip when no specific commit is requested, which is faster on large repositories. A job that must check out a specific historical commit (for example an `apply` running against the commit recorded at `plan` time) automatically falls back to fetching that commit directly, or a full clone if the server doesn't support fetching by SHA.
 * All the files inside ".originalRepository" are moved to \{{ORGANIZATION\_ID\}}//\{{WORKSPACE\_ID\}} folder from previous step.
 * Te executor component will create the extension folders where you can store BASH or GROOVY extensions:
   * /home/cnb/.terraform-spring-boot/executor/\{{ORGANIZATION\_ID\}}/\{{WORKSPACE\_ID\}}/.terrakube/toolsRepository
@@ -24,6 +25,16 @@ An example of how to import external tools can be found in the Terratag Groovy e
 
 This extension download the terratag binary and expose the binary to be used inside the linux PATH when using BASH commands.
 {% endhint %}
+
+A command's `before`/`beforeInit`/`after` flags control when it runs relative to `terraform init` and the step's main command (plan/apply/destroy):
+
+| Flag         | Runs                                                                 |
+| ------------- | ----------------------------------------------------------------------- |
+| `beforeInit`  | Before `terraform init`. If a `beforeInit` script fails, init is skipped entirely. |
+| `before`      | After `init`, before the main command. Ignored if `beforeInit` is also set. |
+| `after`       | After the main command succeeds.                                        |
+
+A separate `onFailure` list (a sibling of `commands`, not a flag on a command) runs only if the step's main command fails — use it for cleanup or failure notifications instead of `after`, which only runs on success.
 
 When using the following template:
 
@@ -48,6 +59,11 @@ flow:
         before: true
         script: |
           helloWorld.sh
+    onFailure:
+      - runtime: "BASH"
+        priority: 100
+        script: |
+          notifyFailure.sh
 ```
 
 The following directory structure will be generating when using a workspace with the workspace with "[https://github.com/AzBuilder/terrakube-docker-compose](https://github.com/AzBuilder/terrakube-docker-compose)"

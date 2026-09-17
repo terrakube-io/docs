@@ -68,3 +68,21 @@ Open Telemetry Example
 One small example to show how to use open telemetry with docker compose can be found in the following URL:
 
 {% embed url="https://github.com/AzBuilder/terrakube/tree/main/telemetry-compose" %}
+
+### Helm chart
+
+Each component (`api`, `executor`, `registry`) exposes the same settings under its own `otel` block instead of raw environment variables:
+
+```yaml
+api: # also executor, registry
+  otel:
+    enabled: true
+    metrics:
+      port: "9464"
+      host: "0.0.0.0"
+    traces:
+      type: jaeger # or "zipkin"
+      endpoint: "http://jaeger-all-in-one:14250"
+```
+
+`otel.metrics.port`/`host` bind a Prometheus-scrapable metrics endpoint, independent of `otel.traces` which controls where spans are exported. The bundled `telemetry-compose` example above uses Jaeger specifically; Zipkin is supported by setting `traces.type: zipkin` and pointing `endpoint` at a Zipkin collector instead.
