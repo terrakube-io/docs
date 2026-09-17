@@ -4,11 +4,11 @@ Project-level team access lets you grant a team a specific role that applies to 
 
 ### Permission Hierarchy
 
-Permissions follow a three-tier hierarchy. The most permissive level takes precedence:
+Permissions are additive across a three-tier hierarchy — a grant at any level unlocks that access, and no level can take a permission away that a higher level already granted:
 
-1. **Organization** — organization-level team permissions (Manage Workspaces, etc.)
-2. **Project** — project-level role assigned on the Teams tab
-3. **Workspace** — future workspace-level overrides
+1. **Organization** — organization-level team permissions, see [Team Management](../organizations/team-management.md)
+2. **Project** — project-level role assigned on this Teams tab
+3. **Workspace** — workspace-level role assigned on a workspace's own [Team Access](../workspaces/team-access.md) tab
 
 {% hint style="info" %}
 Workspaces that are not assigned to any project remain visible to all members of the organization (backward-compatible behavior).

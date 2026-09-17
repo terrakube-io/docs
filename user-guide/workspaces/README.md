@@ -8,7 +8,22 @@ For example, you can create a workspace for dev environment and a different work
 
 <figure><img src="../../.gitbook/assets/Untitled.drawio.png" alt=""><figcaption></figcaption></figure>
 
-You can create unlimited workspaces inside each Terrakube Organization. In this section:
+You can create unlimited workspaces inside each Terrakube Organization.
+
+### Workspaces list
+
+{% hint style="info" %}
+_Screenshot pending: the Workspaces list in New view, grouped by project._
+{% endhint %}
+
+The **Workspaces** page has two views, toggled in the top right and remembered per browser:
+
+* **New** — a condensed list with click-to-filter tags and project chips, an optional **group by project** mode (each project paginates independently), and a lock indicator per workspace.
+* **Legacy** — the original table view.
+
+Use the search box and tag/project filters to narrow a long list; clicking a tag or project chip on any row applies it as a filter directly.
+
+In this section:
 
 {% content-ref url="creating-workspaces.md" %}
 [creating-workspaces.md](creating-workspaces.md)

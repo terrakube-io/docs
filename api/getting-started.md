@@ -460,3 +460,7 @@ The job output should be similar to the following:
 If you wan to check all the available methods you can use the following enpoint.
 
 <figure><img src="../.gitbook/assets/image (372).png" alt=""><figcaption></figcaption></figure>
+
+{% hint style="info" %}
+The same specification is also browsable from inside the Terrakube UI itself — open the **Help & Support** menu and choose **API Docs**. It's the interactive reference shown above, pre-authenticated with your current session, so you can try requests without copying a token around.
+{% endhint %}

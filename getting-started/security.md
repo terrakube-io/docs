@@ -25,6 +25,16 @@ An organization can have one or multiple groups and each group have different ki
 Adding a group to an organization will grant access to read the content inside the organization but to be able to manage any option like module, workspace, templates or providers or VCS a Terrakube administrator will need to grant it
 {% endhint %}
 
+### Build supply-chain safeguards
+
+Terrakube's release build pipeline includes safeguards that make its container build inputs and outputs easier to audit:
+
+* **OpenSSF Scorecard** runs security checks against the source repository.
+* **Syft** generates a software bill of materials (SBOM) during container builds.
+* Container base images are pinned by digest, rather than a mutable tag, to make builds reproducible.
+
+These controls are part of the Terrakube build and release process; they do not require configuration in a deployed Terrakube instance.
+
 ### Administrator group
 
 There is one special group inside Terrakube called _**TERRAKUBE\_ADMIN**_, this is the only group that has access to create organizations and grant access to a teams to manage different organization features, you can also customize the group name if you want to use a different name depending on which [Dex connector](https://dexidp.io/docs/connectors/) you are using when running Terrakube.

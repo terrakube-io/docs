@@ -10,7 +10,7 @@ Webhooks let a Version Control workflow workspace react automatically to activit
 
 Open a workspace, go to **Settings > Webhook**, and turn on **Enable VCS Webhook?**. Once enabled, Terrakube registers a webhook with your VCS provider and shows its remote ID.
 
-On GitHub repositories you can optionally click **Migrate to Shared Webhook** to consolidate the webhooks for every workspace pointed at the same repository into a single shared webhook, instead of one per workspace. This is experimental; **Revert** switches a workspace back to its own per-workspace webhook.
+On GitHub and GitLab repositories you can optionally click **Migrate to Shared Webhook** to consolidate the webhooks for every workspace pointed at the same repository into a single shared webhook, instead of one per workspace. This is experimental; **Revert** switches a workspace back to its own per-workspace webhook.
 
 ### Webhook events
 

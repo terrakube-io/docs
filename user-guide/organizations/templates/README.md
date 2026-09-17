@@ -30,6 +30,23 @@ flow:
   step: 200
 ```
 
+An `approval` step can also carry its own `onReject` command list, run when the approving team rejects the step instead of approving it — the counterpart to the `commands`/`onFailure` hooks described for other step types in the [Terraform Execution Flow](../../reference/executor/terraform-execution-flow.md "mention") reference. The job itself still ends up `rejected`; `onReject` is only for side effects like a notification or cleanup script, and can't approve or resume the run.
+
+```
+flow:
+- type: "terraformPlan"
+  step: 100
+- type: "approval"
+  name: "Approve Plan"
+  step: 150
+  team: "TERRAFORM_ADMINS"
+  onReject:
+    - runtime: "BASH"
+      priority: 100
+      script: |
+        notifyRejection.sh
+```
+
 #### Example 3:
 
 ```
