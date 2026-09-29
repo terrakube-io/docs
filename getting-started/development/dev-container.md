@@ -1,115 +1,79 @@
-# Dev Container
+# Local Dev Container
 
-This page contains the configuration for a development container that provides a consistent environment for working with Terrakube.
+This is the supported local development environment for macOS (Apple Silicon and Intel), Linux, Windows, and WSL. The tools and dependencies run in Linux containers, so contributors use the same workflow on every host platform.
 
-The devcontainer includes all the necessary tools and dependencies to develop both the Java backend, TypeScript frontend components and includes terraform CLI.
+### Prerequisites
 
-{% hint style="info" %}
-The below was tested using Ubuntu-based distribution and Windows 11 with Firefox browser.
-{% endhint %}
+* VS Code and the **Dev Containers** extension
+* A container runtime with Docker Compose support
+* [mkcert](https://github.com/FiloSottile/mkcert) on the host
+* 4 CPUs and 8 GB RAM available to the container runtime
 
-### Features
+On Windows, use Docker Desktop's WSL integration and clone inside the WSL filesystem (for example, `~/src/terrakube`), not `/mnt/c`. This avoids slow bind mounts and unreliable file watching.
 
-* Java 25 (Liberica)
-* Maven 3.9.9
-* Node.js 22.x with Yarn
-* VS Code extensions for Java, JavaScript/TypeScript
+No custom Docker subnet, local DNS server, or hosts-file entries are required. The `*.localhost` names used by the environment resolve to the loopback address on supported browsers and operating systems.
 
-### Getting Started
+### Start developing
 
-#### Prerequisites
+1. Follow the certificate step below once.
+2. Clone your fork, open it in VS Code, and choose **Dev Containers: Reopen in Container** when prompted.
+3. Once setup finishes, select **Terrakube Postgresql** in Run and Debug.
+4. Open [https://terrakube.localhost](https://terrakube.localhost) and sign in with `admin@example.com` / `admin`.
 
-* [Visual Studio Code](https://code.visualstudio.com/)
-* [VS Code Remote - Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+PostgreSQL, MinIO, Redis, and Traefik start with the Dev Container. Do not run `docker compose up` or **setup-env2** yourself.
 
-**Local Development Domains**
+### Make and debug changes
 
-To use the devcontainer we need to setup the following domains in our local computer:
+Use only **Terrakube Postgresql** for the normal local stack. **Terrakube** is an alternative H2 stack: never run both compounds, because they start the same applications on the same ports.
 
+* UI changes refresh the browser automatically.
+* For API, Registry, or Executor changes, use hot-code replace when available; otherwise restart just that service's **Run** configuration.
+* Check the changed behaviour at [https://terrakube.localhost](https://terrakube.localhost).
+
+Rebuild the Dev Container only after changing `.devcontainer/`, its Dockerfile, features, or trusted CA files.
+
+### Validate before a pull request
+
+Run the checks relevant to the change from the repository root:
+
+```sh
+# Backend or shared changes
+mvn -B verify -Dspring-boot.build-image.skip=true
+
+# UI changes
+cd ui
+yarn install --immutable
+yarn lint:modules:check
+yarn format:modules:check
+yarn build
 ```
-terrakube.platform.local
-terrakube-api.platform.local
-terrakube-registry.platform.local
-terrakube-dex.platform.local
-```
 
-**HTTPS Local Certificates**
+Then use **Terrakube Postgresql** to verify the affected user flow. Record what you ran and checked in the pull request. See CONTRIBUTING.md.
 
-Install [mkcert](https://github.com/FiloSottile/mkcert#installation) to generate the local certificates.
+Traefik publishes ports 80 and 443 by default. If either is already occupied, set `TRAEFIK_HTTP_PORT` and `TRAEFIK_HTTPS_PORT` in `.devcontainer/.env` before rebuilding. The app URLs and OAuth redirects expect HTTPS on port 443, so use the default ports for the full sign-in flow.
 
-To generate local CA certificate execute the following:
+### One-time certificate setup
 
-```
+Terrakube uses a local mkcert certificate. Install mkcert using its upstream instructions for your platform, then trust its local CA once on the host:
+
+```sh
 mkcert -install
-Created a new local CA 💥
-The local CA is now installed in the system trust store! ⚡️
-The local CA is now installed in the Firefox trust store (requires browser restart)! 🦊
 ```
 
-**Local DNS entries**
+Generate the certificate before opening the Dev Container:
 
-Update the /etc/hosts or C:\Windows\System32\drivers\etc\hosts file adding the following entries:
-
-```
-127.0.0.1 terrakube.platform.local
-127.0.0.1 terrakube-api.platform.local
-127.0.0.1 terrakube-registry.platform.local
-127.0.0.1 terrakube-dex.platform.local
-```
-
-#### Opening the Project in a Dev Container
-
-*   Clone the Terrakube repository and run the project:
-
-    ```
-    git clone https://github.com/AzBuilder/terrakube.git
-    cd terrakube/.devcontainer
-    mkcert -key-file key.pem -cert-file cert.pem platform.local *.platform.local
-    CAROOT=$(mkcert -CAROOT)/rootCA.pem
-    cp $CAROOT rootCA.pem
-    cd ..
-    code .
-    ```
-
-1. When prompted to "Reopen in Container", click "Reopen in Container". Alternatively, you can:
-   * Press F1 or Ctrl+Shift+P
-   * Type "Remote-Containers: Reopen in Container" and press Enter
-2. Wait for the container to build and start. This may take a few minutes the first time.
-3. Start all Terrakube component
-4. Terrakube should be availabe with the following url `https://terrakube.platform.local` using `admin@example.com` with password `admin`
-
-### Windows devcontainer
-
-Sometimes in windows the `postCreateCommand` fails because of how windows manage the new lines characters
-
-<figure><img src="../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
-
-To fix this it is required to open a terminal in VS Code and run the following:
-
-```bash
-sed -i 's/\r$//' ./scripts/setupDevelopmentEnvironment.sh
-bash ./scripts/setupDevelopmentEnvironment.sh
+```sh
+mkdir -p .devcontainer/tls
+mkcert -cert-file .devcontainer/tls/cert.pem -key-file .devcontainer/tls/key.pem \
+  localhost terrakube.localhost terrakube-api.localhost \
+  terrakube-registry.localhost terrakube-executor.localhost \
+  terrakube-dex.localhost
+cp "$(mkcert -CAROOT)/rootCA.pem" .devcontainer/tls/rootCA.pem
 ```
 
-### Running Terrakube
+Restart the browser after the one-time CA installation. If organisation policy blocks `mkcert -install`, follow your organisation's process for trusting a development CA; this cannot be automated portably without changing host trust settings.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+#### Corporate HTTPS inspection
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+If your company proxies or inspects HTTPS traffic, Maven and other tooling need the company CA trusted inside the Dev Container. Put the approved root or intermediate CA in certs, then run **Dev Containers: Rebuild Container**. This also supplies the trusted store to Java tools bundled with VS Code, including the Java language server. The certificate remains local and is not committed.
 
-### Ports
-
-The devcontainer forwards the following ports:
-
-* 8080: Terrakube API
-* 8075: Terrakube Registry
-* 8090: Terrakube Executor
-* 3000: Terrakube UI
-* 80/443: Traefik Gateway
-
-### Customization
-
-You can customize the devcontainer by modifying:
-
-* `.devcontainer/devcontainer.json`: VS Code settings and extensions
-* `.devcontainer/Dockerfile`: Container image configuration
