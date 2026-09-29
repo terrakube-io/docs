@@ -20,7 +20,7 @@ Click the **Github button** and then click the **Github Cloud option.**
 
 In the next screen click the link to [register a new OAuth Application](https://github.com/settings/applications/new) in Github
 
-<figure><img src="../../.gitbook/assets/image (179) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (179).png" alt=""><figcaption></figcaption></figure>
 
 In the Github page, complete the required fields and click **Register application**
 

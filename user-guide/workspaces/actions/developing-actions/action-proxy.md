@@ -38,7 +38,7 @@ When calling the Action Proxy, use the following required parameters:
 
 ### **Injecting Variables via the Action Proxy**
 
-If you need to access sensitive keys or passwords from your API call, you can inject variables using the template notation `${{var.variable_name}}`, where `variable_name` represents a [Workspace variable](../../../terrakube-cli/commands/terrakube-workspace/workspace-variable/) or a[ Global variable](../../../organizations/global-variables.md).
+If you need to access sensitive keys or passwords from your API call, you can inject variables using the template notation `${{var.variable_name}}`, where `variable_name` represents a [Workspace variable](../../../terrakube-cli/commands/variable/) or a[ Global variable](../../../organizations/global-variables.md).
 
 {% hint style="info" %}
 If you have a Global variable and a Workspace variable with the same name, the Workspace variable value will take priority.

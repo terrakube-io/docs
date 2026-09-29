@@ -12,7 +12,7 @@ The action will appear on the Workspace page, next to the Lock button. Actions a
 
 The action will appear for each resource when you click on a resource using the Overview Workspace page or the Visual State Diagram. Use this when an action applies to specific resources, such as restarting a VM or any actions that involve interaction with the resource. \\
 
-<figure><img src="../../../../.gitbook/assets/image (25) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
 
 ### Workspace/ResourceDrawer/Tab
 

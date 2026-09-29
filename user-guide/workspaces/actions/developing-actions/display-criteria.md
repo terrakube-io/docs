@@ -60,7 +60,7 @@ By setting these configurations, you ensure that your action dynamically adapts 
 
 ### Sensitive Settings
 
-You might be tempted to store secrets inside settings; however, display criteria settings don't provide a secure way to store sensitive data. For cases where you need to use different credentials for an action based on your workspace, organization or any other condition, you should use template notation instead. This approach allows you to use[ Workspace Variables](../../../terrakube-cli/commands/terrakube-workspace/workspace-variable/) or [Global Variables](../../../organizations/global-variables.md) to store sensitive settings securely.
+You might be tempted to store secrets inside settings; however, display criteria settings don't provide a secure way to store sensitive data. For cases where you need to use different credentials for an action based on your workspace, organization or any other condition, you should use template notation instead. This approach allows you to use[ Workspace Variables](../../../terrakube-cli/commands/variable/) or [Global Variables](../../../organizations/global-variables.md) to store sensitive settings securely.
 
 For example, instead of directly storing an API key in the settings, you can reference a variable:
 
@@ -75,5 +75,4 @@ For more details about using settings in your action and template variables chec
 
 ### Multiple Display Actions
 
-You can define multiple display criteria for your actions. In this case, the first criteria to be met will be applied, and the corresponding settings will be provided via the context.&#x20;
-
+You can define multiple display criteria for your actions. In this case, the first criteria to be met will be applied, and the corresponding settings will be provided via the context.
