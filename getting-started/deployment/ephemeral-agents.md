@@ -100,6 +100,51 @@ Apply Running in a different pod:
 
 <figure><img src="../../.gitbook/assets/image (480).png" alt=""><figcaption></figcaption></figure>
 
+### Job Controls
+
+{% hint style="warning" %}
+These settings are supported from version 2.34.0
+{% endhint %}
+
+The following environment variables on the API component control the Kubernetes Job created for each ephemeral step. They apply to every ephemeral job in the cluster and cannot be overridden per workspace.
+
+| Variable | Helm value (`api.ephemeralExecution.*`) | Default | Description |
+| --- | --- | --- | --- |
+| ExecutorEphemeralActiveDeadlineSeconds | activeDeadlineSeconds | unset (no deadline) | Maximum seconds a job may run before Kubernetes terminates it as failed. |
+| ExecutorEphemeralBackoffLimit | backoffLimit | unset (Kubernetes default, 6) | Number of retries before the job is marked failed. Set to `0` for at-most-once execution. |
+| ExecutorEphemeralTerminationGracePeriodSeconds | terminationGracePeriodSeconds | 60 | Seconds the pod gets to shut down cleanly after SIGTERM before Kubernetes sends SIGKILL. |
+| ExecutorEphemeralTtlSecondsAfterFinished | ttlSecondsAfterFinished | 30 | Seconds after completion before the job and its pod are deleted. |
+
+```yaml
+api:
+  ephemeralExecution:
+    enabled: true
+    activeDeadlineSeconds: "3600"
+    backoffLimit: "0"
+    terminationGracePeriodSeconds: "60"
+    ttlSecondsAfterFinished: "300"
+```
+
+#### Active deadline
+
+* The deadline is counted from the Job's `startTime`, which is set before the pod is scheduled or its image is pulled. Node autoscaling and large image pulls count against it, so avoid very small values.
+* It is Job-wide: every retry allowed by `backoffLimit` shares the one deadline, and the deadline takes precedence over any retries left.
+* A single cluster-wide value has to fit your longest legitimate apply, otherwise long runs are terminated with `DeadlineExceeded`.
+* When the deadline fires, the run fails with the message `Executor pod is shutting down`.
+* If the pod is killed before the executor has started (still scheduling or pulling its image), nothing reports back to the API. The run is failed by the API's heartbeat sweep after `ReconciliationHeartbeatGracePeriodSeconds` (default 300), not immediately.
+
+#### Backoff limit
+
+Each retry runs in a brand-new pod. A step that died while holding the Terraform state lock will fail immediately on that lock when retried, and a step that had already applied non-idempotent changes may duplicate them. Set `backoffLimit` to `0` if you want a failed step to fail once and stop.
+
+#### Termination grace period
+
+On shutdown Terraform receives SIGTERM and 10 seconds (fixed by the Terraform client used by the executor) to exit before it is killed. That wait only starts after Spring's shutdown phase, which by default can take up to 30 seconds (`spring.lifecycle.timeout-per-shutdown-phase`) while the running job is stopped. The default of 60 seconds covers both, but raising `terminationGracePeriodSeconds` does not give Terraform more than the 10 seconds, so a long-running apply can still be killed while holding the state lock.
+
+#### TTL after finished
+
+The default of 30 seconds is a tight window to run `kubectl describe pod` or `kubectl logs` on a pod that failed before the executor started (image pull failure, missing secret, out-of-memory). Raise it, for example to `300`-`600`, if you need more time to troubleshoot.
+
 ### Node Selector.
 
 {% hint style="warning" %}
