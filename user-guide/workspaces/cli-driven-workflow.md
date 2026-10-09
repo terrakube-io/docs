@@ -77,6 +77,30 @@ resource "random_string" "random" {
 }
 ```
 {% endtab %}
+
+{% tab title="cloud block key/value tags" %}
+```
+terraform {
+  cloud {
+    organization = "simple"
+    hostname = "terrakube-api.example.com"
+
+    workspaces {
+      tags = {
+        env = "dev"
+        app = "networking"
+      }
+    }
+  }
+}
+
+resource "random_string" "random" {
+  length           = 16
+  special          = true
+  override_special = "/@£$"
+}
+```
+{% endtab %}
 {% endtabs %}
 
 * Hostname
@@ -85,9 +109,45 @@ resource "random_string" "random" {
   * This should be the Terrakube organization where the workspace will be created.&#x20;
 * Workspace
   * The name of the workspace to be created. Or you can use an existing workspace created in the UI using the API or CLI driven workflow.
+  * Alternatively, the tags that select the workspaces to use. See [Selecting Workspaces with Tags](cli-driven-workflow.md#selecting-workspaces-with-tags).
 
 {% hint style="warning" %}
-The `cloud` block is available in Terraform v1.1 and later. Previous versions can use the remote bakced to configure the CLI workflow and migrate state. Using tags in the `cloud` block is not yet supported
+The `cloud` block is available in Terraform v1.1 and later. Previous versions can use the remote backend to configure the CLI workflow and migrate state.
+{% endhint %}
+
+### Selecting Workspaces with Tags <a href="#selecting-workspaces-with-tags" id="selecting-workspaces-with-tags"></a>
+
+Instead of a single workspace `name`, the `cloud` block can select the workspaces to use by their [tags](../organizations/tags.md). The `tags` attribute accepts either of two forms:
+
+* A list of tag keys, for example `tags = ["development", "networking"]`. A workspace matches when it has every key, whatever its values.
+* A map of key/value tags, for example `tags = { env = "dev", app = "networking" }`. A workspace matches when it has every key with exactly that value.
+
+Key/value tags let you tell apart workspaces that share the same keys. For example, with `myapp-dev` (`app = myapp`, `env = dev`) and `myapp-prod` (`app = myapp`, `env = prod`) in the organization, the following configuration always selects `myapp-dev`:
+
+```
+terraform {
+  cloud {
+    organization = "simple"
+    hostname = "terrakube-api.example.com"
+
+    workspaces {
+      tags = {
+        env = "dev"
+        app = "myapp"
+      }
+    }
+  }
+}
+```
+
+When you run `terraform init`:
+
+* If no workspace matches the tags, Terraform offers to create one, and the new workspace gets the tags from the configuration.
+* If the selected workspace is missing some of the tags, Terraform adds them to the workspace. Tags that are not in the configuration, such as tags added in the UI, are kept.
+* Selecting a workspace that does not match the tags, for example with `TF_WORKSPACE`, fails with `Invalid workspace selection`.
+
+{% hint style="info" %}
+When tags are set from the Terraform CLI, a workspace can have at most 10 tags.
 {% endhint %}
 
 ### Terraform login.
