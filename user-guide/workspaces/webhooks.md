@@ -10,7 +10,9 @@ Webhooks let a Version Control workflow workspace react automatically to activit
 
 Open a workspace, go to **Settings > Webhook**, and turn on **Enable VCS Webhook?**. Once enabled, Terrakube registers a webhook with your VCS provider and shows its remote ID.
 
-On GitHub and GitLab repositories you can optionally click **Migrate to Shared Webhook** to consolidate the webhooks for every workspace pointed at the same repository into a single shared webhook, instead of one per workspace. This is experimental; **Revert** switches a workspace back to its own per-workspace webhook.
+If several workspaces use the same repository, tick **Share one webhook across this repository** when enabling (GitHub, GitLab, Azure DevOps and Azure SP/MI) so Terrakube registers a single webhook for all of them. An existing workspace can use **Migrate to shared webhook** and **Switch to a webhook for this workspace** to move either way. If a shared webhook is deleted on the provider, Terrakube recreates it.
+
+Changing the workspace's repository or VCS provider removes its webhook first, because the old webhook belongs to the old repository. Set it up again afterwards from this page.
 
 ### Webhook events
 
@@ -18,9 +20,9 @@ Each row in the events table matches a specific kind of repository activity to a
 
 | Field         | Description                                                                                                                                                     |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Priority      | When more than one event row of the same type could match a payload, Terrakube evaluates them in ascending priority order and uses the first one whose branch and file filters match. |
+| Priority      | Events are checked top to bottom and the first match wins. Use the arrows to reorder; the order is saved as priority 1, 2, 3. |
 | Event         | `Push`, `Pull Request`, or `Release`. See provider support below — not every VCS supports every event type.                                                    |
-| Branch/release | Comma-separated list of branch or release names, matched as a regex against the branch/release in the payload.                                                |
+| Branch/release | One chip per branch or release pattern (a regex), each validated on its own. **Any branch** matches everything. Use **Test patterns** to try a sample branch or path.                                                |
 | Path Type     | `Pattern` for simple wildcards like `terraform/*` or `modules/**`, or `Regex` for full regular-expression matching against changed files. Branch/release matching always uses regex regardless of this setting. |
 | File          | The pattern or regex list (depending on Path Type) that changed files must match for the job to run. Useful for monorepos so unrelated changes don't trigger a run. |
 | Template      | The [template](../organizations/templates/ "mention") to run when this event matches.                                                                          |

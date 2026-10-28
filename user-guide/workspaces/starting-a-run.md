@@ -21,3 +21,16 @@ Both fields autocomplete against the workspace's actual state resources — star
 {% hint style="info" %}
 Target and replace addresses only apply to the run you're creating — they aren't saved on the workspace and don't affect future runs, including ones triggered by a webhook or the scheduler.
 {% endhint %}
+
+### Approve or discard a run
+
+When a template requires approval, the run stops at **Waiting approval** and appears on the workspace overview as the **Current run**. Users in the approval team can **Approve** or **Discard** it from the overview or from the run page. The confirmation restates what the plan will do ("3 to add, 1 to change, 0 to destroy") and calls out any resources that will be destroyed.
+
+* Terrakube records who approved the run and when, and shows it next to the run creator in the run details and run history.
+* A run with unresolved [policy](../policy-enforcement-opa.md) violations cannot be approved; open the run to review them.
+* If more runs are queued behind the current one, the overview says how many and links to the **Runs** tab.
+* Approvals do not time out by default. Administrators can set `InactiveJobsWaitingApprovalTimeoutHours` on the API to cancel runs that wait too long.
+
+### Run-specific variables
+
+Runs started from CI can carry variables that apply to that run only; see [API-driven Workflow](api-driven-workflow.md#variables-for-one-run).

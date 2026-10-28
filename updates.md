@@ -1,5 +1,54 @@
 # Updates
 
+### 2.34.0 (upcoming)
+
+#### Policy Governance (OPA)
+
+Platform teams can now enforce Open Policy Agent policies across every run. Policy sets are stored in Git, attached to an organization, project, tag or workspace, and evaluated inside the runner before apply at one of three levels (`hard_mandatory`, `soft_mandatory`, `advisory`). Soft violations can be overridden by a designated team with an audited justification, individual rules can be waived with expiring exemptions, and a nightly job surfaces compliance drift. See [Policy Governance](user-guide/policy-enforcement-opa.md). The previous template-based approach is documented as [legacy](user-guide/policy-enforcement-opa-templates.md).
+
+#### Run Triggers
+
+Workspaces can be chained: when an apply changes the source workspace, a run is queued in each dependent workspace, with loop detection and a dependency view in the UI. See [Run Triggers](user-guide/workspaces/run-triggers.md).
+
+#### Terraform and OpenTofu CLI login
+
+`terraform login` and `tofu login` can authenticate through a Terrakube OAuth broker that issues a revocable personal access token with a lifetime you choose. See [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md#terraform-login).
+
+#### Runs
+
+* Run approval moved to a sticky bar on the run page and to the workspace overview, which now shows the run that needs action. Terrakube records who approved a run. See [Starting a Run](user-guide/workspaces/starting-a-run.md#approve-or-discard-a-run).
+* Run-specific Terraform variables can be sent with a job from CI. See [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md).
+* Files built by the plan step can be carried to the apply step. See [Plan Artifacts](user-guide/workspaces/plan-artifacts.md).
+* The run page gained a Diagnostics panel, output-only plan changes, and an indicator of whether a step's result is final. Structured output is no longer lost when the API is briefly unavailable, and output is archived while a step runs so an executor crash no longer loses the log. See [Job Output](user-guide/workspaces/job-output.md).
+* Step output is no longer copied to the executor's service log by default. See [Executor Log Output](getting-started/deployment/executor-log-output.md).
+* Ephemeral executor jobs gained deadline, backoff, TTL and grace period controls. See [Ephemeral Agents](getting-started/deployment/ephemeral-agents.md).
+
+#### Workspaces and projects
+
+* Workspaces can have key/value tags, editable in the UI and filterable in the list. See [Tags](user-guide/organizations/tags.md).
+* A workspace's repository URL and VCS provider can be changed in **Settings → General**. See [Creating Workspaces](user-guide/workspaces/creating-workspaces.md#changing-the-repository-or-vcs-provider).
+* The webhook settings were redesigned with per-pattern validation, priority ordering and shared-webhook controls. See [Webhooks](user-guide/workspaces/webhooks.md).
+* A Module Cache page documents sharing `TF_DATA_DIR` between runs. See [Module Cache](user-guide/workspaces/module-cache.md).
+* Projects can be searched, workspace lists group by project, and the project workspaces tab shows each workspace's last run.
+
+#### Registry
+
+* Module and provider versions can be deprecated or removed. See [Deprecating and Removing Versions](user-guide/private-registry/deprecating-and-removing-versions.md).
+* Public providers open a provider page with the latest version preselected before you add them. See [Using Providers](user-guide/private-registry/using-providers.md).
+* Module inputs, outputs and resources are parsed on the server, which makes large modules open faster.
+* The module refresh delay is configurable, and the registry can redirect module downloads to presigned S3, Azure Blob or Google Cloud Storage URLs. See [Private Registry](user-guide/private-registry/README.md).
+
+#### Storage and operations
+
+* S3-compatible stores can set the signing region, path-style addressing, chunked encoding and checksum validation. See [Amazon Cloud Storage](getting-started/deployment/storage-backend/amazon-cloud-storage.md).
+* Dynamic credential tokens carry a `terrakube_project_name` claim, and federated credentials accept multi-audience OIDC tokens. See [Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/README.md).
+* Live log viewing scales to many concurrent viewers, and large organizations load faster through aggregated summaries and cursor pagination.
+* Spring Boot was upgraded to 4.1.
+
+#### UI
+
+The workspace, run, state, settings and registry pages were refreshed, with a dark theme and accessibility fixes, a responsive layout with a sidebar drawer on narrow screens, and faster initial load.
+
 ### August 2026 (2.33.0)
 
 #### Notifications

@@ -115,6 +115,10 @@ The following environment variables can be used to customize the dynamic credent
 * DynamicCredentialPublicKeyPath= The path to the public key to validate the federated tokens
 * DynamicCredentialPrivateKeyPath=The path to the private key to generate the federated tokens
 
+### Project claim
+
+From 2.34.0, when the workspace belongs to a [project](../../projects/README.md), the token also carries a `terrakube_project_name` claim. Use it in GCP and OpenBao/Vault trust policies to scope access by project, for example `"bound_claims": {"terrakube_project_name": "payments"}` in a Vault JWT role. The `sub` claim is unchanged, so existing trust policies keep working. AWS exposes the project through [session tags](aws-dynamic-provider-credentials.md#session-tags-abac), and Azure matches on `sub` only.
+
 ### Token structure
 
 Terrakube will generate a JWT token internally, this token will be used to authenticate to your cloud provider.

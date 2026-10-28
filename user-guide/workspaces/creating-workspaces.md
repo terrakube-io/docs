@@ -130,3 +130,7 @@ For more details how to use the Terrakube API. See [api-driven-workflow.md](api-
 And if you navigate to the **Workspace** menu you will see the workspace in the Workspaces list
 
 <figure><img src="../../.gitbook/assets/image (162).png" alt=""><figcaption></figcaption></figure>
+
+### Changing the repository or VCS provider
+
+Under **Settings → General**, a Version Control workspace can be pointed at a different **VCS provider** or **Repository URL**, for example after moving from GitHub to GitLab. State, variables and run history are kept. If the workspace has a [webhook](webhooks.md), Terrakube asks you to confirm and removes it first; enable it again afterwards. The repository field is not shown for CLI-driven workspaces.

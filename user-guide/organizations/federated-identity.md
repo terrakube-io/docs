@@ -10,7 +10,7 @@ Federated credentials are managed from an organization's **Settings > Federated 
 
 ### How it works
 
-1. A superuser registers a federated credential with a **name**, the OIDC **issuer URL** (e.g. `https://token.actions.githubusercontent.com` for GitHub Actions), and the expected **audience** (e.g. `api://Terrakube`).
+1. A superuser registers a federated credential with a **name**, the OIDC **issuer URL** (e.g. `https://token.actions.githubusercontent.com` for GitHub Actions), and the expected **audience** (e.g. `api://Terrakube`). Tokens whose `aud` is a list are accepted when any entry matches, and claim conditions can match list-valued claims.
 2. A **team** is created in Terrakube whose name exactly matches the federated credential's name. Permissions for federated callers come entirely from this team's assignments — there's no separate permission model for federated identity.
 3. When a request arrives with a JWT whose `iss` and `aud` claims match a registered federated credential, Terrakube verifies the token's signature against that issuer's own JWKS endpoint (instead of your normal Dex/OIDC provider), and treats the caller as a member of the matching team.
 4. If the token doesn't match any registered issuer/audience pair, Terrakube falls back to normal authentication (Dex, PAT, or team token).

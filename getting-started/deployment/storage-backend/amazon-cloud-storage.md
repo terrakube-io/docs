@@ -76,3 +76,18 @@ registry:
   - name: AwsEnableRoleAuth
     value: true
 ```
+
+### S3-compatible storage (MinIO, Alibaba OSS, Qumulo, ...)
+
+When `AwsEndpoint` points at a custom endpoint, these optional variables on the **api**, **executor** and **registry** adapt Terrakube to the store. The defaults keep existing deployments unchanged. Set them on all three components, since the executor also writes them into the backend it generates for each job.
+
+| Variable | Default | Use it when |
+| --- | --- | --- |
+| `AwsEndpointRegion` | `auto` | The store needs a real signing region, e.g. `us-east-1`. |
+| `AwsPathStyleAccess` | `true` | Set `false` for stores that only accept virtual-hosted style requests (Alibaba OSS answers `SecondLevelDomainForbidden` otherwise). |
+| `AwsChunkedEncodingEnabled` | `true` | Set `false` if the store rejects chunked transfer encoding. |
+| `AwsChecksumValidationEnabled` | `true` | Set `false` if the store does not support checksum validation. |
+
+### Faster module downloads with presigned URLs
+
+By default the registry streams module zips from storage. Set `AwsS3PresignedRedirectEnabled=true` on the **registry** to redirect clients to a short-lived presigned URL instead, so downloads no longer pass through the registry pod. `AwsS3PresignedUrlExpirySeconds` (default `300`) sets the link lifetime. Azure Blob (`AzureBlobPresignedRedirectEnabled`) and Google Cloud Storage (`GcpPresignedRedirectEnabled`) have the same switches. All are off by default, and the clients must be able to reach the storage endpoint directly.

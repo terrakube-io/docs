@@ -5,7 +5,7 @@ Terraform provides a public registry, where you can share and reuse your terrafo
 Terrakube provides a private registry that works similarly to the [public Terraform Registry](https://developer.hashicorp.com/terraform/registry) and helps you share [Terraform providers](https://developer.hashicorp.com/terraform/language/providers) and [Terraform modules](https://developer.hashicorp.com/terraform/language/modules) privately across your organization. You can use any of the main [VCS providers](../vcs-providers/) to maintain your terraform module code.
 
 {% hint style="info" %}
-At the moment the Terrakube UI only supports [publish private modules,](publishing-private-modules.md) but you can publish providers using the [Terrakube API](../../api/methods/provider.md)
+The Terrakube UI publishes [private modules](publishing-private-modules.md). You can add providers from the public registry in the UI, or publish your own with the [Terrakube API](../../api/methods/provider.md).
 {% endhint %}
 
 In this section:
@@ -21,3 +21,7 @@ In this section:
 {% content-ref url="deprecating-and-removing-versions.md" %}
 [deprecating-and-removing-versions.md](deprecating-and-removing-versions.md)
 {% endcontent-ref %}
+
+### New versions appear after a refresh
+
+Terrakube reads a module's git tags every 5 minutes and the registry caches the version list for 10 minutes. To shorten the delay, set `ModuleRefreshInterval` (API, seconds, default `300`) and `ModuleVersionsCacheTtlSeconds` (registry, seconds, default `600`). Setting both to `30` brings a new tag into the registry in about a minute.

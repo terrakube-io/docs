@@ -150,50 +150,34 @@ When you run `terraform init`:
 When tags are set from the Terraform CLI, a workspace can have at most 10 tags.
 {% endhint %}
 
-### Terraform login.
+### Terraform login
 
-Once we have added the terraform remote state configuration we will need to authenticate to Terrakube using the following command with the Terrakube API as the following:
-
-```
-terraform login 8080-azbuilder-terrakube-3xqsq270uq1.ws-us82.gitpod.io
-```
-
-The output will look something like the following:
-
-<figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption></figcaption></figure>
+Authenticate the CLI against Terrakube with the standard login command (use `tofu login` for OpenTofu):
 
 ```
-terraform login 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io
-Terraform will request an API token for 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io using OAuth.
-
-This will work only if you are able to use a web browser on this computer to
-complete a login process. If not, you must obtain an API token by another
-means and configure it in the CLI configuration manually.
-
-If login is successful, Terraform will store the token in plain text in
-the following file for use by subsequent commands:
-    C:\Users\XXXXXX\AppData\Roaming\terraform.d\credentials.tfrc.json
-
-Do you want to proceed?
-  Only 'yes' will be accepted to confirm.
-
-  Enter a value: yes
-
-Terraform must now open a web browser to the login page for 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io.
-
-If a browser does not open this automatically, open the following URL to proceed:
-    https://5556-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io/dex/auth?scope=openid+profile+email+offline_access+groups&client_id=example-app&code_challenge=YYe059U9HyeMy1-RmuEzSajPJYGdcY4IkNr0pZz4LZ8&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A10000%2Flogin&response_type=code&state=f8b6da79-35f3-2b92-d8d8-179cda386f91
-
-Terraform will now wait for the host to signal that login was successful.
-
-
----------------------------------------------------------------------------------
-
-Success! Terraform has obtained and saved an API token.
-
-The new API token will be used for any future Terraform command that must make
-authenticated requests to 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io.
+terraform login terrakube-api.example.com
 ```
+
+Terraform opens your browser, you sign in with your identity provider, and the token is stored in the Terraform credentials file. Run it once for each hostname you use; if the registry has a different hostname from the API, log in to both (or put the same token in the credentials file for each).
+
+#### Login through the Terrakube OAuth broker
+
+{% hint style="info" %}
+Available from Terrakube 2.34.0. It is disabled by default.
+{% endhint %}
+
+When enabled, Terrakube brokers the sign-in through Dex and shows a consent page where you choose how long the token lives (1 to 365 days). The CLI receives a normal, revocable personal access token, which you can see and delete in your [User Settings](../organizations/api-tokens.md). After a successful login the browser may show a connection error to `localhost`; this is expected, because Terraform closes its temporary listener as soon as it has the token.
+
+Administrators enable it on the API with:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `TerraformLoginEnabled` | `false` | Turns the broker on and publishes the login discovery document. |
+| `TerraformLoginApiUrl` | | Public URL of the API, used for the OAuth callback and for registry discovery. |
+| `TerraformLoginDefaultDays` | `30` | Token lifetime preselected on the consent page. |
+| `TerraformLoginMaxDays` | `365` | Longest lifetime a user can pick. |
+
+The broker uses PKCE, only redirects to the local CLI (`localhost`, ports 10000-10010), and validates Dex tokens against its signing keys.
 
 ### Terraform Init
 

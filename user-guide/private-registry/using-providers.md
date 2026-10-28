@@ -1,10 +1,18 @@
 # Using Providers
 
-The following will explain how to add a provider to Terrakube.
+Providers can be added to your organization's registry from the public Terraform registry in the UI, or through the API for private providers.
 
-{% hint style="danger" %}
-The provider needs to be added using the API, currently there is no support to do it using the UI and if you want to upload a private provider you will need to upload the provider binary and related files to some domain that you can manage.
-{% endhint %}
+### Add a public provider in the UI
+
+1. Open **Registry → Providers → Add provider** and search the public registry. Official and partner providers are listed first.
+2. Select a result to open its provider page. It shows the tier, downloads, and a usage snippet pointing at your registry. The latest release is preselected; pick another version if you need one.
+3. Click **Add to Terrakube**.
+
+If the provider is already in your registry, the button takes you to its page instead. Versions can later be [deprecated or removed](deprecating-and-removing-versions.md).
+
+### Add a provider with the API
+
+Use the API for private providers or to script the import.
 
 Lets add the `random provider version 3.0.1` to terrakube, we can get the information that we need from the following endpoints:
 
