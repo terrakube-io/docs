@@ -1,49 +1,36 @@
 # Share Workspace State
 
-Terrakube support sharing the terraform state between workspaces using the following data block.
+One workspace can read another workspace's outputs with the standard `terraform_remote_state` data source. This is how, for example, an application workspace reads the VPC id exported by a network workspace.
+
+### Allow sharing
+
+State is private by default. In the **producer** workspace open **Settings → State shared** and share it with the workspaces that need it. **Share this workspace's state with all workspaces in the organization** allows every workspace in the organization to read it, so only enable it when the state holds nothing sensitive.
 
 <figure><img src="../../.gitbook/assets/workspace-state-shared.png" alt="Settings, State shared"><figcaption><p>Settings, State shared</p></figcaption></figure>
 
-```
-data "terraform_remote_state" "remote_creation_time" {
+### Read it from another workspace
+
+In the **consumer** configuration use the `remote` backend and point it at your Terrakube hostname, organization and the producer workspace:
+
+```hcl
+data "terraform_remote_state" "network" {
   backend = "remote"
   config = {
+    hostname     = "terrakube-api.example.com"
     organization = "simple"
-    hostname = "8080-azbuilder-terrakube-vg8s9w8fhaj.ws-us102.gitpod.io"
     workspaces = {
-      name = "simple_tag1"
-    }
-  }
-}
-```
-
-For example it can be used in the following way:
-
-```
-data "terraform_remote_state" "remote_creation_time" {
-  backend = "remote"
-  config = {
-    organization = "simple"
-    hostname = "8080-azbuilder-terrakube-vg8s9w8fhaj.ws-us102.gitpod.io"
-    workspaces = {
-      name = "simple_tag1"
+      name = "network"
     }
   }
 }
 
-resource "null_resource" "previous" {}
-
-resource "time_sleep" "wait_30_seconds" {
-  depends_on = [null_resource.previous]
-
-  create_duration = data.terraform_remote_state.remote_creation_time.outputs.creation_time
-}
-
-resource "null_resource" "next" {
-  depends_on = [time_sleep.wait_30_seconds]
+resource "aws_instance" "app" {
+  subnet_id = data.terraform_remote_state.network.outputs.subnet_id
 }
 ```
+
+Only root-module **outputs** of the producer are readable. If the producer should trigger the consumer when it changes, add a [run trigger](run-triggers.md).
 
 {% hint style="info" %}
-This feature is supported from Terrakube 2.15.0
+Supported from Terrakube 2.15.0.
 {% endhint %}
