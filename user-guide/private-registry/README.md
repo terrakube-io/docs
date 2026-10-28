@@ -17,3 +17,7 @@ In this section:
 {% content-ref url="using-private-modules.md" %}
 [using-private-modules.md](using-private-modules.md)
 {% endcontent-ref %}
+
+{% content-ref url="deprecating-and-removing-versions.md" %}
+[deprecating-and-removing-versions.md](deprecating-and-removing-versions.md)
+{% endcontent-ref %}
