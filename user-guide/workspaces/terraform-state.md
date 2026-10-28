@@ -2,6 +2,8 @@
 
 Each Terrakube workspace has its own separate state data, used for jobs within that workspace. In Terrakube you can see the Terraform state in the standard [JSON format](terraform-state.md#json-state) provided by the Terraform cli or you can see a [Visual State](terraform-state.md#visual-state), this is a diagram created by Terrakube to represent the resources inside the JSON state.
 
+<figure><img src="../../.gitbook/assets/workspace-states.png" alt="State versions of a workspace"><figcaption><p>State versions of a workspace</p></figcaption></figure>
+
 ### JSON State
 
 Go to the workspace and click the **States** tab and then click in the specific state you want to see.

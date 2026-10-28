@@ -10,31 +10,23 @@ When creating a Workspace, Terrakube supports 3 workflows types and based on the
 * [CLI-driven workflow](creating-workspaces.md#cli-driven-workflow): Trigger remote Terraform runs from your local command line.
 * [API-driven workflow](creating-workspaces.md#api-driven-workflow): A more advanced option. Integrate Terraform into a larger pipeline using the [Terrakube API](../../api/getting-started.md).
 
+<figure><img src="../../.gitbook/assets/workspace-new-wizard.png" alt="The New Workspace wizard"><figcaption><p>The New Workspace wizard</p></figcaption></figure>
+
 ### Version Control workflow
 
 Click **Workspaces** in the main menu and then click the **New workspace** button
 
-<figure><img src="../../.gitbook/assets/image (297).png" alt=""><figcaption></figcaption></figure>
-
 Select the IaC type for now we support terraform and open tofu
-
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
 
 Choose the **Version control workflow**
 
-<figure><img src="../../.gitbook/assets/image (319).png" alt=""><figcaption></figcaption></figure>
-
 Select an existing version control provider or click **Connect to a different VCS** to configure a new one. See [vcs-providers](../vcs-providers/ "mention") for more details.
-
-<figure><img src="../../.gitbook/assets/image (294).png" alt=""><figcaption></figcaption></figure>
 
 For GitHub (OAuth or App), GitLab, Bitbucket, and Azure DevOps connections, search and pick a repository from a paginated list backed by the provider's API instead of typing a URL — this scales to organizations with thousands of repositories. Select one and click **Continue**.
 
 {% hint style="info" %}
 SSH connections don't support repository discovery, since there's no provider API to query — provide the git repository URL directly, in SSH format. Example git@github.com:jcanizalez/terraform-sample-repository.git. For more information see [ssh.md](../vcs-providers/ssh.md "mention")
 {% endhint %}
-
-<figure><img src="../../.gitbook/assets/image (317).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.
 
@@ -53,15 +45,9 @@ When using a VCS workflow you can select which branches, folder and action (aka,
 
 The `VCS branches` accepts a list of branches separated by comma, the first in the list is used as the default for the runs kicked off from UI. The branches are compared as prefixes against the branch included in the payload sent from VCS provider.
 
-<figure><img src="../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
-
 You will be redirected to the Workspace page
 
-<figure><img src="../../.gitbook/assets/image (184).png" alt=""><figcaption></figcaption></figure>
-
 And if you navigate to the **Workspace** menu, you will see the workspace in the Workspaces list
-
-<figure><img src="../../.gitbook/assets/image (299).png" alt=""><figcaption></figcaption></figure>
 
 Once you create your workspace, Terrakube sets up a webhook with your VCS. This webhook runs a job based on the selected template every time you push new changes to the set workspace branches. See [webhooks.md](webhooks.md "mention") for how to configure additional events (pull requests, releases) and the PR comment workflow.
 
@@ -69,11 +55,7 @@ Once you create your workspace, Terrakube sets up a webhook with your VCS. This 
 
 Click **Workspaces** in the main menu and then click the **New workspace** button
 
-<figure><img src="../../.gitbook/assets/image (303).png" alt=""><figcaption></figcaption></figure>
-
 Choose the **CLI-driven workflow**
-
-<figure><img src="../../.gitbook/assets/image (316).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.
 
@@ -83,8 +65,6 @@ Configure the workspace settings.
 | Terraform Version | The version of Terraform to use for this workspace. Check [custom-terraform-cli-builds.md](../../getting-started/deployment/custom-terraform-cli-builds.md "mention") if you want to restrict the versions in your Terrakube instance. |
 
 Once you fill the settings click the **Create Workspace** button.
-
-<figure><img src="../../.gitbook/assets/image (174).png" alt=""><figcaption></figcaption></figure>
 
 You will be redirected to the Workspace page.
 
@@ -92,21 +72,13 @@ You will be redirected to the Workspace page.
 The overview page for CLI-driven workspaces show the step to connect to the workspace using the Terraform CLI. For more details see [cli-driven-workflow.md](cli-driven-workflow.md "mention")
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (258).png" alt=""><figcaption></figcaption></figure>
-
 And if you navigate to the **Workspace** menu you will see the workspace in the Workspaces list
-
-<figure><img src="../../.gitbook/assets/image (293).png" alt=""><figcaption></figcaption></figure>
 
 ### API-driven Workflow
 
 Click **Workspaces** in the main menu and then click the **New workspace** button
 
-<figure><img src="../../.gitbook/assets/image (297).png" alt=""><figcaption></figcaption></figure>
-
 Choose the **API-driven workflow**
-
-<figure><img src="../../.gitbook/assets/image (208).png" alt=""><figcaption></figcaption></figure>
 
 Configure the workspace settings.
 
@@ -117,20 +89,16 @@ Configure the workspace settings.
 
 Once you fill the settings click the **Create Workspace** button.
 
-<figure><img src="../../.gitbook/assets/image (218).png" alt=""><figcaption></figcaption></figure>
-
 ou will be redirected to the Workspace page.
 
 {% hint style="info" %}
 For more details how to use the Terrakube API. See [api-driven-workflow.md](api-driven-workflow.md "mention")
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/image (291).png" alt=""><figcaption></figcaption></figure>
-
 And if you navigate to the **Workspace** menu you will see the workspace in the Workspaces list
-
-<figure><img src="../../.gitbook/assets/image (162).png" alt=""><figcaption></figcaption></figure>
 
 ### Changing the repository or VCS provider
 
 Under **Settings → General**, a Version Control workspace can be pointed at a different **VCS provider** or **Repository URL**, for example after moving from GitHub to GitLab. State, variables and run history are kept. If the workspace has a [webhook](webhooks.md), Terrakube asks you to confirm and removes it first; enable it again afterwards. The repository field is not shown for CLI-driven workspaces.
+
+<figure><img src="../../.gitbook/assets/workspace-settings-general.png" alt="Settings, General"><figcaption><p>Settings, General</p></figcaption></figure>

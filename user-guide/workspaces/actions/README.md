@@ -44,13 +44,11 @@ If you are interested in creating your own actions, you only need knowledge of J
 
 After you develop your action. To create a new action in Terrakube:
 
+<figure><img src="../../../.gitbook/assets/actions-list.png" alt="Actions in an organization"><figcaption><p>Actions in an organization</p></figcaption></figure>
+
 1. Navigate to the settings in any Terrakube organization.
 
-<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
-
 2. Click the `Add Action` button.
-
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 3. Provide the required information as detailed in the table below:
 
@@ -69,8 +67,5 @@ After you develop your action. To create a new action in Terrakube:
 
 4. Click the `Save` button.
 
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
-
 \
-
 

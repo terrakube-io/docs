@@ -6,11 +6,7 @@ In Terrakube you can define user permissions inside your organization using team
 
 Once you are in the desired organization, click the **Settings** button and then in the left menu select the **Teams** option.
 
-<figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption></figcaption></figure>
-
 Click the **Create team** button
-
-<figure><img src="../../.gitbook/assets/image (353).png" alt=""><figcaption></figcaption></figure>
 
 In the popup, provide the team name, then choose either a preset **role** or **Custom** permissions.
 
@@ -58,14 +54,9 @@ Now all the users inside the team will be able to manage the specific resources 
 
 Click the **Edit** button next to the team you want to edit
 
-<figure><img src="../../.gitbook/assets/image (330).png" alt=""><figcaption></figcaption></figure>
-
 Change the permissions you need and click the **Save team** button
-
-<figure><img src="../../.gitbook/assets/image (261).png" alt=""><figcaption></figcaption></figure>
 
 ### Delete a Team
 
 Click the **Delete** button next to the team you want to delete, and then click the Yes button to confirm the deletion. Please take in consideration the deletion is irreversible
 
-<figure><img src="../../.gitbook/assets/image (262).png" alt=""><figcaption></figcaption></figure>

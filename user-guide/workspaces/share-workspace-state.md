@@ -2,6 +2,8 @@
 
 Terrakube support sharing the terraform state between workspaces using the following data block.
 
+<figure><img src="../../.gitbook/assets/workspace-state-shared.png" alt="Settings, State shared"><figcaption><p>Settings, State shared</p></figcaption></figure>
+
 ```
 data "terraform_remote_state" "remote_creation_time" {
   backend = "remote"

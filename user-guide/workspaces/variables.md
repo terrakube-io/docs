@@ -15,6 +15,8 @@ There are 2 kinds of Variables:
 * [Terraform Variables](variables.md#terraform-variables)
 * [Environment Variables](variables.md#environment-variables)
 
+<figure><img src="../../.gitbook/assets/workspace-variables.png" alt="A workspace's Variables page"><figcaption><p>A workspace's Variables page</p></figcaption></figure>
+
 ### Terraform Variables
 
 These Terraform variables are set using a terraform.tfvars file. To use interpolation or set a non-string value for a variable, click its HCL checkbox.
@@ -23,7 +25,7 @@ These Terraform variables are set using a terraform.tfvars file. To use interpol
 
 Go to the workspace **Variables** page and in the _Terraform Variables_ section click the **Add variable** button.
 
-<figure><img src="../../.gitbook/assets/image (350).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/workspace-variable-add.png" alt="Adding a variable"><figcaption><p>Adding a variable</p></figcaption></figure>
 
 In the popup, provide the required values. Use the below table as reference:
 
@@ -37,13 +39,9 @@ In the popup, provide the required values. Use the below table as reference:
 
 Finally click the **Save variable** button and the variable will be created.
 
-<figure><img src="../../.gitbook/assets/image (325).png" alt=""><figcaption></figcaption></figure>
-
 #### Edit a Terraform Variable
 
 Click the **Edit** button next to the variable you want to edit.
-
-<figure><img src="../../.gitbook/assets/image (274).png" alt=""><figcaption></figcaption></figure>
 
 Make any desired changes and click **Save variable.**
 
@@ -51,11 +49,7 @@ Make any desired changes and click **Save variable.**
 
 Click the **Delete** button next to the variable you want to delete.
 
-<figure><img src="../../.gitbook/assets/image (273).png" alt=""><figcaption></figcaption></figure>
-
 Click **Yes** to confirm your action.
-
-<figure><img src="../../.gitbook/assets/image (362).png" alt=""><figcaption></figcaption></figure>
 
 ### Environment Variables
 
@@ -65,8 +59,6 @@ These variables are set in Terraform's shell environment using export.
 
 Go to the workspace **Variables** page and in the _Environment Variables_ section click the **Add variable** button.
 
-<figure><img src="../../.gitbook/assets/image (271).png" alt=""><figcaption></figcaption></figure>
-
 In the popup, provide the required values. Use the below table as reference:
 
 | Field       | Description                                                                                                                               |
@@ -79,21 +71,15 @@ In the popup, provide the required values. Use the below table as reference:
 
 Finally click the **Save variable** button and the variable will be created.
 
-<figure><img src="../../.gitbook/assets/image (168).png" alt=""><figcaption></figcaption></figure>
-
 #### Edit an Environment Variable
 
 Click the **Edit** button next to the variable you want to edit.
-
-<figure><img src="../../.gitbook/assets/image (169).png" alt=""><figcaption></figcaption></figure>
 
 Make any desired changes and click **Save variable.**
 
 #### Delete an Environment Variable
 
 Click the **Delete** button next to the variable you want to delete.
-
-<figure><img src="../../.gitbook/assets/image (355).png" alt=""><figcaption></figcaption></figure>
 
 Click **Yes** to confirm your action.
 
