@@ -8,7 +8,7 @@ TF_PLUGIN_CACHE_DIR=/home/cnb/.terraform.d/plugin-cache
 
 <figure><img src="../../.gitbook/assets/image (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
-When deploying the helm chart the following can be used to add an emptyDir volume to cache the providers.
+When deploying the helm chart the following can be used to add an emptyDir volume to cache the providers (chart 4.8.0 and later can do this, plus the [module cache](module-cache.md), with the `executor.cache` block).
 
 ```
 executor:
