@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Updates](updates.md)
+  * [Older Updates](updates-archive.md)
 
 ## Getting started
 
@@ -11,7 +12,7 @@
 * [Docker Images](getting-started/docker-images.md)
 * [Docker Compose](getting-started/docker-compose.md)
 * [Deployment](getting-started/deployment/README.md)
-  * [Helm Chart](getting-started/deployment/docker-compose.md)
+  * [Helm Chart](getting-started/deployment/helm-chart.md)
   * [Minikube](getting-started/deployment/minikube.md)
   * [Minikube + HTTPS](getting-started/deployment/minikube-+-https.md)
   * [Ingress Configuration](getting-started/deployment/ingress-configuration.md)
@@ -349,16 +350,6 @@
     * [Terraform Execution Flow](user-guide/reference/executor/terraform-execution-flow.md)
     * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
 * [Migrating to Terrakube](user-guide/migrating-to-terrakube.md)
-
-## Learn
-
-* [What is Terrakube](learn/what-is-terrakube/README.md)
-  * [Section Overview](learn/what-is-terrakube/section-overview.md)
-  * [Terraform in a Nutshell](learn/what-is-terrakube/terraform-in-a-nutshell.md)
-  * [Terraform Challenges at Enterprise Level](learn/what-is-terrakube/terraform-challenges-at-enterprise-level.md)
-  * [Introducing Terrakube](learn/what-is-terrakube/introducing-terrakube.md)
-  * [Summary and Up Next](learn/what-is-terrakube/summary-and-up-next.md)
-* [Deploying using Terrakube](learn/deploying-using-terrakube.md)
 
 ## API
 

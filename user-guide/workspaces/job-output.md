@@ -2,7 +2,7 @@
 
 Each plan and apply step in a job's output has a **Structured** / **Console** toggle. **Console** shows the raw Terraform/OpenTofu CLI output; **Structured** renders the same plan or apply as a resource-by-resource change list.
 
-<figure><img src="../../.gitbook/assets/job-output-structured.png" alt=""><figcaption><p>A plan step with the Structured view selected</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/run-details-structured.png" alt="A completed plan in the Structured view, with a Final results badge and an Output changes panel"><figcaption><p>A plan step in the Structured view</p></figcaption></figure>
 
 ### Structured view
 

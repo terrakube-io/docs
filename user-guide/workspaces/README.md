@@ -12,9 +12,7 @@ You can create unlimited workspaces inside each Terrakube Organization.
 
 ### Workspaces list
 
-{% hint style="info" %}
-_Screenshot pending: the Workspaces list in New view, grouped by project._
-{% endhint %}
+<figure><img src="../../.gitbook/assets/workspaces-list-grouped.png" alt="The Workspaces list in Compact view, grouped by project"><figcaption><p>The Workspaces list, grouped by project</p></figcaption></figure>
 
 The **Workspaces** page has two views, toggled in the top right and remembered per browser:
 
@@ -47,19 +45,14 @@ Click **Apply filter** to apply the rows, or **Clear** in the tag filter popover
 
 In this section:
 
-{% content-ref url="creating-workspaces.md" %}
-[creating-workspaces.md](creating-workspaces.md)
-{% endcontent-ref %}
+### In this section
 
-{% content-ref url="terraform-state.md" %}
-[terraform-state.md](terraform-state.md)
-{% endcontent-ref %}
+**Set up**: [Creating Workspaces](creating-workspaces.md), [Overview](overview.md), [Variables](variables.md), [Team Access](team-access.md)
 
-{% content-ref url="variables.md" %}
-[variables.md](variables.md)
-{% endcontent-ref %}
+**Run**: [Starting a Run](starting-a-run.md), [Webhooks](webhooks.md), [Workspace scheduler](workspace-scheduler.md), [Run Triggers](run-triggers.md), [Job Output](job-output.md), [Notifications](notifications.md)
 
-{% content-ref url="workspace-scheduler.md" %}
-[workspace-scheduler.md](workspace-scheduler.md)
-{% endcontent-ref %}
+**Workflows**: [CLI-driven](cli-driven-workflow.md), [API-driven](api-driven-workflow.md), [Ephemeral Workspaces](ephemeral-workspaces.md)
 
+**State and caching**: [Terraform State](terraform-state.md), [Share Workspace State](share-workspace-state.md), [Provider Cache](provider-cache.md), [Module Cache](module-cache.md), [Plan Artifacts](plan-artifacts.md)
+
+**Credentials and extensions**: [Dynamic Provider Credentials](dynamic-provider-credentials/README.md), [Actions](actions/README.md)

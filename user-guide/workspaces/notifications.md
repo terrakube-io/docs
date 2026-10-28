@@ -13,10 +13,6 @@ Both scopes are additive: if an organization-wide configuration and a workspace-
 
 ### Creating a notification configuration
 
-{% hint style="info" %}
-_Screenshot pending: notification configuration list (Settings > Notifications), showing scope and channel._
-{% endhint %}
-
 From **Settings > Notifications**, click **New Notification** and choose a channel:
 
 | Field | Description |
@@ -42,10 +38,6 @@ Click **Send Test** at any point — including before saving — to deliver a re
 | **Generic Webhook** | Raw JSON POST containing workspace, job, status, commit ID, run URL, and failure reason (when applicable) | Any HTTPS endpoint. Add a **Signing Secret** to verify deliveries came from Terrakube. |
 
 ### Delivery history and retries
-
-{% hint style="info" %}
-_Screenshot pending: delivery history table on a workspace's Settings > Notifications page._
-{% endhint %}
 
 A workspace's **Settings > Notifications** page also lists recent delivery attempts for that workspace, across every configuration (its own and inherited from the organization) — status, channel, and timestamp.
 

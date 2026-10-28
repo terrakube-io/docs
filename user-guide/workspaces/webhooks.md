@@ -53,9 +53,9 @@ Ask a workspace admin to enable **Allow Apply via PR Comment** in the Webhook se
 
 **Command acknowledgment.** As soon as Terrakube recognizes a `terrakube plan` or `terrakube apply` comment, it reacts to that comment with 👀 so you know it was seen. Once the triggered job finishes, the reaction updates to ✅ (success) or ❌ (failure). Bitbucket has no comment-reaction API, so acknowledgment is a no-op there — Bitbucket users still get the plan/apply result comment itself.
 
-<figure><img src="https://github.com/user-attachments/assets/e40adb29-82db-442f-aa5e-5cc7f08cffff" alt=""><figcaption><p>GitHub pull request with a Terrakube plan comment</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/webhook-pr-comment-github.png" alt=""><figcaption><p>GitHub pull request with a Terrakube plan comment</p></figcaption></figure>
 
-<figure><img src="https://github.com/user-attachments/assets/02aa0b0b-293c-4068-b7f3-4e9db1f267ac" alt=""><figcaption><p>GitLab merge request with a Terrakube plan comment</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/webhook-pr-comment-gitlab.png" alt=""><figcaption><p>GitLab merge request with a Terrakube plan comment</p></figcaption></figure>
 
 ### Provider support
 

@@ -65,6 +65,9 @@ Open **Settings → Policy Sets** in an organization and create a set:
 
 Non-global sets are attached to a workspace, project or tag from the same page.
 
+<figure><img src="../.gitbook/assets/policy-sets.png" alt="Policy sets in an organization, with enforcement level and scope"><figcaption><p>Policy sets in an organization, with enforcement level and scope</p></figcaption></figure>
+
+
 **Parameters** let one bundle be configured per set. They are available to Rego as `data.terrakube.inputs.<key>`, and values are typed (numbers, booleans and JSON are parsed).
 
 Users need the **Manage Policies** team permission to create or change policy sets and exemptions.
@@ -77,7 +80,10 @@ The same result is posted as a comment and commit status on pull requests for VC
 
 ### Exemptions
 
-An exemption waives one rule instead of disabling a whole policy set. Create it under **Settings → Policy Sets → Exemptions** with the policy set, the `rule_id`, a ticket reference, a justification, and optionally an expiry date. It can apply to the organization, a project, or a workspace. Waived violations are logged as `[EXEMPTED]` and a run that was blocked only by them passes.
+An exemption waives one rule instead of disabling a whole policy set. Create it under **Settings → Policy Sets → Exemptions** with the policy set, the `rule_id`, a ticket reference, a justification, and optionally an expiry date. It can apply to the organization, a project, or a workspace. 
+<figure><img src="../.gitbook/assets/policy-exemptions.png" alt="The Exemptions tab"><figcaption><p>The Exemptions tab</p></figcaption></figure>
+
+Waived violations are logged as `[EXEMPTED]` and a run that was blocked only by them passes.
 
 ### Continuous compliance
 

@@ -15,9 +15,11 @@ Open the destination workspace and select **Run Triggers** in the workspace menu
 
 Runs started this way say so in the run header and link to the upstream run.
 
+<figure><img src="../../.gitbook/assets/run-triggers.png" alt="The Run Triggers page of a workspace"><figcaption><p>The Run Triggers page of a workspace</p></figcaption></figure>
+
 ### What fires a trigger
 
-* Only a run that **applied** (or destroyed) changes. A plan-only run, or an apply with no changes, fires nothing.
+* Only a run that **applies, destroys or runs custom scripts** fires a trigger. A plan-only run fires nothing.
 * If the destination is locked or busy, its run is queued rather than skipped.
 * Triggers cascade: a destination can itself be the source of other triggers.
 

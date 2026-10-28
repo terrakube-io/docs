@@ -4,9 +4,11 @@ Providers can be added to your organization's registry from the public Terraform
 
 ### Add a public provider in the UI
 
-1. Open **Registry → Providers → Add provider** and search the public registry. Official and partner providers are listed first.
+1. Open **Registry**, click **Search public registry**, select the **Providers** tab and search. Official and partner providers are listed first.
 2. Select a result to open its provider page. It shows the tier, downloads, and a usage snippet pointing at your registry. The latest release is preselected; pick another version if you need one.
 3. Click **Add to Terrakube**.
+
+<figure><img src="../../.gitbook/assets/public-provider-page.png" alt="The public provider page with the latest version preselected"><figcaption><p>A public provider page</p></figcaption></figure>
 
 If the provider is already in your registry, the button takes you to its page instead. Versions can later be [deprecated or removed](deprecating-and-removing-versions.md).
 
