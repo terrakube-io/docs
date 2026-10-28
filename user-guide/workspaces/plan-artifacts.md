@@ -8,6 +8,19 @@ Available from Terrakube 2.34.0. It is opt-in: a workspace that does not configu
 
 If you can, build the package once in CI and reference it by S3 key and hash instead; then nothing has to be carried.
 
+```mermaid
+sequenceDiagram
+    participant P as Plan step (executor A)
+    participant S as Object storage
+    participant A as Apply step (executor B)
+    P->>P: build files, terraform plan
+    P->>S: upload bundle of matching files
+    P-->>P: record checksum on the run
+    A->>S: download bundle
+    A->>A: verify checksum, unpack, terraform apply
+    A->>S: delete bundle
+```
+
 ### Choose the files
 
 List globs on the plan step of a [template](../organizations/templates/README.md):

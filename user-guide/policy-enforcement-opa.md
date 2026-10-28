@@ -14,6 +14,19 @@ Available from Terrakube 2.34.0. The older, template-based approach is still doc
 
 Policy sets are cumulative: a workspace is checked against the global sets, its project's sets, the sets on its tags, and the sets attached to it directly.
 
+```mermaid
+flowchart TD
+    P[Plan step produces plan.json] --> R[Terrakube collects the policy sets that apply:<br/>global + project + tags + workspace]
+    R -->|none| N[Continue]
+    R --> E[Executor clones each policy repo<br/>and runs OPA against plan.json]
+    E --> X{Violations?<br/>exemptions removed}
+    X -->|none| N
+    X -->|advisory set| W[Warning shown, run continues]
+    X -->|soft_mandatory set| A[Waiting approval<br/>override team can override with a justification]
+    X -->|hard_mandatory set| F[Run fails, apply blocked]
+    A -->|overridden| N
+```
+
 ### Enforcement levels
 
 | Level | When the policy fails |

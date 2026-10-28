@@ -4,10 +4,15 @@
 * [Updates](updates.md)
   * [Older Updates](updates-archive.md)
 
-## Getting started
+## How it works
 
 * [Architecture](getting-started/design-and-architecture.md)
+* [Run Lifecycle](concepts/run-lifecycle.md)
+* [Identity and Access](concepts/identity-and-access.md)
 * [Security](getting-started/security.md)
+
+## Getting started
+
 * [Getting Started](getting-started/getting-started.md)
 * [Docker Images](getting-started/docker-images.md)
 * [Docker Compose](getting-started/docker-compose.md)

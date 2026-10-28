@@ -8,6 +8,18 @@ Terrakube provides a private registry that works similarly to the [public Terraf
 The Terrakube UI publishes [private modules](publishing-private-modules.md). You can add providers from the public registry in the UI, or publish your own with the [Terrakube API](../../api/methods/provider.md).
 {% endhint %}
 
+```mermaid
+flowchart LR
+    git[Git repository<br/>tags vX.Y.Z] -->|refreshed from tags| api[Terrakube API]
+    api --> reg[Registry]
+    pub[Publish provider<br/>API] --> api
+    reg --> store[(Object storage)]
+    cli[terraform init] -->|module and provider protocols| reg
+    pub2[Public registry] -.->|import provider| api
+```
+
+Modules are published from a git repository: each semantic version tag becomes a module version. Providers are imported from the public registry or uploaded through the API. Terraform and OpenTofu then install both through the standard registry protocols after logging in.
+
 In this section:
 
 {% content-ref url="publishing-private-modules.md" %}

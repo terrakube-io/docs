@@ -12,6 +12,16 @@ Available from Terrakube 2.34.0.
 * **Live stream**: what viewers read while the step runs, through Redis (or the API when `io.executor.log-via-api=true`). It is bounded and may fall behind, but never slows the run.
 * **Executor service log** (`kubectl logs`): **off by default since 2.34.0**. Output was previously copied here too, which doubled log ingestion cost and exposed printed values to anyone who can read cluster logs. Set `ExecutorLogsEchoToServiceLog=true` to restore it.
 
+```mermaid
+flowchart LR
+    X[Executor step output] -->|live, bounded| R[(Redis stream)]
+    R --> UI[Console while running]
+    X -->|parts every 1 MiB or 30 s| ST[(Object storage)]
+    X -->|final object when step ends| ST
+    ST --> UI2[Console and download after the step]
+    X -. API outage: final snapshot spooled .-> ST
+```
+
 ### Output survives executor failure
 
 While a step runs, the executor also copies its output to storage in numbered parts (`tfoutput/<org>/<job>/<step>.parts/`). They are deleted when the final output is saved. If the executor dies first, the API serves the parts joined in order and the Console shows a warning that the output is incomplete. If the API is unreachable at the end of a plan or apply, the final structured result is spooled to storage and applied once the API returns, without re-running Terraform.

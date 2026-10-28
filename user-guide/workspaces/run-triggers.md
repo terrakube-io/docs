@@ -6,6 +6,16 @@ A run trigger links two workspaces in the same organization: when the **source**
 Available from Terrakube 2.34.0.
 {% endhint %}
 
+```mermaid
+flowchart LR
+    vpc[vpc] -->|apply changed state| vpn[vpn]
+    vpc --> dns[dns]
+    vpn --> app[app]
+    dns --> app
+```
+
+Applying `vpc` queues runs in `vpn` and `dns`. When both of those apply, `app` runs after each.
+
 ### Configure a trigger
 
 Open the destination workspace and select **Run Triggers** in the workspace menu.
