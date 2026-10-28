@@ -4,7 +4,7 @@ One workspace can read another workspace's outputs with the standard `terraform_
 
 ### Allow sharing
 
-State is private by default. In the **producer** workspace open **Settings → State shared** and share it with the workspaces that need it. **Share this workspace's state with all workspaces in the organization** allows every workspace in the organization to read it, so only enable it when the state holds nothing sensitive.
+State is private by default. In the **producer** workspace open **Settings → State shared** and tick **Share this workspace's state with all workspaces in the organization**. Every workspace in the organization can then read it, and state can contain secrets, so only enable it when that is acceptable.
 
 <figure><img src="../../.gitbook/assets/workspace-state-shared.png" alt="Settings, State shared"><figcaption><p>Settings, State shared</p></figcaption></figure>
 
