@@ -11,9 +11,13 @@ Terrakube can post to Slack, Microsoft Teams, or any generic webhook endpoint wh
 
 Both scopes are additive: if an organization-wide configuration and a workspace-specific one both match a job's new status, both fire. There's no override or suppression between them — a workspace can't turn off an inherited organization notification, only add its own alongside it.
 
+<figure><img src="../../.gitbook/assets/notifications-org-list.png" alt="Organization-wide notification configurations"><figcaption><p>Organization-wide notification configurations</p></figcaption></figure>
+
 ### Creating a notification configuration
 
-From **Settings > Notifications**, click **New Notification** and choose a channel:
+From **Settings > Notifications**, click **Add notification** and choose a channel:
+
+<figure><img src="../../.gitbook/assets/notification-new-form.png" alt="Adding a notification"><figcaption><p>Adding a notification</p></figcaption></figure>
 
 | Field | Description |
 | --- | --- |
@@ -40,6 +44,8 @@ Click **Send Test** at any point — including before saving — to deliver a re
 ### Delivery history and retries
 
 A workspace's **Settings > Notifications** page also lists recent delivery attempts for that workspace, across every configuration (its own and inherited from the organization) — status, channel, and timestamp.
+
+<figure><img src="../../.gitbook/assets/notifications-delivery-history.png" alt="Recent deliveries on a workspace, with a failed delivery that can be retried"><figcaption><p>Recent deliveries on a workspace, with a failed delivery that can be retried</p></figcaption></figure>
 
 Deliveries are queued through a transactional outbox rather than sent inline with the job status update, so a crash between the two can't lose a notification; a background poller sweeps up anything stuck and retries it automatically. Terrakube distinguishes:
 

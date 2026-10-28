@@ -26,6 +26,10 @@ Target and replace addresses only apply to the run you're creating — they aren
 
 When a template requires approval, the run stops at **Waiting approval** and appears on the workspace overview as the **Current run**. Users in the approval team can **Approve** or **Discard** it from the overview or from the run page. The confirmation restates what the plan will do ("3 to add, 1 to change, 0 to destroy") and calls out any resources that will be destroyed.
 
+<figure><img src="../../.gitbook/assets/run-approval-bar.png" alt="A run waiting for approval, with its policy checks"><figcaption><p>A run waiting for approval, with its policy checks</p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/workspace-overview-current-run.png" alt="The workspace overview shows the run that needs action"><figcaption><p>The workspace overview shows the run that needs action</p></figcaption></figure>
+
 * Terrakube records who approved the run and when, and shows it next to the run creator in the run details and run history.
 * A run with unresolved [policy](../policy-enforcement-opa.md) violations cannot be approved; open the run to review them.
 * If more runs are queued behind the current one, the overview says how many and links to the **Runs** tab.

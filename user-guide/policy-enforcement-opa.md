@@ -89,6 +89,8 @@ Users need the **Manage Policies** team permission to create or change policy se
 
 Open the run and select the **Policy checks** tab to see passed rules, warnings and violations grouped by policy set, rule and resource. If a `soft_mandatory` policy blocked the run, an authorized user can override it with a justification (up to 2048 characters). The override is audited, and the run then continues to apply. A run with unresolved violations cannot be approved.
 
+<figure><img src="../.gitbook/assets/policy-checks-soft-mandatory.png" alt="A soft-mandatory violation waiting for an authorized override"><figcaption><p>A soft-mandatory violation waiting for an authorized override</p></figcaption></figure>
+
 The same result is posted as a comment and commit status on pull requests for VCS-driven workspaces.
 
 ### Exemptions
@@ -97,6 +99,8 @@ An exemption waives one rule instead of disabling a whole policy set. Create it 
 <figure><img src="../.gitbook/assets/policy-exemptions.png" alt="The Exemptions tab"><figcaption><p>The Exemptions tab</p></figcaption></figure>
 
 Waived violations are logged as `[EXEMPTED]` and a run that was blocked only by them passes.
+
+<figure><img src="../.gitbook/assets/policy-checks-exemption.png" alt="A violation waived by an exemption, with its ticket and expiry"><figcaption><p>A violation waived by an exemption, with its ticket and expiry</p></figcaption></figure>
 
 ### Continuous compliance
 
