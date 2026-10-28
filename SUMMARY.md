@@ -50,7 +50,7 @@
   * [Docker Desktop](getting-started/user-management/docker-desktop.md)
   * [Keycloak](getting-started/user-management/keycloak.md)
 
-## User Guide
+## Set up
 
 * [Organizations](user-guide/organizations/README.md)
   * [Creating an Organization](user-guide/organizations/organizations.md)
@@ -80,30 +80,33 @@
   * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)
   * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)
   * [SSH](user-guide/vcs-providers/ssh.md)
+
+## Run Terraform
+
 * [Workspaces](user-guide/workspaces/README.md)
   * [Overview](user-guide/workspaces/overview.md)
   * [Creating Workspaces](user-guide/workspaces/creating-workspaces.md)
+  * [Variables](user-guide/workspaces/variables.md)
   * [Starting a Run](user-guide/workspaces/starting-a-run.md)
   * [Webhooks](user-guide/workspaces/webhooks.md)
-  * [Team Access](user-guide/workspaces/team-access.md)
+  * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
+  * [Run Triggers](user-guide/workspaces/run-triggers.md)
   * [Job Output](user-guide/workspaces/job-output.md)
   * [Notifications](user-guide/workspaces/notifications.md)
+  * [Team Access](user-guide/workspaces/team-access.md)
   * [Terraform State](user-guide/workspaces/terraform-state.md)
   * [Share Workspace State](user-guide/workspaces/share-workspace-state.md)
   * [Provider Cache](user-guide/workspaces/provider-cache.md)
   * [Module Cache](user-guide/workspaces/module-cache.md)
-  * [Variables](user-guide/workspaces/variables.md)
+  * [Plan Artifacts](user-guide/workspaces/plan-artifacts.md)
   * [Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/README.md)
     * [AWS Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/aws-dynamic-provider-credentials.md)
     * [Azure Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/azure-dynamic-provider-credentials.md)
     * [GCP Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/gcp-dynamic-provider-credentials.md)
     * [OpenBao/Vault](user-guide/workspaces/dynamic-provider-credentials/openbao-vault.md)
-  * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
-  * [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md)
   * [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md)
+  * [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md)
   * [Ephemeral Workspaces](user-guide/workspaces/ephemeral-workspaces.md)
-  * [Run Triggers](user-guide/workspaces/run-triggers.md)
-  * [Plan Artifacts](user-guide/workspaces/plan-artifacts.md)
   * [Actions](user-guide/workspaces/actions/README.md)
     * [Developing Actions](user-guide/workspaces/actions/developing-actions/README.md)
       * [Quick start](user-guide/workspaces/actions/developing-actions/quick-start.md)
@@ -118,15 +121,24 @@
       * [Restart Azure VM](user-guide/workspaces/actions/built-in-actions/restart-azure-vm.md)
       * [Azure Monitor](user-guide/workspaces/actions/built-in-actions/terrakube.azure-monitor.md)
       * [Open AI](user-guide/workspaces/actions/built-in-actions/terrakube.open-ai.md)
+
+## Govern
+
+* [Policy Governance (OPA)](user-guide/policy-enforcement-opa.md)
+  * [Template-based OPA checks (legacy)](user-guide/policy-enforcement-opa-templates.md)
+* [Cost Estimation](user-guide/cost-estimation.md)
+* [Drift Detection](user-guide/drift-detection.md)
+
+## Private registry
+
 * [Private Registry](user-guide/private-registry/README.md)
   * [Publishing Private Modules](user-guide/private-registry/publishing-private-modules.md)
   * [Using Private Modules](user-guide/private-registry/using-private-modules.md)
   * [Using Providers](user-guide/private-registry/using-providers.md)
   * [Deprecating and Removing Versions](user-guide/private-registry/deprecating-and-removing-versions.md)
-* [Policy Governance (OPA)](user-guide/policy-enforcement-opa.md)
-  * [Template-based OPA checks (legacy)](user-guide/policy-enforcement-opa-templates.md)
-* [Cost Estimation](user-guide/cost-estimation.md)
-* [Drift Detection](user-guide/drift-detection.md)
+
+## Integrate
+
 * [CI/CD Integration](user-guide/ci-cd-integration/README.md)
   * [Github Actions](user-guide/ci-cd-integration/github-actions.md)
   * [Federated OIDC Authentication](user-guide/ci-cd-integration/federated-oidc-authentication.md)
@@ -350,13 +362,8 @@
       * [get](user-guide/terrakube-cli/commands/federated-claim/get.md)
       * [update](user-guide/terrakube-cli/commands/federated-claim/update.md)
       * [delete](user-guide/terrakube-cli/commands/federated-claim/delete.md)
-* [Reference](user-guide/reference/README.md)
-  * [Executor](user-guide/reference/executor/README.md)
-    * [Terraform Execution Flow](user-guide/reference/executor/terraform-execution-flow.md)
-    * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
-* [Migrating to Terrakube](user-guide/migrating-to-terrakube.md)
 
-## API
+## API reference
 
 * [Getting started](api/getting-started.md)
 * [Methods](api/methods/README.md)
@@ -385,3 +392,11 @@
   * [Collection Item](api/methods/collection-item.md)
   * [Collection Reference](api/methods/collection-reference.md)
   * [Federated Identity](api/methods/federated.md)
+
+## Reference
+
+* [Reference](user-guide/reference/README.md)
+  * [Executor](user-guide/reference/executor/README.md)
+    * [Terraform Execution Flow](user-guide/reference/executor/terraform-execution-flow.md)
+    * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
+* [Migrating to Terrakube](user-guide/migrating-to-terrakube.md)
