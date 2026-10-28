@@ -4,20 +4,6 @@ Terrakube separates **who you are** (authentication) from **what you can do** (a
 
 ### Who can sign in
 
-```mermaid
-flowchart TB
-    subgraph People
-        P1[Browser user] -->|OIDC via Dex| API
-        P2[Terraform / OpenTofu CLI] -->|terraform login<br/>personal access token| API
-        P3[Terrakube CLI] -->|login or token| API
-    end
-    subgraph Automation
-        A1[Script or CI] -->|team API token| API
-        A2[GitHub Actions,<br/>Kubernetes workload] -->|federated OIDC token,<br/>no stored secret| API
-    end
-    API[Terrakube API<br/>and registry]
-```
-
 | Method | Use it for | Page |
 | --- | --- | --- |
 | Single sign-on through Dex | People using the UI | [User Management](../getting-started/user-management/README.md) |

@@ -5,25 +5,25 @@ A **run** (a *job* in the API) is one execution of a [template](../user-guide/or
 ### Status of a run
 
 ```mermaid
-stateDiagram-v2
-    [*] --> pending: run created
-    pending --> queue: admitted, sent to an executor
-    queue --> running: executor starts the step
-    running --> waitingApproval: plan finished,<br/>template needs approval
-    waitingApproval --> approved: approved
-    waitingApproval --> rejected: discarded
-    approved --> running: apply step
-    running --> completed: all steps finished
-    running --> noChanges: plan found no changes
-    running --> failed: a step failed
-    pending --> cancelled: cancelled
-    waitingApproval --> cancelled: cancelled
-    completed --> [*]
-    noChanges --> [*]
-    failed --> [*]
-    rejected --> [*]
-    cancelled --> [*]
+flowchart LR
+    A[pending] --> B[queue] --> C["running<br/>(plan)"] --> D[waitingApproval] --> E[approved] --> F["running<br/>(apply)"] --> G([completed])
+    C -.->|nothing to change| H([noChanges])
+    C -.->|a step fails| I([failed])
+    D -.->|discarded| J([rejected])
 ```
+
+| Status | Meaning |
+| --- | --- |
+| `pending` | Created and waiting to be admitted. |
+| `queue` | Admitted and sent to an executor. |
+| `running` | A step is executing. |
+| `waitingApproval` | The plan is done and the template, or a soft-mandatory [policy](../user-guide/policy-enforcement-opa.md), needs a person to approve. |
+| `approved` | Approved; the apply step follows. |
+| `completed` | All steps finished. |
+| `noChanges` | The plan found nothing to change, so there is nothing to approve or apply. |
+| `failed` | A step failed, or a hard-mandatory policy blocked the run. |
+| `rejected` | Someone discarded the run at approval. |
+| `cancelled` | Cancelled before it finished. |
 
 `pending`, `queue`, `running`, `approved` and `waitingApproval` are **active**: a workspace runs one job at a time, so later runs wait behind an active one. A run that is waiting for approval holds the workspace queue until someone approves, discards or cancels it.
 

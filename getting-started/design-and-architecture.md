@@ -3,38 +3,30 @@
 Terrakube is a small set of services around a relational database, object storage and an identity provider. You can run all of them in one Kubernetes cluster with the [Helm chart](deployment/helm-chart.md), or on a laptop with [Docker Compose](docker-compose.md).
 
 ```mermaid
-flowchart LR
-    user([User / CI / Terraform CLI])
-
-    subgraph Terrakube
-        ui[UI]
-        api[API<br/>JSON:API, GraphQL, scheduler]
-        exec[Executor<br/>runs Terraform / OpenTofu]
-        reg[Registry<br/>modules and providers]
-    end
-
-    dex[Dex<br/>OIDC / SSO]
-    idp[(Your identity provider<br/>Entra ID, Google, LDAP, ...)]
-    db[(Database)]
-    redis[(Redis<br/>locks, live logs)]
-    store[(Object storage<br/>state, logs, plans, modules)]
-    vcs[Git provider]
-    cloud[Cloud providers]
-
-    user --> ui --> api
-    user -->|API token / OIDC| api
-    user -->|terraform init, login| reg
-    ui -. sign in .-> dex --> idp
-    api --> db
-    api <--> redis
-    api -->|dispatch step| exec
-    exec -->|status, live output| api
-    exec <--> store
-    exec -->|clone| vcs
-    exec -->|plan / apply| cloud
+flowchart TB
+    clients([Users, CI pipelines and the Terraform CLI])
+    clients --> ui[UI]
+    clients --> api[API and scheduler]
+    clients --> reg[Registry]
+    ui --> api
+    api -->|dispatch steps| exec[Executor]
+    api --> db[(Database)]
+    api --> redis[(Redis)]
+    api --> store[(Object storage)]
+    exec --> store
     reg --> store
-    api --> store
-    vcs -->|webhooks| api
+```
+
+The API is the single source of truth: it stores metadata in the database, coordinates through Redis, and keeps state, logs and plans in object storage. The executor does the work and reports back to the API. The registry serves modules and providers straight from object storage.
+
+Terrakube also talks to three things outside its own services:
+
+```mermaid
+flowchart LR
+    ui[UI] -. sign in .-> dex[Dex] --> idp[(Your identity provider)]
+    git[Git provider] -->|webhooks| api[API]
+    exec[Executor] -->|clone| git
+    exec -->|plan and apply| cloud[Cloud providers]
 ```
 
 ### Components
