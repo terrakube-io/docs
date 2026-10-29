@@ -176,3 +176,30 @@ Edit your template definition, description or name as desired and when you are r
 
 Click the **Delete** button next to the Template you want to delete and then click **Yes** to confirm the deletion
 
+### Require a saved plan
+
+{% hint style="info" %}
+Supported from Terrakube 2.34.0.
+{% endhint %}
+
+Set `requireSavedPlan: true` on a `terraformApply` step to make the apply use the saved plan from the same run, instead of planning again. This guarantees that what was reviewed is what is applied.
+
+```yaml
+flow:
+  - type: terraformPlan
+    step: 100
+  - type: approval
+    step: 200
+    team: TERRAKUBE_ADMIN
+  - type: terraformApply
+    step: 300
+    requireSavedPlan: true
+```
+
+* The executor must download the saved plan, and it must be a non-empty file. If not, the step fails before running apply, even when `ignoreError` is set. Run a new job to produce and review another plan.
+* The plan is applied without the current Terraform input variables. Terraform or OpenTofu validates it, including whether it is stale, and a rejected plan is not retried as a fresh apply.
+* The default is `false`, which keeps today's behaviour: if the plan cannot be downloaded the executor may run a fresh apply.
+* It applies only to `terraformApply` and does not add an approval step. The API and the executor, including any ephemeral executor images, must both be 2.34.0 or later.
+
+The [GitHub Action](../../ci-cd-integration/github-actions.md) uses this template shape to apply a plan after GitHub environment approval.
+

@@ -29,6 +29,8 @@ Workspaces can be chained: when an apply changes the source workspace, a run is 
 
 * Run approval moved to a sticky bar on the run page and to the workspace overview, which now shows the run that needs action. Terrakube records who approved a run. See [Starting a Run](user-guide/workspaces/starting-a-run.md#approve-or-discard-a-run).
 * Run-specific Terraform variables can be sent with a job from CI. See [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md).
+* Templates can require the saved plan at apply with `requireSavedPlan`. See [Templates](user-guide/organizations/templates/README.md#require-a-saved-plan).
+* The Terrakube GitHub Action 2.0.0 supports Terrakube 2.34 with GitHub OIDC, exact-commit runs, per-run variables, and plan then apply with GitHub environment approval. See [GitHub Actions](user-guide/ci-cd-integration/github-actions.md).
 * Files built by the plan step can be carried to the apply step. See [Plan Artifacts](user-guide/workspaces/plan-artifacts.md).
 * The run page gained a Diagnostics panel, output-only plan changes, and an indicator of whether a step's result is final. Structured output is no longer lost when the API is briefly unavailable, and output is archived while a step runs so an executor crash no longer loses the log. See [Job Output](user-guide/workspaces/job-output.md).
 * Step output is no longer copied to the executor's service log by default. See [Executor Log Output](getting-started/deployment/executor-log-output.md).
