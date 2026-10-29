@@ -8,6 +8,8 @@ Run the whole stack on your machine with [Docker Compose](docker-compose.md), or
 
 ### 2. Run your first workspace
 
+Follow [Your First Run](first-run.md) for a guided walkthrough, or in short:
+
 1. [Create an organization](../user-guide/organizations/organizations.md) and a [team](../user-guide/organizations/team-management.md) that your users belong to.
 2. Connect a [VCS provider](../user-guide/vcs-providers/README.md) (or skip this and use the CLI).
 3. [Create a workspace](../user-guide/workspaces/creating-workspaces.md), add its [variables](../user-guide/workspaces/variables.md), and [start a run](../user-guide/workspaces/starting-a-run.md).

@@ -10,7 +10,7 @@ Click the organizations list on the main menu and then click the **Create new or
 
 .png>)
 
-Provide organization name and description and click the Create organization button
+Provide organization name and description and click the Create organization button. The name can contain only letters and numbers.
 
 <figure><img src="../../.gitbook/assets/organization-new.png" alt="The New Organization form"><figcaption><p>The New Organization form</p></figcaption></figure>
 

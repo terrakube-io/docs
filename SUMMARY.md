@@ -14,6 +14,7 @@
 ## Getting started
 
 * [Getting Started](getting-started/getting-started.md)
+* [Your First Run](getting-started/first-run.md)
 * [Docker Images](getting-started/docker-images.md)
 * [Docker Compose](getting-started/docker-compose.md)
 * [Deployment](getting-started/deployment/README.md)
