@@ -51,7 +51,7 @@ These come from the changes in the 2.34 release line. Check each against your de
 
 **Rolling upgrades**
 
-* An executor ahead of the API, or an API ahead of the executor, works for runs that do not use new features. Finish the rollout before clients send [run-specific variables](../user-guide/workspaces/api-driven-workflow.md#variables-for-one-run): an older API pod would run the job without them. `GET /execution/v1/capabilities` reports `jobVariables: true` on a new API.
+* **Upgrade the API before the executors.** Structured-output recovery adds step columns in the API's migration. A new executor against an older API falls back to the old behaviour, and an older executor against a new API keeps working, but results are only recoverable once both are on 2.34. In general an executor ahead of the API, or an API ahead of the executor, works for runs that do not use new features. Finish the rollout before clients send [run-specific variables](../user-guide/workspaces/api-driven-workflow.md#variables-for-one-run): an older API pod would run the job without them. `GET /execution/v1/capabilities` reports `jobVariables: true` on a new API.
 * Run triggers, policy governance and registry version status add tables or columns. They are created by the automatic migration and are empty until used.
 
 **Cloud storage**

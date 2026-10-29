@@ -35,6 +35,7 @@ Environment variables on the executor unless noted.
 | `ExecutorLogsEchoToServiceLog` | `false` | Also write output to the executor's own log. |
 | `ExecutorLogsLiveLineMaxBytes` | `65536` | Longest line sent to the live stream; longer lines are cut there only. |
 | `ExecutorLogsStepOutputMemoryBytes` | `4194304` | Output kept in memory per step before moving to a temporary file. A step printing more than this needs scratch space. |
+| `ExecutorLogsRenderedPlanContextMaxBytes` | `49152` | How much of a plan's text is published for the pull request comment. A longer plan is cut with a note; the step output keeps the whole plan. |
 | `ExecutorLogsArchiveEnabled` | `true` | Copy output to storage in parts while the step runs. |
 | `ExecutorLogsArchivePartBytes` | `1048576` | Write a part once this many new bytes exist. |
 | `ExecutorLogsArchiveIntervalSeconds` | `30` | Also write a part after this long if there is anything new. |

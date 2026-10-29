@@ -32,9 +32,22 @@ Workspaces can be chained: when an apply changes the source workspace, a run is 
 * Templates can require the saved plan at apply with `requireSavedPlan`. See [Templates](user-guide/organizations/templates/README.md#require-a-saved-plan).
 * The Terrakube GitHub Action 2.0.0 supports Terrakube 2.34 with GitHub OIDC, exact-commit runs, per-run variables, and plan then apply with GitHub environment approval. See [GitHub Actions](user-guide/ci-cd-integration/github-actions.md).
 * Files built by the plan step can be carried to the apply step. See [Plan Artifacts](user-guide/workspaces/plan-artifacts.md).
-* The run page gained a Diagnostics panel, output-only plan changes, and an indicator of whether a step's result is final. Structured output is no longer lost when the API is briefly unavailable, and output is archived while a step runs so an executor crash no longer loses the log. See [Job Output](user-guide/workspaces/job-output.md).
-* Step output is no longer copied to the executor's service log by default. See [Executor Log Output](getting-started/deployment/executor-log-output.md).
+* Structured output and logs are more reliable and clearer; see the next section.
 * Ephemeral executor jobs gained deadline, backoff, TTL and grace period controls. See [Ephemeral Agents](getting-started/deployment/ephemeral-agents.md).
+
+#### Structured output and logs
+
+* **A Diagnostics panel** lists every error and warning for the run, unaffected by resource filters.
+* **Output changes** are shown when a plan changes only root module outputs, instead of "no changes".
+* **Final-result indicator:** each step says whether its result is final, being recovered, partial or lost, so a progress snapshot is never mistaken for a finished plan.
+* **Durable results:** if the API is unavailable when a step ends, the final structured result is saved to storage and applied automatically when it returns. The run does not need repeating.
+* **Logs survive an executor crash:** output is archived to storage in parts while a step runs, and the Console serves it, with a notice, if the executor dies.
+* **Bounded memory:** live lines over 64 KiB are shortened in the live view only, step output spills to disk above 4 MiB, and the text published for pull request comments is capped (48 KiB by default) with a note; the full output is always kept.
+* **Scales to many viewers:** live log streaming no longer degrades with many concurrent viewers or very large logs, and a slow viewer cannot hold up others.
+* **Apply output no longer repeats the plan**, and remote CLI applies stream their logs correctly.
+* **Executor logs:** step output is no longer copied to the executor's own log (`kubectl logs`) by default.
+
+See [Job Output](user-guide/workspaces/job-output.md) and [Executor Log Output](getting-started/deployment/executor-log-output.md).
 
 #### Workspaces and projects
 
