@@ -28,7 +28,7 @@ Terrakube is an open source platform for running Terraform and OpenTofu remotely
 
 | Company | Service |
 | --- | --- |
-| <a href="https://jb.gg/OpenSource"><img src=".gitbook/assets/jetbrains.png" alt="JetBrains" width="188"></a> | For providing with free licenses to their great tools. |
-| <a href="https://www.gitbook.com/"><img src=".gitbook/assets/image (482).png" alt="GitBook" width="128"></a> | For providing us with free OSS Plan. |
-| <a href="https://www.docker.com/"><img src=".gitbook/assets/image (7).png" alt="Docker" width="128"></a> | For providing us with free OSS Plan. |
-| <a href="https://tuta.com/"><img src=".gitbook/assets/tuta_logo.svg" alt="Tuta" width="188"></a> | For providing us with free email service. |
+| <p> </p><div><figure><img src=".gitbook/assets/jetbrains.png" alt="JetBrains" width="188"><figcaption></figcaption></figure></div><p><a href="https://jb.gg/OpenSource">JetBrains</a></p> | For providing with free licenses to their great tools. |
+| <p></p><div><figure><img src=".gitbook/assets/image (482).png" alt="GitBook" width="128"><figcaption></figcaption></figure></div><p><a href="https://www.gitbook.com/">GitBook</a></p> | For providing us with free OSS Plan. |
+| <div><figure><img src=".gitbook/assets/image (7).png" alt="Docker" width="128"><figcaption></figcaption></figure></div><p><a href="https://www.docker.com/">Docker</a></p> | For providing us with free OSS Plan. |
+| <p></p><div><figure><img src=".gitbook/assets/tuta_logo.svg" alt="Tuta" width="188"><figcaption></figcaption></figure></div><p><a href="https://tuta.com/">Tuta</a></p> | For providing us with free email service. |
