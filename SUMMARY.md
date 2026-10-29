@@ -397,6 +397,7 @@
 ## Reference
 
 * [Reference](user-guide/reference/README.md)
+  * [Troubleshooting](user-guide/reference/troubleshooting.md)
   * [Configuration](user-guide/reference/configuration/README.md)
     * [API](user-guide/reference/configuration/api.md)
     * [Executor](user-guide/reference/configuration/executor.md)
