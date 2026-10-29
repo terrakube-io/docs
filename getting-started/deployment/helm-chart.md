@@ -66,7 +66,7 @@ helm repo update
 helm upgrade terrakube terrakube-repo/terrakube -n terrakube --values terrakube.yaml --version <chart version>
 ```
 
-Database migrations run automatically when the API starts. Read the [release notes](../../updates.md) before upgrading and upgrade the API, executor, registry and UI together.
+Database migrations run automatically when the API starts. Read [Upgrading](../upgrading.md) before you upgrade: it has the chart and version compatibility table and the breaking changes for each release.
 
 {% hint style="warning" %}
 **Upgrading to Terrakube 2.34.0**

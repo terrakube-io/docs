@@ -40,6 +40,7 @@
   * [Token Security](getting-started/deployment/token-security.md)
   * [Open Telemetry](getting-started/deployment/open-telemetry.md)
   * [Executor Log Output](getting-started/deployment/executor-log-output.md)
+* [Upgrading](getting-started/upgrading.md)
 * [Development](getting-started/development/README.md)
   * [Local Dev Container](getting-started/development/dev-container.md)
   * [GitHub Codespaces](getting-started/development/github-codespaces.md)
