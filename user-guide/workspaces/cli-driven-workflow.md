@@ -168,7 +168,7 @@ Available from Terrakube 2.34.0. It is disabled by default.
 
 When enabled, Terrakube brokers the sign-in through Dex and shows a consent page where you choose how long the token lives (1 to 365 days). The CLI receives a normal, revocable personal access token, which you can see and delete in your [User Settings](../organizations/api-tokens.md). After a successful login the browser may show a connection error to `localhost`; this is expected, because Terraform closes its temporary listener as soon as it has the token.
 
-Administrators enable it on the API with:
+Administrators enable it with these environment variables. Set all of them on the **API**, and set `TerraformLoginEnabled` and `TerraformLoginApiUrl` on the **registry** too, so registry logins use the same broker:
 
 | Variable | Default | Description |
 | --- | --- | --- |
@@ -179,6 +179,25 @@ Administrators enable it on the API with:
 | `TerraformLoginDexTokenUrl`, `TerraformLoginDexJwkSetUrl` | | Optional. Dex token and signing-key endpoints the API calls, for example an in-cluster Dex service URL, when the public Dex URL is not reachable from the API. |
 
 Also add `<TerraformLoginApiUrl>/oauth/callback` to the `redirectURIs` of your Dex static client; see [User Authentication (Dex)](../../getting-started/deployment/user-authentication-dex.md#terraform-login).
+
+With the Helm chart, put them under `env`:
+
+```yaml
+api:
+  env:
+    - name: TerraformLoginEnabled
+      value: "true"
+    - name: TerraformLoginApiUrl
+      value: "https://terrakube-api.example.com"
+registry:
+  env:
+    - name: TerraformLoginEnabled
+      value: "true"
+    - name: TerraformLoginApiUrl
+      value: "https://terrakube-api.example.com"
+```
+
+With Docker Compose, set `TERRAFORM_LOGIN_ENABLED=true` in `docker-compose/.env`.
 
 The broker uses PKCE, only redirects to the local CLI (`localhost`, ports 10000-10010), and validates Dex tokens against its signing keys.
 
