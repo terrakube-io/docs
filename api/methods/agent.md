@@ -35,22 +35,22 @@ POST {{terrakubeApi}}/api/v1/organization/{{organizationId}}/agent
 
 ####
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/agent" method="get" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/agent" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/agent" method="post" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/agent" method="post" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/agent/{agentId}" method="get" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/agent/{agentId}" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/agent/{agentId}" method="delete" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/agent/{agentId}" method="delete" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/agent/{agentId}" method="patch" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/agent/{agentId}" method="patch" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}

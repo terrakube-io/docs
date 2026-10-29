@@ -28,10 +28,10 @@ This endpoint is used to see the output for a job step.
 
 ### Supported Operations
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/step/{stepId}" method="get" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/job/{jobId}/step/{stepId}" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
+The complete OpenAPI specification is available as [terrakube-api.json](../../.gitbook/assets/terrakube-api.json), and in the UI under **Help & Support → API Docs**.
 {% endhint %}

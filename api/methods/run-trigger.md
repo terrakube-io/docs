@@ -32,3 +32,20 @@ Requires manage rights on the destination workspace and visibility of the source
 ```
 
 A trigger that would create a loop is rejected with the offending path in the error. To list both directions for a workspace, filter with `sourceWorkspace.id==X,destinationWorkspace.id==X` (a comma is OR).
+
+### Supported Operations
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/runTrigger" method="get" %}
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/runTrigger" method="post" %}
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/runTrigger/{runTriggerId}" method="get" %}
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/runTrigger/{runTriggerId}" method="patch" %}
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/runTrigger/{runTriggerId}" method="delete" %}
+{% endopenapi %}

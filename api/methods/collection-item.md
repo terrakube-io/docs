@@ -40,22 +40,22 @@ POST /api/v1/organization/${ORGANIZATION_ID}/collection/${COLLECTION_ID}/item
 
 ### Supported Operations
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/collection/{collectionId}/item" method="get" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/collection/{collectionId}/item" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/collection/{collectionId}/item" method="post" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/collection/{collectionId}/item" method="post" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/collection/{collectionId}/item/{itemId}" method="get" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/collection/{collectionId}/item/{itemId}" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/collection/{collectionId}/item/{itemId}" method="delete" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/collection/{collectionId}/item/{itemId}" method="delete" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/collection/{collectionId}/item/{itemId}" method="patch" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/collection/{collectionId}/item/{itemId}" method="patch" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}

@@ -31,26 +31,26 @@ To better understand Terrakube Configuration Language job templates please refer
 
 ### Supported Operations
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/workspace/{workspaceId}/schedule" method="get" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/schedule" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/workspace/{workspaceId}/schedule" method="post" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/schedule" method="post" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/workspace/{workspaceId}/schedule/{scheduleId}" method="delete" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/schedule/{scheduleId}" method="delete" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/workspace/{workspaceId}/schedule/{scheduleId}" method="patch" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/schedule/{scheduleId}" method="patch" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/workspace/{workspaceId}/schedule/{scheduleId}" method="get" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/schedule/{scheduleId}" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
+The complete OpenAPI specification is available as [terrakube-api.json](../../.gitbook/assets/terrakube-api.json), and in the UI under **Help & Support → API Docs**.
 {% endhint %}

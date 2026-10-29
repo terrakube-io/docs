@@ -30,24 +30,24 @@ To use this endpoint you should have "manageWorkspace" access at team level and 
 
 ### Supported Operations
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project" method="get" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/project" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project" method="post" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/project" method="post" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project/{projectId}" method="get" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/project/{projectId}" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project/{projectId}" method="patch" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/project/{projectId}" method="patch" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project/{projectId}" method="delete" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/project/{projectId}" method="delete" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
 ### Workspace Assignment
@@ -73,10 +73,10 @@ To assign a workspace to a project, use the workspace relationships endpoint. Se
 }
 ```
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/workspace/{workspaceId}/relationships/project" method="patch" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/relationships/project" method="patch" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
+The complete OpenAPI specification is available as [terrakube-api.json](../../.gitbook/assets/terrakube-api.json), and in the UI under **Help & Support → API Docs**.
 {% endhint %}

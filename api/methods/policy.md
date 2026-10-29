@@ -32,3 +32,20 @@ Attaches a non-global policy set to exactly one of `workspace`, `project` or `ta
 | data.relationships.workspace / project | object | OPTIONAL scope; omit both for an organization-wide exemption |
 
 Overrides of `soft_mandatory` violations are made from the run page. A run's evaluation results are available as `policy_evaluation` records.
+
+### Supported Operations
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/policy_set" method="get" %}
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/policy_set" method="post" %}
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/policy_set/{policy_setId}" method="get" %}
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/policy_set/{policy_setId}" method="patch" %}
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/policy_set/{policy_setId}" method="delete" %}
+{% endopenapi %}
