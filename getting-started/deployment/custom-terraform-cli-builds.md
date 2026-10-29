@@ -6,9 +6,9 @@ Terrakube will support terraform cli custom builds or custom cli mirrors, the on
 Support is available from version 2.12.0
 {% endhint %}
 
-Example Endpoint:&#x20;
+Example endpoint:
 
-* https://eov1ys4sxa1bfy9.m.pipedream.net/
+* https://terraform-mirror.example.com/
 
 ```json
 {
@@ -44,15 +44,13 @@ This is usefull when you have some network restrictions that does not allow to g
 
 To support custom terrafom cli releases when using the helm chart us the following:
 
-```
+```yaml
 api:
-  version: "2.12.0"
-  terraformReleasesUrl: "https://eov1ys4sxa1bfy9.m.pipedream.net/"
-
-executor:
-  version: "2.12.0"
+  terraformReleasesUrl: "https://terraform-mirror.example.com/"
 ```
 
 {% hint style="info" %}
 For workspaces set to **OpenTofu** instead of Terraform, the equivalent override is the `CustomTofuReleasesUrl` environment variable (`api.tofuReleasesUrl` in the Helm chart), which defaults to the OpenTofu GitHub releases API rather than `releases.hashicorp.com`.
 {% endhint %}
+
+The API caches the release list in Redis so it does not call the index on every request, and keeps using the last known list if the index is briefly unreachable. Tune the cache with `api.cache.releaseCacheExpirationMinutes` (default `30`). See [Terraform Versions](../../user-guide/reference/executor/terraform-versions.md).

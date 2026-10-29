@@ -13,7 +13,7 @@ This endpoint is used to create, update, search or delete teamplates inside an o
 | data.attribute.version     | string | Template version                              |
 
 {% hint style="info" %}
-To better understand Terrakube Configuration Language job templates please refer to the following [GitHub repository.](https://github.com/AzBuilder/terrakube-extensions)
+To better understand Terrakube Configuration Language job templates please refer to the following [GitHub repository.](https://github.com/terrakube-io/terrakube-extensions)
 {% endhint %}
 
 ### Example:

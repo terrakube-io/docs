@@ -1,8 +1,5 @@
 # Google Cloud Identity
 
-{% hint style="warning" %}
-Google Identity Authentication with Dex connector require Terrakube >= 2.6.0 and Helm Chart >= 2.0.0
-{% endhint %}
 
 ### Requirements
 
@@ -83,13 +80,7 @@ dex:
         adminEmail: "<<CHANGE_THIS>>"
 ```
 
-The firt step is to clone the repository.
-
-```
-git clone https://github.com/AzBuilder/terrakube-helm-chart.git
-```
-
-Replace _<\<CHANGE\_THIS>>_ with the real values, create the values.yaml file and run the helm install
+Add the Terrakube Helm repository (see [Helm Chart](../deployment/helm-chart.md)), then replace _<\<CHANGE\_THIS>>_ with the real values, create the `values.yaml` file and run `helm install`
 
 ```
 ## Global Name
@@ -97,9 +88,10 @@ name: "terrakube"
 
 ## Terrakube Security
 security:
+  useOpenLDAP: false # turn off the demo directory
   adminGroup: "<<CHANGE_THIS>>" # The value should be a gcp group (format: group_name@yourdomain.com example: terrakube_admin@terrakube.io)
-  patSecret: "<<CHANGE_THIS>>"  # Sample Key 32 characters z6QHX!y@Nep2QDT!53vgH43^PjRXyC3X 
-  internalSecret: "<<CHANGE_THIS>>" # Sample Key 32 characters Kb^8cMerPNZV6hS!9!kcD*KuUPUBa^B3 
+  patSecret: "<<CHANGE_THIS>>"  # 32 characters, see Token Security
+  internalSecret: "<<CHANGE_THIS>>" # 32 characters, see Token Security
   dexClientId: "google"
   dexClientScope: "email openid profile offline_access groups"
   gcpCredentials: |
@@ -178,7 +170,7 @@ api:
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
-    databaseType: "H2"
+    databaseType: "H2" # evaluation only; use an external database in production
 
 ## Executor properties
 executor:
@@ -186,7 +178,7 @@ executor:
   replicaCount: "1"
   serviceType: "ClusterIP"
   properties:
-    toolsRepository: "https://github.com/AzBuilder/terrakube-extensions"
+    toolsRepository: "https://github.com/terrakube-io/terrakube-extensions"
     toolsBranch: "main"
 
 ## Registry properties
@@ -251,5 +243,5 @@ helm install --debug --values ./values.yaml terrakube ./terrakube-helm-chart/ -n
 ```
 
 {% hint style="warning" %}
-For any question or feedback please open an issue in our [helm chart repository](https://github.com/AzBuilder/terrakube-helm-chart)
+For any question or feedback please open an issue in our [helm chart repository](https://github.com/terrakube-io/terrakube-helm-chart)
 {% endhint %}

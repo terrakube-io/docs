@@ -17,7 +17,7 @@ To use this endpoint you need to create a Terrakube workspace.
 | data.relationships.workspace.data.Id   | string | Should be the VCS Workspace Id (OPTIONAL)         |
 
 {% hint style="info" %}
-To better understand Terrakube Configuration Language job templates please refer to the following [GitHub repository.](https://github.com/AzBuilder/terrakube-extensions)
+To better understand Terrakube Configuration Language job templates please refer to the following [GitHub repository.](https://github.com/terrakube-io/terrakube-extensions)
 {% endhint %}
 
 ### Example:

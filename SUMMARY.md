@@ -49,7 +49,7 @@
   * [Azure Active Directory](getting-started/user-management/azure-active-directory.md)
   * [Google Cloud Identity](getting-started/user-management/google-cloud-identity.md)
   * [Amazon Cognito](getting-started/user-management/amazon-cognito.md)
-  * [Docker Desktop](getting-started/user-management/docker-desktop.md)
+  * [GitHub (Docker Desktop)](getting-started/user-management/docker-desktop.md)
   * [Keycloak](getting-started/user-management/keycloak.md)
 
 ## Set up

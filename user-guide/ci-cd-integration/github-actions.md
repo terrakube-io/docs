@@ -8,7 +8,7 @@ The examples on this page use a Terrakube Personal Access Token. To avoid storin
 
 The GIT repository will represent a Terrakube Organization and each folder inside the repository will be a new workspace.
 
-There is an example available in the following [link](https://github.com/AzBuilder/terraform-sample-repository)
+There is an example available in the following [link](https://github.com/terrakube-io/terraform-sample-repository)
 
 ### Configuration
 
@@ -118,7 +118,7 @@ Create a file called "terrakube.json"; includes workspace name and the terraform
 To build the github action in your local machine use the following.
 
 ```
-git clone https://github.com/AzBuilder/terrakube-action-github.git
+git clone https://github.com/terrakube-io/terrakube-action-github.git
 yarn install
 yarn build
 ```

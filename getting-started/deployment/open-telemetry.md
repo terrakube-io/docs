@@ -67,7 +67,7 @@ Open Telemetry Example
 
 One small example to show how to use open telemetry with docker compose can be found in the following URL:
 
-{% embed url="https://github.com/AzBuilder/terrakube/tree/main/telemetry-compose" %}
+{% embed url="https://github.com/terrakube-io/terrakube/tree/main/telemetry-compose" %}
 
 ### Helm chart
 

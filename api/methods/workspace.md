@@ -29,7 +29,7 @@ To use this endpoint you should have "manageWorkspace" access at team level and 
         "attributes": {
             "branch": "main",
             "name": "Terrakube Workspace",
-            "source": "https://github.com/AzBuilder/terraform-sample-repository.git",
+            "source": "https://github.com/terrakube-io/terraform-sample-repository.git",
             "terraformVersion": "0.15.0"
         },
         "relationships": {

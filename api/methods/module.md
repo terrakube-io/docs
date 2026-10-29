@@ -28,7 +28,7 @@ To use this endpoint you should have "manageModule" access at team level and a T
       "name": "Terrakube module",
       "description": "Module Description",
       "provider": "Terraform Provider",
-      "source": "https://github.com/AzBuilder/terraform-sample-repository.git"
+      "source": "https://github.com/terrakube-io/terraform-sample-repository.git"
     },
         "relationships": {
             "vcs": {

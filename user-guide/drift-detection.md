@@ -1,10 +1,24 @@
 # Drift Detection
 
+Drift is when real infrastructure no longer matches what Terraform last applied. Terrakube detects it by **running a plan on a schedule** and letting a template decide what to do with the result, such as posting to Slack.
+
+```mermaid
+flowchart LR
+    S[Workspace schedule<br/>cron] --> P[Plan only template]
+    P --> X{Template checks the plan<br/>OPA or script}
+    X -->|changes found| N[Notify: Slack, webhook]
+    X -->|none| D([Done])
+```
+
+{% hint style="info" %}
+This is separate from [policy compliance](policy-enforcement-opa.md#continuous-compliance), which Terrakube re-evaluates nightly without a plan.
+{% endhint %}
+
 Terrakube can be used to detect any infrastructure drift, this can be done using Terrakube extensions(open policy and slack), templates and schedules, below you can find an example of how this can be achieved.&#x20;
 
 ### Open Policy Definition
 
-The firts step will be to create a small rego policy and add this to your Terrakube extensions repository inside the "policy" folder with the name **"plan\_information.rego"**, this is a very simple policy that will count the number of changes for a terraform plan.
+The first step will be to create a small rego policy and add this to your Terrakube extensions repository inside the "policy" folder with the name **"plan\_information.rego"**, this is a very simple policy that will count the number of changes for a terraform plan.
 
 ```
 package terrakube.plan.information
@@ -48,12 +62,12 @@ The policy should look like this in your extension repository
 <figure><img src="../.gitbook/assets/image (309).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
-Terrakube extensions can be stored inside a GIT repository that you can configure when staring the platform. This is an example repository that you can fork or customize to create your custom extensions based on your own requirements [https://github.com/AzBuilder/terrakube-extensions](https://github.com/AzBuilder/terrakube-extensions)
+Terrakube extensions can be stored inside a GIT repository that you can configure when starting the platform. This is an example repository that you can fork or customize to create your custom extensions based on your own requirements [https://github.com/terrakube-io/terrakube-extensions](https://github.com/terrakube-io/terrakube-extensions)
 {% endhint %}
 
 ### Template Definition
 
-The firts step will be to create a Terrakube template that validate if there is a change in our infrastructure.
+The first step will be to create a Terrakube template that validate if there is a change in our infrastructure.
 
 <pre class="language-yaml"><code class="lang-yaml"><strong>flow:
 </strong>  - type: "terraformPlan"
@@ -257,7 +271,7 @@ Once our resources are created in Azure we can run the **Drift Detection** templ
 
 The template will send a message to a Slack channel with the following:
 
-* If there is no infracstructure change you should receive the following message in your slack channel.
+* If there is no infrastructure change you should receive the following message in your slack channel.
 
 <figure><img src="../.gitbook/assets/image (113).png" alt=""><figcaption></figcaption></figure>
 

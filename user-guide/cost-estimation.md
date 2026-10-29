@@ -1,10 +1,14 @@
 # Cost Estimation
 
+{% hint style="info" %}
+The quickest start is the built-in template: under **Settings → Templates → Create template**, choose **Infracost**. The example below shows what such a template does so you can adapt it. The Infracost CLI version in it (`0.10.12`) is only an example; use a current release.
+{% endhint %}
+
 Terrakube can be integrated with [Infracost](https://www.infracost.io/) using the Terrakube extension to validate the Terraform plan and estimate the monthly cost of the resources, below you can find an example of how this can be achieved.
 
 ### Template Definition
 
-The firts step will be to create a Terrakube template that calculate the estimated cost of the resources using infracost and validate the total monthly cost to check if we could deploy the resource or not if the price is below 100 USD.
+The first step will be to create a Terrakube template that calculate the estimated cost of the resources using infracost and validate the total monthly cost to check if we could deploy the resource or not if the price is below 100 USD.
 
 ```yaml
 flow:

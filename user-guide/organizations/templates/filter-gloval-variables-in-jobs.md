@@ -52,7 +52,7 @@ flow:
   - type: "terraformPlan"
     step: 100
     importComands:
-      repository: "https://github.com/AzBuilder/terrakube-extensions"
+      repository: "https://github.com/terrakube-io/terrakube-extensions"
       folder: "templates/terratag"
       branch: "import-template"
       inputsEnv:

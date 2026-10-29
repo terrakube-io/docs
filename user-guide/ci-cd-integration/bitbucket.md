@@ -73,4 +73,4 @@ script:
       DEBUG: "true"
 ```
 
-For more information about this pipe please refer to the following [repository](https://github.com/AzBuilder/terrakube-pipe-bitbucket).
+For more information about this pipe please refer to the following [repository](https://github.com/terrakube-io/terrakube-pipe-bitbucket).
