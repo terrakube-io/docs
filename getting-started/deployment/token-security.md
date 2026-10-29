@@ -1,17 +1,26 @@
 # Token Security
 
-Terrakube use two secrets internally to sign the personal access token and one internal token for intercomponent comunnication when using the helm deployment you can change this values using the following keys:
+Terrakube uses two secrets that you must set yourself:
+
+| Key | Used for |
+| --- | --- |
+| `security.patSecret` | Signing personal access and team tokens. |
+| `security.internalSecret` | Authenticating calls between the API, executor and registry. |
 
 ```yaml
 security:
-  patSecret: "AAAAAAAAAAAAAAAAAAAA"
-  internalSecret: "BBBBBBBBBBBBBBBBB"
+  patSecret: "<32 characters>"
+  internalSecret: "<a different 32 characters>"
+```
+
+Each must be 32 characters long and base64-compatible. Generate them with:
+
+```bash
+openssl rand -hex 16
 ```
 
 {% hint style="danger" %}
-Make sure to change the default values in a real kubernetes deployment.
+The values shipped in the Helm chart, and in the examples in this documentation, are public. Always replace them in a real deployment, and use different values for each environment.
 {% endhint %}
 
-{% hint style="warning" %}
-The secret should be 32 character long and it should be base64 compatible string.
-{% endhint %}
+To keep the secrets out of your values file, create the Kubernetes secrets yourself and set `security.existingSecret: true`, then see the chart's `values.yaml` for the secret names it expects.

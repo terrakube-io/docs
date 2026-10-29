@@ -100,10 +100,18 @@ Apply Running in a different pod:
 
 <figure><img src="../../.gitbook/assets/image (480).png" alt=""><figcaption></figcaption></figure>
 
+### Executor secrets in ephemeral jobs
+
+{% hint style="warning" %}
+Supported from version 2.34.0
+{% endhint %}
+
+By default the API mounts the executor secret (`ExecutorEphemeralSecret`, default `terrakube-executor-secrets`) into each ephemeral job as files that the executor loads at startup, instead of injecting them as environment variables. An init container with a restricted security context copies them into a memory-backed volume. The executor image used for ephemeral jobs must be 2.34.0 or later; to keep the old behaviour with an older image set `ExecutorEphemeralEmptyDirSecret=false` on the API.
+
 ### Job Controls
 
 {% hint style="warning" %}
-These settings are supported from version 2.34.0
+These settings are supported from version 2.34.0. The `api.ephemeralExecution.*` Helm values need chart 4.7.11 or later.
 {% endhint %}
 
 The following environment variables on the API component control the Kubernetes Job created for each ephemeral step. They apply to every ephemeral job in the cluster and cannot be overridden per workspace.

@@ -84,6 +84,10 @@ Now we have a single executor component ready to accept jobs, or we can increase
 
 <figure><img src="../../.gitbook/assets/image (62).png" alt=""><figcaption></figcaption></figure>
 
+{% hint style="warning" %}
+**Terrakube 2.34.0 and later:** set `executor.emptyDirSecret: true` (chart 4.7.12 or later) on every executor deployment, including standalone agents. See [Upgrading](helm-chart.md#upgrading).
+{% endhint %}
+
 ### Scaling to multiple replicas
 
 {% hint style="info" %}

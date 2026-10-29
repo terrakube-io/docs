@@ -1,6 +1,6 @@
 # External Redis
 
-By default the helm chart is using bitnami redis, this container is only for testing purposes and for a real cluster it is better to use an external redis.
+By default the Helm chart installs a bundled Valkey (a Redis-compatible store). It is for testing only; in a real cluster use an external Redis or Valkey, such as Azure Cache for Redis, Amazon ElastiCache or Memorystore. Redis holds the scheduler's locks and the live log stream, so it is required when you run more than one API or executor replica.
 
 To enable it, the following values can be used:
 

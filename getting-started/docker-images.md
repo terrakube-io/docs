@@ -12,7 +12,7 @@ description: 'Images for Terrakube components can be found in the following link
 | Terrakube UI       | [https://hub.docker.com/r/azbuilder/terrakube-ui/tags](https://hub.docker.com/r/azbuilder/terrakube-ui/tags)   |
 
 {% hint style="success" %}
-Default Images are based on Ubuntu Jammy (linux/amd64)
+Default images are based on Ubuntu Jammy and published for linux/amd64 and linux/arm64
 {% endhint %}
 
 The docker images are generated using cloud native buildpacks with the maven plugin, more information can be found in these links:

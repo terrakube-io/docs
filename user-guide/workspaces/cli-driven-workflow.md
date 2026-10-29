@@ -173,9 +173,12 @@ Administrators enable it on the API with:
 | Variable | Default | Description |
 | --- | --- | --- |
 | `TerraformLoginEnabled` | `false` | Turns the broker on and publishes the login discovery document. |
-| `TerraformLoginApiUrl` | | Public URL of the API, used for the OAuth callback and for registry discovery. |
+| `TerraformLoginApiUrl` | | Required when enabled. The public **HTTPS** URL of the API (for example `https://terrakube-api.example.com`), used for the OAuth callback and registry discovery. The API refuses to start with a non-HTTPS URL, except on `localhost`. |
 | `TerraformLoginDefaultDays` | `30` | Token lifetime preselected on the consent page. |
 | `TerraformLoginMaxDays` | `365` | Longest lifetime a user can pick. |
+| `TerraformLoginDexTokenUrl`, `TerraformLoginDexJwkSetUrl` | | Optional. Dex token and signing-key endpoints the API calls, for example an in-cluster Dex service URL, when the public Dex URL is not reachable from the API. |
+
+Also add `<TerraformLoginApiUrl>/oauth/callback` to the `redirectURIs` of your Dex static client; see [User Authentication (Dex)](../../getting-started/deployment/user-authentication-dex.md#terraform-login).
 
 The broker uses PKCE, only redirects to the local CLI (`localhost`, ports 10000-10010), and validates Dex tokens against its signing keys.
 
