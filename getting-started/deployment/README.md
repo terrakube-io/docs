@@ -12,5 +12,6 @@ The supported way to run Terrakube in production is the [Helm chart](helm-chart.
 | Use my own database or Redis | [Database backend](database-backend/README.md), [External Redis](external-redis.md) |
 | Run jobs on separate or per-run executors | [Self-Hosted Agents](self-hosted-agents.md), [Ephemeral Agents](ephemeral-agents.md) |
 | Fit it into my network | [Custom CA Certs](custom-ca-certs.md), [Proxy Configuration](proxy-configuration.md), [Custom Terraform CLI Builds](custom-terraform-cli-builds.md) |
+| Look up a setting | [Configuration Reference](../../user-guide/reference/configuration/README.md) |
 | Upgrade safely | [Upgrading](../upgrading.md) |
 | Secure and observe it | [Token Security](token-security.md), [Open Telemetry](open-telemetry.md), [Executor Log Output](executor-log-output.md) |

@@ -22,6 +22,9 @@ Terrakube is an open source platform for running Terraform and OpenTofu remotely
 | Run it from CI/CD | [CI/CD Integration](user-guide/ci-cd-integration/README.md) |
 | Automate Terrakube itself | [Terrakube CLI](user-guide/terrakube-cli/README.md), [API](api/getting-started.md) and the [Terraform provider](https://registry.terraform.io/providers/terrakube-io/terrakube/latest/docs) |
 | Move from Terraform Cloud/Enterprise | [Migrating to Terrakube](user-guide/migrating-to-terrakube.md) |
+| Look up a setting or environment variable | [Configuration Reference](user-guide/reference/configuration/README.md) |
+| Fix a problem | [Troubleshooting](user-guide/reference/troubleshooting.md) |
+| Upgrade | [Upgrading](getting-started/upgrading.md) |
 | See what changed | [Updates](updates.md) |
 
 ### Sponsors

@@ -50,7 +50,7 @@ Create a `terrakube.yaml` and install with `helm install --values terrakube.yaml
 | Observability | OpenTelemetry metrics and traces. | [Open Telemetry](open-telemetry.md) |
 | Private CAs and proxies | Custom certificates, or a corporate proxy. | [Custom CA Certs](custom-ca-certs.md), [Proxy Configuration](proxy-configuration.md) |
 
-Any component accepts extra environment variables under `env`, which is how most Terrakube settings in this documentation are applied:
+Any component accepts extra environment variables under `env`, which is how most Terrakube settings in this documentation are applied. Every variable and its default is listed in the [Configuration Reference](../../user-guide/reference/configuration/README.md):
 
 ```yaml
 api:

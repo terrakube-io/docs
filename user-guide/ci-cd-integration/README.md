@@ -1,7 +1,13 @@
 # CI/CD Integration
 
-If you need to manage your workspaces and execute Jobs from an external CI/CD tool you can use the [Terrakube API, ](https://github.com/terrakube-io/docs/blob/main/user-guide/ci-cd-integration/broken-reference/README.md)however a simple approach is to use the existing integrations:
+Run Terrakube from your pipelines, or let Terrakube run on its own from your repository. The options:
 
-<table><thead><tr><th width="185">CI/CD tool</th><th>Integration</th></tr></thead><tbody><tr><td>Github</td><td><a href="github-actions.md">Github Action</a></td></tr><tr><td>Bitbucket</td><td><a href="bitbucket.md">Bitbucket Pipe</a></td></tr><tr><td>Azure DevOps</td><td>Azure DevOps extension is in development</td></tr></tbody></table>
+| CI/CD tool | Integration |
+| --- | --- |
+| GitHub | The [Terrakube GitHub Action](github-actions.md#the-terrakube-github-action) (`terrakube-io/terrakube-action-github`), the [Terraform or OpenTofu CLI](github-actions.md#the-terraform-or-opentofu-cli), or the [Terrakube CLI](github-actions.md#the-terrakube-cli) |
+| Bitbucket | The [Bitbucket Pipe](bitbucket.md) |
+| Any other tool | The [Terraform or OpenTofu CLI](../workspaces/cli-driven-workflow.md), the [Terrakube CLI](../terrakube-cli/README.md), or the [API](../../api/getting-started.md) |
 
-Workloads can also authenticate without storing a Terrakube PAT. See [Federated OIDC Authentication](federated-oidc-authentication.md) for GitHub Actions and Kubernetes examples using short-lived identity tokens.
+You can also skip the pipeline: connect a [VCS provider](../vcs-providers/README.md) and a [webhook](../workspaces/webhooks.md) and Terrakube starts runs on pushes and pull requests itself.
+
+Pipelines can authenticate without storing a Terrakube token. See [Federated OIDC Authentication](federated-oidc-authentication.md) for GitHub Actions and Kubernetes examples that use short-lived identity tokens.

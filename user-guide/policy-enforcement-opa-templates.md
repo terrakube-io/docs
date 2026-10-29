@@ -1,7 +1,7 @@
 # Template-based OPA checks (legacy)
 
 {% hint style="info" %}
-From 2.34.0, [Policy Governance](policy-enforcement-opa.md) is the recommended way to enforce OPA policies: policies are attached to workspaces by the platform and cannot be removed from a template. This page describes the older approach where a template runs the OPA check as a step.
+From 2.34.0, [Policy Governance](policy-enforcement-opa.md) is the recommended way to enforce OPA policies: policies are attached to workspaces by the platform and cannot be removed from a template. This page describes the older approach where a template runs the OPA check as a step. For a working policy repository to start from, see [terrakube-opa-reference](https://github.com/terrakube-io/terrakube-opa-reference).
 {% endhint %}
 
 Terrakube can be integrated with Open Policy Agent using the Terrakube extension to validate the Terraform plan, below you can find an example of how this can be achieved. The example is based on this [document](https://www.openpolicyagent.org/docs/latest/terraform/#goals).&#x20;

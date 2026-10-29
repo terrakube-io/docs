@@ -397,13 +397,12 @@
 
 ## Reference
 
-* [Reference](user-guide/reference/README.md)
-  * [Troubleshooting](user-guide/reference/troubleshooting.md)
-  * [Configuration](user-guide/reference/configuration/README.md)
-    * [API](user-guide/reference/configuration/api.md)
-    * [Executor](user-guide/reference/configuration/executor.md)
-    * [Registry](user-guide/reference/configuration/registry.md)
-  * [Executor](user-guide/reference/executor/README.md)
-    * [Terraform Execution Flow](user-guide/reference/executor/terraform-execution-flow.md)
-    * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
+* [Configuration Reference](user-guide/reference/configuration/README.md)
+  * [API](user-guide/reference/configuration/api.md)
+  * [Executor](user-guide/reference/configuration/executor.md)
+  * [Registry](user-guide/reference/configuration/registry.md)
+* [Troubleshooting](user-guide/reference/troubleshooting.md)
+* [Executor](user-guide/reference/executor/README.md)
+  * [Terraform Execution Flow](user-guide/reference/executor/terraform-execution-flow.md)
+  * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
 * [Migrating to Terrakube](user-guide/migrating-to-terrakube.md)

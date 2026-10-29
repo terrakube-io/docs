@@ -1,3 +1,8 @@
+---
+layout:
+  width: wide
+---
+
 # Configuration Reference
 
 Every Terrakube service is configured with environment variables. This section lists all of them, with their defaults, for the three services you deploy:

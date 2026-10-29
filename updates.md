@@ -1,5 +1,16 @@
 # Updates
 
+### Coming in 2.35
+
+{% hint style="info" %}
+These are planned and not yet released. Scope can change; follow progress in the [2.35 milestone](https://github.com/terrakube-io/terrakube/milestone/34).
+{% endhint %}
+
+* **Registry:** better performance and caching, provider mirroring, and sharing.
+* **Projects:** better navigation, access controls and shared configuration.
+* **Cost estimation:** Infracost estimates in runs, pull requests and cost policies. See [Cost Estimation](user-guide/cost-estimation.md) for what is possible today.
+* **Single-domain deployment:** an optional setup serving the UI, API, registry and Dex from one domain.
+
 ### 2.34.0 (upcoming)
 
 #### Policy Governance (OPA)

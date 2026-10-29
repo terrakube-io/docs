@@ -9,7 +9,7 @@ The following will explain how to run the executor component in`"ephemeral"` mod
 These environment variables can be used to customize the API component:
 
 * ExecutorEphemeralNamespace (Default value: "terrakube")
-* ExecutorEphemeralImage (Defatul value: "azbuilder/executor:2.22.0" )
+* ExecutorEphemeralImage (Default value: the executor image of the same version as the API, for example "azbuilder/executor:2.34.0")
 * ExecutorEphemeralSecret (Default value: "terrakube-executor-secrets" )
 
 > The above is basically to control where the job will be created and executed and to mount the secrets required by the executor component

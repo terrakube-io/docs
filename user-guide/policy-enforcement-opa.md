@@ -14,6 +14,32 @@ Available from Terrakube 2.34.0. The older, template-based approach is still doc
 
 Policy sets are cumulative: a workspace is checked against the global sets, its project's sets, the sets on its tags, and the sets attached to it directly.
 
+### Start from the reference repository
+
+[`terrakube-io/terrakube-opa-reference`](https://github.com/terrakube-io/terrakube-opa-reference) is a working example of a policy repository: a layout to copy, shared helper libraries, ready-made bundles, unit tests with plan fixtures, and live example workspaces for every outcome. Fork it, keep what you need, and point your policy sets at your fork.
+
+```text
+terrakube-opa-reference/
+├── lib/        shared Rego helpers (plan parsing, tags, networking, blast radius)
+├── bundles/    one folder per policy set: common/, password/, aws/, azure/, gcp/
+├── fixtures/   sample `terraform show -json` plans for tests
+└── examples/   live Terraform and OpenTofu workspaces that trigger each outcome
+```
+
+| Bundle | Level | What it does |
+| --- | --- | --- |
+| `bundles/common/tagging` | `advisory` | Warns when `Environment`, `Owner` or `CostCenter` tags are missing. |
+| `bundles/common/blast_radius` | `soft_mandatory` | Pauses for approval on more than 5 deletions or a high weighted risk score. |
+| `bundles/common/required_providers` | `hard_mandatory` | Allows only approved provider registries. |
+| `bundles/aws`, `azure`, `gcp` `/baseline` | `hard_mandatory` | Cloud security baselines, such as S3 public access blocks and HTTPS-only storage. |
+| `bundles/password/*` | all three levels | A cloud-free suite on `random_password`, handy for trying every level without credentials. |
+
+The repository's own [README](https://github.com/terrakube-io/terrakube-opa-reference#readme) explains how to run its tests with OPA and Regal and how to deploy its policy sets to Terrakube with Terraform. To see every outcome working, its `examples/` workspaces run as the `simple-governance` demo organization that Terrakube seeds in the `demo` profile.
+
+{% hint style="warning" %}
+The reference repository is for demonstration and evaluation. Its rules and thresholds are illustrations, not a vetted security baseline. Review and test any policy before it enforces production runs.
+{% endhint %}
+
 ```mermaid
 flowchart TD
     P[Plan step produces plan.json] --> R[Terrakube collects the policy sets that apply:<br/>global + project + tags + workspace]
@@ -39,29 +65,39 @@ A policy set can also have a **shadow enforcement level**. Violations of the sha
 
 ### Write the policies
 
-Put Rego in a repository folder under the package `terraform.analysis`. Terrakube reads three rule sets from it:
+Put Rego in a repository folder under the package `terraform.analysis`. This follows the [reference repository](https://github.com/terrakube-io/terrakube-opa-reference), which uses a shared `tfplan` helper library:
 
 ```rego
 package terraform.analysis
 
 import rego.v1
+import data.lib.tfplan
 
-# deny: a violation. What it does is decided by the policy set's enforcement level
-deny contains {"rule_id": "no-public-s3", "resource": r.address, "msg": "S3 buckets must not be public"} if {
-    some r in input.resource_changes
-    r.type == "aws_s3_bucket_public_access_block"
-    r.change.after.block_public_acls == false
-}
-
-# warn: never blocks, shown as a warning
-warn contains {"rule_id": "name-prefix", "resource": r.address, "msg": "Prefer the corp- name prefix"} if {
-    some r in input.resource_changes
-    r.type == "aws_instance"
-    not startswith(r.change.after.tags.Name, "corp-")
+# Hard mandatory: a password shorter than 8 characters blocks the apply
+deny contains violation if {
+    some res in tfplan.resources_by_type("random_password")
+    tfplan.is_create_or_update(res)
+    len := tfplan.after_or_empty(res).length
+    len < 8
+    violation := {
+        "rule_id": "password_length_hard_mandatory",
+        "resource": res.address,
+        "message": sprintf("Password length of %d is below the minimum of 8.", [len]),
+    }
 }
 ```
 
-Terrakube reads the `deny` and `warn` rules (`soft_mandatory` is also read and treated like `deny`). A `deny` violation fails the run on a `hard_mandatory` set, stops it for approval on a `soft_mandatory` set, and is only a warning on an `advisory` set. Each entry can be a string or an object with `rule_id`, `resource` and `msg`. Shared helpers can live in a `lib/` folder next to the policy folder and are loaded automatically.
+Terrakube reads three rule sets from the package: `deny`, `soft_mandatory` and `warn`. **By convention** each bundle uses the rule that matches the level of the policy set it is attached to: `deny` for `hard_mandatory`, `soft_mandatory` for `soft_mandatory` and `warn` for `advisory`. What a violation does is decided by the policy set's enforcement level: on a `hard_mandatory` set it fails the run, on a `soft_mandatory` set it stops the run for approval, and on an `advisory` set it is only a warning. `warn` violations never block.
+
+Each entry can be a string or an object with `rule_id`, `resource` and `message` (`msg` also works). Shared helpers live in a `lib/` folder next to the bundles and are loaded automatically.
+
+**Parameters** let one bundle be configured per policy set without editing Rego. A parameter `min_length` set on the policy set is available as `data.terrakube.inputs.min_length`:
+
+```rego
+configured_min_length := to_number(data.terrakube.inputs.min_length) if {
+    data.terrakube.inputs.min_length != ""
+}
+```
 
 ### Create a policy set
 
@@ -72,7 +108,7 @@ Open **Settings → Policy Sets** in an organization and create a set:
 | Name / description | Unique name within the organization. |
 | Enforcement level | `hard_mandatory`, `soft_mandatory` or `advisory`. |
 | Override team | Team allowed to override `soft_mandatory` violations. Organization admins can always override. |
-| VCS, repository, branch, folder | Where the Rego lives. Pin `branch` to a release tag (for example `v2.1.0`) to roll policy changes out deliberately. |
+| VCS, repository, branch, folder | Where the Rego lives. Pin `branch` to a tag in your policy repository to roll policy changes out deliberately. |
 | OPA version | Optional. Defaults to the version configured on the executor. |
 | Global | Apply to every workspace in the organization. |
 
@@ -81,7 +117,7 @@ Non-global sets are attached to a workspace, project or tag from the same page.
 <figure><img src="../.gitbook/assets/policy-sets.png" alt="Policy sets in an organization, with enforcement level and scope"><figcaption><p>Policy sets in an organization, with enforcement level and scope</p></figcaption></figure>
 
 
-**Parameters** let one bundle be configured per set. They are available to Rego as `data.terrakube.inputs.<key>`, and values are typed (numbers, booleans and JSON are parsed).
+Set parameters on the policy set. Their values are typed: numbers, booleans and JSON are parsed.
 
 Users need the **Manage Policies** team permission to create or change policy sets and exemptions.
 
@@ -118,8 +154,8 @@ resource "terrakube_policy_set" "blast_radius" {
   override_team     = "secops-approvers"
   global            = true
   vcs_id            = var.vcs_id
-  repository        = "https://github.com/acme/terrakube-policies.git"
-  branch            = "v2.1.0"
+  repository        = "https://github.com/acme/terrakube-opa-reference.git" # your fork
+  branch            = "main"
   folder            = "bundles/common/blast_radius"
 }
 

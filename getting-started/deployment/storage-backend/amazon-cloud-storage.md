@@ -57,24 +57,21 @@ storage:
 
 ## Terrakube components properties
 api:
-  version: "2.24.0"
   env:
   - name: AwsEnableRoleAuth
-    value: true
+    value: "true"
 
 executor:
-  version: "2.24.0"
   env:
   - name: AwsIncludeBackendKeys
-    value: false
+    value: "false"
   - name: AwsEnableRoleAuth
     value: true
 
 registry:
-  version: "2.24.0"
   env:
   - name: AwsEnableRoleAuth
-    value: true
+    value: "true"
 ```
 
 ### S3-compatible storage (MinIO, Alibaba OSS, Qumulo, ...)
