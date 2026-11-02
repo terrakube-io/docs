@@ -49,6 +49,21 @@ These come from the changes in the 2.34 release line. Check each against your de
 * Runs waiting for approval are **not** closed by the inactive-run limits unless you set `InactiveJobsWaitingApprovalTimeoutHours`. Other open runs are closed as failed after `InactiveJobsMaxAgeHours` (default 6). See [Executor Log Output](deployment/executor-log-output.md#run-limits).
 * Features that are **off until you enable them**: [`terraform login` through Terrakube](../user-guide/workspaces/cli-driven-workflow.md#terraform-login), presigned module downloads in the registry, and plan artifacts.
 
+**Changes since 2.34.0-beta.10**
+
+These changes are included in 2.34.0-rc.1 and apply when upgrading from beta.10 or earlier:
+
+* **Token provisioning:** PATs/team tokens/federated tokens cannot mint more tokens by default. Provisioning tools that do this need a Dex user session or a deliberate `TokenAllowPatIssuance=true` compatibility choice for PATs. Children cannot outlive the parent PAT. Unknown or revoked Terrakube token IDs are rejected. Review [Token Security](deployment/token-security.md).
+* **Destroy permission:** Admin/Write retain destroy access; Plan/Read cannot destroy. Custom team, workspace and project entries get `destroyJob=true` to preserve previous access. Review and remove that grant where appropriate. Approving a destroy also requires it.
+* **CLI runs:** auto-approve requires approve permission. Supplying `-var`, `-var-file` or `TF_VAR_*` run inputs requires workspace-management permission; the values are now used rather than silently ignored. Project-level plan and approve grants are honored by the Terraform-compatible API.
+* **Sensitive values and tenant checks:** workspace variables and collection items cannot change from sensitive to non-sensitive. Cross-organization resource relationships and template lookups are rejected. Check integrations that depended on those operations.
+* **Schedule clients:** stop sending the deprecated `tcl` field; use `templateReference` instead.
+* **Opt-in controls:** `restrictApplyToConfiguredBranch` and `requireApproveToApply` both default to false. Branch restrictions conflict with API-created exact-commit apply runs, including the documented GitHub Action deployment flow. Choose controls using [Recommended Settings](recommended-settings.md).
+* **New environment controls:** `TokenAllowPatIssuance=false`, `TokenMaxDays=0` (no configured maximum), and `DexAudienceValidation=false` are the shipped defaults. The [HTTP state backend](deployment/http-state-backend.md) is also off by default.
+* **Cloud credentials:** tighter AWS/GCP setup examples do not update existing cloud policies. Review and apply the trust changes in your cloud account.
+
+The API migration adds workspace restriction columns, destroy flags on all three access levels, and CLI-variable placement metadata on jobs. Finish upgrading the API and executors before relying on branch commit verification, typed CLI inputs or HTTP state access. An older executor does not enforce the new commit-membership check. Both workspace controls remain off until enabled.
+
 **Rolling upgrades**
 
 * **Upgrade the API before the executors.** Structured-output recovery adds step columns in the API's migration. A new executor against an older API falls back to the old behaviour, and an older executor against a new API keeps working, but results are only recoverable once both are on 2.34. In general an executor ahead of the API, or an API ahead of the executor, works for runs that do not use new features. Finish the rollout before clients send [run-specific variables](../user-guide/workspaces/api-driven-workflow.md#variables-for-one-run): an older API pod would run the job without them. `GET /execution/v1/capabilities` reports `jobVariables: true` on a new API.

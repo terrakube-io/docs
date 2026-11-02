@@ -13,6 +13,19 @@ These are planned and not yet released. Scope can change; follow progress in the
 
 ### 2.34.0 (upcoming)
 
+#### Added after 2.34.0-beta.10
+
+The [2.34.0-rc.1 comparison](https://github.com/terrakube-io/terrakube/compare/2.34.0-beta.10...2.34.0-rc.1) adds the controls below. Use [Recommended Settings](getting-started/recommended-settings.md) to choose them for production; see [Upgrading](getting-started/upgrading.md#terrakube-2340) for compatibility changes.
+
+* **Workspace run restrictions:** opt into configured-branch apply/destroy and approve-permission checks for applies without approval steps. Both default to off. PRs can still plan, but branch restrictions affect PR applies, CLI uploads and exact-commit CI. See [Run Restrictions](user-guide/workspaces/run-restrictions.md).
+* **Destroy permission:** separate control for starting ungated destroys and approving destroy runs. Admin/Write allow it, Plan/Read do not, and Custom entries default to allowed. Review existing grants. See [Team Management](user-guide/organizations/team-management.md#run-permissions-in-2340).
+* **Token security:** token minting requires a Dex user session by default, team-token deletion checks membership/ownership, and unknown/revoked Terrakube tokens are rejected. Optional lifetime and Dex audience controls are available. See [Token Security](getting-started/deployment/token-security.md).
+* **API isolation and secrets:** organization ownership and relationship checks are enforced across more entities; sensitive workspace variables and collection items cannot be made non-sensitive. See [Security](getting-started/security.md) and [Variables](user-guide/workspaces/variables.md#sensitive-values-in-2340).
+* **CLI inputs:** `-var`, `-var-file` and `TF_VAR_*` inputs are honored as encrypted run-only values and require workspace-management permission. Auto-approve requires approve permission, and CLI plan completion waits for approval readiness. See [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md#cli-variables-in-2340).
+* **HTTP state backend:** executors can opt into API-mediated current-state access using workspace-scoped credentials; existing storage behavior remains the default. See [Executor HTTP State Backend](getting-started/deployment/http-state-backend.md).
+* **Cloud trust examples:** AWS matches the workspace subject exactly; GCP also pins the workspace ID. Apply changes to existing cloud trust policies yourself. See [AWS](user-guide/workspaces/dynamic-provider-credentials/aws-dynamic-provider-credentials.md#workspace-trust-boundary) and [GCP](user-guide/workspaces/dynamic-provider-credentials/gcp-dynamic-provider-credentials.md#workspace-trust-boundary).
+* **Other fixes:** archived log parts remain readable if final-output storage fails; jobs from deleted workspaces no longer stop reconciliation; the implicit project collection cap is 10,000; GitHub push runs display the sender's username with a pusher-name fallback. The deprecated schedule `tcl` API field is excluded; use [templateReference](api/methods/schedule.md).
+
 #### Policy Governance (OPA)
 
 Platform teams can now enforce Open Policy Agent policies across every run. Policy sets are stored in Git, attached to an organization, project, tag or workspace, and evaluated inside the runner before apply at one of three levels (`hard_mandatory`, `soft_mandatory`, `advisory`). Soft violations can be overridden by a designated team with an audited justification, individual rules can be waived with expiring exemptions, and a nightly job surfaces compliance drift. See [Policy Governance](user-guide/policy-enforcement-opa.md). The previous template-based approach is documented as [legacy](user-guide/policy-enforcement-opa-templates.md).

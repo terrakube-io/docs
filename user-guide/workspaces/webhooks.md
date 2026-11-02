@@ -69,3 +69,9 @@ Ask a workspace admin to enable **Allow Apply via PR Comment** in the Webhook se
 | [SSH](../vcs-providers/ssh.md)                          | –    | –             | –       | –                                         |
 
 Azure DevOps triggers push and pull-request jobs via service hooks (or outbound polling on private networks — see [Azure DevOps](../vcs-providers/azure-devops.md#webhooks)), but the PR comment plan/apply workflow above is currently only available for GitHub, GitLab, and Bitbucket. SSH-based repositories have no webhook support at all; runs must be triggered manually, via the API, or on a [schedule](workspace-scheduler.md).
+
+### Branch restrictions in 2.34.0
+
+When `restrictApplyToConfiguredBranch` is enabled, pushes can use apply/destroy templates only on the workspace's configured branch. PR events and PR comment commands can use only plan-only templates, regardless of branch name; apply from a PR comment is disabled. A refused event starts no job, and a refused comment command receives a PR notice.
+
+Release events can start their configured template, but the executor verifies that the commit belongs to the configured branch before apply/destroy. Protect release publishing in the VCS. Workspaces with the setting off retain their previous behavior. See [Run Restrictions](run-restrictions.md) for the full source-by-source rules.

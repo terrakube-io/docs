@@ -287,12 +287,30 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 ```
 
 {% hint style="info" %}
-You can use .tfvars file inside the workspace to upload the variables to the workspace automatically
+You can include `.tfvars` files in the uploaded configuration. CLI run inputs apply only to the run; they do not change stored workspace variables.
 {% endhint %}
 
 If you go to the Terrakube UI, you will be able to see the workspace plan execution.
 
 <figure><img src="../../.gitbook/assets/image (286).png" alt=""><figcaption></figcaption></figure>
+
+### CLI variables in 2.34.0
+
+Inputs supplied through `-var`, `-var-file` and `TF_VAR_*` are honored as encrypted variables for that run only. They do not update the workspace's stored variables. Supplying them requires **Manage Workspace** permission; a caller who can only plan receives `403` with the variable names.
+
+CLI run variables use Terraform CLI argument/variable-file precedence above configuration `terraform.tfvars` and `*.auto.tfvars`. Typed HCL values retain their types with the updated executor. Invalid literals, expressions and interpolated values are rejected when the run is created. Both the plan and saved-plan apply use the run's values. See [API-driven Workflow](api-driven-workflow.md#variables-for-one-run) for encryption and size limits; its job `variables` field uses environment-variable placement instead.
+
+For example:
+
+```bash
+terraform plan -var='image_tag=release-42' -var-file=production.tfvars
+```
+
+### Run permissions and restrictions
+
+Auto-approving a non-speculative CLI run requires approve permission. Destroy workflows also enforce the separate destroy permission, and `requireApproveToApply` checks CLI templates that omit an approval step.
+
+On a VCS/SSH workspace with branch restriction enabled, normal CLI plans still work, but apply/destroy runs using uploaded local configuration are refused. The built-in CLI `terraform plan -destroy` path is refused too. A CLI-driven workspace has no branch to restrict. See [Run Restrictions](run-restrictions.md).
 
 ### Terraform Apply
 

@@ -16,12 +16,12 @@ Workspaces that are not assigned to any project remain visible to all members of
 
 ### Project Roles
 
-| Role  | Manage Project | Manage Workspace | Create Workspace | Plan Job | Approve Job |
-| ----- | :------------: | :--------------: | :--------------: | :------: | :---------: |
-| Admin | ✅             | ✅               | ✅               | ✅       | ✅          |
-| Write | ❌             | ✅               | ✅               | ✅       | ✅          |
-| Plan  | ❌             | ❌               | ❌               | ✅       | ❌          |
-| Read  | ❌             | ❌               | ❌               | ❌       | ❌          |
+| Role | Manage Project | Manage Workspace | Create Workspace | Plan Job | Approve Job | Destroy Job |
+| --- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Admin | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Write | ❌ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Plan | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ |
+| Read | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 ### Adding a Team
 
@@ -50,3 +50,9 @@ Hover over a role tag in the table to see a description of what the role allows.
 Click the **Remove** button on the team's row in the Team Access table to revoke the team's access to the project.
 
 <figure><img src="../../.gitbook/assets/projects-team-remove.png" alt=""><figcaption></figcaption></figure>
+
+### Destroy and approval controls in 2.34.0
+
+Project access includes a `destroyJob` flag for Custom access. It defaults to **true**, including migrated entries; Admin/Write always allow destroy and Plan/Read do not. A destroy approver needs destroy permission too. Grants at organization or workspace level remain additive.
+
+Enable the workspace's `requireApproveToApply` setting to require approval permission when starting an apply without an approval step. Project-level plan/approve rights are also recognized by the Terraform-compatible API. See [Run Restrictions](../workspaces/run-restrictions.md).

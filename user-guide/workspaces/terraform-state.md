@@ -37,3 +37,7 @@ All the resources can be shown in the overview page inside the workspace:
 If you click the resources you can check the information about each resouce like the folloing
 
 <figure><img src="../../.gitbook/assets/image (444).png" alt=""><figcaption></figcaption></figure>
+
+### Executor HTTP state backend
+
+In 2.34.0, administrators can opt into an [HTTP state backend](../../getting-started/deployment/http-state-backend.md) that routes executor state reads and writes through the API using workspace-scoped credentials. It is disabled by default and does not change how you view state here or configure your local CLI workflow.

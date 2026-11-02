@@ -16,7 +16,7 @@ Follow [Your First Run](first-run.md) for a guided walkthrough, or in short:
 
 ### 3. Go to production
 
-Follow the [Helm deployment](deployment/README.md), then configure [user authentication](user-management/README.md), a [storage backend](deployment/storage-backend/README.md) and a [database](deployment/database-backend/README.md). Read [Security](security.md) and [Architecture](design-and-architecture.md) before exposing it to your team.
+Follow [Production Setup](production-setup.md) in order: choose [recommended controls](recommended-settings.md), deploy and configure the services, create teams and templates, configure workspace restrictions, then validate a run. It links to each setup page and explains where each setting belongs.
 
 ### 4. Integrate
 

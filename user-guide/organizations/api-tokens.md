@@ -4,6 +4,12 @@ Terrakube has two kinds of API tokens: user and team. Each token type has a diff
 
 API tokens are only shown once when you create them, and then they are hidden. You have to make a new token if you lose the old one.
 
+### Creation requirements in 2.34.0
+
+Sign in through Dex to create personal or team tokens. Using an existing PAT, team token or federated token to create another token is refused by default. Administrators can permit bounded PAT-based issuance with `TokenAllowPatIssuance`; see [Token Security](../../getting-started/deployment/token-security.md#token-creation-and-lifetime).
+
+Administrators can limit new token lifetimes with `TokenMaxDays`. Revoked or unknown Terrakube token IDs are rejected even if the JWT signature is valid. Team-token deletion requires membership in the token's group or instance-owner authorization.
+
 ### User API Tokens <a href="#user-api-tokens" id="user-api-tokens"></a>
 
 API tokens may belong directly to a user. User tokens inherit permissions from the user they are associated with.

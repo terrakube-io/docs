@@ -4,7 +4,17 @@ Organizations are privately shared spaces for teams to collaborate on infrastruc
 
 Like the [Workspaces list](../workspaces/ "mention"), the **Organizations** page has a **New**/**Legacy** view toggle in the top right. The New view is a condensed list showing each organization's workspace count, with a settings shortcut on rows you have permission to manage.
 
-In this section:
+### Set up in this order
+
+For a new deployment, begin with [Production Setup](../../getting-started/production-setup.md) and [Recommended Settings](../../getting-started/recommended-settings.md). Once the services and authentication are configured:
+
+1. [Create an organization](organizations.md).
+2. [Create teams and assign permissions](team-management.md), including who may plan, approve and destroy.
+3. Prepare [templates](templates/README.md) with the required approval steps. Add [shared variables](variable-collections.md) or [global variables](global-variables.md) if needed.
+4. Configure [federated identity](federated-identity.md) for automation, or create [API tokens](api-tokens.md) when needed.
+5. Continue to [workspace setup](../workspaces/README.md#workspace-setup-order) to apply access, credentials and run restrictions before the first run.
+
+### Organization topics
 
 {% content-ref url="organizations.md" %}
 [organizations.md](organizations.md)

@@ -7,6 +7,12 @@ Open a workspace and click **New Run** to start a job without waiting on a git p
 | Choose job type | The [template](../organizations/templates/ "mention") to run, e.g. `Plan`, `Plan and Apply`, or a `Destroy` variant (shown in red). |
 | Branch Name | The git branch to run against. Leave as-is for CLI-driven workspaces — Terrakube manages this value itself in that workflow. |
 
+### Restrictions and permissions
+
+Creating a run requires plan permission. In 2.34.0, workspace [Run Restrictions](run-restrictions.md) can limit apply/destroy to the configured branch and require approve permission for templates without an approval step. Destroy runs have a separate permission. A run refused by these checks is not created.
+
+With branch restriction enabled, selecting another branch offers only plan-only templates. If none are available, ask an administrator to create one.
+
 ### Additional planning options
 
 Expand **Additional planning options** to scope the plan the same way `terraform plan -target=... -replace=...` would from the CLI:

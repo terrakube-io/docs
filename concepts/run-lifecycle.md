@@ -52,6 +52,8 @@ sequenceDiagram
     API-->>U: status and logs in the UI
 ```
 
+Before admission, user-created runs must pass plan permission and the workspace's [run restrictions](../user-guide/workspaces/run-restrictions.md). In 2.34.0, those controls can restrict apply/destroy branches and ungated applies, with a separate destroy permission.
+
 Two queues apply. Runs are serialized **per workspace**, and across the cluster they are admitted in **first-in, first-out** order, so a busy workspace never lets a newer run overtake an older eligible one, and it does not block other workspaces. If no executor is ready, the run stays `pending` and is retried; it does not fail. Runs that stay open too long are closed by [run limits](../getting-started/deployment/executor-log-output.md#run-limits).
 
 ### Steps in a run

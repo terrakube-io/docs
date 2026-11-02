@@ -26,6 +26,8 @@ org.azbuilder.owner=TERRAKUBE_ADMIN
 | data.attributes.manageVcs       | boolean | Enable Create/Update/Delete VCS connection for private GIT Repositories for a Team |
 | data.attributes.manageTemplates | boolean | Enable Create/Update/Delete Templates for a Team                                   |
 
+In 2.34.0, `data.attributes.destroyJob` controls destroy permission for Custom access and defaults to `true`. Admin/Write allow destroy; Plan/Read do not. See [Run Restrictions](../../user-guide/workspaces/run-restrictions.md#control-who-can-destroy).
+
 ### Example:
 
 ```

@@ -6,14 +6,15 @@ This endpoint is used to create, update, search or delete schedules for a partic
 
 | Path                              | Type   | Description                                                                                                                                                                                                   |
 | --------------------------------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| data.type                         | string | Should be "template"                                                                                                                                                                                          |
+| data.type                         | string | Should be "schedule"                                                                                                                                                                                          |
 | data.attributes.cron              | string | Cron expression to schedule a job inside a workspace. For more information please visit [Quartz documentation](http://www.quartz-scheduler.org/documentation/quartz-2.3.0/tutorials/tutorial-lesson-06.html). |
-| data.attributes.tcl               | string | Terrakube configuration language in base64                                                                                                                                                                    |
 | data.attributes.templateReference | string | Terrakube template id                                                                                                                                                                                         |
 
 {% hint style="info" %}
 To better understand Terrakube Configuration Language job templates please refer to the following [GitHub repository.](https://github.com/terrakube-io/terrakube-extensions)
 {% endhint %}
+
+In 2.34.0, the deprecated `tcl` field is excluded from the API. Use `templateReference` to select an organization template.
 
 ### Example:
 
@@ -23,7 +24,7 @@ To better understand Terrakube Configuration Language job templates please refer
     "type": "schedule",
     "attributes": {
       "cron": "0 0/1 * * * ?",
-      "tcl": "{{templateSample}}"
+      "templateReference": "<template id>"
     }
   }
 }

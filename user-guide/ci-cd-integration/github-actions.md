@@ -18,6 +18,10 @@ All three can use a Personal Access Token or team token stored as a secret. To a
 **Version 2.0.0** targets **Terrakube 2.34.0 or later** and needs GitHub Actions runner **v2.327.1 or later** on self-hosted runners (it ships its own Node 24 runtime). If you run an older Terrakube, stay on a 1.x release of the action. Pin the action to a release tag, `@v2.0.0`, or to a full commit SHA for stronger supply-chain protection, and never to `@main`.
 {% endhint %}
 
+{% hint style="warning" %}
+From 2.34.0, `restrictApplyToConfiguredBranch` refuses API-created apply-capable runs with an explicit commit ID. The action uses exact-commit runs, so leave that workspace setting off for the deployment examples below and protect the CI identity, branch/environment and approval template. Plan-only runs remain available. See [Run Restrictions](../workspaces/run-restrictions.md) and [Recommended Settings](../../getting-started/recommended-settings.md).
+{% endhint %}
+
 #### What it does
 
 * **Authenticates** to Terrakube with GitHub OIDC (no stored secret) or a personal access token.

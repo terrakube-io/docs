@@ -26,6 +26,12 @@ curl -X POST "$TERRAKUBE_API/api/v1/organization/$ORG_ID/job" \
 
 Creating a job needs permission to plan in the workspace. Poll the job (`GET .../job/{id}`) or subscribe to status changes until it reaches `waitingApproval`, `completed` or a failure.
 
+### Branch and run permissions in 2.34.0
+
+[Run Restrictions](run-restrictions.md) apply to REST and GraphQL job creation too. When branch restriction is enabled, an apply/destroy template must use the configured branch and must omit `commitId`. An explicit commit is allowed only with a plan-only template. `overrideBranch` and `commitId` cannot be edited after creation while the restriction is on.
+
+A destroy without a preceding approval step also needs destroy permission. If `requireApproveToApply` is enabled, an apply without a preceding approval step needs approve permission. A planner can still queue a template with an approval gate; approving a destroy also requires destroy permission.
+
 ### Variables for one run
 
 Pass `variables` on the job to set Terraform input variables for that run only, without touching the workspace's stored variables. This is how CI can forward values such as `TF_VAR_image_tag`:
@@ -50,3 +56,5 @@ A run waiting for approval is approved by updating the job's status to `approved
 ### Large lists
 
 Page through collections with `page[number]` and `page[size]`. The workspaces query on the GraphQL endpoint (`/graphql/api/v1`) also supports cursor pagination, which stays fast on organizations with thousands of workspaces.
+
+In 2.34.0, the implicit project collection cap is 10,000. Use explicit pagination for complete lists rather than relying on an implicit limit.

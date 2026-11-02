@@ -24,6 +24,10 @@ flowchart TD
 
 A team has a role (`admin`, `write`, `plan`, `read`) or, with the `custom` role, individual permissions such as managing state, modules, providers, VCS, templates or policies. See [Team Management](../user-guide/organizations/team-management.md), [Project Team Access](../user-guide/projects/team-access.md) and [Workspace Team Access](../user-guide/workspaces/team-access.md).
 
+### Run restrictions
+
+In 2.34.0, destroying has a separate `destroyJob` permission. Workspace settings can also limit applies to the configured branch and require approve permission when a template has no approval step. See [Run Restrictions](../user-guide/workspaces/run-restrictions.md) for defaults and [Recommended Settings](../getting-started/recommended-settings.md) for choosing controls for your workflow.
+
 ### How a run authenticates to your cloud
 
 [Dynamic provider credentials](../user-guide/workspaces/dynamic-provider-credentials/README.md) let a run assume a cloud role without a stored secret.

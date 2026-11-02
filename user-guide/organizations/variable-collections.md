@@ -46,3 +46,7 @@ When a job runs, variables are resolved in this order, with earlier sources winn
 {% hint style="warning" %}
 A variable collection can never override a workspace-level or global variable with the same key — it only fills in keys that aren't already set. Use priority to control conflicts **between** collections, not between a collection and the workspace itself.
 {% endhint %}
+
+### Sensitive values in 2.34.0
+
+A sensitive collection item cannot be changed back to non-sensitive. Changing the sensitive flag still requires management permission. This prevents previously hidden values from being exposed by clearing the flag. If you need a non-sensitive replacement, create it deliberately with a value suitable for disclosure.

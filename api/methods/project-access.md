@@ -12,7 +12,7 @@ To use this endpoint you should have "manageWorkspace" access at team level or b
 | ----- | --------------------------------------------------------------------------------------------- |
 | admin | Full control: manage workspaces, plan/approve jobs, manage project team access                |
 | write | Manage workspaces, plan and apply jobs                                                        |
-| plan  | Plan jobs only (cannot approve or apply)                                                      |
+| plan  | Queue runs; does not grant approve permission. Use `requireApproveToApply` to restrict ungated applies.                                                      |
 | read  | Read-only access (no changes allowed)                                                         |
 
 ### Entity fields:
@@ -27,6 +27,8 @@ To use this endpoint you should have "manageWorkspace" access at team level or b
 | data.attributes.planJob         | boolean | Permission to plan jobs within the project                               |
 | data.attributes.approveJob      | boolean | Permission to approve and apply jobs within the project                  |
 | data.attributes.manageState     | boolean | Permission to manage Terraform state within the project                  |
+
+In 2.34.0, `data.attributes.destroyJob` controls destroy permission for Custom access and defaults to `true`. Admin/Write allow destroy; Plan/Read do not. See [Run Restrictions](../../user-guide/workspaces/run-restrictions.md#control-who-can-destroy).
 
 ### Example:
 

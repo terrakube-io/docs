@@ -83,3 +83,6 @@ Click the **Delete** button next to the variable you want to delete.
 
 Click **Yes** to confirm your action.
 
+### Sensitive values in 2.34.0
+
+A sensitive workspace variable cannot be changed back to non-sensitive. Changing the sensitive flag still requires management permission. This prevents previously hidden values from being exposed by clearing the flag. If you need a non-sensitive replacement, create it deliberately with a value suitable for disclosure.

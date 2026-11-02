@@ -63,3 +63,7 @@ To better understand Terrakube Configuration Language job templates please refer
 {% hint style="info" %}
 The complete OpenAPI specification is available as [terrakube-api.json](../../.gitbook/assets/terrakube-api.json), and in the UI under **Help & Support → API Docs**.
 {% endhint %}
+
+### Run checks in 2.34.0
+
+Creating a job requires plan permission. Workspace branch restrictions and approval rules apply to REST/GraphQL too, and destroy runs have a separate `destroyJob` permission. An explicit `commitId` is refused for apply-capable templates when branch restriction is enabled. See [Run Restrictions](../../user-guide/workspaces/run-restrictions.md) for the checks and defaults, and [API-driven Workflow](../../user-guide/workspaces/api-driven-workflow.md) for run-only variables.

@@ -15,7 +15,8 @@ Terrakube is an open source platform for running Terraform and OpenTofu remotely
 | I want to... | Go to |
 | --- | --- |
 | Try Terrakube on my machine | [Getting Started](getting-started/getting-started.md) |
-| Deploy it for my team | [Deployment](getting-started/deployment/README.md) and [User Management](getting-started/user-management/README.md) |
+| Deploy and configure it for my team | [Production Setup](getting-started/production-setup.md): deployment, recommended controls, teams, workspaces, then validation |
+| Choose production settings | [Recommended Settings](getting-started/recommended-settings.md) |
 | Run my first workspace | [Organizations](user-guide/organizations/README.md), then [Workspaces](user-guide/workspaces/README.md) |
 | Connect a git provider | [VCS Providers](user-guide/vcs-providers/README.md) |
 | Use it from the Terraform CLI | [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md) |

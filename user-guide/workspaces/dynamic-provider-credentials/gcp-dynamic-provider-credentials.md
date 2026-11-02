@@ -71,3 +71,9 @@ resource "google_storage_bucket" "auto-expire" {
 ### Running Example
 
 <figure><img src="../../../.gitbook/assets/image (462).png" alt=""><figcaption></figcaption></figure>
+
+### Workspace trust boundary
+
+The 2.34.0 setup example matches `assertion.sub` exactly and also pins `assertion.terrakube_workspace_id` to the created workspace. A prefix check such as `startsWith` could trust `production2` when configured for `production`; checking the ID also prevents a different workspace reusing the name from inheriting access.
+
+Use the updated [2.34.0-rc.1 setup example](https://github.com/terrakube-io/terrakube/blob/2.34.0-rc.1/dynamic-credential-setup/gcp/main.tf) when reviewing your provider's attribute condition. Upgrading Terrakube does not change existing GCP trust configuration; apply the change there too.

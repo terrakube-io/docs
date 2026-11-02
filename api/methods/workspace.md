@@ -20,6 +20,13 @@ To use this endpoint you should have "manageWorkspace" access at team level and 
 | data.relationships.project.data.type    | string  | Should be "project" (OPTIONAL)                      |
 | data.relationships.project.data.id      | string  | Project ID to assign this workspace to (OPTIONAL)   |
 
+The 2.34.0 workspace controls below default to `false`. Only a superuser or organization-level workspace manager can change them; see [Run Restrictions](../../user-guide/workspaces/run-restrictions.md).
+
+| Path | Type | Description |
+| --- | --- | --- |
+| data.attributes.restrictApplyToConfiguredBranch | boolean | Restrict apply/destroy runs to the configured branch, with source-specific checks. |
+| data.attributes.requireApproveToApply | boolean | Require approve permission to start an apply without a preceding approval step. |
+
 ### Example:
 
 ```

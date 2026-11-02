@@ -2,6 +2,12 @@
 
 Templates allows you to customize the job workflow inside each workspace. You can define multiple templates inside each organization. Templates are written in yaml and you can specify each step to be executed once you use this template in the workspace. Lets see an example for a basic template:
 
+### Permissions and approval steps in 2.34.0
+
+A template without an approval step can apply as soon as its preceding steps finish. Enable the workspace's `requireApproveToApply` setting to require approve permission when starting such a run. To require review, add an explicit `approval` step and name its team; the permission setting does not add a gate itself.
+
+Destroy templates also enforce destroy permission. A plan-only template, for branch-restricted PR runs, must contain only `terraformPlan` or `terraformPlanDestroy` flow steps. See [Run Restrictions](../../workspaces/run-restrictions.md) and [Recommended Settings](../../../getting-started/recommended-settings.md).
+
 #### Example 1:
 
 ```

@@ -13,6 +13,8 @@ Every Terrakube service is configured with environment variables. This section l
 
 Most topics have a task-oriented guide that explains *why* and *when* to change a setting; this reference is for looking up the exact name and default. Names are case sensitive.
 
+For the setup order, follow [Production Setup](../../../getting-started/production-setup.md). For production choices and trade-offs, start with [Recommended Settings](../../../getting-started/recommended-settings.md). These references describe shipped defaults, which may be less restrictive than the recommended configuration.
+
 ### How to set them
 
 | Deployment | Where |
