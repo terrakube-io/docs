@@ -8,13 +8,9 @@ Click the organizations list on the main menu and then click the **Create new or
 
 <figure><img src="../../.gitbook/assets/organizations-list.png" alt="The Organizations page"><figcaption><p>The Organizations page</p></figcaption></figure>
 
-.png>)
-
 Provide organization name and description and click the Create organization button. The name can contain only letters and numbers.
 
 <figure><img src="../../.gitbook/assets/organization-new.png" alt="The New Organization form"><figcaption><p>The New Organization form</p></figcaption></figure>
-
-.png>)
 
 Then you will redirected to the Organization Settings page where you can define your teams, this is step is important so you can assign the permissions to users, otherwise you won't be able to create workspaces and modules inside the organization.
 
