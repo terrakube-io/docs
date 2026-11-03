@@ -1,0 +1,57 @@
+# Vcs
+
+This endpoint is used to create, update, search or delete vcs (version control system) information inside a Terrakube organization so you can connect to private git repositories to run modules and workspaces
+
+{% hint style="warning" %}
+To use this endpoint you should have "manageVcs" access at team level and a Terrakube Organization
+{% endhint %}
+
+### Entity fields:
+
+| Path                         | Type   | Description                                                |
+| ---------------------------- | ------ | ---------------------------------------------------------- |
+| data.type                    | string | Should be "vcs"                                            |
+| data.attributes.name         | string | Unique vcs name for an Terrakube organization              |
+| data.attributes.description  | string | Free text for description                                  |
+| data.attributes.vcsType      | string | Supported values: GITHUB, GITLAB, BITBUCKET, AZURE\_DEVOPS |
+| data.attributes.clientID     | string | Client Application Id                                      |
+| data.attributes.clientSecret | string | Client Application secret                                  |
+
+### Example:
+
+```
+{
+  "data": {
+    "type": "vcs",
+    "attributes": {
+      "name": "GitHubConnection",
+      "description": "Private repositories inside GitHub",
+      "vcsType": "GITHUB",
+      "clientId": "{{githubClientId}}",
+      "clientSecret": "{{githubClientSecret}}"
+    }
+  }
+}
+```
+
+### Supported Operations
+
+{% openapi src="../../.gitbook/assets/v1_4.yml" path="/organization/{organizationId}/vcs/{vcsId}" method="get" %}
+[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/v1_4.yml" path="/organization/{organizationId}/vcs" method="post" %}
+[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/v1_4.yml" path="/organization/{organizationId}/vcs/{vcsId}" method="delete" %}
+[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% endopenapi %}
+
+{% openapi src="../../.gitbook/assets/v1_4.yml" path="/organization/{organizationId}/vcs/{vcsId}" method="patch" %}
+[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% endopenapi %}
+
+{% hint style="info" %}
+For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
+{% endhint %}
