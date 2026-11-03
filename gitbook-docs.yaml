@@ -14,7 +14,7 @@ site:
       title: 2.34.0 - unreleased
       path: 2.34.0
       content:
-        directory: ./2.34.0
+        directory: null
     - type: space
       key: space-7
       title: 2.33.0
