@@ -16,6 +16,7 @@ routing by path. You need one DNS record, one TLS certificate and one ingress.
 | `/api/private-registry/...` | Registry |
 | `/api/...` | API |
 | `/webhook/...`, `/callback/...` | API (webhooks and OAuth redirects registered before a migration) |
+| `/access-token/...` | API (team tokens, as called by released Terraform provider and CLI versions) |
 | `/dex/...` | Dex |
 | everything else | UI |
 
@@ -50,6 +51,10 @@ Explicitly set variables always win over derived values. Keep these on internal 
 `AzBuilderApiUrl` (registry, executor), `TerrakubeApiUrl` (executor) and `AzBuilderExecutorUrl`
 (API). Server-to-server traffic does not need to go through the shared ingress.
 
+Executors and agents that run outside the cluster can use the shared host instead: set
+`AzBuilderApiUrl` and `TerrakubeApiUrl` to `<public>/api`. Run output and state links that the
+executor stores for users always use `<public>/api` in single-domain mode.
+
 For the UI, set these in `env-config.js`:
 
 ```js
@@ -78,13 +83,11 @@ registry hostname.
 
 ## Setups
 
+- **Helm:** set `ingress.singleDomain.enabled: true` (chart 4.8.0 or later). The chart renders one ingress or HTTPRoute from the route table.
 - **Docker Compose:** in the Terrakube repository, run `docker compose -f docker-compose.yml -f docker-compose.single-domain.yml up -d` from `docker-compose/`.
 
 ## Known limitations
 
-- Releases of the Terraform provider, the CLI and the GitHub Action from before 2.35 call team-token
-  endpoints at `/access-token/v1/...`. On a shared host those requests reach the UI. Use client
-  releases that call `/api/access-token/v1/...`, or keep the API's own hostname routed.
 - Serving Terrakube under a sub-path of another site, such as `https://example.com/terrakube`, is
   not supported.
 
