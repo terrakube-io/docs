@@ -15,6 +15,7 @@
   * [Minikube](getting-started/deployment/minikube.md)
   * [Minikube + HTTPS](getting-started/deployment/minikube-+-https.md)
   * [Ingress Configuration](getting-started/deployment/ingress-configuration.md)
+  * [Single-Domain Deployment](getting-started/deployment/single-domain.md)
   * [User Authentication (DEX)](getting-started/deployment/user-authentication-dex.md)
   * [Storage backend](getting-started/deployment/storage-backend/README.md)
     * [Azure Storage Account](getting-started/deployment/storage-backend/azure-storage-account.md)
