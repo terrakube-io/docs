@@ -30,6 +30,16 @@ If you cannot see who has access to projects (you do not have the Manage Workspa
 
 You only see the projects you can access: projects in organizations where your team can manage workspaces, and projects your team has been given access to.
 
+### Sharing a view and getting to the detail
+
+The projects list and a project's workspace list keep their search, filters, sort and page in the address, so you can bookmark a view, send the link to a colleague, and come back to it with the browser's back button. For example `.../projects?chip=attention` lists the projects that need attention, and `.../projects/<id>/workspaces?status=failed` lists a project's failed workspaces. A link with values the page does not recognise opens the default view instead of failing.
+
+Every number leads to what it counts. On the list, the attention count and the policy roll-up open the project's workspaces filtered to the problem. On a project's Overview, each tile and each status in the health legend does the same, and the status next to a workspace in "Needs attention" or "Recent activity" opens that workspace's runs, which is where a failure or a pending approval is read. "Needs attention" mixes failed runs, runs waiting for approval and policy violations, which one filter cannot show together, so it opens the worst one present (failed, then waiting, then non-compliant).
+
+Press `/` anywhere outside a text field to jump to the search box on the projects list.
+
+When a control is disabled, hovering or focusing it says what is missing, for example "Creating a workspace here needs write access to this project, or Manage Workspaces in the organization."
+
 ### The project page
 
 Inside a project the left menu changes to **Back to projects**, **Overview**, **Workspaces (n)**, **Policies**, **Team access** and **Settings**. A banner under the title says what you can do here, for example "Your access in this project: Write, through team payments-devs. You cannot manage access or delete the project." **Edit** opens Settings and **New workspace** creates a workspace in the project.
