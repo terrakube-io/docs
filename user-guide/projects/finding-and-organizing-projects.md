@@ -23,7 +23,13 @@ You only see the projects you can access: projects in organizations where your t
 
 A project opens on its **Overview**, which shows the number of workspaces, how many are running or queued and how many are locked, the health bar, and an alert when workspaces need attention.
 
-The tab a project opens on can be changed with **Open projects on** at the bottom of the Overview. The choice is remembered in your browser.
+The tab a project opens on can be set at three levels, and the first one that is set wins:
+
+1. **You**: **Open this project on** at the bottom of the Overview. It is remembered in your browser and applies to every project. Choose **Project default** to forget it.
+2. **The project**: **Opens on** under the project's **General** tab.
+3. **The organization**: **Project landing tab** under the organization's **General settings**.
+
+When none is set, projects open on the Overview.
 
 The other tabs are:
 
@@ -44,9 +50,17 @@ Moving a workspace changes who can access it: teams on the old project lose proj
 
 Tags set under **General** > **Default tags** are copied onto workspaces that are created in the project or moved into it. They are copied once, so:
 
-* workspaces already in the project are not changed when you add a default tag
+* workspaces already in the project are not changed when you add a default tag, unless you choose **Apply to existing workspaces**
 * a tag the workspace already has keeps its own value
 * removing a default tag does not remove it from any workspace
+
+**Apply to existing workspaces** first shows how many tags would be added to how many workspaces, and only changes anything when you confirm. It adds only tags a workspace is missing, so running it again changes nothing. Scripts can use the same preview:
+
+```
+POST /access-token/v1/projects/organization/{organizationId}/project/{projectId}/default-tags/apply?dryRun=true
+```
+
+Pass `dryRun=false` to apply. The caller needs to manage the project; anyone else gets `404`.
 
 Because the tags are real workspace tags, tag filters and tag-based policy sets behave exactly as before.
 
