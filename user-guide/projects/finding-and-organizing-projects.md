@@ -4,47 +4,55 @@ From Terrakube 2.35 the projects list shows the health of each project at a glan
 
 ### The projects list
 
-Each project shows its number of workspaces, a health bar and the time of its last run. The health bar splits the project's workspaces into failed, waiting for approval, running or queued, applied, and never run.
+Under 25 projects the list opens as cards, above that as a table. Your choice (**Cards** or **Table**) is remembered in your browser and wins over that default.
 
-A project **needs attention** when it has workspaces that failed, are waiting for approval, or are not compliant with policy. Locked workspaces are not counted as needing attention, because a lock is usually deliberate.
+Each project shows its number of workspaces, a health bar and the time of its last run. The health bar splits the project's workspaces into completed, failed, running, queued (hatched), waiting for approval and never run. The key is shown under the list.
 
-Searching, sorting and paging happen on the server, so only the page you are looking at is loaded. You can:
+A project **needs attention** when it has workspaces that failed, are waiting for approval, or are not compliant with policy. Locked workspaces are not counted as needing attention, because a lock is usually deliberate. A card shows a red "N need attention" badge for failed or waiting runs, and an amber "N non-compliant" badge when policy is the only issue.
 
-* search by name or description
-* sort by needs attention (the default), name, last run, or number of workspaces
-* show only the projects that need attention
-* switch between a table and cards; the choice is remembered in your browser
+The chips under the search box filter the list on the server, and each shows how many projects it matches:
 
-Workspaces that are not in any project are mentioned under the list, with a link to the workspaces page.
+| Chip | Shows |
+| --- | --- |
+| All | every project you can see |
+| Needs attention | projects with failed, waiting or non-compliant workspaces |
+| My projects | projects one of your teams has been given access to |
+| Empty | projects with no workspaces |
+| Stale (90d) | projects whose last run was more than 90 days ago |
+
+Searching, sorting and paging also happen on the server, so only the page you are looking at is loaded, however many projects there are. In the table every column header sorts. If a count cannot be loaded it is shown as a dash with a **Retry** button, never as 0.
+
+Workspaces that are in no project appear as a dashed **Unassigned** card, or an italic row in the table, with a link to move them into a project.
+
+The **Policy** column rolls up each workspace's policy compliance: "N non-compliant", "Compliant", or "Not evaluated" when no workspace has been evaluated yet.
 
 You only see the projects you can access: projects in organizations where your team can manage workspaces, and projects your team has been given access to.
 
 ### The project page
 
-A project opens on its **Overview**, which shows the number of workspaces, how many are running or queued and how many are locked, the health bar, and an alert when workspaces need attention.
+Inside a project the left menu changes to **Back to projects**, **Overview**, **Workspaces (n)**, **Policies**, **Team access** and **Settings**. A banner under the title says what you can do here, for example "Your access in this project: Write, through team payments-devs. You cannot manage access or delete the project." **Edit** opens Settings and **New workspace** creates a workspace in the project.
+
+The **Overview** shows four tiles (workspaces, need attention, queued now with the longest wait, and teams with access), the health bar with the count of each status, the workspaces that need attention, and recent activity.
 
 The tab a project opens on can be set at three levels, and the first one that is set wins:
 
 1. **You**: **Open this project on** at the bottom of the Overview. It is remembered in your browser and applies to every project. Choose **Project default** to forget it.
-2. **The project**: **Opens on** under the project's **General** tab.
+2. **The project**: **Opens on** under the project's **Settings**.
 3. **The organization**: **Project landing tab** under the organization's **General settings**.
 
 When none is set, projects open on the Overview.
 
-The other tabs are:
+**Policies** lists the policy sets that apply to every workspace in the project: global sets, and sets attached to the project itself. **Team access** lists the teams with access. If your own access does not let you see who has access, the page says so instead of showing an empty list.
 
-| Tab | Purpose |
-| --- | --- |
-| Workspaces | The project's workspaces. Select several to move them to another project or remove them from the project. |
-| Variables | Variable collections that apply to every workspace in the project. See [Variable Collections](../organizations/variable-collections.md). |
-| Teams | Team access to the project. |
-| General | Name, description, default tags and deleting the project. |
+### Workspaces
 
-### Moving workspaces in bulk
+The **Workspaces** tab uses the same filters as the organization's workspace list: search, status, policy and tags. Tags that came from the project's default tags are marked "from project". Rows can also be shown as cards.
 
-On the **Workspaces** tab, tick the workspaces and choose **Move to project** or **Remove from project**. Each workspace is changed separately and a failure on one does not stop the others; the result message tells you how many succeeded and why any failed.
+Tick workspaces to act on several at once. The bar says how many are selected and that the selection covers the current page only, and offers **Add tag**, **Move to project**, **Lock** or **Unlock**, and **Remove from project**. Each workspace is changed separately and a failure on one does not stop the others; the result message tells you how many succeeded and why any failed. An empty project offers **New workspace** and **Move existing**.
 
-Moving a workspace changes who can access it: teams on the old project lose project-level access to it and teams on the destination project gain it. Access granted directly on the workspace is kept.
+### Moving workspaces
+
+Before a move is confirmed, the dialog shows what it changes: which teams gain or lose access, which policy sets start or stop applying, which variable collections start or stop applying, and which default tags the workspaces will inherit. Access granted directly on a workspace is kept. If you cannot see who has access to a project, the dialog says so instead of guessing.
 
 ### Default tags
 
@@ -66,7 +74,17 @@ Because the tags are real workspace tags, tag filters and tag-based policy sets 
 
 ### Deleting a project
 
-A project cannot be deleted while it still has workspaces or attached variable collections. The error tells you how many are in the way. Move or delete the workspaces, and detach the collections, then delete the project.
+**Delete Project** under Settings opens a pre-flight that says what the project contains (workspaces and team access rows), which policy attachments and exemptions would be removed, which project-scoped variable collections would be detached, and how many default tags would go. Type the project name to confirm. If the project still has workspaces the button reads **Move to Unassigned, then delete**: the workspaces are moved out first (they are not deleted), then the policy attachments, exemptions and collection attachments are removed, then the project.
+
+The server enforces the same rule for scripts and the API. Deleting a project that still has workspaces, variable collections, policy attachments or policy exemptions answers `409` and says how many are in the way.
+
+### Configuration
+
+**Settings** also holds the project's configuration:
+
+* **Defaults for new workspaces**: a Terraform version and an execution mode. They are applied when a workspace is created in the project without a value, and the create form prefills the version. Each is labelled "Defaulted from project" or "Defaulted from organisation".
+* **Variables**: the variable collections attached to the project. See [Variable Collections](../organizations/variable-collections.md).
+* **Effective variables**: choose a workspace to see the variables its runs will use and where each comes from (the workspace, the organization's global variables, or a collection and its scope). Sensitive values are never shown. Each source links to where it is edited.
 
 ### Permissions
 
