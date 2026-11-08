@@ -38,19 +38,17 @@ Terrakube provides several [built-in actions](built-in-actions/) that you can st
 
 ### Developing Actions
 
-If you are interested in creating your own actions, you only need knowledge of JavaScript and React, as an action is essentially a React component. For more details please check our [quick start guide](developing-actions/quick-start.md), or visit our [GitHub Terrakube Actions repository](https://github.com/AzBuilder/terrakube-actions) to see some examples, contribute new actions or suggest improvements.
+If you are interested in creating your own actions, you only need knowledge of JavaScript and React, as an action is essentially a React component. For more details please check our [quick start guide](developing-actions/quick-start.md), or visit our [GitHub Terrakube Actions repository](https://github.com/terrakube-io/terrakube-actions) to see some examples, contribute new actions or suggest improvements.
 
 ### Creating an Action
 
 After you develop your action. To create a new action in Terrakube:
 
+<figure><img src="../../../.gitbook/assets/actions-list.png" alt="Actions in an organization"><figcaption><p>Actions in an organization</p></figcaption></figure>
+
 1. Navigate to the settings in any Terrakube organization.
 
-<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
-
 2. Click the `Add Action` button.
-
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 3. Provide the required information as detailed in the table below:
 
@@ -69,8 +67,5 @@ After you develop your action. To create a new action in Terrakube:
 
 4. Click the `Save` button.
 
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
-
 \
-
 

@@ -34,18 +34,18 @@ To use this endpoint you should have "manageVcs" access at team level and a Terr
 
 ### Supported Operations
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/organization/{organizationId}/ssh" method="get" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/ssh" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/organization/{organizationId}/ssh" method="post" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/ssh" method="post" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/organization/{organizationId}/ssh/{sshId}" method="delete" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/ssh/{sshId}" method="delete" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/organization/{organizationId}/ssh/{sshId}" method="patch" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/organization/{organizationId}/ssh/{sshId}" method="patch" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}

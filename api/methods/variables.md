@@ -38,22 +38,22 @@ To use this endpoint you should have "manageWorkspace" access at team level and 
 
 ### Supported Operations
 
-{% openapi src="../../.gitbook/assets/v2_6.yaml" path="/workspace/{workspaceId}/variable/{variableId}" method="get" %}
-[v2_6.yaml](../../.gitbook/assets/v2_6.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/variable/{variableId}" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v1_4.yml" path="/workspace/{workspaceId}/variable" method="post" %}
-[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/variable" method="post" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v1_4.yml" path="/workspace/{workspaceId}/vcs/{vcsId}" method="delete" %}
-[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/vcs/{vcsId}" method="delete" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v1_4.yml" path="/workspace/{workspaceId}/vcs/{vcsId}" method="patch" %}
-[v1_4.yml](../../.gitbook/assets/v1_4.yml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/workspace/{workspaceId}/vcs/{vcsId}" method="patch" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
+The complete OpenAPI specification is available as [terrakube-api.json](../../.gitbook/assets/terrakube-api.json), and in the UI under **Help & Support → API Docs**.
 {% endhint %}

@@ -12,7 +12,7 @@ Managing workspace team access requires the **Manage Workspace** permission on t
 | ---------- | ---------------------------------------------------------- |
 | **Admin**  | Full control over this workspace                          |
 | **Write**  | Can plan, apply runs, and manage this workspace's settings |
-| **Plan**   | Can queue plans but cannot apply changes                   |
+| **Plan** | Can queue runs; does not grant approve permission; enable the workspace approval rule to restrict ungated applies. |
 | **Read**   | Read-only access to this workspace and its runs            |
 | **Custom** | Fine-grained permissions, picked individually               |
 
@@ -24,6 +24,7 @@ When **Custom** is selected:
 | ------------------- | ---------------------------------------------------- |
 | Plan Runs            | Queue plan runs on this workspace                    |
 | Apply Runs             | Approve/apply runs on this workspace                 |
+| Destroy Runs | Start a destroy without an approval step, or approve a destroy run. |
 | Manage Workspace      | Administrate this workspace's settings                |
 | Manage State           | View the terraform/tofu state for this workspace from the UI |
 
@@ -36,3 +37,9 @@ Open the workspace, go to **Settings > Team Access**, select a team and a role, 
 {% hint style="info" %}
 This tab can also be managed via the `terrakube_workspace_access` resource in the [Terrakube Terraform provider](https://registry.terraform.io/providers/AzBuilder/terrakube), or the [Workspace Access](../terrakube-cli/commands/workspace-access/) CLI commands.
 {% endhint %}
+
+### Run permissions in 2.34.0
+
+Admin and Write include **Destroy runs**; Plan and Read do not. For Custom access, `destroyJob` defaults to **true**, including existing entries on upgrade. Review it when separating planning, deployment and destruction duties. A destroy waiting for approval can be queued by a planner, but the approver also needs destroy permission.
+
+The Plan role does not grant approval permission. To prevent planners from starting an apply through a template without an approval step, enable `requireApproveToApply` on the workspace. Permissions are additive: a grant at another level can still allow the operation. See [Run Restrictions](run-restrictions.md) for the full rules, including ordinary applies that delete resources.

@@ -16,7 +16,7 @@ To authenticate users Terrakube implement [DEX](https://dexidp.io/) so you can a
 Any dex connector that implements the "groups" scope should work without any issue
 {% endhint %}
 
-The Terrakube [helm chart](https://azbuilder.github.io/terrakube-helm-chart/) is using DEX as dependency, so you can quickly implement it using any exiting dex configuration.
+The Terrakube [Helm chart](helm-chart.md) is using DEX as dependency, so you can quickly implement it using any exiting dex configuration.
 
 {% hint style="danger" %}
 Make sure to update the dex configuration when deploying terrakube in a real kubernetes environment, by default it is using a very basic openLDAP with some sample data. To disable udpate security.useOpenLDAP in your terrakube.yaml
@@ -112,3 +112,12 @@ dex:
 {% hint style="success" %}
 Dex configuration examples can be found [here](https://dexidp.io/docs/connectors/).
 {% endhint %}
+
+### Terraform login
+
+The `redirectURIs` above include `http://localhost:10000/login` and `http://localhost:10001/login`, which the Terraform CLI uses for a plain Dex login. If you enable [login through the Terrakube OAuth broker](../../user-guide/workspaces/cli-driven-workflow.md#login-through-the-terrakube-oauth-broker) (`TerraformLoginEnabled`), also add the API callback to the same client:
+
+```yaml
+      redirectURIs:
+      - 'https://terrakube-api.example.com/oauth/callback'
+```

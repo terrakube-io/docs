@@ -20,7 +20,8 @@ defaultBuckets: "terrakube"
 ```
 
 ```
-kubectl install --values minio-setup.yaml miniostorage bitnami/minio -n terrakube
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install --values minio-setup.yaml miniostorage bitnami/minio -n terrakube
 ```
 
 Once the minio storage is installed lets get the service name.

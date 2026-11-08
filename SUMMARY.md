@@ -2,16 +2,25 @@
 
 * [Introduction](README.md)
 * [Updates](updates.md)
+  * [Older Updates](updates-archive.md)
+
+## How it works
+
+* [Architecture](getting-started/design-and-architecture.md)
+* [Run Lifecycle](concepts/run-lifecycle.md)
+* [Identity and Access](concepts/identity-and-access.md)
+* [Security](getting-started/security.md)
 
 ## Getting started
 
-* [Architecture](getting-started/design-and-architecture.md)
-* [Security](getting-started/security.md)
 * [Getting Started](getting-started/getting-started.md)
+* [Your First Run](getting-started/first-run.md)
+* [Production Setup](getting-started/production-setup.md)
+* [Recommended Settings](getting-started/recommended-settings.md)
 * [Docker Images](getting-started/docker-images.md)
 * [Docker Compose](getting-started/docker-compose.md)
 * [Deployment](getting-started/deployment/README.md)
-  * [Helm Chart](getting-started/deployment/docker-compose.md)
+  * [Helm Chart](getting-started/deployment/helm-chart.md)
   * [Minikube](getting-started/deployment/minikube.md)
   * [Minikube + HTTPS](getting-started/deployment/minikube-+-https.md)
   * [Ingress Configuration](getting-started/deployment/ingress-configuration.md)
@@ -32,7 +41,10 @@
   * [External Redis](getting-started/deployment/external-redis.md)
   * [Proxy Configuration](getting-started/deployment/proxy-configuration.md)
   * [Token Security](getting-started/deployment/token-security.md)
+  * [Executor HTTP State Backend](getting-started/deployment/http-state-backend.md)
   * [Open Telemetry](getting-started/deployment/open-telemetry.md)
+  * [Executor Log Output](getting-started/deployment/executor-log-output.md)
+* [Upgrading](getting-started/upgrading.md)
 * [Development](getting-started/development/README.md)
   * [Local Dev Container](getting-started/development/dev-container.md)
   * [GitHub Codespaces](getting-started/development/github-codespaces.md)
@@ -40,15 +52,15 @@
   * [Azure Active Directory](getting-started/user-management/azure-active-directory.md)
   * [Google Cloud Identity](getting-started/user-management/google-cloud-identity.md)
   * [Amazon Cognito](getting-started/user-management/amazon-cognito.md)
-  * [Docker Desktop](getting-started/user-management/docker-desktop.md)
+  * [GitHub (Docker Desktop)](getting-started/user-management/docker-desktop.md)
   * [Keycloak](getting-started/user-management/keycloak.md)
 
-## User Guide
+## Set up
 
 * [Organizations](user-guide/organizations/README.md)
   * [Creating an Organization](user-guide/organizations/organizations.md)
-  * [Global Variables](user-guide/organizations/global-variables.md)
   * [Team Management](user-guide/organizations/team-management.md)
+  * [Global Variables](user-guide/organizations/global-variables.md)
   * [API Tokens](user-guide/organizations/api-tokens.md)
   * [Federated Identity](user-guide/organizations/federated-identity.md)
   * [Variable Collections](user-guide/organizations/variable-collections.md)
@@ -73,26 +85,33 @@
   * [Bitbucket](user-guide/vcs-providers/bitbucket.com.md)
   * [Azure DevOps](user-guide/vcs-providers/azure-devops.md)
   * [SSH](user-guide/vcs-providers/ssh.md)
+
+## Run Terraform
+
 * [Workspaces](user-guide/workspaces/README.md)
-  * [Overview](user-guide/workspaces/overview.md)
   * [Creating Workspaces](user-guide/workspaces/creating-workspaces.md)
-  * [Starting a Run](user-guide/workspaces/starting-a-run.md)
-  * [Webhooks](user-guide/workspaces/webhooks.md)
   * [Team Access](user-guide/workspaces/team-access.md)
+  * [Variables](user-guide/workspaces/variables.md)
+  * [Run Restrictions](user-guide/workspaces/run-restrictions.md)
+  * [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md)
+  * [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md)
+  * [Starting a Run](user-guide/workspaces/starting-a-run.md)
+  * [Overview](user-guide/workspaces/overview.md)
+  * [Webhooks](user-guide/workspaces/webhooks.md)
+  * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
+  * [Run Triggers](user-guide/workspaces/run-triggers.md)
   * [Job Output](user-guide/workspaces/job-output.md)
   * [Notifications](user-guide/workspaces/notifications.md)
   * [Terraform State](user-guide/workspaces/terraform-state.md)
   * [Share Workspace State](user-guide/workspaces/share-workspace-state.md)
   * [Provider Cache](user-guide/workspaces/provider-cache.md)
-  * [Variables](user-guide/workspaces/variables.md)
+  * [Module Cache](user-guide/workspaces/module-cache.md)
+  * [Plan Artifacts](user-guide/workspaces/plan-artifacts.md)
   * [Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/README.md)
     * [AWS Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/aws-dynamic-provider-credentials.md)
     * [Azure Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/azure-dynamic-provider-credentials.md)
     * [GCP Dynamic Provider Credentials](user-guide/workspaces/dynamic-provider-credentials/gcp-dynamic-provider-credentials.md)
     * [OpenBao/Vault](user-guide/workspaces/dynamic-provider-credentials/openbao-vault.md)
-  * [Workspace scheduler](user-guide/workspaces/workspace-scheduler.md)
-  * [API-driven Workflow](user-guide/workspaces/api-driven-workflow.md)
-  * [CLI-driven Workflow](user-guide/workspaces/cli-driven-workflow.md)
   * [Ephemeral Workspaces](user-guide/workspaces/ephemeral-workspaces.md)
   * [Actions](user-guide/workspaces/actions/README.md)
     * [Developing Actions](user-guide/workspaces/actions/developing-actions/README.md)
@@ -108,13 +127,24 @@
       * [Restart Azure VM](user-guide/workspaces/actions/built-in-actions/restart-azure-vm.md)
       * [Azure Monitor](user-guide/workspaces/actions/built-in-actions/terrakube.azure-monitor.md)
       * [Open AI](user-guide/workspaces/actions/built-in-actions/terrakube.open-ai.md)
+
+## Govern
+
+* [Policy Governance (OPA)](user-guide/policy-enforcement-opa.md)
+  * [Template-based OPA checks (legacy)](user-guide/policy-enforcement-opa-templates.md)
+* [Cost Estimation](user-guide/cost-estimation.md)
+* [Drift Detection](user-guide/drift-detection.md)
+
+## Private registry
+
 * [Private Registry](user-guide/private-registry/README.md)
   * [Publishing Private Modules](user-guide/private-registry/publishing-private-modules.md)
   * [Using Private Modules](user-guide/private-registry/using-private-modules.md)
   * [Using Providers](user-guide/private-registry/using-providers.md)
-* [Policy Enforcement (OPA)](user-guide/policy-enforcement-opa.md)
-* [Cost Estimation](user-guide/cost-estimation.md)
-* [Drift Detection](user-guide/drift-detection.md)
+  * [Deprecating and Removing Versions](user-guide/private-registry/deprecating-and-removing-versions.md)
+
+## Integrate
+
 * [CI/CD Integration](user-guide/ci-cd-integration/README.md)
   * [Github Actions](user-guide/ci-cd-integration/github-actions.md)
   * [Federated OIDC Authentication](user-guide/ci-cd-integration/federated-oidc-authentication.md)
@@ -338,23 +368,8 @@
       * [get](user-guide/terrakube-cli/commands/federated-claim/get.md)
       * [update](user-guide/terrakube-cli/commands/federated-claim/update.md)
       * [delete](user-guide/terrakube-cli/commands/federated-claim/delete.md)
-* [Reference](user-guide/reference/README.md)
-  * [Executor](user-guide/reference/executor/README.md)
-    * [Terraform Execution Flow](user-guide/reference/executor/terraform-execution-flow.md)
-    * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
-* [Migrating to Terrakube](user-guide/migrating-to-terrakube.md)
 
-## Learn
-
-* [What is Terrakube](learn/what-is-terrakube/README.md)
-  * [Section Overview](learn/what-is-terrakube/section-overview.md)
-  * [Terraform in a Nutshell](learn/what-is-terrakube/terraform-in-a-nutshell.md)
-  * [Terraform Challenges at Enterprise Level](learn/what-is-terrakube/terraform-challenges-at-enterprise-level.md)
-  * [Introducing Terrakube](learn/what-is-terrakube/introducing-terrakube.md)
-  * [Summary and Up Next](learn/what-is-terrakube/summary-and-up-next.md)
-* [Deploying using Terrakube](learn/deploying-using-terrakube.md)
-
-## API
+## API reference
 
 * [Getting started](api/getting-started.md)
 * [Methods](api/methods/README.md)
@@ -364,6 +379,8 @@
   * [Workspace](api/methods/workspace.md)
   * [Project](api/methods/project.md)
   * [Project Access](api/methods/project-access.md)
+  * [Run Trigger](api/methods/run-trigger.md)
+  * [Policy Set](api/methods/policy.md)
   * [Variables](api/methods/variables.md)
   * [History](api/methods/history.md)
   * [Jobs](api/methods/jobs.md)
@@ -381,3 +398,15 @@
   * [Collection Item](api/methods/collection-item.md)
   * [Collection Reference](api/methods/collection-reference.md)
   * [Federated Identity](api/methods/federated.md)
+
+## Reference
+
+* [Configuration Reference](user-guide/reference/configuration/README.md)
+  * [API](user-guide/reference/configuration/api.md)
+  * [Executor](user-guide/reference/configuration/executor.md)
+  * [Registry](user-guide/reference/configuration/registry.md)
+* [Troubleshooting](user-guide/reference/troubleshooting.md)
+* [Executor](user-guide/reference/executor/README.md)
+  * [Terraform Execution Flow](user-guide/reference/executor/terraform-execution-flow.md)
+  * [Terraform Versions](user-guide/reference/executor/terraform-versions.md)
+* [Migrating to Terrakube](user-guide/migrating-to-terrakube.md)

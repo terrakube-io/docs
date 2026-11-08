@@ -4,7 +4,7 @@
 
 The dynamic provider credential setup in AWS  can be done with the Terrraform code available in the following link:
 
-[https://github.com/AzBuilder/terrakube/tree/main/dynamic-credential-setup/aws](https://github.com/AzBuilder/terrakube/tree/main/dynamic-credential-setup/aws)
+[https://github.com/terrakube-io/terrakube/tree/main/dynamic-credential-setup/aws](https://github.com/terrakube-io/terrakube/tree/main/dynamic-credential-setup/aws)
 
 {% hint style="warning" %}
 The code will also create a sample workspace with all the require environment variables that can be used to test the functionality using the CLI driven workflow.
@@ -95,10 +95,8 @@ The role trust policy needs two additions: allow `sts:TagSession` alongside `sts
 ],
 "Condition": {
   "StringEquals": {
-    "terrakube-api.mydomain.com:aud": "aws.workload.identity"
-  },
-  "StringLike": {
-    "terrakube-api.mydomain.com:sub": "organization:my-org:workspace:*"
+    "terrakube-api.mydomain.com:aud": "aws.workload.identity",
+    "terrakube-api.mydomain.com:sub": "organization:my-org:workspace:my-workspace"
   },
   "ForAllValues:StringEquals": {
     "aws:TagKeys": [
@@ -110,7 +108,7 @@ The role trust policy needs two additions: allow `sts:TagSession` alongside `sts
 }
 ```
 
-This lets a single role serve every workspace in an organization while still scoping access per workspace, for example restricting an S3 prefix to the calling workspace's name:
+Session tags let the role's permissions scope access to the calling workspace, for example restricting an S3 prefix to its name:
 
 ```json
 {
@@ -126,3 +124,9 @@ This lets a single role serve every workspace in an organization while still sco
 ```
 
 You can further restrict accepted tag *values* (not just keys) with `aws:RequestTag/<key>` in the trust policy, to pin a role to a specific organization or workspace.
+
+### Workspace trust boundary
+
+The 2.34.0 setup example trusts the exact workspace subject using `StringEquals`. Use your organization and workspace names in the example above. An organization-wide `workspace:*` pattern requires `StringLike` and intentionally lets any matching workspace assume the role; choose it only when that broader trust is required.
+
+Upgrading Terrakube does not update existing IAM trust policies. Review roles created with earlier setup examples and apply the narrower trust policy yourself.

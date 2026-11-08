@@ -39,4 +39,9 @@ These controls are part of the Terrakube build and release process; they do not 
 
 There is one special group inside Terrakube called _**TERRAKUBE\_ADMIN**_, this is the only group that has access to create organizations and grant access to a teams to manage different organization features, you can also customize the group name if you want to use a different name depending on which [Dex connector](https://dexidp.io/docs/connectors/) you are using when running Terrakube.
 
-###
+
+### Recommended controls
+
+Start with [Recommended Settings](recommended-settings.md) for production workspace restrictions, run permissions, token policy and cloud trust. [Run Restrictions](../user-guide/workspaces/run-restrictions.md) explains the 2.34.0 workspace controls; [Token Security](deployment/token-security.md) covers issuance, revocation and Dex audiences.
+
+In 2.34.0, API checks also enforce organization ownership across jobs, templates, workspace relationships and variable collections. A valid object ID from another organization does not grant access to it. Integrations must use resources belonging to the same organization.

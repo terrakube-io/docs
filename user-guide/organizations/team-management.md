@@ -6,11 +6,7 @@ In Terrakube you can define user permissions inside your organization using team
 
 Once you are in the desired organization, click the **Settings** button and then in the left menu select the **Teams** option.
 
-<figure><img src="../../.gitbook/assets/image (363).png" alt=""><figcaption></figcaption></figure>
-
 Click the **Create team** button
-
-<figure><img src="../../.gitbook/assets/image (353).png" alt=""><figcaption></figcaption></figure>
 
 In the popup, provide the team name, then choose either a preset **role** or **Custom** permissions.
 
@@ -22,7 +18,7 @@ In the popup, provide the team name, then choose either a preset **role** or **C
 | ----------- | ------------------------------------------------------------ |
 | **Admin**   | Full control over all resources in the organization         |
 | **Write**   | Can plan, apply runs, and manage workspaces/state             |
-| **Plan**    | Can queue plans but cannot apply changes                      |
+| **Plan** | Can queue runs; does not grant approve permission; enable the workspace approval rule to restrict ungated applies. |
 | **Read**    | Read-only access to workspaces and runs                       |
 | **Custom**  | Fine-grained permissions, picked individually below           |
 
@@ -38,6 +34,7 @@ When **Custom** is selected, pick individual permissions:
 | -------------------------- | --------------------------------------------------------------------------------- |
 | Plan Runs                  | Allow members to queue plan runs                                                  |
 | Apply Runs                  | Allow members to approve/apply runs                                              |
+| Destroy Runs | Start a destroy without an approval step, or approve a destroy run. |
 | Manage Workspaces           | Allow members to create and administrate all workspaces within the organization    |
 | Manage Modules              | Allow members to create and administrate all modules within the organization       |
 | Manage Providers            | Allow members to create and administrate all providers within the organization     |
@@ -58,14 +55,14 @@ Now all the users inside the team will be able to manage the specific resources 
 
 Click the **Edit** button next to the team you want to edit
 
-<figure><img src="../../.gitbook/assets/image (330).png" alt=""><figcaption></figcaption></figure>
-
 Change the permissions you need and click the **Save team** button
-
-<figure><img src="../../.gitbook/assets/image (261).png" alt=""><figcaption></figcaption></figure>
 
 ### Delete a Team
 
 Click the **Delete** button next to the team you want to delete, and then click the Yes button to confirm the deletion. Please take in consideration the deletion is irreversible
 
-<figure><img src="../../.gitbook/assets/image (262).png" alt=""><figcaption></figcaption></figure>
+### Run permissions in 2.34.0
+
+Admin and Write include **Destroy runs**; Plan and Read do not. For Custom access, `destroyJob` defaults to **true**, including existing entries on upgrade. Review it when separating planning, deployment and destruction duties. A destroy waiting for approval can be queued by a planner, but the approver also needs destroy permission.
+
+The Plan role does not grant approval permission. To prevent planners from starting an apply through a template without an approval step, enable `requireApproveToApply` on the workspace. Permissions are additive: a grant at another level can still allow the operation. See [Run Restrictions](../workspaces/run-restrictions.md) for the full rules, including ordinary applies that delete resources.

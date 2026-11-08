@@ -2,6 +2,12 @@
 
 Templates allows you to customize the job workflow inside each workspace. You can define multiple templates inside each organization. Templates are written in yaml and you can specify each step to be executed once you use this template in the workspace. Lets see an example for a basic template:
 
+### Permissions and approval steps in 2.34.0
+
+A template without an approval step can apply as soon as its preceding steps finish. Enable the workspace's `requireApproveToApply` setting to require approve permission when starting such a run. To require review, add an explicit `approval` step and name its team; the permission setting does not add a gate itself.
+
+Destroy templates also enforce destroy permission. A plan-only template, for branch-restricted PR runs, must contain only `terraformPlan` or `terraformPlanDestroy` flow steps. See [Run Restrictions](../../workspaces/run-restrictions.md) and [Recommended Settings](../../../getting-started/recommended-settings.md).
+
 #### Example 1:
 
 ```
@@ -107,10 +113,10 @@ The previous example is using [Terratag](https://www.terratag.io/) to add the en
 Using templates you can define all the business logic you need to execute in your workspace, basically you can integrate terrakube with any external tool. For example you can use [Infracost](https://www.infracost.io/) to calculate the cost of the resources to be created in your workspace or verify some policies using [Open Policy Agent](https://www.openpolicyagent.org/).
 
 {% hint style="warning" %}
-Terrakube extensions can be stored inside a GIT repository that you can configure when starting the platform. This is an example repository that you can fork or customiza to create your custom extensions [https://github.com/AzBuilder/terrakube-extensions](https://github.com/AzBuilder/terrakube-extensions)
+Terrakube extensions can be stored inside a GIT repository that you can configure when starting the platform. This is an example repository that you can fork or customiza to create your custom extensions [https://github.com/terrakube-io/terrakube-extensions](https://github.com/terrakube-io/terrakube-extensions)
 {% endhint %}
 
-There are some tools that are very common, and you don't want repeat the same code everytime or maybe other engineer already created the code and the logic to integrate with a specific tool. For these cases, inside the template is possible to reuse some logic using [Terrakube extensions](https://github.com/AzBuilder/terrakube-extensions). Basically if someone else developed an integration with an external third party service, you don't need to implement it again, you can use the extension. Let's see how the template looks like using the [Terratag extension](https://github.com/AzBuilder/terrakube-extensions/tree/main/groovy/TerraTag):
+There are some tools that are very common, and you don't want repeat the same code everytime or maybe other engineer already created the code and the logic to integrate with a specific tool. For these cases, inside the template is possible to reuse some logic using [Terrakube extensions](https://github.com/terrakube-io/terrakube-extensions). Basically if someone else developed an integration with an external third party service, you don't need to implement it again, you can use the extension. Let's see how the template looks like using the [Terratag extension](https://github.com/terrakube-io/terrakube-extensions/tree/main/groovy/TerraTag):
 
 ```
 flow:
@@ -135,7 +141,7 @@ If you notice the above script is more compact as is reusing some logic. If you 
 Using Templates you can even customize the UI for each job, see [UI templates](ui-templates.md) for more details.
 
 {% hint style="info" %}
-To see the complete list for terrakube extensions see the [github repo](https://github.com/AzBuilder/terrakube-extensions). This repo is always growing so its possible the tool you need is already there. In this repo you can also see more templates examples for things like approvals, variable injection and so on.
+To see the complete list for terrakube extensions see the [github repo](https://github.com/terrakube-io/terrakube-extensions). This repo is always growing so its possible the tool you need is already there. In this repo you can also see more templates examples for things like approvals, variable injection and so on.
 {% endhint %}
 
 ### Persistent Context
@@ -148,42 +154,58 @@ If you need to store information generated on the steps defined in your template
 **Manage VCS Templates** permission is required to perform this action, please check [team-management.md](../team-management.md "mention") for more info
 {% endhint %}
 
-Once you are in the desired organization, click the **Settings** button, then in the left menu select the **Templates** option and click the **Add Template** button
+<figure><img src="../../../.gitbook/assets/templates-list.png" alt="Templates in an organization"><figcaption><p>Templates in an organization</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (397).png" alt=""><figcaption></figcaption></figure>
+Once you are in the desired organization, click the **Settings** button, then in the left menu select the **Templates** option and click the **Add Template** button
 
 You will see a list of some predefined templates than you can utilize as a quick start or if you prefer you can click the **Blank Template** to start from scratch
 
-<figure><img src="../../../.gitbook/assets/image (134).png" alt=""><figcaption></figcaption></figure>
-
 In the next screen you can define your template and when you are ready click the **Continue** button.
-
-<figure><img src="../../../.gitbook/assets/image (148).png" alt=""><figcaption></figcaption></figure>
 
 Finally, you can assign a name and description to your template and click the **Create Template** button.
 
-<figure><img src="../../../.gitbook/assets/image (124).png" alt=""><figcaption></figcaption></figure>
-
 Now you template is ready and you can start using it in any workspace within your organization.
-
-<figure><img src="../../../.gitbook/assets/image (412).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 By default Terrakube don't create any template, so you have to define the templates in your organization based on your requirements.
 {% endhint %}
 
+<figure><img src="../../../.gitbook/assets/template-new.png" alt="Creating a template: start from a blank template or a built-in integration"><figcaption><p>Creating a template: start from a blank template or a built-in integration</p></figcaption></figure>
+
 ### Editing a Template
 
 Click the **Edit** button next to the Template you would like to edit
 
-<figure><img src="../../../.gitbook/assets/image (135).png" alt=""><figcaption></figcaption></figure>
-
 Edit your template definition, description or name as desired and when you are ready click the **Save Template** button
-
-<figure><img src="../../../.gitbook/assets/image (393).png" alt=""><figcaption></figcaption></figure>
 
 ### Deleting a Template
 
 Click the **Delete** button next to the Template you want to delete and then click **Yes** to confirm the deletion
 
-<figure><img src="../../../.gitbook/assets/image (117).png" alt=""><figcaption></figcaption></figure>
+### Require a saved plan
+
+{% hint style="info" %}
+Supported from Terrakube 2.34.0.
+{% endhint %}
+
+Set `requireSavedPlan: true` on a `terraformApply` step to make the apply use the saved plan from the same run, instead of planning again. This guarantees that what was reviewed is what is applied.
+
+```yaml
+flow:
+  - type: terraformPlan
+    step: 100
+  - type: approval
+    step: 200
+    team: TERRAKUBE_ADMIN
+  - type: terraformApply
+    step: 300
+    requireSavedPlan: true
+```
+
+* The executor must download the saved plan, and it must be a non-empty file. If not, the step fails before running apply, even when `ignoreError` is set. Run a new job to produce and review another plan.
+* The plan is applied without the current Terraform input variables. Terraform or OpenTofu validates it, including whether it is stale, and a rejected plan is not retried as a fresh apply.
+* The default is `false`, which keeps today's behaviour: if the plan cannot be downloaded the executor may run a fresh apply.
+* It applies only to `terraformApply` and does not add an approval step. The API and the executor, including any ephemeral executor images, must both be 2.34.0 or later.
+
+The [GitHub Action](../../ci-cd-integration/github-actions.md) uses this template shape to apply a plan after GitHub environment approval.
+

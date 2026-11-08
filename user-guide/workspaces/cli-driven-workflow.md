@@ -150,50 +150,56 @@ When you run `terraform init`:
 When tags are set from the Terraform CLI, a workspace can have at most 10 tags.
 {% endhint %}
 
-### Terraform login.
+### Terraform login
 
-Once we have added the terraform remote state configuration we will need to authenticate to Terrakube using the following command with the Terrakube API as the following:
-
-```
-terraform login 8080-azbuilder-terrakube-3xqsq270uq1.ws-us82.gitpod.io
-```
-
-The output will look something like the following:
-
-<figure><img src="../../.gitbook/assets/image (200).png" alt=""><figcaption></figcaption></figure>
+Authenticate the CLI against Terrakube with the standard login command (use `tofu login` for OpenTofu):
 
 ```
-terraform login 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io
-Terraform will request an API token for 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io using OAuth.
-
-This will work only if you are able to use a web browser on this computer to
-complete a login process. If not, you must obtain an API token by another
-means and configure it in the CLI configuration manually.
-
-If login is successful, Terraform will store the token in plain text in
-the following file for use by subsequent commands:
-    C:\Users\XXXXXX\AppData\Roaming\terraform.d\credentials.tfrc.json
-
-Do you want to proceed?
-  Only 'yes' will be accepted to confirm.
-
-  Enter a value: yes
-
-Terraform must now open a web browser to the login page for 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io.
-
-If a browser does not open this automatically, open the following URL to proceed:
-    https://5556-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io/dex/auth?scope=openid+profile+email+offline_access+groups&client_id=example-app&code_challenge=YYe059U9HyeMy1-RmuEzSajPJYGdcY4IkNr0pZz4LZ8&code_challenge_method=S256&redirect_uri=http%3A%2F%2Flocalhost%3A10000%2Flogin&response_type=code&state=f8b6da79-35f3-2b92-d8d8-179cda386f91
-
-Terraform will now wait for the host to signal that login was successful.
-
-
----------------------------------------------------------------------------------
-
-Success! Terraform has obtained and saved an API token.
-
-The new API token will be used for any future Terraform command that must make
-authenticated requests to 8080-azbuilder-terrakube-po7evw1u15x.ws-us86.gitpod.io.
+terraform login terrakube-api.example.com
 ```
+
+Terraform opens your browser, you sign in with your identity provider, and the token is stored in the Terraform credentials file. Run it once for each hostname you use; if the registry has a different hostname from the API, log in to both (or put the same token in the credentials file for each).
+
+#### Login through the Terrakube OAuth broker
+
+{% hint style="info" %}
+Available from Terrakube 2.34.0. It is disabled by default.
+{% endhint %}
+
+When enabled, Terrakube brokers the sign-in through Dex and shows a consent page where you choose how long the token lives (1 to 365 days). The CLI receives a normal, revocable personal access token, which you can see and delete in your [User Settings](../organizations/api-tokens.md). After a successful login the browser may show a connection error to `localhost`; this is expected, because Terraform closes its temporary listener as soon as it has the token.
+
+Administrators enable it with these environment variables. Set all of them on the **API**, and set `TerraformLoginEnabled` and `TerraformLoginApiUrl` on the **registry** too, so registry logins use the same broker:
+
+| Variable | Default | Description |
+| --- | --- | --- |
+| `TerraformLoginEnabled` | `false` | Turns the broker on and publishes the login discovery document. |
+| `TerraformLoginApiUrl` | | Required when enabled. The public **HTTPS** URL of the API (for example `https://terrakube-api.example.com`), used for the OAuth callback and registry discovery. The API refuses to start with a non-HTTPS URL, except on `localhost`. |
+| `TerraformLoginDefaultDays` | `30` | Token lifetime preselected on the consent page. |
+| `TerraformLoginMaxDays` | `365` | Longest lifetime a user can pick. |
+| `TerraformLoginDexTokenUrl`, `TerraformLoginDexJwkSetUrl` | | Optional. Dex token and signing-key endpoints the API calls, for example an in-cluster Dex service URL, when the public Dex URL is not reachable from the API. |
+
+Also add `<TerraformLoginApiUrl>/oauth/callback` to the `redirectURIs` of your Dex static client; see [User Authentication (Dex)](../../getting-started/deployment/user-authentication-dex.md#terraform-login).
+
+With the Helm chart, put them under `env`:
+
+```yaml
+api:
+  env:
+    - name: TerraformLoginEnabled
+      value: "true"
+    - name: TerraformLoginApiUrl
+      value: "https://terrakube-api.example.com"
+registry:
+  env:
+    - name: TerraformLoginEnabled
+      value: "true"
+    - name: TerraformLoginApiUrl
+      value: "https://terrakube-api.example.com"
+```
+
+With Docker Compose, set `TERRAFORM_LOGIN_ENABLED=true` in `docker-compose/.env`.
+
+The broker uses PKCE, only redirects to the local CLI (`localhost`, ports 10000-10010), and validates Dex tokens against its signing keys.
 
 ### Terraform Init
 
@@ -281,12 +287,30 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 ```
 
 {% hint style="info" %}
-You can use .tfvars file inside the workspace to upload the variables to the workspace automatically
+You can include `.tfvars` files in the uploaded configuration. CLI run inputs apply only to the run; they do not change stored workspace variables.
 {% endhint %}
 
 If you go to the Terrakube UI, you will be able to see the workspace plan execution.
 
 <figure><img src="../../.gitbook/assets/image (286).png" alt=""><figcaption></figcaption></figure>
+
+### CLI variables in 2.34.0
+
+Inputs supplied through `-var`, `-var-file` and `TF_VAR_*` are honored as encrypted variables for that run only. They do not update the workspace's stored variables. Supplying them requires **Manage Workspace** permission; a caller who can only plan receives `403` with the variable names.
+
+CLI run variables use Terraform CLI argument/variable-file precedence above configuration `terraform.tfvars` and `*.auto.tfvars`. Typed HCL values retain their types with the updated executor. Invalid literals, expressions and interpolated values are rejected when the run is created. Both the plan and saved-plan apply use the run's values. See [API-driven Workflow](api-driven-workflow.md#variables-for-one-run) for encryption and size limits; its job `variables` field uses environment-variable placement instead.
+
+For example:
+
+```bash
+terraform plan -var='image_tag=release-42' -var-file=production.tfvars
+```
+
+### Run permissions and restrictions
+
+Auto-approving a non-speculative CLI run requires approve permission. Destroy workflows also enforce the separate destroy permission, and `requireApproveToApply` checks CLI templates that omit an approval step.
+
+On a VCS/SSH workspace with branch restriction enabled, normal CLI plans still work, but apply/destroy runs using uploaded local configuration are refused. The built-in CLI `terraform plan -destroy` path is refused too. A CLI-driven workspace has no branch to restrict. See [Run Restrictions](run-restrictions.md).
 
 ### Terraform Apply
 

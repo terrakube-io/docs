@@ -10,11 +10,19 @@ For example, you can create a workspace for dev environment and a different work
 
 You can create unlimited workspaces inside each Terrakube Organization.
 
+### Workspace setup order
+
+Choose your workflow and controls in [Recommended Settings](../../getting-started/recommended-settings.md) first. The full deployment-to-run sequence is in [Production Setup](../../getting-started/production-setup.md).
+
+1. [Create the workspace](creating-workspaces.md) with its project, source and branch or CLI workflow.
+2. Assign [Team Access](team-access.md), add [variables](variables.md), and configure [dynamic provider credentials](dynamic-provider-credentials/README.md).
+3. Apply [Run Restrictions](run-restrictions.md) in **Settings > General**. These settings are off by default and require an organization-level workspace manager.
+4. Check the [CLI](cli-driven-workflow.md), [API](api-driven-workflow.md) or [CI](../ci-cd-integration/README.md) guide for your chosen workflow, then [start a run](starting-a-run.md) and verify its approval path.
+5. Add [webhooks](webhooks.md), [schedules](workspace-scheduler.md) or [run triggers](run-triggers.md) after the run works with the intended permissions.
+
 ### Workspaces list
 
-{% hint style="info" %}
-_Screenshot pending: the Workspaces list in New view, grouped by project._
-{% endhint %}
+<figure><img src="../../.gitbook/assets/workspaces-list-grouped.png" alt="The Workspaces list in Compact view, grouped by project"><figcaption><p>The Workspaces list, grouped by project</p></figcaption></figure>
 
 The **Workspaces** page has two views, toggled in the top right and remembered per browser:
 
@@ -45,21 +53,14 @@ Click **Apply filter** to apply the rows, or **Clear** in the tag filter popover
 
 <figure><img src="../../.gitbook/assets/workspaces-tag-filter.png" alt=""><figcaption></figcaption></figure>
 
-In this section:
+### In this section
 
-{% content-ref url="creating-workspaces.md" %}
-[creating-workspaces.md](creating-workspaces.md)
-{% endcontent-ref %}
+**Set up**: [Creating Workspaces](creating-workspaces.md), [Overview](overview.md), [Variables](variables.md), [Team Access](team-access.md)
 
-{% content-ref url="terraform-state.md" %}
-[terraform-state.md](terraform-state.md)
-{% endcontent-ref %}
+**Run**: [Starting a Run](starting-a-run.md), [Run Restrictions](run-restrictions.md), [Webhooks](webhooks.md), [Workspace scheduler](workspace-scheduler.md), [Run Triggers](run-triggers.md), [Job Output](job-output.md), [Notifications](notifications.md)
 
-{% content-ref url="variables.md" %}
-[variables.md](variables.md)
-{% endcontent-ref %}
+**Workflows**: [CLI-driven](cli-driven-workflow.md), [API-driven](api-driven-workflow.md), [Ephemeral Workspaces](ephemeral-workspaces.md)
 
-{% content-ref url="workspace-scheduler.md" %}
-[workspace-scheduler.md](workspace-scheduler.md)
-{% endcontent-ref %}
+**State and caching**: [Terraform State](terraform-state.md), [Share Workspace State](share-workspace-state.md), [Provider Cache](provider-cache.md), [Module Cache](module-cache.md), [Plan Artifacts](plan-artifacts.md)
 
+**Credentials and extensions**: [Dynamic Provider Credentials](dynamic-provider-credentials/README.md), [Actions](actions/README.md)

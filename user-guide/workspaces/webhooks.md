@@ -10,7 +10,9 @@ Webhooks let a Version Control workflow workspace react automatically to activit
 
 Open a workspace, go to **Settings > Webhook**, and turn on **Enable VCS Webhook?**. Once enabled, Terrakube registers a webhook with your VCS provider and shows its remote ID.
 
-On GitHub and GitLab repositories you can optionally click **Migrate to Shared Webhook** to consolidate the webhooks for every workspace pointed at the same repository into a single shared webhook, instead of one per workspace. This is experimental; **Revert** switches a workspace back to its own per-workspace webhook.
+If several workspaces use the same repository, tick **Share one webhook across this repository** when enabling (GitHub, GitLab, Azure DevOps and Azure SP/MI) so Terrakube registers a single webhook for all of them. An existing workspace can use **Migrate to shared webhook** and **Switch to a webhook for this workspace** to move either way. If a shared webhook is deleted on the provider, Terrakube recreates it.
+
+Changing the workspace's repository or VCS provider removes its webhook first, because the old webhook belongs to the old repository. Set it up again afterwards from this page.
 
 ### Webhook events
 
@@ -18,9 +20,9 @@ Each row in the events table matches a specific kind of repository activity to a
 
 | Field         | Description                                                                                                                                                     |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Priority      | When more than one event row of the same type could match a payload, Terrakube evaluates them in ascending priority order and uses the first one whose branch and file filters match. |
+| Priority      | Events are checked top to bottom and the first match wins. Use the arrows to reorder; the order is saved as priority 1, 2, 3. |
 | Event         | `Push`, `Pull Request`, or `Release`. See provider support below — not every VCS supports every event type.                                                    |
-| Branch/release | Comma-separated list of branch or release names, matched as a regex against the branch/release in the payload.                                                |
+| Branch/release | One chip per branch or release pattern (a regex), each validated on its own. **Any branch** matches everything. Use **Test patterns** to try a sample branch or path.                                                |
 | Path Type     | `Pattern` for simple wildcards like `terraform/*` or `modules/**`, or `Regex` for full regular-expression matching against changed files. Branch/release matching always uses regex regardless of this setting. |
 | File          | The pattern or regex list (depending on Path Type) that changed files must match for the job to run. Useful for monorepos so unrelated changes don't trigger a run. |
 | Template      | The [template](../organizations/templates/ "mention") to run when this event matches.                                                                          |
@@ -51,9 +53,9 @@ Ask a workspace admin to enable **Allow Apply via PR Comment** in the Webhook se
 
 **Command acknowledgment.** As soon as Terrakube recognizes a `terrakube plan` or `terrakube apply` comment, it reacts to that comment with 👀 so you know it was seen. Once the triggered job finishes, the reaction updates to ✅ (success) or ❌ (failure). Bitbucket has no comment-reaction API, so acknowledgment is a no-op there — Bitbucket users still get the plan/apply result comment itself.
 
-<figure><img src="https://github.com/user-attachments/assets/e40adb29-82db-442f-aa5e-5cc7f08cffff" alt=""><figcaption><p>GitHub pull request with a Terrakube plan comment</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/webhook-pr-comment-github.png" alt=""><figcaption><p>GitHub pull request with a Terrakube plan comment</p></figcaption></figure>
 
-<figure><img src="https://github.com/user-attachments/assets/02aa0b0b-293c-4068-b7f3-4e9db1f267ac" alt=""><figcaption><p>GitLab merge request with a Terrakube plan comment</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/webhook-pr-comment-gitlab.png" alt=""><figcaption><p>GitLab merge request with a Terrakube plan comment</p></figcaption></figure>
 
 ### Provider support
 
@@ -67,3 +69,9 @@ Ask a workspace admin to enable **Allow Apply via PR Comment** in the Webhook se
 | [SSH](../vcs-providers/ssh.md)                          | –    | –             | –       | –                                         |
 
 Azure DevOps triggers push and pull-request jobs via service hooks (or outbound polling on private networks — see [Azure DevOps](../vcs-providers/azure-devops.md#webhooks)), but the PR comment plan/apply workflow above is currently only available for GitHub, GitLab, and Bitbucket. SSH-based repositories have no webhook support at all; runs must be triggered manually, via the API, or on a [schedule](workspace-scheduler.md).
+
+### Branch restrictions in 2.34.0
+
+When `restrictApplyToConfiguredBranch` is enabled, pushes can use apply/destroy templates only on the workspace's configured branch. PR events and PR comment commands can use only plan-only templates, regardless of branch name; apply from a PR comment is disabled. A refused event starts no job, and a refused comment command receives a PR notice.
+
+Release events can start their configured template, but the executor verifies that the commit belongs to the configured branch before apply/destroy. Protect release publishing in the VCS. Workspaces with the setting off retain their previous behavior. See [Run Restrictions](run-restrictions.md) for the full source-by-source rules.

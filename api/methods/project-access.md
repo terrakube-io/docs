@@ -12,7 +12,7 @@ To use this endpoint you should have "manageWorkspace" access at team level or b
 | ----- | --------------------------------------------------------------------------------------------- |
 | admin | Full control: manage workspaces, plan/approve jobs, manage project team access                |
 | write | Manage workspaces, plan and apply jobs                                                        |
-| plan  | Plan jobs only (cannot approve or apply)                                                      |
+| plan  | Queue runs; does not grant approve permission. Use `requireApproveToApply` to restrict ungated applies.                                                      |
 | read  | Read-only access (no changes allowed)                                                         |
 
 ### Entity fields:
@@ -27,6 +27,8 @@ To use this endpoint you should have "manageWorkspace" access at team level or b
 | data.attributes.planJob         | boolean | Permission to plan jobs within the project                               |
 | data.attributes.approveJob      | boolean | Permission to approve and apply jobs within the project                  |
 | data.attributes.manageState     | boolean | Permission to manage Terraform state within the project                  |
+
+In 2.34.0, `data.attributes.destroyJob` controls destroy permission for Custom access and defaults to `true`. Admin/Write allow destroy; Plan/Read do not. See [Run Restrictions](../../user-guide/workspaces/run-restrictions.md#control-who-can-destroy).
 
 ### Example:
 
@@ -44,26 +46,26 @@ To use this endpoint you should have "manageWorkspace" access at team level or b
 
 ### Supported Operations
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project/{projectId}/projectAccess" method="get" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/project/{projectId}/projectAccess" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project/{projectId}/projectAccess" method="post" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/project/{projectId}/projectAccess" method="post" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project/{projectId}/projectAccess/{projectAccessId}" method="get" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/project/{projectId}/projectAccess/{project_accessId}" method="get" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project/{projectId}/projectAccess/{projectAccessId}" method="patch" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/project/{projectId}/projectAccess/{project_accessId}" method="patch" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
-{% openapi src="../../.gitbook/assets/v2_7.yaml" path="/organization/{organizationId}/project/{projectId}/projectAccess/{projectAccessId}" method="delete" %}
-[v2_7.yaml](../../.gitbook/assets/v2_7.yaml)
+{% openapi src="../../.gitbook/assets/terrakube-api.json" path="/project/{projectId}/projectAccess/{project_accessId}" method="delete" %}
+[terrakube-api.json](../../.gitbook/assets/terrakube-api.json)
 {% endopenapi %}
 
 {% hint style="info" %}
-For a complete list of organization operation please visit the [OpenAPI specification](https://github.com/AzBuilder/terrakube-server/tree/main/openapi-spec)
+The complete OpenAPI specification is available as [terrakube-api.json](../../.gitbook/assets/terrakube-api.json), and in the UI under **Help & Support → API Docs**.
 {% endhint %}

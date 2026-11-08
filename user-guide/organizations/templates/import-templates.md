@@ -40,7 +40,7 @@ flow:
   - type: "terraformPlan"
     step: 100
     importComands:
-      repository: "https://github.com/AzBuilder/terrakube-extensions"
+      repository: "https://github.com/terrakube-io/terrakube-extensions"
       folder: "templates/terratag"
       branch: "import-template"
   - type: "terraformApply"
@@ -49,7 +49,7 @@ flow:
 
 Using import templates become simply and we can reuse the logic accross several Terrakube organizations
 
-The sample template can be found [here](https://github.com/AzBuilder/terrakube-extensions/blob/main/templates/terratag/commands.yaml).
+The sample template can be found [here](https://github.com/terrakube-io/terrakube-extensions/blob/main/templates/terratag/commands.yaml).
 
 {% hint style="info" %}
 The import commands are using a public repository, we will add support for private repositories in the future.

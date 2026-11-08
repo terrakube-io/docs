@@ -2,6 +2,8 @@
 
 Each Terrakube workspace has its own separate state data, used for jobs within that workspace. In Terrakube you can see the Terraform state in the standard [JSON format](terraform-state.md#json-state) provided by the Terraform cli or you can see a [Visual State](terraform-state.md#visual-state), this is a diagram created by Terrakube to represent the resources inside the JSON state.
 
+<figure><img src="../../.gitbook/assets/workspace-states.png" alt="State versions of a workspace"><figcaption><p>State versions of a workspace</p></figcaption></figure>
+
 ### JSON State
 
 Go to the workspace and click the **States** tab and then click in the specific state you want to see.
@@ -35,3 +37,7 @@ All the resources can be shown in the overview page inside the workspace:
 If you click the resources you can check the information about each resouce like the folloing
 
 <figure><img src="../../.gitbook/assets/image (444).png" alt=""><figcaption></figcaption></figure>
+
+### Executor HTTP state backend
+
+In 2.34.0, the Helm chart enables an [HTTP state backend](../../getting-started/deployment/http-state-backend.md) that routes executor state reads and writes through the API using workspace-scoped credentials. Without the chart it is disabled by default. It does not change how you view state here or configure your local CLI workflow.

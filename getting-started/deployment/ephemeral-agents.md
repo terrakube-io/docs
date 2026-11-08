@@ -9,7 +9,7 @@ The following will explain how to run the executor component in`"ephemeral"` mod
 These environment variables can be used to customize the API component:
 
 * ExecutorEphemeralNamespace (Default value: "terrakube")
-* ExecutorEphemeralImage (Defatul value: "azbuilder/executor:2.22.0" )
+* ExecutorEphemeralImage (Default value: the executor image of the same version as the API, for example "azbuilder/executor:2.34.0")
 * ExecutorEphemeralSecret (Default value: "terrakube-executor-secrets" )
 
 > The above is basically to control where the job will be created and executed and to mount the secrets required by the executor component
@@ -100,10 +100,18 @@ Apply Running in a different pod:
 
 <figure><img src="../../.gitbook/assets/image (480).png" alt=""><figcaption></figcaption></figure>
 
+### Executor secrets in ephemeral jobs
+
+{% hint style="warning" %}
+Supported from version 2.34.0
+{% endhint %}
+
+By default the API mounts the executor secret (`ExecutorEphemeralSecret`, default `terrakube-executor-secrets`) into each ephemeral job as files that the executor loads at startup, instead of injecting them as environment variables. An init container with a restricted security context copies them into a memory-backed volume. The executor image used for ephemeral jobs must be 2.34.0 or later; to keep the old behaviour with an older image set `ExecutorEphemeralEmptyDirSecret=false` on the API.
+
 ### Job Controls
 
 {% hint style="warning" %}
-These settings are supported from version 2.34.0
+These settings are supported from version 2.34.0. The `api.ephemeralExecution.*` Helm values need chart 4.7.11 or later.
 {% endhint %}
 
 The following environment variables on the API component control the Kubernetes Job created for each ephemeral step. They apply to every ephemeral job in the cluster and cannot be overridden per workspace.
@@ -178,20 +186,20 @@ The following environment variables can be used to customize the ephemeral execu
 
 * EPHEMERAL\_CONFIG\_NODE\_SELECTOR\_TAGS
   * Example: key1=value1;key2=value2
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1243)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1243)
 * EPHEMERAL\_CONFIG\_SERVICE\_ACCOUNT
   * Example: myserviceaccount
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1243)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1243)
 * EPHEMERAL\_CONFIG\_ANNOTATIONS
   * Example: key1=value1;key2=value2
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1243)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1243)
 * EPHEMERAL\_CONFIG\_TOLERATIONS
   * Example: `key:operator:effect`
-  * [`Reference`](https://github.com/AzBuilder/terrakube/pull/1579)
+  * [`Reference`](https://github.com/terrakube-io/terrakube/pull/1579)
 * EPHEMERAL\_CONFIG\_MAP\_NAME
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1505)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1505)
 * EPHEMERAL\_CONFIG\_MAP\_MOUNT\_PATH
-  * [Reference](https://github.com/AzBuilder/terrakube/pull/1505)
+  * [Reference](https://github.com/terrakube-io/terrakube/pull/1505)
 * EPHEMERAL\_CPU\_REQUEST
   * Example: `100m` or `1`
 * EPHEMERAL\_CPU\_LIMIT
@@ -205,4 +213,4 @@ The following environment variables can be used to customize the ephemeral execu
 * EPHEMERAL\_STORAGE\_LIMIT
   * Example: `4Gi`
 
-More information can be found inside this [code](https://github.com/AzBuilder/terrakube/blob/main/api/src/main/java/org/terrakube/api/plugin/scheduler/job/tcl/executor/ephemeral/EphemeralExecutorService.java)
+More information can be found inside this [code](https://github.com/terrakube-io/terrakube/blob/main/api/src/main/java/org/terrakube/api/plugin/scheduler/job/tcl/executor/ephemeral/EphemeralExecutorService.java)

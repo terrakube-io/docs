@@ -1,64 +1,86 @@
 # Ingress Configuration
 
-The default ingress configuration for terrakube can be customize using a terrakube.yaml like the following:
+The chart exposes the UI, API, registry and Dex through an ingress. Choose the controller with `ingress.controller` and set a domain for each service. The defaults are for NGINX with the example domains `*.minikube.net`; replace them.
 
-```
-dex:
-  config:
-    issuer: http://terrakube-api.minikube.net/dex ## CHANGE THIS DOMAIN
-    #.....
-    #PUT ALL THE REST OF THE DEX CONFIG AND UPDATE THE URL WITH THE NEW DOMAIN
-    #.....
+| `ingress.controller` | Use for |
+| --- | --- |
+| `generic` (default) | Any Kubernetes ingress controller, such as NGINX. |
+| `aws` | AWS Application Load Balancer (work in progress in the chart). |
+| `gke` | Google Cloud Load Balancer, with managed certificates and Cloud Armor. |
+| `gatewayapi` | Gateway API `HTTPRoute` resources. |
 
-## Ingress properties
+### NGINX (generic)
+
+```yaml
 ingress:
-  useTls: false
+  controller: "generic"
+  useTls: true
   ui:
-    enabled: true
-    domain: "terrakube-ui.minikube.net" ## CHANGE THIS DOMAIN
-    path: "/"
-    pathType: "Prefix" 
-    annotations:
-      kubernetes.io/ingress.class: nginx
-      nginx.ingress.kubernetes.io/use-regex: "true"
+    domain: "terrakube-ui.example.com"
+    ingressClassName: "nginx"
+    tlsSecretName: tls-secret-ui-terrakube
   api:
-    enabled: true
-    domain: "terrakube-api.minikube.net" ## CHANGE THIS DOMAIN
-    path: "/"
-    pathType: "Prefix"
-    annotations:
-      kubernetes.io/ingress.class: nginx
-      nginx.ingress.kubernetes.io/use-regex: "true"
-      nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
+    domain: "terrakube-api.example.com"
+    ingressClassName: "nginx"
+    tlsSecretName: tls-secret-api-terrakube
   registry:
-    enabled: true
-    domain: "terrakube-reg.minikube.net" ## Change to your customer domain
-    path: "/"
-    pathType: "Prefix"
-    annotations:
-      kubernetes.io/ingress.class: nginx
-      nginx.ingress.kubernetes.io/use-regex: "true"
-      nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
+    domain: "terrakube-reg.example.com"
+    ingressClassName: "nginx"
+    tlsSecretName: tls-secret-reg-terrakube
   dex:
     enabled: true
     path: "/dex/"
-    pathType: "Prefix"
-    annotations:
-      kubernetes.io/ingress.class: nginx
-      nginx.ingress.kubernetes.io/use-regex: "true"
-      nginx.ingress.kubernetes.io/configuration-snippet: "proxy_set_header Authorization $http_authorization;"
 ```
 
-{% hint style="info" %}
-Update the custom domains and the other ingress configuration depending of your kubernetes environment
-{% endhint %}
+Each service has its own `enabled`, `domain`, `path`, `ingressClassName`, `tlsSecretName` and `annotations`. The `executor` ingress is off by default, because the API reaches the executor inside the cluster.
 
-{% hint style="warning" %}
-The above example is using a simple ngnix ingress
-{% endhint %}
+### Other controllers
 
-Now you can install terrakube using the command
+```yaml
+# GKE
+ingress:
+  controller: "gke"
+  gke:
+    enabled: true
+    managedCertificate:
+      create: true
+    backendConfig:
+      create: true
+  ui:
+    domain: "terrakube-ui.example.com"
+  api:
+    domain: "terrakube-api.example.com"
+  registry:
+    domain: "terrakube-reg.example.com"
+```
+
+```yaml
+# Gateway API
+ingress:
+  controller: "gatewayapi"
+  gatewayapi:
+    gateways:
+      - name: "terrakube-gateway"
+        namespace: "terrakube"
+  ui:
+    domain: "terrakube-ui.example.com"
+  api:
+    domain: "terrakube-api.example.com"
+  registry:
+    domain: "terrakube-reg.example.com"
+```
+
+For AWS ALB, GKE static IPs and Cloud Armor policies, see the [chart README](https://github.com/terrakube-io/terrakube-helm-chart#ingress-configuration) for every option.
+
+### Things that must line up
+
+* **Dex issuer.** `dex.config.issuer` must be the public API URL plus `/dex`, for example `https://terrakube-api.example.com/dex`, and the Dex client `redirectURIs` must include the UI URL. See [User Authentication (Dex)](user-authentication-dex.md).
+* **Public discovery endpoints.** The API serves `/.well-known/openid-configuration` and `/.well-known/jwks` without authentication, and the chart keeps them public on every controller. Cloud providers use them to trust [dynamic provider credentials](../../user-guide/workspaces/dynamic-provider-credentials/README.md), so they must be reachable from the internet.
+* **Authorization header.** The ingress must pass the `Authorization` header through to the API and registry.
+* **Registry hostname.** Terraform and OpenTofu need HTTPS for the registry and remote state.
+
+Install or upgrade with:
 
 ```bash
-helm install --values terrakube.yaml terrakube terrakube-repo/terrakube -n terrakube
+helm upgrade --install terrakube terrakube-repo/terrakube -n terrakube --values terrakube.yaml
 ```
