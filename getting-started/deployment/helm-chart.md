@@ -19,17 +19,17 @@ The bundled OpenLDAP, PostgreSQL and MinIO use Bitnami images and well-known def
 
 ### Choose the Terrakube version
 
-The chart's default image tag is its `appVersion` (chart 4.7.12 ships Terrakube 2.33.1), which can lag the latest release. Pin the versions you want in your values file; they are independent per component and should match:
+The chart's default image tag is its `appVersion` (chart 4.7.16 ships Terrakube 2.34.0), which can lag the latest release. Pin the versions you want in your values file; they are independent per component and should match:
 
 ```yaml
 api:
-  version: "2.33.3"
+  version: "2.34.0"
 executor:
-  version: "2.33.3"
+  version: "2.34.0"
 registry:
-  version: "2.33.3"
+  version: "2.34.0"
 ui:
-  version: "2.33.3"
+  version: "2.34.0"
 ```
 
 Images are published to Docker Hub as `azbuilder/api-server`, `azbuilder/executor`, `azbuilder/open-registry` and `azbuilder/terrakube-ui` (see [Docker Images](../docker-images.md)). Pin the chart version too, with `helm install ... --version <chart version>`, so upgrades are deliberate.

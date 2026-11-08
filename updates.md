@@ -11,11 +11,11 @@ These are planned and not yet released. Scope can change; follow progress in the
 * **Cost estimation:** Infracost estimates in runs, pull requests and cost policies. See [Cost Estimation](user-guide/cost-estimation.md) for what is possible today.
 * **Single-domain deployment:** an optional setup serving the UI, API, registry and Dex from one domain.
 
-### 2.34.0 (upcoming)
+### November 2026 (2.34.0)
 
-#### Added after 2.34.0-beta.10
+#### Security and run controls
 
-The [2.34.0-rc.1 comparison](https://github.com/terrakube-io/terrakube/compare/2.34.0-beta.10...2.34.0-rc.1) adds the controls below. Use [Recommended Settings](getting-started/recommended-settings.md) to choose them for production; see [Upgrading](getting-started/upgrading.md#terrakube-2340) for compatibility changes.
+[Release notes](https://github.com/terrakube-io/terrakube/releases/tag/2.34.0). This release adds the controls below. Use [Recommended Settings](getting-started/recommended-settings.md) to choose them for production; see [Upgrading](getting-started/upgrading.md#terrakube-2340) for compatibility changes.
 
 * **Workspace run restrictions:** opt into configured-branch apply/destroy and approve-permission checks for applies without approval steps. Both default to off. PRs can still plan, but branch restrictions affect PR applies, CLI uploads and exact-commit CI. See [Run Restrictions](user-guide/workspaces/run-restrictions.md).
 * **Destroy permission:** separate control for starting ungated destroys and approving destroy runs. Admin/Write allow it, Plan/Read do not, and Custom entries default to allowed. Review existing grants. See [Team Management](user-guide/organizations/team-management.md#run-permissions-in-2340).

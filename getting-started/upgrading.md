@@ -22,7 +22,7 @@ Each chart release has a default Terrakube version (its `appVersion`). You can r
 
 | Terrakube | Latest chart that ships it | Minimum chart and why |
 | --- | --- | --- |
-| 2.34.0 | not yet released | **4.7.12**, for `executor.emptyDirSecret`. 4.7.11 for `api.ephemeralExecution.*` job controls |
+| 2.34.0 | 4.7.16 | **4.7.12**, for `executor.emptyDirSecret`. 4.7.11 for `api.ephemeralExecution.*` job controls |
 | 2.33.x | 4.7.12 (2.33.1) | **4.7.7**, for safe multi-replica executors |
 | 2.32.x | 4.7.8 | |
 | 2.31.x | 4.7.3 | |
@@ -30,7 +30,7 @@ Each chart release has a default Terrakube version (its `appVersion`). You can r
 | 2.29.0 | 4.5.6 | |
 | 2.28.x | 4.5.1 | |
 
-Chart 4.7.12 is the latest at the time of writing. Its default Terrakube version is 2.33.1, so set the component versions explicitly to get 2.33.3 or a 2.34 pre-release.
+Chart 4.7.16 is the latest at the time of writing and ships Terrakube 2.34.0 by default. Older charts default to an older Terrakube version, so set the component versions explicitly when you use one.
 
 ### Terrakube 2.34.0
 
@@ -49,9 +49,9 @@ These come from the changes in the 2.34 release line. Check each against your de
 * Runs waiting for approval are **not** closed by the inactive-run limits unless you set `InactiveJobsWaitingApprovalTimeoutHours`. Other open runs are closed as failed after `InactiveJobsMaxAgeHours` (default 6). See [Executor Log Output](deployment/executor-log-output.md#run-limits).
 * Features that are **off until you enable them**: [`terraform login` through Terrakube](../user-guide/workspaces/cli-driven-workflow.md#terraform-login), presigned module downloads in the registry, and plan artifacts.
 
-**Changes since 2.34.0-beta.10**
+**Security and compatibility changes**
 
-These changes are included in 2.34.0-rc.1 and apply when upgrading from beta.10 or earlier:
+These apply to every upgrade to 2.34.0. If you ran a 2.34.0 pre-release (beta.10 or earlier), they are new since that build:
 
 * **Token provisioning:** PATs/team tokens/federated tokens cannot mint more tokens by default. Provisioning tools that do this need a Dex user session or a deliberate `TokenAllowPatIssuance=true` compatibility choice for PATs. Children cannot outlive the parent PAT. Unknown or revoked Terrakube token IDs are rejected. Review [Token Security](deployment/token-security.md).
 * **Destroy permission:** Admin/Write retain destroy access; Plan/Read cannot destroy. Custom team, workspace and project entries get `destroyJob=true` to preserve previous access. Review and remove that grant where appropriate. Approving a destroy also requires it.

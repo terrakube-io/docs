@@ -27,6 +27,8 @@ It passes authentication through `TF_HTTP_USERNAME` and `TF_HTTP_PASSWORD`, keep
 
 ### Access and limits
 
+The token the executor uses lasts as long as the executor's maximum job duration (`ExecutorJobMaxDurationMinutes`, 360 minutes by default), so long applies and destroys can still write state at the end. Terrakube revokes it as soon as the step finishes. To set the lifetime separately, use `TerraformStateHttpTokenTtlMinutes` on the executor.
+
 The endpoint accepts scoped `WORKSPACE_EXECUTOR` tokens matching the organization and workspace. It is not a general-purpose HTTP backend for user PATs. Plan steps can read state but cannot write or delete it. Apply, destroy and custom-script flow steps can write/delete state with the required executor token.
 
 | API behavior | Result |

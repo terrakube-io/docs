@@ -13,18 +13,18 @@ Terrakube publishes four images to Docker Hub. All are multi-architecture (`linu
 
 | Tag | Meaning |
 | --- | --- |
-| `2.33.3` | A release. Use an exact version in production. |
-| `2.34.0-beta.10` | A pre-release of the next version. |
-| `2.33.3-alpaquita` | The same release on Alpaquita Linux (API, executor and registry only). |
+| `2.34.0` | A release. Use an exact version in production. |
+| `2.34.0-rc.1` | A pre-release of an upcoming version. Do not use it in production. |
+| `2.34.0-alpaquita` | The same release on Alpaquita Linux (API, executor and registry only). |
 | `latest` | The newest build, which can be a pre-release. Do not use it in production. |
 
 Run the API, executor, registry and UI at the **same version**. With the Helm chart set `api.version`, `executor.version`, `registry.version` and `ui.version`; see [Helm Chart](deployment/helm-chart.md#choose-the-terrakube-version) and [Upgrading](upgrading.md). To reproduce a deployment exactly, pin the image digest as well as the tag.
 
 ```bash
-docker pull azbuilder/api-server:2.33.3
-docker pull azbuilder/executor:2.33.3
-docker pull azbuilder/open-registry:2.33.3
-docker pull azbuilder/terrakube-ui:2.33.3
+docker pull azbuilder/api-server:2.34.0
+docker pull azbuilder/executor:2.34.0
+docker pull azbuilder/open-registry:2.34.0
+docker pull azbuilder/terrakube-ui:2.34.0
 ```
 
 ### How they are built
@@ -36,9 +36,9 @@ The default images are based on Ubuntu Jammy and are built with [Cloud Native Bu
 Every release also has API, executor and registry images based on [Alpaquita Linux](https://bell-sw.com/alpaquita-linux/), a smaller image built for Spring Boot. They use the same version with an `-alpaquita` suffix:
 
 ```bash
-docker pull azbuilder/api-server:2.33.3-alpaquita
-docker pull azbuilder/open-registry:2.33.3-alpaquita
-docker pull azbuilder/executor:2.33.3-alpaquita
+docker pull azbuilder/api-server:2.34.0-alpaquita
+docker pull azbuilder/open-registry:2.34.0-alpaquita
+docker pull azbuilder/executor:2.34.0-alpaquita
 ```
 
 {% hint style="danger" %}
