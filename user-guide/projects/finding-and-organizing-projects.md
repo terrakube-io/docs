@@ -24,7 +24,9 @@ Searching, sorting and paging also happen on the server, so only the page you ar
 
 Workspaces that are in no project appear as a dashed **Unassigned** card, or an italic row in the table, with a link to move them into a project.
 
-The **Policy** column rolls up each workspace's policy compliance: "N non-compliant", "Compliant", or "Not evaluated" when no workspace has been evaluated yet.
+The **Policy** column rolls up the latest policy evaluation of each workspace: "N hard" when any workspace has a hard mandatory violation, otherwise "N soft" for soft mandatory violations, "Compliant", or "Not evaluated" when no workspace has been evaluated yet. Workspaces evaluated before 2.35 have no hard or soft split and are shown as "N non-compliant" until they run again.
+
+If you cannot see who has access to projects (you do not have the Manage Workspaces permission), the Teams slot shows a dash, and hovering it gives the total number of teams.
 
 You only see the projects you can access: projects in organizations where your team can manage workspaces, and projects your team has been given access to.
 
@@ -48,7 +50,10 @@ When none is set, projects open on the Overview.
 
 The **Workspaces** tab uses the same filters as the organization's workspace list: search, status, policy and tags. Tags that came from the project's default tags are marked "from project". Rows can also be shown as cards.
 
-Tick workspaces to act on several at once. The bar says how many are selected and that the selection covers the current page only, and offers **Add tag**, **Move to project**, **Lock** or **Unlock**, and **Remove from project**. Each workspace is changed separately and a failure on one does not stop the others; the result message tells you how many succeeded and why any failed. An empty project offers **New workspace** and **Move existing**.
+Tick workspaces to act on several at once. The bar says how many are selected and that the selection covers the current page only, and offers **Plan**, **Approve**, **Add tag**, **Move to project**, **Lock** or **Unlock**, and **Remove from project**.
+
+* **Plan** starts one run on each selected workspace from a template you choose, on the workspace's own branch. Choose a plan-only template to preview changes: a template that also applies will apply on every selected workspace, subject to the approval each workspace requires.
+* **Approve** is available when a selected workspace has a run waiting for approval. It lists the runs it found and approves them once you confirm. Each workspace is changed separately and a failure on one does not stop the others; the result message tells you how many succeeded and why any failed. An empty project offers **New workspace** and **Move existing**.
 
 ### Moving workspaces
 
@@ -82,7 +87,7 @@ The server enforces the same rule for scripts and the API. Deleting a project th
 
 **Settings** also holds the project's configuration:
 
-* **Defaults for new workspaces**: a Terraform version and an execution mode. They are applied when a workspace is created in the project without a value, and the create form prefills the version. Each is labelled "Defaulted from project" or "Defaulted from organisation".
+* **Defaults for new workspaces**: a Terraform version, an execution mode and a template. They are applied when a workspace is created in the project without a value, and the create form prefills the version. Each is labelled "Defaulted from project" or "Defaulted from organisation".
 * **Variables**: the variable collections attached to the project. See [Variable Collections](../organizations/variable-collections.md).
 * **Effective variables**: choose a workspace to see the variables its runs will use and where each comes from (the workspace, the organization's global variables, or a collection and its scope). Sensitive values are never shown. Each source links to where it is edited.
 
