@@ -12,7 +12,7 @@ Click **Projects** in the main menu and then Click the **New project** button.
 
 <figure><img src="../../.gitbook/assets/projects-list.png" alt=""><figcaption></figcaption></figure>
 
-Enter a name for the project and click **Create project**.
+Enter a name for the project and click **Create project**. Names must be unique in the organization and can be up to 256 characters; descriptions can also be up to 256 characters.
 
 <figure><img src="../../.gitbook/assets/projects-create-dialog.png" alt=""><figcaption></figcaption></figure>
 

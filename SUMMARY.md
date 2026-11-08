@@ -75,6 +75,7 @@
 * [Projects](user-guide/projects/README.md)
   * [Creating Projects](user-guide/projects/creating-projects.md)
   * [Team Access](user-guide/projects/team-access.md)
+  * [Finding and Organizing Projects](user-guide/projects/finding-and-organizing-projects.md)
   * [Workspace Assignment](user-guide/projects/workspace-assignment.md)
 * [VCS Providers](user-guide/vcs-providers/README.md)
   * [Github OAuth](user-guide/vcs-providers/github.com.md)

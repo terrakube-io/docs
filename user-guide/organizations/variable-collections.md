@@ -35,16 +35,29 @@ Each item in a collection has the same shape as a regular workspace variable:
 
 On the collection's edit page, the **Apply to workspaces** field under **Variable collection scope** picks which workspaces the collection applies to. Only the workspaces selected there receive the collection's variables — removing a workspace from this list detaches the collection without deleting the collection or its variables.
 
+### Attaching a collection to a project or the whole organization
+
+From Terrakube 2.35 a collection can also be attached to every workspace in a **project**, or to every workspace in the **organization**, so shared settings are defined once.
+
+* **Project**: open the project, go to the **Variables** tab, choose a collection and click **Attach**. Everyone with access to the project can see which collections are attached.
+* **Organization**: create a collection reference with `scope` set to `ORGANIZATION` through the API, the Terraform provider (`terrakube_collection_reference` with `scope = "ORGANIZATION"`) or the CLI (`terrakube collection-reference create --scope ORGANIZATION`). Organization wide attachments are deliberately explicit, so a missing workspace can never apply a collection to everything.
+
+Attaching a collection needs the **Manage Collections** permission. A project cannot be deleted while collections are attached to it; detach them first.
+
 ### Resolution order
 
 When a job runs, variables are resolved in this order, with earlier sources winning on key conflicts:
 
-1. **Workspace variables** — set directly on the workspace
-2. **Organization global variables** — see [Global Variables](global-variables.md)
-3. **Variable collections** — applied to the workspace, highest **priority** first; if two collections both define the same key, the one with the higher priority number wins
+1. **Workspace variables**: set directly on the workspace
+2. **Organization global variables**: see [Global Variables](global-variables.md)
+3. **Collections attached to the workspace**, highest **priority** first
+4. **Collections attached to the workspace's project**, highest priority first
+5. **Collections attached to the organization**, highest priority first
+
+The narrower the scope, the higher it ranks: a collection attached to a workspace beats one attached to its project, regardless of priority, and priority only decides between collections at the same scope.
 
 {% hint style="warning" %}
-A variable collection can never override a workspace-level or global variable with the same key — it only fills in keys that aren't already set. Use priority to control conflicts **between** collections, not between a collection and the workspace itself.
+A variable collection can never override a workspace-level or global variable with the same key. It only fills in keys that aren't already set. Use priority to control conflicts **between** collections at the same level.
 {% endhint %}
 
 ### Sensitive values in 2.34.0

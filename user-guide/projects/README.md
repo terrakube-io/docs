@@ -12,6 +12,10 @@ In this section:
 [team-access.md](team-access.md)
 {% endcontent-ref %}
 
+{% content-ref url="finding-and-organizing-projects.md" %}
+[finding-and-organizing-projects.md](finding-and-organizing-projects.md)
+{% endcontent-ref %}
+
 {% content-ref url="workspace-assignment.md" %}
 [workspace-assignment.md](workspace-assignment.md)
 {% endcontent-ref %}
