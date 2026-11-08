@@ -1,6 +1,6 @@
 # Recommended Settings
 
-Use this as a starting point for a production deployment. It explains recommended choices; it does not describe settings that Terrakube automatically enables. The run restrictions and token controls below were added between **2.34.0-beta.10 and 2.34.0-rc.1** and are part of the 2.34.0 release line. See [Upgrading](upgrading.md) for changes that take effect on upgrade.
+Use this as a starting point for a production deployment. It explains recommended choices; it does not describe settings that Terrakube automatically enables. The run restrictions and token controls below are available from Terrakube 2.34.0. See [Upgrading](upgrading.md) for changes that take effect on upgrade.
 
 ### Where to apply the recommendations
 

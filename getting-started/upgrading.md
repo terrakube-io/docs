@@ -51,7 +51,7 @@ These come from the changes in the 2.34 release line. Check each against your de
 
 **Security and compatibility changes**
 
-These apply to every upgrade to 2.34.0. If you ran a 2.34.0 pre-release (beta.10 or earlier), they are new since that build:
+These apply when you upgrade to 2.34.0:
 
 * **Token provisioning:** PATs/team tokens/federated tokens cannot mint more tokens by default. Provisioning tools that do this need a Dex user session or a deliberate `TokenAllowPatIssuance=true` compatibility choice for PATs. Children cannot outlive the parent PAT. Unknown or revoked Terrakube token IDs are rejected. Review [Token Security](deployment/token-security.md).
 * **Destroy permission:** Admin/Write retain destroy access; Plan/Read cannot destroy. Custom team, workspace and project entries get `destroyJob=true` to preserve previous access. Review and remove that grant where appropriate. Approving a destroy also requires it.

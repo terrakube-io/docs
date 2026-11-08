@@ -14,7 +14,6 @@ Terrakube publishes four images to Docker Hub. All are multi-architecture (`linu
 | Tag | Meaning |
 | --- | --- |
 | `2.34.0` | A release. Use an exact version in production. |
-| `2.34.0-rc.1` | A pre-release of an upcoming version. Do not use it in production. |
 | `2.34.0-alpaquita` | The same release on Alpaquita Linux (API, executor and registry only). |
 | `latest` | The newest build, which can be a pre-release. Do not use it in production. |
 
