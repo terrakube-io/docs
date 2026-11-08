@@ -73,7 +73,7 @@ The 2.34.0 setup examples were tightened, but upgrading Terrakube does not chang
 
 ### Choose state storage deliberately
 
-Keep the existing state backend unless you need the new [executor HTTP state backend](deployment/http-state-backend.md). It is opt-in, with `TerraformStateHttpBackend=false` by default. It routes state through the API using workspace-scoped executor credentials, while plans and other artifacts still use the configured storage implementation. It does not remove every need for executor storage access.
+The [executor HTTP state backend](deployment/http-state-backend.md) is on by default in the Helm chart (`storage.httpBackend: true`). Terrakube itself defaults `TerraformStateHttpBackend` to `false`, so set it yourself if you don't use the chart. It routes state through the API using workspace-scoped executor credentials, while plans and other artifacts still use the configured storage implementation. It does not remove every need for executor storage access.
 
 ### Check the result before wider adoption
 

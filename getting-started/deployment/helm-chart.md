@@ -71,7 +71,7 @@ Database migrations run automatically when the API starts. Read [Upgrading](../u
 {% hint style="warning" %}
 **Upgrading to Terrakube 2.34.0**
 
-* **Executor pool:** set `executor.emptyDirSecret: true` (chart 4.7.12 or later). From 2.34.0 the executor reads its internal secret from a file and removes it after loading, so the file must be in a writable volume. The chart copies the secret into an `emptyDir` with an init container (`executor.initSecretImage`, default `busybox`).
+* **Executor pool:** `executor.emptyDirSecret` is `true` by default (chart 4.7.12 or later); don't override it to `false`. From 2.34.0 the executor reads its internal secret from a file and removes it after loading, so the file must be in a writable volume. The chart copies the secret into an `emptyDir` with an init container (`executor.initSecretImage`, default `busybox`).
 * **Ephemeral executors:** the API now mounts the executor secret into each ephemeral job as files instead of environment variables (`ExecutorEphemeralEmptyDirSecret`, default `true`). The executor image used for ephemeral jobs must therefore be 2.34.0 or later. If you pin an older ephemeral executor image, set `ExecutorEphemeralEmptyDirSecret=false` on the API.
 
 Upgrade the API, executor, registry and UI together.

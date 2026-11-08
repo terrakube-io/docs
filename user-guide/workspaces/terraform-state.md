@@ -40,4 +40,4 @@ If you click the resources you can check the information about each resouce like
 
 ### Executor HTTP state backend
 
-In 2.34.0, administrators can opt into an [HTTP state backend](../../getting-started/deployment/http-state-backend.md) that routes executor state reads and writes through the API using workspace-scoped credentials. It is disabled by default and does not change how you view state here or configure your local CLI workflow.
+In 2.34.0, the Helm chart enables an [HTTP state backend](../../getting-started/deployment/http-state-backend.md) that routes executor state reads and writes through the API using workspace-scoped credentials. Without the chart it is disabled by default. It does not change how you view state here or configure your local CLI workflow.

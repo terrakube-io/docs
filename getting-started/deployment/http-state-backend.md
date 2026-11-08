@@ -1,12 +1,12 @@
 # Executor HTTP State Backend
 
-Added in Terrakube 2.34.0, the HTTP state backend lets the executor read and write current Terraform state through the Terrakube API. The API persists it in the configured storage backend. It is **opt-in**; existing backend behavior remains the default.
+Added in Terrakube 2.34.0, the HTTP state backend lets the executor read and write current Terraform state through the Terrakube API. The API persists it in the configured storage backend. The Helm chart (4.7.16) **enables it by default**. Terrakube itself defaults `TerraformStateHttpBackend` to `false`, so deployments that don't use the chart must turn it on.
 
 Use it when you want Terraform state operations to use workspace-scoped executor credentials through the API. Plans, logs, artifacts and binary caches still use the executor's configured storage implementation, so enabling it does not remove all executor storage credentials or access requirements.
 
 ### Enable it
 
-Upgrade the API and executors to 2.34.0 before enabling this feature. On each executor, including standalone and ephemeral agents that should use it, set:
+Upgrade the API and executors to 2.34.0 before enabling this feature. With the Helm chart it is already on (`storage.httpBackend: true`; `executor.properties.httpBackend` overrides it for the executor). Set either to `false` to keep state on the configured storage only. Without the chart, on each executor, including standalone and ephemeral agents that should use it, set:
 
 ```yaml
 executor:

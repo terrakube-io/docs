@@ -70,7 +70,7 @@ Ephemeral jobs are deleted shortly after they finish (30 seconds by default), wh
 
 ### The executor will not start after upgrading to 2.34
 
-Set `executor.emptyDirSecret: true` (chart 4.7.12 or later). See [Upgrading](../../getting-started/upgrading.md#terrakube-2340).
+The chart default is `executor.emptyDirSecret: true` (chart 4.7.12 or later); check you haven't overridden it to `false`. See [Upgrading](../../getting-started/upgrading.md#terrakube-2340).
 
 ### S3-compatible storage returns `403 SecondLevelDomainForbidden`
 

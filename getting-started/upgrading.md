@@ -38,7 +38,7 @@ These come from the changes in the 2.34 release line. Check each against your de
 
 **Action required**
 
-* **Executor secret volume.** The executor now reads its internal secret from a file and removes it after loading. Set `executor.emptyDirSecret: true` (chart 4.7.12+) for every executor deployment, including [standalone agents](deployment/self-hosted-agents.md). See [Helm Chart](deployment/helm-chart.md#upgrading).
+* **Executor secret volume.** The executor now reads its internal secret from a file and removes it after loading. The Helm chart sets `executor.emptyDirSecret: true` by default (chart 4.7.12+); keep it, and set it yourself on any executor deployment not managed by the chart, including [standalone agents](deployment/self-hosted-agents.md). See [Helm Chart](deployment/helm-chart.md#upgrading).
 * **Ephemeral executors.** Ephemeral jobs now get their secret mounted as files by default (`ExecutorEphemeralEmptyDirSecret=true`). The executor image they use must be 2.34.0 or later, or set the variable to `false`. See [Ephemeral Agents](deployment/ephemeral-agents.md#executor-secrets-in-ephemeral-jobs).
 
 **Behaviour changes**
@@ -59,7 +59,7 @@ These apply to every upgrade to 2.34.0. If you ran a 2.34.0 pre-release (beta.10
 * **Sensitive values and tenant checks:** workspace variables and collection items cannot change from sensitive to non-sensitive. Cross-organization resource relationships and template lookups are rejected. Check integrations that depended on those operations.
 * **Schedule clients:** stop sending the deprecated `tcl` field; use `templateReference` instead.
 * **Opt-in controls:** `restrictApplyToConfiguredBranch` and `requireApproveToApply` both default to false. Branch restrictions conflict with API-created exact-commit apply runs, including the documented GitHub Action deployment flow. Choose controls using [Recommended Settings](recommended-settings.md).
-* **New environment controls:** `TokenAllowPatIssuance=false`, `TokenMaxDays=0` (no configured maximum), and `DexAudienceValidation=false` are the shipped defaults. The [HTTP state backend](deployment/http-state-backend.md) is also off by default.
+* **New environment controls:** `TokenAllowPatIssuance=false`, `TokenMaxDays=0` (no configured maximum), and `DexAudienceValidation=false` are the shipped defaults. The [HTTP state backend](deployment/http-state-backend.md) is off by default in Terrakube but on by default in the Helm chart (`storage.httpBackend: true`).
 * **Cloud credentials:** tighter AWS/GCP setup examples do not update existing cloud policies. Review and apply the trust changes in your cloud account.
 
 The API migration adds workspace restriction columns, destroy flags on all three access levels, and CLI-variable placement metadata on jobs. Finish upgrading the API and executors before relying on branch commit verification, typed CLI inputs or HTTP state access. An older executor does not enforce the new commit-membership check. Both workspace controls remain off until enabled.
