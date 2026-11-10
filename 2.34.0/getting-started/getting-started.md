@@ -1,0 +1,23 @@
+# Getting Started
+
+Pick the path that matches what you want to do.
+
+### 1. Try it locally
+
+Run the whole stack on your machine with [Docker Compose](docker-compose.md), or on a laptop Kubernetes cluster with [Minikube + HTTPS](deployment/minikube-+-https.md).
+
+### 2. Run your first workspace
+
+Follow [Your First Run](first-run.md) for a guided walkthrough, or in short:
+
+1. [Create an organization](../set-up/organizations/organizations.md) and a [team](../set-up/organizations/team-management.md) that your users belong to.
+2. Connect a [VCS provider](../set-up/vcs-providers/) (or skip this and use the CLI).
+3. [Create a workspace](../run-terraform/workspaces/creating-workspaces.md), add its [variables](../run-terraform/workspaces/variables.md), and [start a run](../run-terraform/workspaces/starting-a-run.md).
+
+### 3. Go to production
+
+Follow the [Helm deployment](deployment/), then configure [user authentication](user-management/), a [storage backend](deployment/storage-backend/) and a [database](deployment/database-backend/). Read [Security](../how-it-works/security.md) and [Architecture](../how-it-works/design-and-architecture.md) before exposing it to your team.
+
+### 4. Integrate
+
+Use Terrakube from [the Terraform CLI](../run-terraform/workspaces/cli-driven-workflow.md), [GitHub Actions and other CI/CD](../integrate/ci-cd-integration/), the [Terrakube CLI](../integrate/terrakube-cli/) or the [API](../api-reference/getting-started.md).

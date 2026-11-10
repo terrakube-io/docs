@@ -1,0 +1,53 @@
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Terrakube
+  structure:
+    - type: space
+      key: space-1
+      title: Latest
+      path: latest
+      default: true
+      content:
+        directory: ./latest
+    - type: space
+      key: space-8
+      title: 2.34.0 - unreleased
+      path: 2.34.0
+      content:
+        directory: null
+    - type: space
+      key: space-7
+      title: 2.33.0
+      path: 2.33.0
+      content:
+        directory: ./2.33.0
+    - type: space
+      key: space-6
+      title: 2.22.0
+      path: 2.22.0
+      content:
+        directory: ./2.22.0
+    - type: space
+      key: space-5
+      title: 2.21.0
+      path: 2.21.0
+      content:
+        directory: ./2.21.0
+    - type: space
+      key: space-3
+      title: 2.20.0
+      path: 2.20.0
+      content:
+        directory: ./2.20.0
+    - type: space
+      key: space-4
+      title: 2.19.0
+      path: 2.19.0
+      content:
+        directory: ./2.19.0
+    - type: space
+      key: space-2
+      title: 2.18.0
+      path: 2.18.0
+      content:
+        directory: ./2.18.0
