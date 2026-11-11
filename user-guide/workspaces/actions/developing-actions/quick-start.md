@@ -20,6 +20,16 @@ This component contains only one button and receives a `context` parameter. We w
 
 Terrakube uses [Ant Design (antd) components](https://ant.design/components/overview), so by default, all antd components are available when you are developing an action.
 
+For dates, use [`dayjs`](https://day.js.org/docs/en/display/format), which is also available in every action:
+
+```javascript
+<span>{dayjs(context.workspace.attributes.createdDate).format("YYYY-MM-DD HH:mm")}</span>
+```
+
+{% hint style="warning" %}
+`DateTime` (luxon) is still available to actions but is deprecated and will be removed in a future release. Actions that use it log a notice in the browser console; move them to `dayjs`.
+{% endhint %}
+
 ### Testing our Hello world action
 
 To create the action in your Terrakube instance, navigate to the Organization settings and click the `Create Action` button
