@@ -75,10 +75,10 @@ Environment variables of the Terrakube **Registry**. See [Configuration Referenc
 
 | Variable | Default | Description |
 | --- | --- | --- |
-| `GcpStorageCredentialsBase64` |  | Sets `io.terrakube.registry.plugin.storage.gcp.credentials`. |
+| `GcpStorageCredentialsBase64` |  | Sets `io.terrakube.registry.plugin.storage.gcp.credentials`. Leave empty to use Google Application Default Credentials. |
 | `GcpStorageBucketName` |  | Sets `io.terrakube.registry.plugin.storage.gcp.bucketName`. |
-| `GcpStorageProjectId` |  | Sets `io.terrakube.registry.plugin.storage.gcp.projectId`. |
-| `GcpPresignedUrlExpirySeconds` | `300` | GCP Cloud Storage module.zip V4-signed URL redirect - off by default for staged rollout; also the rollback switch back to the registry proxying ZIP bytes. Requires iam.serviceAccounts.signBlob IAM permission on the service account. |
+| `GcpStorageProjectId` |  | Sets `io.terrakube.registry.plugin.storage.gcp.projectId`. When empty, the project is taken from the credentials or the environment. |
+| `GcpPresignedUrlExpirySeconds` | `300` | GCP Cloud Storage module.zip V4-signed URL redirect - off by default for staged rollout; also the rollback switch back to the registry proxying ZIP bytes. Without a service account key, the service account needs the iam.serviceAccounts.signBlob IAM permission on itself. |
 | `GcpPresignedRedirectEnabled` | `false` | Sets `io.terrakube.registry.plugin.storage.gcp.presignedRedirectEnabled`. |
 
 ### Cors

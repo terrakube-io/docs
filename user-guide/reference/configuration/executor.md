@@ -82,10 +82,10 @@ Environment variables of the Terrakube **Executor**. See [Configuration Referenc
 
 | Variable | Default | Description |
 | --- | --- | --- |
-| `GcpTerraformStateCredentials` |  | Sets `io.terrakube.executor.plugin.tfstate.gcp.credentials`. |
+| `GcpTerraformStateCredentials` |  | Sets `io.terrakube.executor.plugin.tfstate.gcp.credentials`. Leave empty, together with `GcpTerraformStateCredentialsFile`, to use Google Application Default Credentials. |
 | `GcpTerraformStateCredentialsFile` |  | Sets `io.terrakube.executor.plugin.tfstate.gcp.credentialsFile`. |
 | `GcpTerraformStateBucketName` |  | Sets `io.terrakube.executor.plugin.tfstate.gcp.bucketName`. |
-| `GcpTerraformStateProjectId` |  | Sets `io.terrakube.executor.plugin.tfstate.gcp.projectId`. |
+| `GcpTerraformStateProjectId` |  | Sets `io.terrakube.executor.plugin.tfstate.gcp.projectId`. When empty, the project is taken from the credentials or the environment. |
 
 ### Security
 
