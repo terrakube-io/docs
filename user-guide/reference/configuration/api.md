@@ -153,9 +153,9 @@ Environment variables of the Terrakube **API**. See [Configuration Reference](RE
 
 | Variable | Default | Description |
 | --- | --- | --- |
-| `GcpStorageCredentialsBase64` |  | Sets `io.terrakube.storage.gcp.credentials`. |
+| `GcpStorageCredentialsBase64` |  | Sets `io.terrakube.storage.gcp.credentials`. Leave empty to use Google Application Default Credentials. |
 | `GcpStorageBucketName` |  | Sets `io.terrakube.storage.gcp.bucketName`. |
-| `GcpStorageProjectId` |  | Sets `io.terrakube.storage.gcp.projectId`. |
+| `GcpStorageProjectId` |  | Sets `io.terrakube.storage.gcp.projectId`. When empty, the project is taken from the credentials or the environment. |
 
 ### Terrakube Extension Repository
 
