@@ -57,6 +57,29 @@ Ask a workspace admin to enable **Allow Apply via PR Comment** in the Webhook se
 
 <figure><img src="../../.gitbook/assets/webhook-pr-comment-gitlab.png" alt=""><figcaption><p>GitLab merge request with a Terrakube plan comment</p></figcaption></figure>
 
+### Who may apply from a comment in 2.35.0
+
+A `terrakube apply` comment starts the default template with `auto-apply`, so the template's approval step does not stop it. From 2.35.0 Terrakube checks the comment's author against the repository before it starts anything:
+
+| Provider | The author needs | Checked with |
+| -------- | ---------------- | ------------ |
+| GitHub, GitHub Enterprise | Write access or more (`write`, `maintain` or `admin`) | `GET /repos/{owner}/{repo}/collaborators/{username}/permission` |
+| GitLab, GitLab EE/CE | The Developer role or more in the project, inherited memberships included | `GET /projects/:id/members/all/:user_id` |
+| Bitbucket, Azure DevOps | Not checked yet: comments work as before, and Terrakube logs a warning | – |
+
+Repository write access is not the same as the template's approval team: someone who can push to the repository can apply from a comment even if they are not on that team.
+
+A refused comment starts no job and does not lock the workspace. Terrakube replies on the pull request and reacts to the comment with 👎 on GitHub or ❌ on GitLab.
+
+**The VCS connection's token must be able to call the endpoint above.** If it cannot, Terrakube cannot check the author, and every `terrakube apply` comment is refused with "Could not check whether ... may apply from a comment". The plan comment and `terrakube plan` keep working.
+
+* **GitHub App:** the endpoint needs the **Metadata** repository permission (read), which every GitHub App has. No change is needed.
+* **GitHub OAuth app or classic personal access token:** the `repo` scope, which the connection already needs to read private repositories.
+* **Fine-grained personal access token:** the **Metadata** repository permission (read) on the workspace's repository.
+* **GitLab:** a token with the `read_api` or `api` scope, whose user can see the project's members.
+
+The same reply appears when the provider fails to answer, for example on a temporary GitHub error. Comment `terrakube apply` again, or apply the plan from the Terrakube UI.
+
 ### Provider support
 
 | Provider                                              | Push | Pull Request | Release | Post Plan on PR / Apply via PR Comment |

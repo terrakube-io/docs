@@ -10,6 +10,7 @@ These are planned and not yet released. Scope can change; follow progress in the
 * **Projects:** better navigation, access controls and shared configuration.
 * **Cost estimation:** Infracost estimates in runs, pull requests and cost policies. See [Cost Estimation](user-guide/cost-estimation.md) for what is possible today.
 * **Single-domain deployment:** an optional setup serving the UI, API, registry and Dex from one domain.
+* **Apply from a PR comment:** on GitHub and GitLab, a `terrakube apply` comment needs an author with write access (GitHub) or the Developer role (GitLab) on the repository. The VCS connection's token must be able to read the author's permission; if it cannot, apply comments are refused. Bitbucket and Azure DevOps are not checked yet. See [Webhooks](user-guide/workspaces/webhooks.md#who-may-apply-from-a-comment-in-2350).
 
 ### November 2026 (2.34.0)
 
