@@ -2,6 +2,12 @@
 
 The workspace overview page provides you a summary of the current workspace state.
 
+### Last run, drift and policy
+
+From Terrakube 2.35 the overview opens with cards for the last run, [drift](../drift-detection.md) and the policy result. The header says when the workspace has drifted and, next to the workspace name, shows [your access](../projects/finding-and-organizing-projects.md#the-project-page) as a chip with what it allows.
+
+Runs in the **Runs** tab show what the plan adds, changes and destroys (for example `+3 ~1 -0`, or "No changes"), the worst policy result and how the run was started. A run waiting for approval can be approved from the list. Runs from before 2.35 have no plan counts until they run again.
+
 ### Managing Workspace Tags
 
 The right panel of the overview page shows the workspace's tags as chips. A key/value tag shows its key and its value, and a key-only tag shows just its key. Hover a chip to see the tag as `key = value`.

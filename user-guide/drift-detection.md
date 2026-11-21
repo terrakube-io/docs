@@ -14,6 +14,10 @@ flowchart LR
 This is separate from [policy compliance](policy-enforcement-opa.md#continuous-compliance), which Terrakube re-evaluates nightly without a plan.
 {% endhint %}
 
+From Terrakube 2.35 a scheduled run of a plan-only template is also a drift check that the interface understands. When its plan has changes, the workspace is marked **drifted**, and Terrakube keeps when the drift was first seen, when it was last checked and which run found it. A clean plan clears the mark. A check that fails before it has a plan leaves the workspace as it was, so an unknown result never hides drift. Runs of any other kind, including a scheduled apply, say nothing about drift.
+
+A drifted workspace shows a **Drift** card on its overview with the first-seen time, how many resources differ and the latest checks, and it appears under **Drifted** in the [organization inbox](organizations/overview-and-inbox.md#inbox). The workspace has to have been checked at least once to show the card.
+
 Terrakube can be used to detect any infrastructure drift, this can be done using Terrakube extensions(open policy and slack), templates and schedules, below you can find an example of how this can be achieved.&#x20;
 
 ### Open Policy Definition

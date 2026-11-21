@@ -59,6 +59,7 @@
 
 * [Organizations](user-guide/organizations/README.md)
   * [Creating an Organization](user-guide/organizations/organizations.md)
+  * [Overview, Inbox and Quick Navigation](user-guide/organizations/overview-and-inbox.md)
   * [Team Management](user-guide/organizations/team-management.md)
   * [Global Variables](user-guide/organizations/global-variables.md)
   * [API Tokens](user-guide/organizations/api-tokens.md)
